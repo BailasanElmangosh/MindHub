@@ -20,6 +20,16 @@ dashBoard.factory("skillsSrv", function ($http) {
                     'Content-Type': 'application/json'
                 }
             });
+        },
+        deleteSkill: function (id) {
+            return $http({
+                method: "Get",
+                url: "http://localhost:8178/api/deleteskill/?id=14",
+                data:id,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
         }
     }
 })
