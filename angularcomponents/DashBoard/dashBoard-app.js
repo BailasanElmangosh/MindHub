@@ -6,7 +6,12 @@
              
             templateUrl: "/angularcomponents/DashBoard/template/skills.html",
             controller: 'skillsCtrl'  
-           })
+           }).when('/categorys',
+           {
+            
+           templateUrl: "/angularcomponents/DashBoard/template/category.html",
+           controller: 'categorysCtrl'  
+          })
 
     });
 

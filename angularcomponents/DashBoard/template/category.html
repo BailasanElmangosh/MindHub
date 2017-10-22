@@ -1,0 +1,39 @@
+<div ng-controller="categorysCtrl">
+    
+        <h1>HII </h1>
+        <div class="row">
+            <div class="col-md-6">
+                <!-- BASIC TABLE -->
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Category</h3>
+                        <form ng-submit="addCategory()" name="category" >
+                        <input type="text" class="form-control" ng-model="category.Name" placeholder="AddCategory">
+                        <button class="btn add" type="submit" ng-click="firstReset()">Add</button>
+                        </form>   
+                    </div>
+                    <div class="panel-body"  >
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th> 
+                                    <th>Category</th>                    
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody >
+                                <tr ng-repeat="Category in getcategory" >
+                                    <td>{{Category.id}}</td>
+                                    <td>{{Category.name}}</td>
+                                    <td><button  class="btn-danger"ng-click="delete(getcategory,Category,Category.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    
+    </div>

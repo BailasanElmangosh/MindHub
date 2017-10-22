@@ -10,6 +10,7 @@
         .success(function(data, status){
              alert(data.status);
              $scope.getskill.push(data.skill)
+             $scope.skill.Name = null;
         });
       };
     //  Get ALL skills
@@ -24,9 +25,9 @@
        $scope.remove = function(array, index){
         array.splice(index, 1);
         }
-       $scope.delete=function(array, index){
+       $scope.delete=function(array, index ,id){
         $scope.remove(array, index);
-        skillsSrv.deleteSkill( $scope.delskill)
+        skillsSrv.deleteSkill( id)
         .success(function(data, status){
              alert(data.status);
         });

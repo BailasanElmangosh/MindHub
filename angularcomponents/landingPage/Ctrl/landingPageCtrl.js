@@ -13,9 +13,6 @@
                 .success(function (data, status) {
                     $scope.showSuccesspop = true;
                     $scope.showSpinnerSign = false;
-                    //alert(status);
-                    //alert(data.status);
-                   
                     if (data.status =="Success")
                     {
                         var signupSuccessPopUp = angular.element(document.querySelector('#popupSeccess'));
