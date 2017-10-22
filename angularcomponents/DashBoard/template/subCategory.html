@@ -1,0 +1,49 @@
+<div ng-controller="subCategoryCtrl">
+
+  
+    <div class="row">
+        <div class="col-md-6">
+            <!-- BASIC TABLE -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Sub category</h3>
+                    <form ng-submit="addSubCategory()" >
+                    <input type="text" class="form-control" ng-model="subCategory.Name" placeholder="Add Sub Category">
+                    <select ng-model="filterCondition" >
+                        <option ng-repeat="category in getCategory" value="{{category.id}}" >{{category.name}}</option>
+                    </select>
+                    <button class="btn add" type="submit">Add</button>
+                    </form>   
+                </div>
+                <div class="panel-body"  >
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                 <th>ID</th> 
+                                 <th>Sub Category</th>  
+                                <th>Category</th>
+                                                              
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody >
+                            <tr ng-repeat="subCategory in getsubCategorys" >
+                                <td>{{subCategory.id}}</td>
+                                <td>{{subCategory.name}}</td>
+                                <td>{{subCategory.mainCategory}}</td>                                
+                                <td><button class="btn-danger" ng-click="delete(getskill,skill,skill.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+
+                            </tr>
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END BASIC TABLE -->
+        </div>
+    </div>
+
+
+
+
+</div>

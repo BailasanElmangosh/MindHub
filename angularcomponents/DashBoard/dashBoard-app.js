@@ -11,7 +11,12 @@
             
            templateUrl: "/angularcomponents/DashBoard/template/category.html",
            controller: 'categorysCtrl'  
-          })
+          }).when('/subCategorys',
+          {
+           
+          templateUrl: "/angularcomponents/DashBoard/template/subCategory.html",
+          controller: 'subCategoryCtrl'  
+         })
 
     });
 
