@@ -18,18 +18,11 @@
                    
                     if (data.status =="Success")
                     {
-                        alert('Seccess');
-
-                        var signBtn = angular.element(document.querySelector('#signPopBtn'));
-                        signBtn.attr('data-toggle', 'modal');
-                        signBtn.attr('data-target', '#popupSeccess');
-                        angular.element(document.querySelector('#signPopBtn')).triggerHandler('click');
-                        angular.element(document.querySelector('#close')).click();
-                        angular.element(document.querySelector("#signFrm").reset());
+                        var signupSuccessPopUp = angular.element(document.querySelector('#popupSeccess'));
+                        signupSuccessPopUp.modal('show');
                     }
                     if (data.status == "Failed") {
                         $scope.errorsSignUp = data.errors;
-                        alert('failed');
                     }
                 });
         };
