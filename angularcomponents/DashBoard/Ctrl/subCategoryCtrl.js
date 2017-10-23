@@ -20,7 +20,8 @@
       //   MainCategoryId:1
       // }
 
-      // Wa ba3d kda 3mltlo comment wa garabt mn l html 3ady a7ot l value  am asht3'al 3ady 
+      // Wa ba3d kda 3mltlo comment wa garabt mn l html 3ady a7ot l value  am asht3'al 3ady  , ahh wa 7atet 
+      //ng-model="subCategory.mainCategoryId" fa tag l <select>
 
 
 
