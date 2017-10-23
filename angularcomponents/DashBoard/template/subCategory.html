@@ -9,8 +9,10 @@
                     <h3 class="panel-title">Sub category</h3>
                     <form ng-submit="addSubCategory()" >
                     <input type="text" class="form-control" ng-model="subCategory.Name" placeholder="Add Sub Category">
-                    <select ng-model="filterCondition" >
-                        <option ng-repeat="category in getCategory" value="{{category.id}}" >{{category.name}}</option>
+                  
+                  <!--ANA Zawedt ng-model fl select dy am asht3'al-->
+                    <select ng-model="subCategory.MainCategoryId"  ng-model="filterCondition" >
+                        <option ng-repeat="c in MainCategories" value='{{c.id}}' >{{c.name}}</option>
                     </select>
                     <button class="btn add" type="submit">Add</button>
                     </form>   
