@@ -10,12 +10,14 @@
     margin-top: 50% !important;
     position: absolute;
     text-align: center;
+    margin-left: 140px;
   }
   .btnSignLog button {
     margin-bottom: 10px;
+    width: 100px !important;
   }
   header .btnSignLog .btn {
-    width: 50%;
+    width: 100% !important;
     height: 20%;
   }
 }
@@ -28,7 +30,7 @@
 
 @media (max-width: 767px) and (min-width: 574px) {
   header .btnSignLog .btn {
-    width: 100%;
+    width: 100% !important;
     height: 8%;
   }
   header .text h1 {
@@ -41,7 +43,7 @@
 
 @media (max-width: 991px) and (min-width: 768px) {
   header .btnSignLog .btn {
-    width: 100%;
+    width: 100% !important;
     height: 8%;
   }
   header .text h1 {

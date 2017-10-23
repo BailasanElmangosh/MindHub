@@ -3,11 +3,12 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+        <title>Landing Page</title>
+        <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
         <link href="/scss/bootstrap.min.css" rel="stylesheet" />
         <link href="/scss/font-awesome.min.css" rel="stylesheet" />
-        <link href="scss/style.css" rel="stylesheet" />
-        <link href="/scss/media.scss" rel="stylesheet" />
+        <link href="/scss/style.css" rel="stylesheet" />
+        <link href="/scss/media.css" rel="stylesheet" />
     </head>
     <body ng-app="landingPage">
   
@@ -27,26 +28,34 @@
                 </div>
                 <!-- end logo  -->
                 <!-- start text  -->
-                <div class="text hidden-xs">
-                    <h1><span>LEARN</span> as if you were to live forever. </h1>
-                    <h2>SIGN UP For Free</h2>
-                    <p>Explore the Courses From around The World   </p>
-                    <p>and Learn From Any Where. </p>
-                </div>
-                <!-- end text  -->
-                <!--Start  button sign and login -->
-                <div class="col-sm-4 col-xs-8 btnSignLog">
+                <div class="text col-xs-12 ">
                     <div class="row">
-                        <div class=" col-sm-6 col-xs-12">
-                            <button type="button" id="loginBtn" class="btn  btn-success" data-toggle="modal" data-target="#myModal">LOGIN</button>
-                        </div>
-                        <div class=" col-sm-6 col-xs-12">
-                            <button type="button" id="signBtn" class="btn btn-outline-success " data-toggle="modal" data-target="#myModal">SIGN UP</button>
-                        </div>
+                    <div class="col-sm-12 hidden-xs ">
+                         <h1><span>LEARN</span> as if you were to live forever. </h1>
+                        <h2>SIGN UP For Free</h2>
+                        <p>Explore the Courses From around The World   </p>
+                        <p>and Learn From Any Where. </p>
                     </div>
+                </div> 
+                           <!--Start  button sign and login -->
+                <div class="row">
+                        <div class="col-sm-6 col-xs-12 btnSignLog">
+                                <div class="row">
+                                    <div class=" col-sm-6 col-xs-12">
+                                        <button type="button" id="loginBtn" class="btn  btn-success" data-toggle="modal" data-target="#myModal">LOGIN</button>
+                                    </div>
+                                    <div class=" col-sm-6 col-xs-12">
+                                        <button type="button" id="signBtn" class="btn btn-outline-success " data-toggle="modal" data-target="#myModal">SIGN UP</button>
+                                    </div>
+                                </div>
+                            </div>
                 </div>
+             
                 <!--End  button sign and login -->
 
+                </div>
+                <!-- end text  -->
+         
             </div>
 
             <!-- Start Pop up Sign & Login -->
@@ -73,9 +82,7 @@
                             <!-- start Login pop up -->
                             <div id="loginDiv" class="tab-pane hide">
                                 <form name="loginfrm" novalidate ng-submit="login()">
-                                    <div ng-repeat="error in errorsLogin">
-                                        <span class="msg">{{error.description}}</span>
-                                    </div>
+                                        <span class="msg">{{errorsLogin.msg}}</span>
                                     <div class="form-group">
                                         <input type="email" name="loginMail" id="loginMail" placeholder="Mail" ng-model="userLogin.Email" required>
                                    
@@ -108,7 +115,7 @@
                             </div>
                             <!-- End Login pop up -->
                             <!--start Sign Up pop up -->
-                            <div id="sginUpDiv" class="tab-pane hide">
+                            <div id="sginUpDiv" class="tab-pane hide" >
                                 <div ng-repeat="error in errorsSignUp">
                                     <span class="msg">{{error.description}}</span>
                                 </div>
@@ -127,10 +134,10 @@
                                         <span class="msg" ng-show="signFrm.password.$dirty && signFrm.password.$error.required">*Required</span>
                                         <!-- @*<span class="msg" ng-show="signFrm.user.password.$dirty && signFrm.user.Password.$error.minlength">Mini 8 characters</span>*@ -->
                                     </div>
-                                    <div class="form-group">
-                                        <input type="password" name="confirmPass" id="confirmPass" ng-model="confirmPass" required ng-pattern="password" placeholder="Confirm Password">
+                                    <div class="form-group" >
+                                        <input type="password" name="confirmPass" id="confirmPass" ng-model="confirmPass" required ng-pattern="{{userSignUp.Password}}" placeholder="Confirm Password" ">
                                        <span class="msg" ng-show="signFrm.confirmPass.$dirty && signFrm.confirmPass.$error.required">*Required</span>
-                                        <span class="msg" ng-show="signFrm.confirmPass.$error.pattern" >Password Dont match</span>
+                                        <span class="msg" ng-show="signFrm.confirmPass.$error.pattern">Password Dont match</span>
                                     </div>
                                     <div class="form-group">
                                         <label>Birthdate</label>
@@ -231,6 +238,9 @@
         <script src="angularcomponents/landingPage/Srvs/signup.js"></script>
         <script src="angularcomponents/landingPage/Srvs/login.js"></script>
         <script src="angularcomponents/landingPage/Ctrl/landingPageCtrl.js"></script>
+        <script src="angularcomponents/landingPage/Ctrl/directivejs"></script>
+        
+
 
     </body>
     </html>

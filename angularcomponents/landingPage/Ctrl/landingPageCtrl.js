@@ -1,5 +1,6 @@
 (function () {
-    landingPage.controller("landingPageCtrl", function ($scope, signupSrv,$http,loginSrv) {
+    landingPage
+    .controller("landingPageCtrl", function ($scope, signupSrv,$http,loginSrv) {
         $scope.userSignUp = {};
         $scope.userLogin = {};
         $scope.errorsLogin = {};
@@ -25,24 +26,26 @@
         };
 
         $scope.login = function () {
-            $scope.showSpinnerLogin = true;
-            alert("Working");
+    
             loginSrv.login($scope.userLogin)
                 .success(function (data, status) {
-                    $scope.showSpinnerLogin = false;
-                    //alert(status);
-                    //alert(data.status);
-                    if (data.status ="Success")
-                    {
+                    
+                
+                    if (data.status =="Success")
+                    {  
                         alert(data.token);
-                        $('#spinner').addClass('hide');
-                        $(this).attr('disabled', false);
+
                     }
-                    if (data.status = "Failed") {
-                        $scope.errorsLogin = data.errors;
+                    if (data.status == "Failed") {
+
+                        $scope.errorsLogin = data;
                     }
                 });
         };
 
+
+         
+
     });
+
 })();

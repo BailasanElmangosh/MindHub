@@ -44,19 +44,19 @@
 
 
 
-    //    // delete skill
-    //    $scope.delskill={}
-    //    $scope.remove = function(array, index){
-    //     array.splice(index, 1);
-    //     }
-    //    $scope.delete=function(array, index ,id){
-    //     $scope.remove(array, index);
-    //     skillsSrv.deleteSkill( id)
-    //     .success(function(data, status){
-    //          alert(data.status);
-    //     });
+       // delete skill
+
+       $scope.remove = function(array, index){
+        array.splice(index, 1);
+        }
+       $scope.delete=function(array, index ,id){
+        $scope.remove(array, index);
+        subCategorySrv.DeleteSubCategory( id)
+        .success(function(data, status){
+             alert(data.status);
+        });
                 
-    //           };
+              };
        
       });
      
