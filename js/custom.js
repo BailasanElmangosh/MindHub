@@ -123,7 +123,7 @@ $('#btnMenuProfile').click(function(){
 });
 //show comment Box
 $('#answer').click(function(){
- $('#commentBox').show("slow");
+ $('#commentBox').fadeIn(1000).addClass('show');
 });
 
 })();
