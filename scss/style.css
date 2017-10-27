@@ -573,8 +573,8 @@ body {
 
 .question {
   background-color: #fff;
-  border: 1px solid #666666;
   padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .question .header {
@@ -601,21 +601,22 @@ body {
   background-color: fafafa;
 }
 
-.question .body .body-container .image {
+.question .body .body-container .post {
+  padding: 10px;
+  border-bottom: 1px solid #8ccb75;
+}
+
+.question .body .body-container .post .image {
   width: 80px;
   height: 80px;
   margin: 0 auto;
   margin-top: 18px;
 }
 
-.question .body .body-container .image img {
+.question .body .body-container .post .image img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-}
-
-.question .body .body-container .post {
-  padding: 10px;
 }
 
 .question .body .body-container .post .box {
@@ -627,11 +628,13 @@ body {
   width: 100%;
   height: 100%;
   resize: none;
-  white-space: pre;
+  padding: 10px;
+  border: 1px solid #f3f3f3;
 }
 
 .question .body .body-container .post .box textarea:focus {
   outline: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .question .body .body-container .post button {
@@ -640,6 +643,31 @@ body {
   color: #fff;
   background-color: #8ccb75;
   border: 1px solid #8ccb75;
+}
+
+.question .body .body-container .post .queBody {
+  border-bottom: 1px solid #8ccb75;
+  padding: 10px;
+}
+
+.question .body .body-container .post .queBody a {
+  color: #666666;
+}
+
+.question .body .body-container .post .queBody a:hover {
+  color: #8ccb75;
+}
+
+.question .body .body-container .post .comment {
+  padding: 10px;
+}
+
+.question .body .body-container .post .comment a {
+  color: #666666;
+}
+
+.question .body .body-container .post .comment a:hover {
+  color: #8ccb75;
 }
  
 
