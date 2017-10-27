@@ -116,6 +116,17 @@ $('#typeOption a').click(function(){
   
 //  Birthdate
 
+//dropdown navbar
+$('#btnMenuProfile').click(function(){
 
+    $('#menuProfile').toggleClass('show')
+});
+// $("#btnMenuProfilet").toggle( 
+//     function() {
+//     $('#menuProfile').css( "display", "block");
+//     }, 
+//     function () {
+//     $('#menuProfile').css( "display","none");
+//  });
 
 })();

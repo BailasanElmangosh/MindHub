@@ -3,10 +3,10 @@ $black:#1b1b1b;
 $purple:#bd82f0;
 $grey1:#595959;
 $grey2:#666666;
+$background:fafafa;
 body
 { 
-
-   
+ background-color: $background;
 }
 // start Landing page
 .landingPage {
@@ -361,6 +361,7 @@ body
     }
 }
 // End Landing page
+//start  pop up Success
 .popupSeccess {
     .modal {
         .modal-dialog {
@@ -381,7 +382,323 @@ body
         }
     }
 }
+//End  pop up Success
 
+// strat  Profile
+
+// start Navbar
+.navbar
+{
+    padding-bottom: 0px;
+    &.bg-light
+    {
+         background-color: $grey2 !important;
+    }
+    .collapse
+    {
+        .navbar-brand
+        {padding-bottom: 0px;
+            img
+            {
+                margin-top: -13px;
+            }
+        }
+        .navbar-nav
+        {   margin-right: 100px;
+            .nav-item
+            {
+               height: 50px;
+                .nav-link
+                {
+                    color:#fff;
+                    font-size: 17px;
+                    margin-top: 2px;
+                    font-family: 'Raleway', sans-serif;
+                    opacity: 0.8;
+                    .icon
+                    {
+                        width: 24px;
+                        height: 24px;
+                    }   
+                    &:hover
+                    {
+                        opacity: 1;
+                    }
+                  
+                }
+                &:hover:not(:last-child)
+                {
+                    border-bottom: 3px solid $greencolor;
+                }
+                .dropdown-menu
+                {
+                    margin: 0.4rem 0 0;
+                    background-color: $greencolor;
+                    .arrow {
+                        width: 0;
+                        height: 0;
+                        margin-left: 15px;
+                        border-left: 7px solid transparent;
+                        border-right: 7px solid transparent;
+                        border-bottom: 9px solid $greencolor;
+                        margin-top: -17px;
+                    }
+                    a
+                    {
+                        color:$grey1;
+                        padding: 0.25rem 0.5rem;
+                        svg ,i {
+                            height: 20px;
+                            width: 20px;
+                            fill: #5a6674;
+                            opacity: 0.6;
+                            transition: all .2s ease-in-out;
+                            pointer-events: none;
+                          }
+.show
+{
+    display: block;
+}
+                    }
+                }
+             
+            }
+        }
+    }
+}
+
+
+
+
+// end Navbar
+
+.search-form {
+  position: relative;
+  top: 50%;
+//   left: 50%;
+  width: 350px;
+  height: 40px;
+  border-radius: 40px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+//   transform: translate(-50%, -50%);
+  background: #fff;
+  transition: all 0.3s ease;
+  margin-bottom: 0px;
+
+  &.focus {
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.search-input {
+  position: absolute;
+  top: 10px;
+  left: 38px;
+  font-size: 14px;
+  background: none;
+  color: #5a6674;
+  width: 195px;
+  height: 20px;
+  border: none;
+  appearance: none;
+  outline: none;
+
+  &::-webkit-search-cancel-button {
+    appearance: none;
+  }
+}
+
+.search-button {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  height: 20px;
+  width: 20px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  outline: none!important;
+  cursor: pointer;
+  
+  & svg {
+    width: 20px;
+    height: 20px;
+    fill: #5a6674;
+  }
+}
+
+.search-option {
+  position: absolute;
+  text-align: right;
+  top: 10px;
+  right: 15px;
+
+  div {
+    position: relative;
+    display: inline-block;
+    margin: 0 1px;
+    cursor: pointer;
+    
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.01;
+      cursor: pointer;
+    }
+    
+    span {
+      position: absolute;
+      display: block;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      background: #929AA3;
+      color: #fff;
+      font-size: 9px;
+      letter-spacing: 1px;
+      line-height: 1;
+      text-transform: uppercase;
+      padding: 4px 7px;
+      border-radius: 12px;
+      top: -18px;
+      transition: all .2s ease-in-out;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top: 4px solid #929AA3;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        transition: all .2s ease-in-out;
+      }
+    }
+    
+    &:hover span {
+      opacity: 1;
+      top: -21px;
+    }
+    
+    label {
+      display: block;
+      cursor: pointer;
+    }
+    
+    svg {
+      height: 20px;
+      width: 20px;
+      fill: #5a6674;
+      opacity: 0.6;
+      transition: all .2s ease-in-out;
+      pointer-events: none;
+    }
+    
+    &:hover svg {
+      opacity: 1;
+    }
+    
+    input:checked + label svg {
+      fill: $greencolor;
+      opacity: .9;
+    }
+    
+    input:checked + label span {
+      background: $greencolor;
+      
+      &::after {
+        border-top-color: $greencolor;
+      }
+    }
+  }
+
+
+}
+
+// End  Profile 
+
+
+// Questions
+
+.question 
+{   background-color: #fff;
+    border:1px solid $grey2;
+    padding: 10px;
+    .header
+    {   
+        border-bottom: 1px solid $greencolor;
+      padding: 10px;
+        h2
+        { 
+            color:$greencolor;
+            display: inline;
+            i
+            {
+              font-size: 22px;
+            }
+        }
+        
+    }
+    .body
+    {   padding: 10px;
+        width:100%;
+        overflow: hidden;
+        .body-container
+        {background-color: $background;
+            //  border-radius: 32px;
+            .image
+            {  width:80px;
+                height: 80px;
+                margin: 0 auto;
+                margin-top: 18px;
+                img{
+                    width:100%;
+                    height: 100%;
+                    border-radius:50%;
+                }
+                
+            }
+            .post
+            { padding: 10px;
+                .box
+                {
+                    width:100%;
+                    height: 100px;
+                    // border:1px solid $grey1;
+                    textarea
+                    {
+                        width: 100%;
+                        height: 100%;
+                        resize: none;
+                        border-radius: 13px;
+                        white-space: pre;
+                        &:focus
+                        {
+                           outline:none;
+                           
+                        }
+                    }
+                   
+                }
+                button
+                {  width:100%;
+                    margin-top: 10px;
+                     color:#fff;
+                    background-color: $greencolor;
+                    border: 1px solid $greencolor;
+                }
+    
+            }
+        }
+       
+    }
+    
+}
+// Questions
 
 
 
