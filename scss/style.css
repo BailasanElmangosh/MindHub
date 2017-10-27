@@ -1,5 +1,6 @@
 body {
   background-color: #f0f0f0;
+  height: 2000px;
 }
 
 .show {
@@ -645,10 +646,207 @@ body {
   font-weight: bold;
 }
 
+.profile .profileBody {
+  margin-top: 100px;
+}
+
+.profile .profileBody .overview {
+  padding: 30px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.profile .profileBody .overview .header {
+  border-bottom: 1px solid #8ccb75;
+}
+
+.profile .profileBody .overview .boxOverview {
+  border: 1px solid #f0f0f0;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.profile .profileBody .overview .boxOverview .col-sm-2 {
+  padding-right: 0px;
+}
+
+.profile .profileBody .overview .boxOverview .col-sm-10 {
+  padding-left: 0px;
+}
+
+.profile .profileBody .overview .boxOverview .icon {
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.profile .profileBody .overview .boxOverview .icon svg, .profile .profileBody .overview .boxOverview .icon i {
+  width: 20px;
+  height: 20px;
+  margin-top: 9px;
+}
+
+.profile .profileBody .overview .boxOverview .text {
+  border: none;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  padding: 6px;
+  font-weight: bold;
+  text-align: inherit;
+  color: #666666;
+}
+
+.profile .profileBody .overview .boxOverview .text:hover {
+  background-color: #8ccb75;
+}
+
+.profile .profileBody .overview .question {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.profile .profileBody .overview .question .header {
+  border-bottom: 1px solid #8ccb75;
+  padding: 10px;
+}
+
+.profile .profileBody .overview .question .header h2 {
+  color: #8ccb75;
+  display: inline;
+}
+
+.profile .profileBody .overview .question .header h2 i {
+  font-size: 22px;
+}
+
+.profile .profileBody .overview .question .body {
+  padding: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.profile .profileBody .overview .question .body .body-container {
+  background-color: #f0f0f0;
+}
+
+.profile .profileBody .overview .question .body .body-container .post {
+  padding: 10px;
+  border-bottom: 1px solid #8ccb75;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .image {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  margin-top: 18px;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .boxQus {
+  width: 100%;
+  height: 100px;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .boxQus textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 10px;
+  border: 1px solid #f3f3f3;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .boxQus textarea:focus {
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.profile .profileBody .overview .question .body .body-container .post button {
+  width: 100%;
+  margin-top: 10px;
+  color: #fff;
+  background-color: #8ccb75;
+  border: 1px solid #8ccb75;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .queBody {
+  padding: 10px;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .queBody .queOption {
+  text-align: center;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .queBody .queOption a {
+  color: #666666;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .queBody .queOption a:hover {
+  color: #8ccb75;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .comment {
+  padding: 10px;
+  border-top: 1px solid #8ccb75;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .comment .image {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 18px;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .comment .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .comment .queText {
+  font-size: 13px;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .comment a {
+  color: #666666;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .comment a:hover {
+  color: #8ccb75;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .postComment {
+  padding: 10px;
+  border-top: 1px solid #8ccb75;
+  display: none;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .postComment .image {
+  width: 60px;
+  height: 60px;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .prevComment {
+  height: 30px;
+}
+
+.profile .profileBody .overview .question .body .body-container .post .prevComment a {
+  color: #595959;
+}
+
 .question {
   background-color: #fff;
   padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  display: none;
 }
 
 .question .header {
@@ -661,8 +859,12 @@ body {
   display: inline;
 }
 
-.question .header h2 i {
-  font-size: 22px;
+.question .header h2 span {
+  margin-right: 3px;
+}
+
+.question .header h2 span i {
+  font-size: 28px;
 }
 
 .question .body {
@@ -693,12 +895,12 @@ body {
   border-radius: 50%;
 }
 
-.question .body .body-container .post .box {
+.question .body .body-container .post .boxQus {
   width: 100%;
   height: 100px;
 }
 
-.question .body .body-container .post .box textarea {
+.question .body .body-container .post .boxQus textarea {
   width: 100%;
   height: 100%;
   resize: none;
@@ -706,7 +908,7 @@ body {
   border: 1px solid #f3f3f3;
 }
 
-.question .body .body-container .post .box textarea:focus {
+.question .body .body-container .post .boxQus textarea:focus {
   outline: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
