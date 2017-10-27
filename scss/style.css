@@ -1,5 +1,5 @@
 body {
-  background-color: fafafa;
+  background-color: #f0f0f0;
 }
 
 .show {
@@ -428,7 +428,7 @@ body {
   pointer-events: none;
 }
 
-.search-form {
+.navbar .search-form {
   position: relative;
   top: 50%;
   width: 350px;
@@ -440,11 +440,11 @@ body {
   margin-bottom: 0px;
 }
 
-.search-form.focus {
+.navbar .search-form.focus {
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
 }
 
-.search-input {
+.navbar .search-input {
   position: absolute;
   top: 10px;
   left: 38px;
@@ -458,11 +458,11 @@ body {
   outline: none;
 }
 
-.search-input::-webkit-search-cancel-button {
+.navbar .search-input::-webkit-search-cancel-button {
   appearance: none;
 }
 
-.search-button {
+.navbar .search-button {
   position: absolute;
   top: 10px;
   left: 15px;
@@ -476,27 +476,27 @@ body {
   cursor: pointer;
 }
 
-.search-button svg {
+.navbar .search-button svg {
   width: 20px;
   height: 20px;
   fill: #5a6674;
 }
 
-.search-option {
+.navbar .search-option {
   position: absolute;
   text-align: right;
   top: 10px;
   right: 15px;
 }
 
-.search-option div {
+.navbar .search-option div {
   position: relative;
   display: inline-block;
   margin: 0 1px;
   cursor: pointer;
 }
 
-.search-option div input {
+.navbar .search-option div input {
   position: absolute;
   top: 0;
   left: 0;
@@ -504,7 +504,7 @@ body {
   cursor: pointer;
 }
 
-.search-option div span {
+.navbar .search-option div span {
   position: absolute;
   display: block;
   text-align: center;
@@ -523,7 +523,7 @@ body {
   transition: all .2s ease-in-out;
 }
 
-.search-option div span::after {
+.navbar .search-option div span::after {
   content: '';
   position: absolute;
   bottom: -3px;
@@ -535,17 +535,17 @@ body {
   transition: all .2s ease-in-out;
 }
 
-.search-option div:hover span {
+.navbar .search-option div:hover span {
   opacity: 1;
   top: -21px;
 }
 
-.search-option div label {
+.navbar .search-option div label {
   display: block;
   cursor: pointer;
 }
 
-.search-option div svg {
+.navbar .search-option div svg {
   height: 20px;
   width: 20px;
   fill: #5a6674;
@@ -554,21 +554,88 @@ body {
   pointer-events: none;
 }
 
-.search-option div:hover svg {
+.navbar .search-option div:hover svg {
   opacity: 1;
 }
 
-.search-option div input:checked + label svg {
+.navbar .search-option div input:checked + label svg {
   fill: #8ccb75;
   opacity: .9;
 }
 
-.search-option div input:checked + label span {
+.navbar .search-option div input:checked + label span {
   background: #8ccb75;
 }
 
-.search-option div input:checked + label span::after {
+.navbar .search-option div input:checked + label span::after {
   border-top-color: #8ccb75;
+}
+
+.bgCover {
+  background: url("../images/bgProfile.jpeg") no-repeat;
+  background-size: cover;
+  height: 270px;
+}
+
+.profile .box {
+  position: relative;
+  top: -40px;
+  background: #fff;
+  height: 100px;
+}
+
+.profile .box .profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: -30px;
+  margin-left: -43px;
+}
+
+.profile .box .info {
+  margin-right: 23%;
+}
+
+.profile .box .info h2, .profile .box .info p {
+  margin-left: 20px;
+}
+
+.profile .box .count {
+  border: 1px solid #eee;
+  width: 92px;
+  height: 50px;
+  border-radius: 10%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile .box .count .iconbg {
+  background: #eee;
+}
+
+.profile .box .count .iconbg .icon {
+  margin-left: -9px;
+  margin-top: 14px;
+}
+
+.profile .box .count .iconbg .icon svg, .profile .box .count .iconbg .icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.profile .box .count .data.col-sm-8 {
+  padding-left: 7px;
+}
+
+.profile .box .count .data .num {
+  color: #8ccb75;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.profile .box .count .data .name {
+  font-size: 11px;
+  font-weight: bold;
 }
 
 .question {
@@ -598,7 +665,7 @@ body {
 }
 
 .question .body .body-container {
-  background-color: fafafa;
+  background-color: #f0f0f0;
 }
 
 .question .body .body-container .post {
