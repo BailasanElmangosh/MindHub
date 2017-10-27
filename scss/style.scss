@@ -696,7 +696,7 @@ body
                 }
                 .queBody
                 {
-                   border-bottom:1px solid $greencolor;
+                   
                    padding: 10px;
                   a
                   {
@@ -710,6 +710,7 @@ body
                 .comment
                 {
                     padding: 10px;
+                    border-top:1px solid $greencolor;
                     a
                     {
                        color: $grey2;
@@ -718,6 +719,11 @@ body
                          color:$greencolor
                        }
                     }
+                }
+                .postComment
+                {
+                    padding: 10px;
+                    border-top:1px solid $greencolor;
                 }
             }
         }

@@ -646,7 +646,6 @@ body {
 }
 
 .question .body .body-container .post .queBody {
-  border-bottom: 1px solid #8ccb75;
   padding: 10px;
 }
 
@@ -660,6 +659,7 @@ body {
 
 .question .body .body-container .post .comment {
   padding: 10px;
+  border-top: 1px solid #8ccb75;
 }
 
 .question .body .body-container .post .comment a {
@@ -668,6 +668,11 @@ body {
 
 .question .body .body-container .post .comment a:hover {
   color: #8ccb75;
+}
+
+.question .body .body-container .post .postComment {
+  padding: 10px;
+  border-top: 1px solid #8ccb75;
 }
  
 
