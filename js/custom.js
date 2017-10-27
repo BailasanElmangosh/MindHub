@@ -121,12 +121,9 @@ $('#btnMenuProfile').click(function(){
 
     $('#menuProfile').toggleClass('show')
 });
-// $("#btnMenuProfilet").toggle( 
-//     function() {
-//     $('#menuProfile').css( "display", "block");
-//     }, 
-//     function () {
-//     $('#menuProfile').css( "display","none");
-//  });
+//show comment Box
+$('#answer').click(function(){
+ $('#commentBox').show("slow");
+});
 
 })();

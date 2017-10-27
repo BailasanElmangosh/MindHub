@@ -2,6 +2,10 @@ body {
   background-color: fafafa;
 }
 
+.show {
+  display: block !important;
+}
+
 .landingPage {
   background: url("../images/bg.jpg") no-repeat center;
   background-size: cover;
@@ -424,10 +428,6 @@ body {
   pointer-events: none;
 }
 
-.navbar .collapse .navbar-nav .nav-item .dropdown-menu a .show {
-  display: block;
-}
-
 .search-form {
   position: relative;
   top: 50%;
@@ -694,6 +694,7 @@ body {
 .question .body .body-container .post .postComment {
   padding: 10px;
   border-top: 1px solid #8ccb75;
+  display: none;
 }
 
 .question .body .body-container .post .postComment .image {
