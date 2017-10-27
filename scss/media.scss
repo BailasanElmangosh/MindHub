@@ -1,6 +1,7 @@
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px)
  {
+     //strat landing page
    .hidden-xs
    {
        display: none;
@@ -30,6 +31,26 @@
     height: 20%;
     
     }
+    //End landing page
+     //start Profile page
+ .question 
+ {
+   .body
+   {
+       .body-container
+       {   
+           .post
+           {
+               .image
+               {
+                   margin-bottom: 10px;
+               }
+
+           }
+       }
+   }
+ }
+ //End start Profile page
   }
 @media (min-width: 576px)
 {
@@ -39,7 +60,7 @@
 }
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767px)and(min-width: 574px) 
-{
+{ // start Landing page
      // start header
 header .btnSignLog .btn 
    {
@@ -56,12 +77,32 @@ header .btnSignLog .btn
             } 
   }
   // end header
+   // End Landing page
+ //start Profile page
+ .question 
+ {
+   .body
+   {
+       .body-container
+       {   
+           .post
+           {
+               .image
+               {
+                   margin-bottom: 10px;
+               }
 
+           }
+       }
+   }
+ }
+ //End start Profile page
  }
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991px) and (min-width: 768px) 
 { 
+// start Landing page
      // start header
 header .btnSignLog .btn 
    {
@@ -78,6 +119,29 @@ header .btnSignLog .btn
             } 
   }
   // end header
+// End Landing page
+  //start Profile page
+  .question 
+  {
+    .body
+    {
+        .body-container
+        {   
+            .post
+            {
+                .image
+                {
+                    width: 70px;
+                    height: 70px;
+                }
+
+            }
+        }
+    }
+  }
+  //End start Profile page
+  
+
  }
 
 // Large devices (desktops, less than 1200px)
