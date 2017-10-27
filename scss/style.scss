@@ -698,14 +698,19 @@ body
                 {
                    
                    padding: 10px;
-                  a
-                  {
-                     color: $grey2;
-                     &:hover
-                     {
-                       color:$greencolor
-                     }
-                  }
+                   .queOption
+                   {
+                    text-align: center;
+                    a
+                    {
+                       color: $grey2;
+                       &:hover
+                       {
+                         color:$greencolor
+                       }
+                    }
+                   }
+                 
                 }
                 .comment
                 {
@@ -727,14 +732,17 @@ body
                     {
                         font-size:13px;
                     }
-                    a
-                    {
-                       color: $grey2;
-                       &:hover
-                       {
-                         color:$greencolor
-                       }
-                    }
+                    
+                    
+                     a
+                     {
+                        color: $grey2;
+                        &:hover
+                        {
+                          color:$greencolor
+                        }
+                     }
+                    
                 }
                 .postComment
                 {

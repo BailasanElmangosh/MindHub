@@ -649,11 +649,15 @@ body {
   padding: 10px;
 }
 
-.question .body .body-container .post .queBody a {
+.question .body .body-container .post .queBody .queOption {
+  text-align: center;
+}
+
+.question .body .body-container .post .queBody .queOption a {
   color: #666666;
 }
 
-.question .body .body-container .post .queBody a:hover {
+.question .body .body-container .post .queBody .queOption a:hover {
   color: #8ccb75;
 }
 
