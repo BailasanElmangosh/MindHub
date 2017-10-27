@@ -1,3 +1,69 @@
+// iphone 5
+@media (max-width: 320px)
+{
+    //start profile page
+    .profile
+    {
+        .box
+        { 
+          .profileImg
+          {
+              width: 100px !important;
+              height: 100px !important;
+          }
+          .info
+          {
+            .col-2 {
+                max-width: 23.666667%;
+            }
+            h2 ,p
+            {
+                font-size: 0.8em !important;
+                margin-left: 32px;
+            }
+            .col-12 {
+                margin-top: 9px;
+                margin-left: 5px;
+            }
+            .info-count{
+
+                
+                .count
+                {
+                   .iconbg
+                   { 
+                      
+                      .icon
+                      { margin-left: -9px;
+                          svg ,img,i
+                          {
+                           
+                          }
+                      }
+                   }
+                   .data
+                   {
+                     
+                      .num
+                      {
+                          margin-left: -6px;
+                      }
+                      .name
+                      {
+                      }
+                   }
+                   
+                }
+                
+            }
+          }
+         
+         
+        }
+    }
+    //End profile page
+}
+
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px)
  {

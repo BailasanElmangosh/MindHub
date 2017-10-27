@@ -1,3 +1,27 @@
+@media (max-width: 320px) {
+  .profile .box .profileImg {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .profile .box .info .col-2 {
+    max-width: 23.666667%;
+  }
+  .profile .box .info h2, .profile .box .info p {
+    font-size: 0.8em !important;
+    margin-left: 32px;
+  }
+  .profile .box .info .col-12 {
+    margin-top: 9px;
+    margin-left: 5px;
+  }
+  .profile .box .info .info-count .count .iconbg .icon {
+    margin-left: -9px;
+  }
+  .profile .box .info .info-count .count .data .num {
+    margin-left: -6px;
+  }
+}
+
 @media (max-width: 575px) {
   .hidden-xs {
     display: none;
