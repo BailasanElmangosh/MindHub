@@ -578,13 +578,14 @@ body {
 }
 
 .profile .box {
+  padding: 10px;
   position: relative;
   top: -40px;
   background: #fff;
   height: 100px;
 }
 
-.profile .box .profile {
+.profile .box .profileImg {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -592,21 +593,20 @@ body {
   margin-left: -43px;
 }
 
-.profile .box .info {
-  margin-right: 23%;
-}
-
 .profile .box .info h2, .profile .box .info p {
   margin-left: 20px;
 }
 
+.profile .box .info .info-count {
+  padding-left: 100px;
+}
+
 .profile .box .count {
-  border: 1px solid #eee;
-  width: 92px;
-  height: 50px;
-  border-radius: 10%;
+  border: 1px solid #f3f3f3;
+  min-height: 54px;
   text-align: center;
   margin-top: 10px;
+  margin-left: 2px;
 }
 
 .profile .box .count .iconbg {
@@ -614,13 +614,20 @@ body {
 }
 
 .profile .box .count .iconbg .icon {
-  margin-left: -9px;
-  margin-top: 14px;
+  min-height: 20px;
 }
 
-.profile .box .count .iconbg .icon svg, .profile .box .count .iconbg .icon img {
+.profile .box .count .iconbg .icon svg, .profile .box .count .iconbg .icon img, .profile .box .count .iconbg .icon i {
   width: 20px;
   height: 20px;
+}
+
+.profile .box .count .iconbg .icon i {
+  margin-top: 3px;
+}
+
+.profile .box .count .data {
+  background-color: #fff;
 }
 
 .profile .box .count .data.col-sm-8 {

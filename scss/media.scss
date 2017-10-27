@@ -50,6 +50,69 @@
        }
    }
  }
+
+ .profile
+ {
+     .box
+     { height: 150px;
+       .profileImg
+       {
+        width: 110px;
+        height: 110px;
+        margin-top: -15px;
+       }
+       .info
+       {margin-right: 0px;
+        margin-left: -32px;
+         h2 
+         {
+           font-size: 1.5em;
+         }
+         p
+         {
+           
+         }
+         .info-count
+         {
+             padding-left: 0px;
+         }
+       }
+      
+       .count
+       {
+       
+        margin-left: -13px;
+        .col-sm-12
+        {
+           
+        }
+          .iconbg
+          { 
+            
+             .icon
+             {  
+                 svg ,img,i
+                 {
+                   
+                 }
+             }
+          }
+          .data
+          {
+            
+             .num
+             {
+               
+             }
+             .name
+             {
+             }
+          }
+          
+       }
+       
+     }
+ }
  //End start Profile page
   }
 @media (min-width: 576px)
@@ -96,6 +159,69 @@ header .btnSignLog .btn
        }
    }
  }
+
+ .profile
+ {
+     .box
+     { 
+       .profileImg
+       {
+        width: 110px;
+        height: 110px;
+        margin-top: -15px;
+        margin-left: -43px;
+       }
+       .info
+       { 
+         h2 
+         {
+          font-size: 1em;
+          margin-left: 32px;
+         }
+         p
+         {
+            font-size: 13px;
+            margin-left: 32px;
+         }
+         .info-count
+         {
+             padding-left: 0px;
+         }
+       }
+      
+       .count
+       {
+        .col-sm-12
+        {
+            padding-left: 0px;
+        }
+          .iconbg
+          { 
+            
+             .icon
+             {    margin-left: 16px;
+                 svg ,img,i
+                 {
+                    margin-left: -15px;
+                 }
+             }
+          }
+          .data
+          {
+            
+             .num
+             {
+                margin-left: 4px;
+             }
+             .name
+             {
+             }
+          }
+          
+       }
+       
+     }
+ }
  //End start Profile page
  }
 
@@ -139,6 +265,51 @@ header .btnSignLog .btn
         }
     }
   }
+  .profile
+  {
+      .box
+      { 
+        .profileImg
+        { width:130px;
+            height: 130px;
+        }
+        .info
+        {    padding-left: 30px;
+           
+          h2
+          {
+            font-size: 1.1em;
+          }
+        }
+       
+        .count
+        {
+           .iconbg
+           { 
+              
+              .icon
+              {
+                  svg ,img,i
+                  {
+                      margin-left: -5px;
+                  }
+              }
+           }
+           .data
+           {
+             
+              .num
+              {
+              }
+              .name
+              {
+              }
+           }
+           
+        }
+        
+      }
+  }
   //End start Profile page
   
 
@@ -146,8 +317,10 @@ header .btnSignLog .btn
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199px) and(min-width: 992px)
-{ // start header
-  header{ .text
+{ //landing page
+    // start header
+  header
+  { .text
             {
                 h1 
                     {font-size: 3rem;}
@@ -155,5 +328,57 @@ header .btnSignLog .btn
                     {    font-size: 2rem; }
             } 
   }
-        // end header
+  
+  // end header
+  //landing page
+//   start profile page
+        .profile
+        {
+            .box
+            { 
+              .profileImg
+              {
+                  
+                    width: 130px;
+                    height: 130px;
+              }
+              .info
+              {
+                h2 
+                {
+                    font-size: 1.5rem;
+                    
+                }
+              }
+             
+              .count
+              {
+                 .iconbg
+                 { 
+                    
+                    .icon
+                    {
+                        svg ,img,i
+                        {
+                         
+                        }
+                    }
+                 }
+                 .data
+                 {
+                   
+                    .num
+                    {
+                    }
+                    .name
+                    {
+                    }
+                 }
+                 
+              }
+              
+            }
+        }
+//   End profile page
+        
  }

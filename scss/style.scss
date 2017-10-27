@@ -627,12 +627,12 @@ body
 .profile
 {
     .box
-    {
+    {  padding: 10px;
         position: relative;
         top: -40px;
       background:#fff;
       height: 100px;
-      .profile
+      .profileImg
       {
           
           width:150px;
@@ -643,37 +643,46 @@ body
       }
       .info
       {
-        margin-right: 23%;
+        // margin-right: 23%;
         h2 ,p
         {
           margin-left: 20px;
+        }
+        .info-count
+        {
+            padding-left: 100px;
         }
       }
      
       .count
       {
-          border:1px solid #eee;
-          width:92px;
-          height: 50px;
-          border-radius: 10%;
+          border:1px solid #f3f3f3;
+          min-height: 54px;
           text-align: center;
           margin-top: 10px;
-         
+         margin-left: 2px;
          .iconbg
          {  background: #eee;
             
             .icon
-            { margin-left: -9px;
-                margin-top: 14px;
-                svg ,img
+            {
+                min-height: 20px;
+                svg ,img,i
                 {
                     width:20px;
                     height: 20px;
+                 
                 }
+                i
+                {
+                    margin-top: 3px;
+                }
+
             }
          }
          .data
          {
+             background-color: #fff;
             &.col-sm-8
             {
                 padding-left: 7px;
