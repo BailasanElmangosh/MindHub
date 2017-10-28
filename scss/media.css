@@ -44,9 +44,6 @@
     width: 100% !important;
     height: 20%;
   }
-  .question .body .body-container .post .image {
-    margin-bottom: 10px;
-  }
   .profile .box {
     height: 150px;
   }
@@ -68,6 +65,21 @@
   .profile .box .count {
     margin-left: -13px;
   }
+  .profile .profileBody .overview .header h3 {
+    font-size: 1rem;
+  }
+  .profile .profileBody .overview .boxOverview .text {
+    font-size: 12px;
+  }
+  .profile .question {
+    margin-top: 20px;
+  }
+  .profile .question .body .body-container {
+    font-size: 12px;
+  }
+  .profile .question .body .body-container .post .image {
+    margin-bottom: 10px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -86,9 +98,6 @@
   }
   header .text h2 {
     font-size: 1.4rem;
-  }
-  .question .body .body-container .post .image {
-    margin-bottom: 10px;
   }
   .profile .box .profileImg {
     width: 110px;
@@ -119,6 +128,21 @@
   .profile .box .count .data .num {
     margin-left: 4px;
   }
+  .profile .profileBody .overview .header h3 {
+    font-size: 1rem;
+  }
+  .profile .profileBody .overview .boxOverview .text {
+    font-size: 10px;
+  }
+  .profile .question .body .body-container .post .image {
+    margin-bottom: 10px;
+  }
+  .profile .question .body .body-container .post .queBody .name {
+    font-size: 1.3rem;
+  }
+  .profile .question .body .body-container .post .comment .name {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
@@ -132,10 +156,6 @@
   header .text h2 {
     font-size: 1.5rem;
   }
-  .question .body .body-container .post .image {
-    width: 70px;
-    height: 70px;
-  }
   .profile .box .profileImg {
     width: 130px;
     height: 130px;
@@ -148,6 +168,24 @@
   }
   .profile .box .count .iconbg .icon svg, .profile .box .count .iconbg .icon img, .profile .box .count .iconbg .icon i {
     margin-left: -5px;
+  }
+  .profile .profileBody .overview .header h3 {
+    font-size: 1rem;
+  }
+  .profile .profileBody .overview .boxOverview .text {
+    font-size: 12px;
+  }
+  .profile .question .body .body-container .post .image {
+    width: 70px;
+    height: 70px;
+  }
+  .profile .question .body .body-container .post .comment .name {
+    font-size: 1.3rem;
+    margin-left: 12px;
+  }
+  .profile .question .body .body-container .post .comment .queText {
+    font-size: 12px;
+    margin-left: 12px;
   }
 }
 

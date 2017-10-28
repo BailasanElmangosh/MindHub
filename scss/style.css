@@ -667,11 +667,11 @@ body {
   margin-top: 10px;
 }
 
-.profile .profileBody .overview .boxOverview .col-sm-2 {
+.profile .profileBody .overview .boxOverview .col-lg-2 {
   padding-right: 0px;
 }
 
-.profile .profileBody .overview .boxOverview .col-sm-10 {
+.profile .profileBody .overview .boxOverview .col-lg-10 {
   padding-left: 0px;
 }
 

@@ -126,7 +126,8 @@ $('#answer').click(function(){
  $('#commentBox').fadeIn(1000).addClass('show');
 });
 
-$('#quesBtn').click(function(){
+$('#quesBtn').click(function()
+{
     $('#question').show('slow');
 })
 

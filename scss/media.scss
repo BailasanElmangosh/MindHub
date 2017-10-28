@@ -103,23 +103,7 @@
     }
     //End landing page
      //start Profile page
- .question 
- {
-   .body
-   {
-       .body-container
-       {   
-           .post
-           {
-               .image
-               {
-                   margin-bottom: 10px;
-               }
 
-           }
-       }
-   }
- }
 
  .profile
  {
@@ -182,6 +166,44 @@
        }
        
      }
+     .profileBody
+     {
+       .overview
+       {
+          .header
+          {
+              h3
+              {
+                  font-size:1rem; 
+              }
+          }
+        .boxOverview
+        {
+           .text
+           {
+               font-size:12px;
+               
+           }
+        } 
+       }
+     }
+     .question 
+     {    margin-top: 20px;
+       .body
+       {
+           .body-container
+           {   
+               .post
+               {
+                   .image
+                   {
+                       margin-bottom: 10px;
+                   }
+    
+               }    font-size: 12px;
+           }
+       }
+     }
  }
  //End start Profile page
   }
@@ -195,40 +217,26 @@
 @media (max-width: 767px)and(min-width: 574px) 
 { // start Landing page
      // start header
-header .btnSignLog .btn 
+   header .btnSignLog .btn 
    {
     width: 100% !important;
     height: 8%;
     
     }
- header{ .text
-            {
-                h1 
-                    {font-size: 2rem;}
-                    h2
-                    {    font-size: 1.4rem; }
-            } 
+ header
+ { 
+     .text
+     {
+          h1 
+        {font-size: 2rem;}
+        h2
+        {    font-size: 1.4rem; }
+    } 
   }
   // end header
    // End Landing page
  //start Profile page
- .question 
- {
-   .body
-   {
-       .body-container
-       {   
-           .post
-           {
-               .image
-               {
-                   margin-bottom: 10px;
-               }
 
-           }
-       }
-   }
- }
 
  .profile
  {
@@ -291,6 +299,60 @@ header .btnSignLog .btn
        }
        
      }
+     .profileBody
+     {
+       .overview
+       {
+          .header
+          {
+              h3
+              {
+                  font-size:1rem; 
+              }
+          }
+        .boxOverview
+        {
+           .text
+           {
+               font-size:10px;
+               
+           }
+        } 
+       }
+     }
+     .question 
+     {
+       .body
+       {
+           .body-container
+           {   
+               .post
+               {
+                   .image
+                   {
+                       margin-bottom: 10px;
+                   }
+                   .queBody
+                   {
+                       .name
+                       {
+                        font-size: 1.3rem; 
+                       }
+                   }
+                   .comment 
+                   {   .name
+                       {
+                        font-size: 1rem; 
+                        }              
+                       .queText
+                       {
+                       }
+                   }
+    
+               }
+           }
+       }
+     }
  }
  //End start Profile page
  }
@@ -317,24 +379,7 @@ header .btnSignLog .btn
   // end header
 // End Landing page
   //start Profile page
-  .question 
-  {
-    .body
-    {
-        .body-container
-        {   
-            .post
-            {
-                .image
-                {
-                    width: 70px;
-                    height: 70px;
-                }
 
-            }
-        }
-    }
-  }
   .profile
   {
       .box
@@ -378,6 +423,56 @@ header .btnSignLog .btn
            
         }
         
+      }
+      .profileBody
+      {
+        .overview
+        {
+           .header
+           {
+               h3
+               {
+                   font-size:1rem; 
+               }
+           }
+         .boxOverview
+         {
+            .text
+            {
+                font-size: 12px;
+                
+            }
+         } 
+        }
+      }
+      .question 
+      {
+        .body
+        {
+            .body-container
+            {   
+                .post
+                {
+                    .image
+                    {
+                        width: 70px;
+                        height: 70px;
+                    }
+                    .comment 
+                    {   .name
+                        {
+                            font-size: 1.3rem; 
+                            margin-left: 12px;   
+                         }              
+                        .queText
+                        {
+                              font-size: 12px;
+                              margin-left: 12px;
+                        }
+                    }
+                }
+            }
+        }
       }
   }
   //End start Profile page
