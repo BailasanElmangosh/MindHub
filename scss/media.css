@@ -134,6 +134,12 @@
   .profile .profileBody .overview .boxOverview .text {
     font-size: 10px;
   }
+  .profile .profileBody .overview .boxOverview .text.hidden-sm {
+    display: none !important;
+  }
+  .profile .profileBody .overview .boxOverview .text.visible-sm {
+    display: block !important;
+  }
   .profile .question .body .body-container .post .image {
     margin-bottom: 10px;
   }

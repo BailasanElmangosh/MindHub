@@ -703,6 +703,14 @@ body {
   background-color: #8ccb75;
 }
 
+.profile .profileBody .overview .boxOverview .text.hidden-xs {
+  display: block;
+}
+
+.profile .profileBody .overview .boxOverview .text.visible-sm {
+  display: none;
+}
+
 .profile .profileBody .overview .question {
   background-color: #fff;
   padding: 10px;
