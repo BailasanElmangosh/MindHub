@@ -941,6 +941,100 @@ body {
   border-radius: 10px;
 }
 
+.profile .profileBody .follow {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.profile .profileBody .follow .header {
+  border-bottom: 1px solid #8ccb75;
+  padding: 10px;
+}
+
+.profile .profileBody .follow .header h2 {
+  color: #8ccb75;
+  display: inline;
+}
+
+.profile .profileBody .follow .header h2 i {
+  font-size: 20px;
+  margin-right: 6px;
+}
+
+.profile .profileBody .follow .body {
+  padding: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.profile .profileBody .follow .body .body-container {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.profile .profileBody .follow .body .col-sm-8 {
+  padding-top: 10px;
+}
+
+.profile .profileBody .follow .body #custom-search-input {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.profile .profileBody .follow .body #custom-search-input .search-query {
+  padding-right: 3px;
+  padding-right: 4px \9;
+  padding-left: 3px;
+  padding-left: 4px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.profile .profileBody .follow .body #custom-search-input button {
+  border: 0;
+  background: none;
+  /** belows styles are working good */
+  padding: 2px 5px;
+  margin-top: 2px;
+  position: relative;
+  left: -28px;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #595959;
+}
+
+.profile .profileBody .follow .body .search-query:focus + button {
+  z-index: 3;
+}
+
+.profile .profileBody .follow .body .person {
+  margin-top: 10px;
+}
+
+.profile .profileBody .follow .body .person .followImg img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.profile .profileBody .follow .body .person .messageBtn {
+  margin-top: 10px;
+}
+
+.profile .profileBody .follow .body .person .delete {
+  margin-top: 22px;
+}
+
 svg, i {
   height: 20px;
   width: 20px;

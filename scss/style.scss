@@ -940,76 +940,178 @@ body
                     {   background-color: $background;
                         padding: 20px;
                         margin-top: 20px;
-                      h3
-                      { color:$greencolor;
-                    
-                          span
-                          {
-                             color:$grey1;
-                          }
-                      }
-                      .readMore
-                      {
-                        transition: background-color 0.5s;
-                        a
-                        {
-                            color:$grey1;
-                        }
-                        &:hover
-                        {
-                            background-color:#f7f7f7;
-                            border-radius: 3px; 
-                        }
-                      }
-                      .infoBasic
-                      {display: none;
-                        .basic
-                        {
-                            .col-lg-2 ,.col-md-3 , .col-4
+                        h3
+                        { color:$greencolor;
+                        
+                            span
                             {
-                                padding-right: 0px;
+                                color:$grey1;
+                            }
+                        }
+                        .readMore
+                        {
+                            transition: background-color 0.5s;
+                            a
+                            {
+                                color:$grey1;
+                            }
+                            &:hover
+                            {
+                                background-color:#f7f7f7;
+                                border-radius: 3px; 
+                            }
+                        }
+                        .infoBasic
+                        {display: none;
+                            .basic
+                            {
+                                .col-lg-2 ,.col-md-3 , .col-4
+                                {
+                                    padding-right: 0px;
 
-                            }
-                            .col-lg-10 ,.col-md-9 , .col-8
+                                }
+                                .col-lg-10 ,.col-md-9 , .col-8
+                                {
+                                    padding-left: 0px;
+                                }
+                                
+                            .head
                             {
-                                padding-left: 0px;
+                                color:$grey1;
+                                display: inline;
                             }
-                            
-                          .head
-                          {
-                            color:$grey1;
-                            display: inline;
-                          }
-                          .detalis
-                          {
-                              color:$purple;
-                              display: inline;
-                          }
+                            .detalis
+                            {
+                                color:$purple;
+                                display: inline;
+                            }
+                            }
                         }
-                      }
-                     .education
-                     {   h4
-                         {
-                            margin-top: 10px;
-                         }
-                         p
-                         {
-                             margin-bottom: 0px;
-                         }
-                     }
-                     .skills
-                     {
-                         .skill
-                         { max-height: 20px;
-                            background: #fff;
-                            border-radius: 10px;
-                         }
-                     }
+                        .education
+                        {   h4
+                            {
+                                margin-top: 10px;
+                            }
+                            p
+                            {
+                                margin-bottom: 0px;
+                            }
+                        }
+                        .skills
+                        {
+                            .skill
+                            { max-height: 20px;
+                                background: #fff;
+                                border-radius: 10px;
+                            }
+                        }
                      
                     }
                 }
             }
-        
+           .follow
+           {
+                background-color: #fff;
+                padding: 10px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+                display: none;
+                .header
+                {   
+                    border-bottom: 1px solid $greencolor;
+                    padding: 10px;
+                    h2
+                    { 
+                        color:$greencolor;
+                        display: inline;
+                        i
+                        {
+                        font-size: 20px;
+                        margin-right: 6px;
+                        }
+                    }
+                    
+                }
+                .body
+                {   padding: 10px;
+                    width:100%;
+                    overflow: hidden;
+                    .body-container
+                    {   background-color: $background;
+                        padding: 20px;
+                        margin-top: 20px;
+                    }
+                    .col-sm-8
+                    {
+                        padding-top: 10px; 
+                    }
+                    #custom-search-input {
+                        margin:0;
+                        margin-top: 10px;
+                        padding: 0;
+                    }
+                    
+                    #custom-search-input .search-query 
+                    {
+                        padding-right: 3px;
+                        padding-right: 4px \9;
+                        padding-left: 3px;
+                        padding-left: 4px \9;
+                        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+                    
+                        margin-bottom: 0;
+                        -webkit-border-radius: 3px;
+                        -moz-border-radius: 3px;
+                        border-radius: 3px;
+                    }
+                    
+                    #custom-search-input button 
+                    {
+                        border: 0;
+                        background: none;
+                        /** belows styles are working good */
+                        padding: 2px 5px;
+                        margin-top: 2px;
+                        position: relative;
+                        left: -28px;
+                        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+                        margin-bottom: 0;
+                        -webkit-border-radius: 3px;
+                        -moz-border-radius: 3px;
+                        border-radius: 3px;
+                        color:$grey1;
+                    }
+                    
+                    .search-query:focus + button {
+                        z-index: 3;   
+                    }
+                 
+                   
+                    .person
+                    {  margin-top: 10px;
+                        .followImg
+                        {
+                            img
+                            {
+                                width:70px;
+                                height: 70px;
+                                border-radius: 50%;
+                            }
+                        
+                        }
+                        .messageBtn
+                        {
+                            margin-top: 10px;
+                        }
+                        .delete
+                        {
+                            margin-top: 22px;
+                        }
+                    }
+                    
+                    
+
+                }
+            }
     }
 }
 

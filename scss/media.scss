@@ -277,16 +277,58 @@
                }
            }
        }
+       .follow
+       {
+        margin-top: 20px;
+        .header
+        {   
+            h2
+            { 
+                i
+                {
+                
+                }
+            }
+            
+        }
+        .body
+        { 
+            .person
+            {  margin-top: 20px;
+                background-color: #eee;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            .followImg
+            {
+                text-align: center;
+            }
+            .followInfo
+            {
+                text-align: center; 
+            }
+            .messageBtn
+            {
+                margin-top: 0px;
+            }
+            .delete
+            {
+                margin-top: 12px;
+            }
+           }
+        } 
+      }
      }
+}
     
- }
+ 
  //End start Profile page
-  }
+}
 @media (min-width: 576px)
 {
 .modal-dialog {
     max-width: 350px;
 }
+
 }
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767px)and(min-width: 574px) 
@@ -499,6 +541,46 @@
                }
            }
        }
+       .follow
+       {
+        margin-top: 20px;
+        .header
+        {   
+            h2
+            { 
+                i
+                {
+                
+                }
+            }
+            
+        }
+        .body
+        { 
+            .person
+            {  margin-top: 20px;
+                background-color: #eee;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            .followImg
+            {
+                text-align: center;
+            }
+            .followInfo
+            {
+                text-align: center; 
+            }
+            .messageBtn
+            {
+                margin-top: 0px;
+            }
+            .delete
+            {
+                margin-top: 12px;
+            }
+        }
+       }
+    }
      }
      
  }

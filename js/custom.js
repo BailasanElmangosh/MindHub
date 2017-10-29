@@ -127,6 +127,8 @@ $('#aboutBtn').click(function()
 {
     $('#aboutMe').show('slow');
     $('#question').hide('slow');
+    $('#follow').hide('slow');
+    
 })
 // show in about me readmore
 $('#readMore').click(function(){
@@ -139,12 +141,18 @@ $('#quesBtn').click(function()
 {
     $('#question').show('slow');
     $('#aboutMe').hide('slow');
+    $('#follow').hide('slow');
 })
 //show in Question comment Box
 $('#answer').click(function(){
  $('#commentBox').fadeIn(1000).addClass('show');
 });
-
-
+//show follow
+$('#followBtn').click(function()
+{
+    $('#follow').show('slow');
+    $('#aboutMe').hide('slow');
+    $('#question').hide('slow');
+})
 
 })();

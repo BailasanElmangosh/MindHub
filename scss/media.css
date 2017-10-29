@@ -89,6 +89,27 @@
   .profile .profileBody .aboutMe .body .body-container .infoBasic .basic .detalis.birth {
     margin-left: 6px;
   }
+  .profile .profileBody .follow {
+    margin-top: 20px;
+  }
+  .profile .profileBody .follow .body .person {
+    margin-top: 20px;
+    background-color: #eee;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .profile .profileBody .follow .body .person .followImg {
+    text-align: center;
+  }
+  .profile .profileBody .follow .body .person .followInfo {
+    text-align: center;
+  }
+  .profile .profileBody .follow .body .person .messageBtn {
+    margin-top: 0px;
+  }
+  .profile .profileBody .follow .body .person .delete {
+    margin-top: 12px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -160,6 +181,27 @@
   }
   .profile .profileBody .aboutMe .body .body-container .infoBasic .basic .detalis {
     font-size: 80%;
+  }
+  .profile .profileBody .follow {
+    margin-top: 20px;
+  }
+  .profile .profileBody .follow .body .person {
+    margin-top: 20px;
+    background-color: #eee;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .profile .profileBody .follow .body .person .followImg {
+    text-align: center;
+  }
+  .profile .profileBody .follow .body .person .followInfo {
+    text-align: center;
+  }
+  .profile .profileBody .follow .body .person .messageBtn {
+    margin-top: 0px;
+  }
+  .profile .profileBody .follow .body .person .delete {
+    margin-top: 12px;
   }
 }
 
