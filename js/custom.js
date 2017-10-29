@@ -128,6 +128,8 @@ $('#aboutBtn').click(function()
     $('#aboutMe').show('slow');
     $('#question').hide('slow');
     $('#follow').hide('slow');
+    $('#Accomplishments').hide('slow');    
+    
     
 })
 // show in about me readmore
@@ -141,8 +143,9 @@ $('#quesBtn').click(function()
 {
     $('#question').show('slow');
     $('#aboutMe').hide('slow');
+    $('#Accomplishments').hide('slow');    
     $('#follow').hide('slow');
-})
+});
 //show in Question comment Box
 $('#answer').click(function(){
  $('#commentBox').fadeIn(1000).addClass('show');
@@ -153,11 +156,20 @@ $('#followBtn').click(function()
     $('#follow').show('slow');
     $('#aboutMe').hide('slow');
     $('#question').hide('slow');
+    $('#Accomplishments').hide('slow');    
+    
 });
+//show menu delete person
 $('#delete').click(function(){
     
   $('#menuDelete').toggleClass('show')
 });
-
+$('#accompBtn').click(function()
+{
+    $('#Accomplishments').show('slow');    
+    $('#question').hide('slow');
+    $('#aboutMe').hide('slow');
+    $('#follow').hide('slow');
+});
 
 })();
