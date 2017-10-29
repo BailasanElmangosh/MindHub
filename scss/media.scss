@@ -186,24 +186,25 @@
            }
         } 
        }
-     }
-     .question 
-     {    margin-top: 20px;
-       .body
-       {
-           .body-container
-           {   
-               .post
-               {
-                   .image
-                   {
-                       margin-bottom: 10px;
-                   }
-    
-               }    font-size: 12px;
-           }
+       .question 
+       {    margin-top: 20px;
+         .body
+         {
+             .body-container
+             {   
+                 .post
+                 {
+                     .image
+                     {
+                         margin-bottom: 10px;
+                     }
+      
+                 }    font-size: 12px;
+             }
+         }
        }
      }
+    
  }
  //End start Profile page
   }
@@ -326,40 +327,41 @@
            }
         } 
        }
-     }
-     .question 
-     {
-       .body
+       .question 
        {
-           .body-container
-           {   
-               .post
-               {
-                   .image
-                   {
-                       margin-bottom: 10px;
-                   }
-                   .queBody
-                   {
-                       .name
-                       {
-                        font-size: 1.3rem; 
-                       }
-                   }
-                   .comment 
-                   {   .name
-                       {
-                        font-size: 1rem; 
-                        }              
-                       .queText
-                       {
-                       }
-                   }
-    
-               }
-           }
+         .body
+         {
+             .body-container
+             {   
+                 .post
+                 {
+                     .image
+                     {
+                         margin-bottom: 10px;
+                     }
+                     .queBody
+                     {
+                         .name
+                         {
+                          font-size: 1.3rem; 
+                         }
+                     }
+                     .comment 
+                     {   .name
+                         {
+                          font-size: 1rem; 
+                          }              
+                         .queText
+                         {
+                         }
+                     }
+      
+                 }
+             }
+         }
        }
      }
+     
  }
  //End start Profile page
  }
@@ -451,36 +453,37 @@ header .btnSignLog .btn
             }
          } 
         }
-      }
-      .question 
-      {
-        .body
+        .question 
         {
-            .body-container
-            {   
-                .post
-                {
-                    .image
-                    {
-                        width: 70px;
-                        height: 70px;
-                    }
-                    .comment 
-                    {   .name
-                        {
-                            font-size: 1.3rem; 
-                            margin-left: 12px;   
-                         }              
-                        .queText
-                        {
-                              font-size: 12px;
-                              margin-left: 12px;
-                        }
-                    }
-                }
-            }
+          .body
+          {
+              .body-container
+              {   
+                  .post
+                  {
+                      .image
+                      {
+                          width: 70px;
+                          height: 70px;
+                      }
+                      .comment 
+                      {   .name
+                          {
+                              font-size: 1.3rem; 
+                              margin-left: 12px;   
+                           }              
+                          .queText
+                          {
+                                font-size: 12px;
+                                margin-left: 12px;
+                          }
+                      }
+                  }
+              }
+          }
         }
       }
+     
   }
   //End start Profile page
   

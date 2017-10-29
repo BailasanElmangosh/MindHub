@@ -7,6 +7,10 @@ body {
   display: block !important;
 }
 
+.hide {
+  display: none !important;
+}
+
 .landingPage {
   background: url("../images/bg.jpg") no-repeat center;
   background-size: cover;
@@ -143,10 +147,6 @@ body {
 .landingPage .modal .modal-dialog .modal-content .modal-body {
   padding: 10px 0 10px 0;
   background-color: #fff;
-}
-
-.landingPage .modal .modal-dialog .modal-content .modal-body .hide {
-  display: none;
 }
 
 .landingPage .modal .modal-dialog .modal-content .modal-body .wrapper {
@@ -711,60 +711,61 @@ body {
   display: none;
 }
 
-.profile .profileBody .overview .question {
+.profile .profileBody .question {
   background-color: #fff;
   padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  display: none;
 }
 
-.profile .profileBody .overview .question .header {
+.profile .profileBody .question .header {
   border-bottom: 1px solid #8ccb75;
   padding: 10px;
 }
 
-.profile .profileBody .overview .question .header h2 {
+.profile .profileBody .question .header h2 {
   color: #8ccb75;
   display: inline;
 }
 
-.profile .profileBody .overview .question .header h2 i {
+.profile .profileBody .question .header h2 i {
   font-size: 22px;
 }
 
-.profile .profileBody .overview .question .body {
+.profile .profileBody .question .body {
   padding: 10px;
   width: 100%;
   overflow: hidden;
 }
 
-.profile .profileBody .overview .question .body .body-container {
+.profile .profileBody .question .body .body-container {
   background-color: #f0f0f0;
 }
 
-.profile .profileBody .overview .question .body .body-container .post {
+.profile .profileBody .question .body .body-container .post {
   padding: 10px;
   border-bottom: 1px solid #8ccb75;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .image {
+.profile .profileBody .question .body .body-container .post .image {
   width: 80px;
   height: 80px;
   margin: 0 auto;
   margin-top: 18px;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .image img {
+.profile .profileBody .question .body .body-container .post .image img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .boxQus {
+.profile .profileBody .question .body .body-container .post .boxQus {
   width: 100%;
   height: 100px;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .boxQus textarea {
+.profile .profileBody .question .body .body-container .post .boxQus textarea {
   width: 100%;
   height: 100%;
   resize: none;
@@ -772,12 +773,12 @@ body {
   border: 1px solid #f3f3f3;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .boxQus textarea:focus {
+.profile .profileBody .question .body .body-container .post .boxQus textarea:focus {
   outline: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-.profile .profileBody .overview .question .body .body-container .post button {
+.profile .profileBody .question .body .body-container .post button {
   width: 100%;
   margin-top: 10px;
   color: #fff;
@@ -785,213 +786,146 @@ body {
   border: 1px solid #8ccb75;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .queBody {
+.profile .profileBody .question .body .body-container .post .queBody {
   padding: 10px;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .queBody .queOption {
+.profile .profileBody .question .body .body-container .post .queBody .queOption {
   text-align: center;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .queBody .queOption a {
+.profile .profileBody .question .body .body-container .post .queBody .queOption a {
   color: #666666;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .queBody .queOption a:hover {
+.profile .profileBody .question .body .body-container .post .queBody .queOption a:hover {
   color: #8ccb75;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .comment {
+.profile .profileBody .question .body .body-container .post .comment {
   padding: 10px;
   border-top: 1px solid #8ccb75;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .comment .image {
+.profile .profileBody .question .body .body-container .post .comment .image {
   width: 60px;
   height: 60px;
   margin: 0 auto;
   margin-top: 18px;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .comment .image img {
+.profile .profileBody .question .body .body-container .post .comment .image img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .comment .queText {
+.profile .profileBody .question .body .body-container .post .comment .queText {
   font-size: 13px;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .comment a {
+.profile .profileBody .question .body .body-container .post .comment a {
   color: #666666;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .comment a:hover {
+.profile .profileBody .question .body .body-container .post .comment a:hover {
   color: #8ccb75;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .postComment {
+.profile .profileBody .question .body .body-container .post .postComment {
   padding: 10px;
   border-top: 1px solid #8ccb75;
   display: none;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .postComment .image {
+.profile .profileBody .question .body .body-container .post .postComment .image {
   width: 60px;
   height: 60px;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .prevComment {
+.profile .profileBody .question .body .body-container .post .prevComment {
   height: 30px;
 }
 
-.profile .profileBody .overview .question .body .body-container .post .prevComment a {
+.profile .profileBody .question .body .body-container .post .prevComment a {
   color: #595959;
 }
 
-.question {
+.profile .profileBody .aboutMe {
   background-color: #fff;
   padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
   display: none;
 }
 
-.question .header {
+.profile .profileBody .aboutMe .header {
   border-bottom: 1px solid #8ccb75;
   padding: 10px;
 }
 
-.question .header h2 {
+.profile .profileBody .aboutMe .header h2 {
   color: #8ccb75;
   display: inline;
 }
 
-.question .header h2 span {
-  margin-right: 3px;
+.profile .profileBody .aboutMe .header h2 i {
+  font-size: 22px;
 }
 
-.question .header h2 span i {
-  font-size: 28px;
-}
-
-.question .body {
+.profile .profileBody .aboutMe .body {
   padding: 10px;
   width: 100%;
   overflow: hidden;
 }
 
-.question .body .body-container {
+.profile .profileBody .aboutMe .body .body-container {
   background-color: #f0f0f0;
+  padding: 20px;
 }
 
-.question .body .body-container .post {
-  padding: 10px;
-  border-bottom: 1px solid #8ccb75;
-}
-
-.question .body .body-container .post .image {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  margin-top: 18px;
-}
-
-.question .body .body-container .post .image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-.question .body .body-container .post .boxQus {
-  width: 100%;
-  height: 100px;
-}
-
-.question .body .body-container .post .boxQus textarea {
-  width: 100%;
-  height: 100%;
-  resize: none;
-  padding: 10px;
-  border: 1px solid #f3f3f3;
-}
-
-.question .body .body-container .post .boxQus textarea:focus {
-  outline: none;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-}
-
-.question .body .body-container .post button {
-  width: 100%;
-  margin-top: 10px;
-  color: #fff;
-  background-color: #8ccb75;
-  border: 1px solid #8ccb75;
-}
-
-.question .body .body-container .post .queBody {
-  padding: 10px;
-}
-
-.question .body .body-container .post .queBody .queOption {
-  text-align: center;
-}
-
-.question .body .body-container .post .queBody .queOption a {
-  color: #666666;
-}
-
-.question .body .body-container .post .queBody .queOption a:hover {
+.profile .profileBody .aboutMe .body .body-container h3 {
   color: #8ccb75;
 }
 
-.question .body .body-container .post .comment {
-  padding: 10px;
-  border-top: 1px solid #8ccb75;
-}
-
-.question .body .body-container .post .comment .image {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto;
-  margin-top: 18px;
-}
-
-.question .body .body-container .post .comment .image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-.question .body .body-container .post .comment .queText {
-  font-size: 13px;
-}
-
-.question .body .body-container .post .comment a {
-  color: #666666;
-}
-
-.question .body .body-container .post .comment a:hover {
+.profile .profileBody .aboutMe .body .body-container h3 i {
   color: #8ccb75;
 }
 
-.question .body .body-container .post .postComment {
-  padding: 10px;
-  border-top: 1px solid #8ccb75;
+.profile .profileBody .aboutMe .body .body-container h3 span {
+  color: #595959;
+}
+
+.profile .profileBody .aboutMe .body .body-container .readMore {
+  transition: background-color 0.5s;
+}
+
+.profile .profileBody .aboutMe .body .body-container .readMore a {
+  color: #595959;
+}
+
+.profile .profileBody .aboutMe .body .body-container .readMore:hover {
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.profile .profileBody .aboutMe .body .body-container .infoBasic {
   display: none;
 }
 
-.question .body .body-container .post .postComment .image {
-  width: 60px;
-  height: 60px;
-}
-
-.question .body .body-container .post .prevComment {
-  height: 30px;
-}
-
-.question .body .body-container .post .prevComment a {
+.profile .profileBody .aboutMe .body .body-container .infoBasic .basic .head {
   color: #595959;
+  display: inline;
+}
+
+.profile .profileBody .aboutMe .body .body-container .infoBasic .basic .detalis {
+  color: #bd82f0;
+  display: inline;
+}
+
+svg, i {
+  height: 20px;
+  width: 20px;
+  fill: #5a6674;
 }
  
 

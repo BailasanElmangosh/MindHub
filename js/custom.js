@@ -121,14 +121,27 @@ $('#btnMenuProfile').click(function(){
 
     $('#menuProfile').toggleClass('show')
 });
-//show comment Box
-$('#answer').click(function(){
- $('#commentBox').fadeIn(1000).addClass('show');
+// overview show
+//show About Me
+$('#aboutBtn').click(function()
+{
+    $('#aboutMe').show('slow');
+})
+// show in about me readmore
+$('#readMore').click(function(){
+    $('#infoBasic').fadeIn(1000).addClass('show');
+    $(this).addClass('hide')
 });
-
+//show Question
 $('#quesBtn').click(function()
 {
     $('#question').show('slow');
 })
+//show in Question comment Box
+$('#answer').click(function(){
+ $('#commentBox').fadeIn(1000).addClass('show');
+});
+
+
 
 })();

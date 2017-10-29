@@ -13,6 +13,9 @@ body
 {
     display: block !important;
 }
+.hide {
+    display: none!important;
+}
 // start Landing page
 .landingPage {
     background: url('../images/bg.jpg') no-repeat center;
@@ -153,9 +156,7 @@ body
                     padding: 10px 0 10px 0;
                     background-color: #fff;
 
-                    .hide {
-                        display: none;
-                    }
+                    
                     //start spinner
                     .wrapper {
                         display: inline-flex;
@@ -763,13 +764,14 @@ body
                  }
                 }
             }
+        }
             // Questions
 
             .question 
             {   background-color: #fff;
-                // border:1px solid $grey2;
                 padding: 10px;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+                display: none;
                 .header
                 {   
                     border-bottom: 1px solid $greencolor;
@@ -909,165 +911,88 @@ body
                 
             }
            // Questions
-
-        }
+            .aboutMe
+            {
+                background-color: #fff;
+                padding: 10px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+                display: none;
+                .header
+                {   
+                    border-bottom: 1px solid $greencolor;
+                    padding: 10px;
+                    h2
+                    { 
+                        color:$greencolor;
+                        display: inline;
+                        i
+                        {
+                        font-size: 22px;
+                        }
+                    }
+                    
+                }
+                .body
+                {   padding: 10px;
+                    width:100%;
+                    overflow: hidden;
+                    .body-container
+                    {   background-color: $background;
+                        padding: 20px;
+                      h3
+                      { color:$greencolor;
+                    
+                          span
+                          {
+                             color:$grey1;
+                          }
+                      }
+                      .readMore
+                      {
+                        transition: background-color 0.5s;
+                        a
+                        {
+                            color:$grey1;
+                        }
+                        &:hover
+                        {
+                            background-color:#f7f7f7;
+                            border-radius: 3px; 
+                        }
+                      }
+                      .infoBasic
+                      {display: none;
+                        .basic
+                        {
+                          .head
+                          {
+                            color:$grey1;
+                            display: inline;
+                          }
+                          .detalis
+                          {
+                              color:$purple;
+                              display: inline;
+                          }
+                        }
+                      }
+                     
+                     
+                    }
+                }
+            }
+        
     }
 }
 
 // End  Profile 
 
 
-// Questions
 
-.question 
-{   background-color: #fff;
-    padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
-    display: none;
-    .header
-    {   
-        border-bottom: 1px solid $greencolor;
-        padding: 10px;
-        h2
-        { 
-            color:$greencolor;
-            display: inline;
-            span
-            {margin-right: 3px;
-                i
-                {
-                  font-size: 28px;
-                }
 
-            }
-        }
-        
-    }
-    .body
-    {   padding: 10px;
-        width:100%;
-        overflow: hidden;
-        .body-container
-        {   background-color: $background;
-            .post
-            { padding: 10px;
-                border-bottom:1px solid $greencolor;
-                .image
-                {  width:80px;
-                    height: 80px;
-                    margin: 0 auto;
-                    margin-top: 18px;
-                    img{
-                        width:100%;
-                        height: 100%;
-                        border-radius:50%;
-                    }
-                    
-                }
-                .boxQus
-                {
-                    width:100%;
-                    height: 100px;
-                    // border:1px solid $grey1;
-                   
-                    textarea
-                    {
-                        width: 100%;
-                        height: 100%;
-                        resize: none;
-                        padding: 10px;
-                        border:1px solid #f3f3f3;
-                        &:focus
-                        {
-                           outline:none;
-                           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-                        }
-                    }
-                  
- 
-                }
-                button
-                {  width:100%;
-                    margin-top: 10px;
-                     color:#fff;
-                    background-color: $greencolor;
-                    border: 1px solid $greencolor;
-                }
-                .queBody
-                {
-                   
-                   padding: 10px;
-                   .queOption
-                   {
-                    text-align: center;
-                    a
-                    {
-                       color: $grey2;
-                       &:hover
-                       {
-                         color:$greencolor
-                       }
-                    }
-                   }
-                 
-                }
-                .comment
-                {
-                    padding: 10px;
-                    border-top:1px solid $greencolor;
-                    .image
-                    {  width:60px;
-                        height: 60px;
-                        margin: 0 auto;
-                        margin-top: 18px;
-                        img{
-                            width:100%;
-                            height: 100%;
-                            border-radius:50%;
-                        }
-                        
-                    }
-                    .queText
-                    {
-                        font-size:13px;
-                    }
-                    
-                    
-                     a
-                     {
-                        color: $grey2;
-                        &:hover
-                        {
-                          color:$greencolor
-                        }
-                     }
-                    
-                }
-                .postComment
-                {
-                    padding: 10px;
-                    border-top:1px solid $greencolor;
-                    display: none;
-                    .image
-                    {  width:60px;
-                        height: 60px;
-                    }
-                }
-                .prevComment
-                { height: 30px;
-                   a
-                   {
-                       color:$grey1;
-                   } 
-                }
-            }
-        }
-       
-    }
-    
+svg ,i {
+    height: 20px;
+    width: 20px;
+    fill: #5a6674;
 }
-// Questions
-
-
-
 
