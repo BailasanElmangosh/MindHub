@@ -881,13 +881,10 @@ body {
 .profile .profileBody .aboutMe .body .body-container {
   background-color: #f0f0f0;
   padding: 20px;
+  margin-top: 20px;
 }
 
 .profile .profileBody .aboutMe .body .body-container h3 {
-  color: #8ccb75;
-}
-
-.profile .profileBody .aboutMe .body .body-container h3 i {
   color: #8ccb75;
 }
 
@@ -920,6 +917,14 @@ body {
 .profile .profileBody .aboutMe .body .body-container .infoBasic .basic .detalis {
   color: #bd82f0;
   display: inline;
+}
+
+.profile .profileBody .aboutMe .body .body-container .education h4 {
+  margin-top: 10px;
+}
+
+.profile .profileBody .aboutMe .body .body-container .education p {
+  margin-bottom: 0px;
 }
 
 svg, i {

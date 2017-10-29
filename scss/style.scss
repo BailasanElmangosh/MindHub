@@ -939,6 +939,7 @@ body
                     .body-container
                     {   background-color: $background;
                         padding: 20px;
+                        margin-top: 20px;
                       h3
                       { color:$greencolor;
                     
@@ -976,7 +977,16 @@ body
                           }
                         }
                       }
-                     
+                     .education
+                     {   h4
+                         {
+                            margin-top: 10px;
+                         }
+                         p
+                         {
+                             margin-bottom: 0px;
+                         }
+                     }
                      
                     }
                 }
