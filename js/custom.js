@@ -153,6 +153,11 @@ $('#followBtn').click(function()
     $('#follow').show('slow');
     $('#aboutMe').hide('slow');
     $('#question').hide('slow');
-})
+});
+$('#delete').click(function(){
+    
+  $('#menuDelete').toggleClass('show')
+});
+
 
 })();

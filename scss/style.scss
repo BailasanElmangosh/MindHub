@@ -1010,6 +1010,7 @@ body
                 }
             }
            .follow
+     
            {
                 background-color: #fff;
                 padding: 10px;
@@ -1106,10 +1107,100 @@ body
                         {
                             margin-top: 22px;
                         }
+                        .dropdown-menu
+                        {
+                            margin: 0.4rem 0 0;
+                            background-color: $greencolor;
+                            .arrow {
+                                width: 0;
+                                height: 0;
+                                margin-left: 15px;
+                                border-left: 7px solid transparent;
+                                border-right: 7px solid transparent;
+                                border-bottom: 9px solid $greencolor;
+                                margin-top: -17px;
+                            }
+                            a
+                            {
+                                color:$grey1;
+                                padding: 0.25rem 0.5rem;
+                                svg ,i {
+                                    height: 20px;
+                                    width: 20px;
+                                    fill: #5a6674;
+                                    opacity: 0.6;
+                                    transition: all .2s ease-in-out;
+                                    pointer-events: none;
+                                  }
+        
+                            }
+                        }
                     }
                     
                     
 
+                }
+            }
+            .Accomplishments
+            {
+              
+                background-color: #fff;
+                padding: 10px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+                
+                .header
+                {   
+                    border-bottom: 1px solid $greencolor;
+                    padding: 10px;
+                    h2
+                    { 
+                        color:$greencolor;
+                        display: inline;
+                        i
+                        {
+                        font-size: 20px;
+                        margin-right: 6px;
+                        }
+                    }
+                    
+                }
+                .body
+                {   padding: 10px;
+                    width:100%;
+                    overflow: hidden;
+                    .title
+                    {
+                        span
+                        {
+                            color:$greencolor;
+                        }
+                    }
+                    .exam
+                    {    border-bottom:1px solid $greencolor;
+                       
+                        .examDetalis
+                        {
+                            margin-top: 10px;
+                        }
+                        .readMore
+                        {
+                            transition: background-color 0.5s;
+                            a
+                            {
+                                color:$grey1;
+                            }
+                            &:hover
+                            {
+                                background-color:#f7f7f7;
+                                border-radius: 3px; 
+                            }
+                        }
+                    }
+                    .courses
+                    {
+                        margin-top: 20px;
+                    }
+               
                 }
             }
     }

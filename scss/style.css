@@ -1035,6 +1035,91 @@ body {
   margin-top: 22px;
 }
 
+.profile .profileBody .follow .body .person .dropdown-menu {
+  margin: 0.4rem 0 0;
+  background-color: #8ccb75;
+}
+
+.profile .profileBody .follow .body .person .dropdown-menu .arrow {
+  width: 0;
+  height: 0;
+  margin-left: 15px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 9px solid #8ccb75;
+  margin-top: -17px;
+}
+
+.profile .profileBody .follow .body .person .dropdown-menu a {
+  color: #595959;
+  padding: 0.25rem 0.5rem;
+}
+
+.profile .profileBody .follow .body .person .dropdown-menu a svg, .profile .profileBody .follow .body .person .dropdown-menu a i {
+  height: 20px;
+  width: 20px;
+  fill: #5a6674;
+  opacity: 0.6;
+  transition: all .2s ease-in-out;
+  pointer-events: none;
+}
+
+.profile .profileBody .Accomplishments {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.profile .profileBody .Accomplishments .header {
+  border-bottom: 1px solid #8ccb75;
+  padding: 10px;
+}
+
+.profile .profileBody .Accomplishments .header h2 {
+  color: #8ccb75;
+  display: inline;
+}
+
+.profile .profileBody .Accomplishments .header h2 i {
+  font-size: 20px;
+  margin-right: 6px;
+}
+
+.profile .profileBody .Accomplishments .body {
+  padding: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.profile .profileBody .Accomplishments .body .title span {
+  color: #8ccb75;
+}
+
+.profile .profileBody .Accomplishments .body .exam {
+  border-bottom: 1px solid #8ccb75;
+}
+
+.profile .profileBody .Accomplishments .body .exam .examDetalis {
+  margin-top: 10px;
+}
+
+.profile .profileBody .Accomplishments .body .exam .readMore {
+  transition: background-color 0.5s;
+}
+
+.profile .profileBody .Accomplishments .body .exam .readMore a {
+  color: #595959;
+}
+
+.profile .profileBody .Accomplishments .body .exam .readMore:hover {
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.profile .profileBody .Accomplishments .body .courses {
+  margin-top: 20px;
+}
+
 svg, i {
   height: 20px;
   width: 20px;
