@@ -126,16 +126,19 @@ $('#btnMenuProfile').click(function(){
 $('#aboutBtn').click(function()
 {
     $('#aboutMe').show('slow');
+    $('#question').hide('slow');
 })
 // show in about me readmore
 $('#readMore').click(function(){
     $('#infoBasic').fadeIn(1000).addClass('show');
-    $(this).addClass('hide')
+    $(this).addClass('hide');
+
 });
 //show Question
 $('#quesBtn').click(function()
 {
     $('#question').show('slow');
+    $('#aboutMe').hide('slow');
 })
 //show in Question comment Box
 $('#answer').click(function(){
