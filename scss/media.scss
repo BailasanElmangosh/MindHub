@@ -203,6 +203,80 @@
              }
          }
        }
+       .aboutMe
+       {
+           margin-top: 20px;
+        .header
+           {   
+               h2
+               { 
+                   i
+                   {
+                   }
+               }
+               
+           }
+           .body
+           {  
+               .body-container
+               {  
+                 h3
+                 {
+               
+                     span
+                     {
+                        
+                     }
+                 }
+                 .readMore
+                 {
+                   a
+                   {
+                   }
+                   &:hover
+                   {
+                   }
+                 }
+                 .infoBasic
+                 {
+                   .basic
+                   {
+                     .head
+                     {
+                         
+                     }
+                     .detalis
+                     {   &.mail
+                         {
+                            font-size: 13px;
+                         }
+                         &.birth
+                         {
+                            margin-left: 6px;
+                         }
+                     }
+                   }
+                 }
+                .education
+                {   h4
+                    {
+                      
+                    }
+                    p
+                    {
+                     
+                    }
+                }
+                .skills
+                {
+                    .skill
+                    { 
+                    }
+                }
+                
+               }
+           }
+       }
      }
     
  }
@@ -360,6 +434,71 @@
              }
          }
        }
+       .aboutMe
+       {
+           .header
+           {   
+               h2
+               { 
+                   i
+                   {
+                   }
+               }
+               
+           }
+           .body
+           {  
+               .body-container
+               {  
+                 h3
+                 {
+               
+                     span
+                     {
+                        
+                     }
+                 }
+                 .readMore
+                 {
+                   a
+                   {
+                   }
+                   &:hover
+                   {
+                   }
+                 }
+                 .infoBasic
+                 {
+                   .basic
+                   {
+                     .head
+                     {
+                     }
+                     .detalis
+                     { font-size: 80%;
+                     }
+                   }
+                 }
+                .education
+                {   h4
+                    {
+                      
+                    }
+                    p
+                    {
+                     
+                    }
+                }
+                .skills
+                {
+                    .skill
+                    { 
+                    }
+                }
+                
+               }
+           }
+       }
      }
      
  }
@@ -481,6 +620,71 @@ header .btnSignLog .btn
                   }
               }
           }
+        }   
+        .aboutMe
+        {
+            .header
+            {   
+                h2
+                { 
+                    i
+                    {
+                    }
+                }
+                
+            }
+            .body
+            {  
+                .body-container
+                {  
+                  h3
+                  {
+                
+                      span
+                      {
+                         
+                      }
+                  }
+                  .readMore
+                  {
+                    a
+                    {
+                    }
+                    &:hover
+                    {
+                    }
+                  }
+                  .infoBasic
+                  {
+                    .basic
+                    {
+                      .head
+                      {
+                      }
+                      .detalis
+                      { font-size: 85%;
+                      }
+                    }
+                  }
+                 .education
+                 {   h4
+                     {
+                       
+                     }
+                     p
+                     {
+                      
+                     }
+                 }
+                 .skills
+                 {
+                     .skill
+                     { 
+                     }
+                 }
+                 
+                }
+            }
         }
       }
      

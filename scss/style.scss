@@ -965,6 +965,16 @@ body
                       {display: none;
                         .basic
                         {
+                            .col-lg-2 ,.col-md-3 , .col-4
+                            {
+                                padding-right: 0px;
+
+                            }
+                            .col-lg-10 ,.col-md-9 , .col-8
+                            {
+                                padding-left: 0px;
+                            }
+                            
                           .head
                           {
                             color:$grey1;
@@ -985,6 +995,14 @@ body
                          p
                          {
                              margin-bottom: 0px;
+                         }
+                     }
+                     .skills
+                     {
+                         .skill
+                         { max-height: 20px;
+                            background: #fff;
+                            border-radius: 10px;
                          }
                      }
                      

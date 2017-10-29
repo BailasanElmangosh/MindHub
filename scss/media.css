@@ -80,6 +80,15 @@
   .profile .profileBody .question .body .body-container .post .image {
     margin-bottom: 10px;
   }
+  .profile .profileBody .aboutMe {
+    margin-top: 20px;
+  }
+  .profile .profileBody .aboutMe .body .body-container .infoBasic .basic .detalis.mail {
+    font-size: 13px;
+  }
+  .profile .profileBody .aboutMe .body .body-container .infoBasic .basic .detalis.birth {
+    margin-left: 6px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -149,6 +158,9 @@
   .profile .profileBody .question .body .body-container .post .comment .name {
     font-size: 1rem;
   }
+  .profile .profileBody .aboutMe .body .body-container .infoBasic .basic .detalis {
+    font-size: 80%;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
@@ -192,6 +204,9 @@
   .profile .profileBody .question .body .body-container .post .comment .queText {
     font-size: 12px;
     margin-left: 12px;
+  }
+  .profile .profileBody .aboutMe .body .body-container .infoBasic .basic .detalis {
+    font-size: 85%;
   }
 }
 

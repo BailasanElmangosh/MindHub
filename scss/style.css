@@ -909,6 +909,14 @@ body {
   display: none;
 }
 
+.profile .profileBody .aboutMe .body .body-container .infoBasic .basic .col-lg-2, .profile .profileBody .aboutMe .body .body-container .infoBasic .basic .col-md-3, .profile .profileBody .aboutMe .body .body-container .infoBasic .basic .col-4 {
+  padding-right: 0px;
+}
+
+.profile .profileBody .aboutMe .body .body-container .infoBasic .basic .col-lg-10, .profile .profileBody .aboutMe .body .body-container .infoBasic .basic .col-md-9, .profile .profileBody .aboutMe .body .body-container .infoBasic .basic .col-8 {
+  padding-left: 0px;
+}
+
 .profile .profileBody .aboutMe .body .body-container .infoBasic .basic .head {
   color: #595959;
   display: inline;
@@ -925,6 +933,12 @@ body {
 
 .profile .profileBody .aboutMe .body .body-container .education p {
   margin-bottom: 0px;
+}
+
+.profile .profileBody .aboutMe .body .body-container .skills .skill {
+  max-height: 20px;
+  background: #fff;
+  border-radius: 10px;
 }
 
 svg, i {
