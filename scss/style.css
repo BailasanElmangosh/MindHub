@@ -1155,6 +1155,10 @@ body {
   margin-bottom: 0px;
 }
 
+.popUpInfo .modal-dialog .modal-content .modal-body .line .form-control {
+  border-radius: 0px;
+}
+
 .popUpInfo .modal-dialog .modal-content .modal-body .line textarea {
   width: 500px;
   height: 100px;
