@@ -11,26 +11,18 @@
       categorysSrv.categorysGet()
       .success(function(data, status){
         $scope.MainCategories= data.mainCategories;
-
+      //  $scope.subCategory.name = null;
       });
 
-//Garabt A3ml Add bl object da nfe3 wa asht3'al 
-      // $scope.subCategory={
-      //   Name:"C#",
-      //   MainCategoryId:1
-      // }
-
-      // Wa ba3d kda 3mltlo comment wa garabt mn l html 3ady a7ot l value  am asht3'al 3ady  , ahh wa 7atet 
-      //ng-model="subCategory.mainCategoryId" fa tag l <select>
 
 
 
       // Add Sub Category 
-      
+      $scope.subCategory ={}
       $scope.addSubCategory=function(){
-        subCategorySrv.CreateSubCategory($scope.subCategory)
+        alert($scope.subCategory.MainCategoryId)
+      subCategorySrv.CreateSubCategory($scope.subCategory)
         .success(function(data, status){
-            console.log(data)
              $scope.getsubCategorys.push(data.subCategory)
         });
       };
@@ -47,13 +39,13 @@
        // delete skill
 
        $scope.remove = function(array, index){
-        array.splice(index, 1);
+        array.splice($scope.getsubCategorys.indexOf(index), 1);
         }
        $scope.delete=function(array, index ,id){
         $scope.remove(array, index);
         subCategorySrv.DeleteSubCategory( id)
         .success(function(data, status){
-             alert(data.status);
+       
         });
                 
               };
