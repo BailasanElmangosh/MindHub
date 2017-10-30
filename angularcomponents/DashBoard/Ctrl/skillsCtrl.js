@@ -8,7 +8,7 @@
       $scope.addSkill=function(){
         skillsSrv.skillsPost($scope.skill)
         .success(function(data, status){
-             alert(data.status);
+            //  alert(data.status);
              $scope.getskill.push(data.skill)
              $scope.skill.Name = null;
         });
@@ -23,13 +23,13 @@
        // delete skill
        $scope.delskill={}
        $scope.remove = function(array, index){
-        array.splice(index, 1);
+        array.splice($scope.getskill.indexOf(index), 1);
         }
        $scope.delete=function(array, index ,id){
         $scope.remove(array, index);
         skillsSrv.deleteSkill( id)
         .success(function(data, status){
-             alert(data.status);
+            //  alert(data.status);
         });
                 
               };

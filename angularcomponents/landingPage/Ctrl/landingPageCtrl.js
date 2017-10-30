@@ -15,9 +15,11 @@
                     $scope.showSuccesspop = true;
                     $scope.showSpinnerSign = false;
                     if (data.status =="Success")
-                    {
+                    {                           angular.element(document.querySelector('#close')).click();
+                 
                         var signupSuccessPopUp = angular.element(document.querySelector('#popupSeccess'));
                         signupSuccessPopUp.modal('show');
+                        angular.element(document.querySelector("#signFrm").reset());
                     }
                     if (data.status == "Failed") {
                         $scope.errorsSignUp = data.errors;
@@ -29,15 +31,11 @@
     
             loginSrv.login($scope.userLogin)
                 .success(function (data, status) {
-                    
-                
                     if (data.status =="Success")
                     {  
                         alert(data.token);
-
                     }
                     if (data.status == "Failed") {
-
                         $scope.errorsLogin = data;
                     }
                 });
