@@ -934,10 +934,24 @@ body {
   margin-bottom: 0px;
 }
 
-.profile .profileBody .aboutMe .body .body-container .skills .skill {
-  max-height: 20px;
-  background: #fff;
-  border-radius: 10px;
+.profile .profileBody .aboutMe .body .body-container .skills .skillRow {
+  margin-top: 10px;
+}
+
+.profile .profileBody .aboutMe .body .body-container .skills .skillRow .skillCont .skill {
+  float: left;
+  position: relative;
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.profile .profileBody .aboutMe .body .body-container .skills .skillRow .skillCont .skill a {
+  color: #666666;
+}
+
+.profile .profileBody .aboutMe .body .body-container .skills .skillRow .skillCont .skill a:hover {
+  text-decoration: none;
 }
 
 .profile .profileBody .follow {
@@ -1186,6 +1200,36 @@ body {
 
 .popUpEduc .modal-dialog .modal-content .modal-body .educEdit .fromTo h5 {
   text-align: center;
+}
+
+.popUpSkill .modal-dialog .modal-content .modal-body .skillRow {
+  margin-top: 35px;
+}
+
+.popUpSkill .modal-dialog .modal-content .modal-body .skillRow .skillCont .skill {
+  float: left;
+  position: relative;
+  background-color: #eee;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.popUpSkill .modal-dialog .modal-content .modal-body .skillRow .skillCont .skill a {
+  color: #666666;
+}
+
+.popUpSkill .modal-dialog .modal-content .modal-body .skillRow .skillCont .skill a {
+  text-decoration: none;
+}
+
+.popUpSkill .modal-dialog .modal-content .modal-body .skillRow .skillCont:hover .skill:before {
+  content: "\00d7";
+  z-index: 1000;
+  color: rgba(107, 13, 10, 0.952);
+}
+
+.popUpSkill .modal-dialog .modal-content .modal-body .skillRow .skillCont .delete {
+  display: none;
 }
 
 svg, i {

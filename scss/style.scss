@@ -1004,10 +1004,28 @@ body
                     }
                     .skills
                     {
-                        .skill
-                        { max-height: 20px;
-                            background: #fff;
-                            border-radius: 10px;
+                         .skillRow
+                        { 
+                            margin-top: 10px;
+                            .skillCont
+                            {
+                                .skill
+                                {  float:left;
+                                    position:relative;
+                                    background-color: #fff;
+                                    border-radius: 40px;
+                                    padding: 10px;
+                                    a 
+                                    {
+                                        color:$grey2;
+                                        &:hover
+                                        {
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+                            }
+                        
                         }
                     }
                     
@@ -1331,8 +1349,67 @@ body
         
     }
 }
+.popUpSkill
+{
+    .modal-dialog
+    {
+        .modal-content
+        {
+            .modal-header
+            {
 
-
+            }
+            .modal-body
+            {
+                .skillRow
+                {   margin-top: 35px;
+                    .skillCont
+                    {
+                        .skill
+                        {  float:left;
+                            position:relative;
+                            background-color: #eee;
+                            border-radius: 40px;
+                            padding: 10px;
+                            a 
+                            {
+                                color:$grey2;
+                            }
+                            a
+                            {
+                                text-decoration: none;
+                            }
+                        }
+                        &:hover 
+                        { 
+                            .skill
+                            {
+                                // background-color: #666666;
+                                // opacity: 0.2;
+                                // .text
+                                // {display: none;}
+                                &:before
+                                {
+                                    content: "\00d7";
+                                    z-index: 1000;
+                                    color:rgba(107, 13, 10, 0.952);
+                                }
+                                
+                            }
+                        }
+                        .delete
+                        {
+                            display: none
+                        }
+                    }
+                   
+                  
+                   
+                }
+            }
+        } 
+    }
+}
 
 svg ,i {
     height: 20px;
