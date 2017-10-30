@@ -1121,6 +1121,55 @@ body {
   margin-top: 20px;
 }
 
+.popUpInfo .modal-dialog {
+  max-width: 700px !important;
+}
+
+.popUpInfo .modal-dialog .modal-content .modal-header {
+  background-color: #595959;
+  color: #fff;
+}
+
+.popUpInfo .modal-dialog .modal-content .modal-header .Close {
+  color: #8ccb75;
+  text-shadow: none;
+}
+
+.popUpInfo .modal-dialog .modal-content .modal-body img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.popUpInfo .modal-dialog .modal-content .modal-body i {
+  position: absolute;
+  top: 83px;
+  right: 12px;
+}
+
+.popUpInfo .modal-dialog .modal-content .modal-body .line {
+  margin-top: 20px;
+}
+
+.popUpInfo .modal-dialog .modal-content .modal-body .line .title {
+  margin-bottom: 0px;
+}
+
+.popUpInfo .modal-dialog .modal-content .modal-body .line textarea {
+  width: 500px;
+  height: 100px;
+}
+
+.popUpInfo .modal-dialog .modal-content .modal-footer {
+  display: block;
+  border-top: none;
+}
+
+.popUpInfo .modal-dialog .modal-content .modal-footer .save {
+  background-color: #8ccb75;
+  color: #fff;
+}
+
 svg, i {
   height: 20px;
   width: 20px;

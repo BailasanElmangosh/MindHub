@@ -110,11 +110,38 @@
   .profile .profileBody .follow .body .person .delete {
     margin-top: 12px;
   }
+  .modal-dialog .modal-content .modal-body i {
+    right: -21px !important;
+  }
+  .modal-dialog .modal-content .modal-body .line textarea {
+    width: 400px !important;
+  }
 }
 
 @media (min-width: 576px) {
-  .modal-dialog {
+  .landingPage .modal-dialog {
     max-width: 350px;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 430px) {
+  .modal-dialog .modal-content .modal-body i {
+    right: -41px !important;
+  }
+  .modal-dialog .modal-content .modal-body .line textarea {
+    width: 350px !important;
+  }
+}
+
+@media (min-width: 575px) and (max-width: 610px) {
+  .modal-dialog .modal-content .modal-body i {
+    right: -8px !important;
+  }
+}
+
+@media (min-width: 610px) and (max-width: 690px) {
+  .modal-dialog .modal-content .modal-body i {
+    right: 0px !important;
   }
 }
 

@@ -135,7 +135,7 @@
                                         <!-- @*<span class="msg" ng-show="signFrm.user.password.$dirty && signFrm.user.Password.$error.minlength">Mini 8 characters</span>*@ -->
                                     </div>
                                     <div class="form-group" >
-                                        <input type="password" name="confirmPass" id="confirmPass" ng-model="confirmPass" required ng-pattern="{{userSignUp.Password}}" placeholder="Confirm Password" ">
+                                        <input type="password" name="confirmPass" id="confirmPass" ng-model="confirmPass" required ng-pattern="{{userSignUp.Password}}" placeholder="Confirm Password" >
                                        <span class="msg" ng-show="signFrm.confirmPass.$dirty && signFrm.confirmPass.$error.required">*Required</span>
                                         <span class="msg" ng-show="signFrm.confirmPass.$error.pattern">Password Dont match</span>
                                     </div>
