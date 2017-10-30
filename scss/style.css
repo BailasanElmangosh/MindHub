@@ -1120,6 +1120,10 @@ body {
   margin-top: 20px;
 }
 
+.popUpInfo {
+  padding-left: 20px;
+}
+
 .popUpInfo .modal-dialog {
   max-width: 700px !important;
 }
@@ -1154,12 +1158,8 @@ body {
   margin-bottom: 0px;
 }
 
-.popUpInfo .modal-dialog .modal-content .modal-body .line .form-control {
-  border-radius: 0px;
-}
-
 .popUpInfo .modal-dialog .modal-content .modal-body .line textarea {
-  width: 500px;
+  width: 660px;
   height: 100px;
 }
 

@@ -318,34 +318,39 @@
         }
         
     }
-    .modal-dialog
+    .popUpInfo
     {
-        .modal-content
+        padding-left: 20px;
+        .modal-dialog
         {
-            .modal-header
+            .modal-content
             {
-
-            }
-            .modal-body
-            {
-                img
+                .modal-header
                 {
+    
                 }
-                i
+                .modal-body
                 {
-                    right: -21px !important;
-                }
-                .line
-                { 
-                    textarea
+                    img
                     {
-                        width:400px !important;
                     }
+                    i
+                    {
+                        right: -21px !important;
+                    }
+                    .line
+                    { 
+                        textarea
+                        {
+                         
+                        }
+                    }
+                
                 }
-            
             }
         }
     }
+   
  //End start Profile page
 }
 @media (min-width: 576px)
@@ -358,37 +363,7 @@
        
 
 }
-@media (min-width:100px)and (max-width: 430px)
-{
-    .modal-dialog
-    {
-        .modal-content
-        {
-            .modal-header
-            {
-    
-            }
-            .modal-body
-            {
-                img
-                {
-                }
-                i
-                {
-                    right: -41px !important;
-                }
-                .line
-                { 
-                    textarea
-                    {
-                        width:350px !important;
-                    }
-                }
-               
-            }
-        }
-    }
-}
+
 @media (min-width: 575px) and(max-width: 610px)
 {
     .modal-dialog
@@ -417,7 +392,8 @@
     }
     
 }
-@media (min-width: 610px) and(max-width: 690px)
+
+@media (min-width: 575px) and(max-width: 700px)
 {
     .modal-dialog
     {
@@ -438,6 +414,11 @@
                 }
                 .line
                 { 
+                    textarea
+                    {
+                       
+                        
+                    }
                 }
                
             }
@@ -445,6 +426,8 @@
     }
     
 }
+
+
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767px)and(min-width: 574px) 
 { // start Landing page
@@ -455,252 +438,254 @@
     height: 8%;
     
     }
- header
- { 
-     .text
-     {
-          h1 
-        {font-size: 2rem;}
-        h2
-        {    font-size: 1.4rem; }
-    } 
-  }
-  // end header
-   // End Landing page
- //start Profile page
-
-
- .profile
- {
-     .box
-     { 
-       .profileImg
-       {
-        width: 110px;
-        height: 110px;
-        margin-top: -15px;
-        margin-left: -43px;
-       }
-       .info
-       { 
-         h2 
-         {
-          font-size: 1em;
-          margin-left: 32px;
-         }
-         p
-         {
-            font-size: 13px;
-            margin-left: 32px;
-         }
-         .info-count
-         {
-             padding-left: 0px;
-         }
-       }
-      
-       .count
-       {
-        .col-sm-12
+    header
+    { 
+        .text
         {
-            padding-left: 0px;
-        }
-          .iconbg
-          { 
-            
-             .icon
-             {    margin-left: 16px;
-                 svg ,img,i
-                 {
-                    margin-left: -15px;
-                 }
-             }
-          }
-          .data
-          {
-            
-             .num
-             {
-                margin-left: 4px;
-             }
-             .name
-             {
-             }
-          }
-          
-       }
-       
-     }
-     .profileBody
-     {
-       .overview
-       {
-          .header
-          {
-              h3
-              {
-                  font-size:1rem; 
-              }
-          }
-        .boxOverview
-        {
-           .text
-           {
-               font-size:10px;
-               &.hidden-sm
-               {
-                   display: none !important;
-               }
-               &.visible-sm
-               {
-                   display: block !important;
-               }
-           }
-        } 
-       }
-       .question 
-       {
-         .body
-         {
-             .body-container
-             {   
-                 .post
-                 {
-                     .image
-                     {
-                         margin-bottom: 10px;
-                     }
-                     .queBody
-                     {
-                         .name
-                         {
-                          font-size: 1.3rem; 
-                         }
-                     }
-                     .comment 
-                     {   .name
-                         {
-                          font-size: 1rem; 
-                          }              
-                         .queText
-                         {
-                         }
-                     }
-      
-                 }
-             }
-         }
-       }
-       .aboutMe
-       {
-           .header
-           {   
-               h2
-               { 
-                   i
-                   {
-                   }
-               }
-               
-           }
-           .body
-           {  
-               .body-container
-               {  
-                 h3
-                 {
-               
-                     span
-                     {
-                        
-                     }
-                 }
-                 .readMore
-                 {
-                   a
-                   {
-                   }
-                   &:hover
-                   {
-                   }
-                 }
-                 .infoBasic
-                 {
-                   .basic
-                   {
-                     .head
-                     {
-                     }
-                     .detalis
-                     { font-size: 80%;
-                     }
-                   }
-                 }
-                .education
-                {   h4
-                    {
-                      
-                    }
-                    p
-                    {
-                     
-                    }
-                }
-                .skills
-                {
-                    .skill
-                    { 
-                    }
-                }
-                
-               }
-           }
-       }
-       .follow
-       {
-        margin-top: 20px;
-        .header
-        {   
+            h1 
+            {font-size: 2rem;}
             h2
+            {    font-size: 1.4rem; }
+        } 
+    }
+    // end header
+
+    // End Landing page
+
+    //start Profile page
+    .profile
+    {
+        .box
+        { 
+        .profileImg
+        {
+            width: 110px;
+            height: 110px;
+            margin-top: -15px;
+            margin-left: -43px;
+        }
+        .info
+        { 
+            h2 
+            {
+            font-size: 1em;
+            margin-left: 32px;
+            }
+            p
+            {
+                font-size: 13px;
+                margin-left: 32px;
+            }
+            .info-count
+            {
+                padding-left: 0px;
+            }
+        }
+        
+        .count
+        {
+            .col-sm-12
+            {
+                padding-left: 0px;
+            }
+            .iconbg
             { 
-                i
-                {
                 
+                .icon
+                {    margin-left: 16px;
+                    svg ,img,i
+                    {
+                        margin-left: -15px;
+                    }
+                }
+            }
+            .data
+            {
+                
+                .num
+                {
+                    margin-left: 4px;
+                }
+                .name
+                {
                 }
             }
             
         }
-        .body
-        { 
-            .person
-            {  margin-top: 20px;
-                background-color: #eee;
-                padding-top: 10px;
-                padding-bottom: 10px;
-            .followImg
+        
+        }
+        .profileBody
+        {
+        .overview
+        {
+            .header
             {
-                text-align: center;
+                h3
+                {
+                    font-size:1rem; 
+                }
             }
-            .followInfo
+            .boxOverview
             {
-                text-align: center; 
+            .text
+            {
+                font-size:10px;
+                &.hidden-sm
+                {
+                    display: none !important;
+                }
+                &.visible-sm
+                {
+                    display: block !important;
+                }
             }
-            .messageBtn
+            } 
+        }
+        .question 
+        {
+            .body
             {
-                margin-top: 0px;
-            }
-            .delete
-            {
-                margin-top: 12px;
+                .body-container
+                {   
+                    .post
+                    {
+                        .image
+                        {
+                            margin-bottom: 10px;
+                        }
+                        .queBody
+                        {
+                            .name
+                            {
+                            font-size: 1.3rem; 
+                            }
+                        }
+                        .comment 
+                        {   .name
+                            {
+                            font-size: 1rem; 
+                            }              
+                            .queText
+                            {
+                            }
+                        }
+        
+                    }
+                }
             }
         }
-       }
+        .aboutMe
+        {
+            .header
+            {   
+                h2
+                { 
+                    i
+                    {
+                    }
+                }
+                
+            }
+            .body
+            {  
+                .body-container
+                {  
+                    h3
+                    {
+                
+                        span
+                        {
+                            
+                        }
+                    }
+                    .readMore
+                    {
+                    a
+                    {
+                    }
+                    &:hover
+                    {
+                    }
+                    }
+                    .infoBasic
+                    {
+                    .basic
+                    {
+                        .head
+                        {
+                        }
+                        .detalis
+                        { font-size: 80%;
+                        }
+                    }
+                    }
+                    .education
+                    {   h4
+                        {
+                        
+                        }
+                        p
+                        {
+                        
+                        }
+                    }
+                    .skills
+                    {
+                        .skill
+                        { 
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .follow
+        {
+            margin-top: 20px;
+            .header
+            {   
+                h2
+                { 
+                    i
+                    {
+                    
+                    }
+                }
+                
+            }
+            .body
+            { 
+                .person
+                {  margin-top: 20px;
+                    background-color: #eee;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                .followImg
+                {
+                    text-align: center;
+                }
+                .followInfo
+                {
+                    text-align: center; 
+                }
+                .messageBtn
+                {
+                    margin-top: 0px;
+                }
+                .delete
+                {
+                    margin-top: 12px;
+                }
+            }
+        }
+        }
+        }
+        
     }
-     }
-     
- }
  //End start Profile page
  }
+
+
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991px) and (min-width: 768px) 
@@ -957,4 +942,36 @@ header .btnSignLog .btn
         }
 //   End profile page
         
+ }
+
+ @media (min-width:100px)and (max-width: 430px)
+ {
+     .modal-dialog
+     {
+         .modal-content
+         {
+             .modal-header
+             {
+     
+             }
+             .modal-body
+             {
+                 img
+                 {
+                 }
+                 i
+                 {
+                     right: -45px !important;
+                 }
+                 .line
+                 { 
+                     textarea
+                     {
+                        
+                     }
+                 }
+                
+             }
+         }
+     }
  }
