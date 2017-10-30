@@ -707,6 +707,7 @@ body
     }
     .profileBody
     {   margin-top: 100px;
+        //start overview
         .overview
         {   padding: 30px;
             background-color: #fff;
@@ -765,40 +766,104 @@ body
                 }
             }
         }
-            // Questions
+        //End overview
 
-            .question 
-            {   background-color: #fff;
+        //Start  Questions
+        .question 
+        {   background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+            display: none;
+            .header
+            {   
+                border-bottom: 1px solid $greencolor;
                 padding: 10px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
-                display: none;
-                .header
-                {   
-                    border-bottom: 1px solid $greencolor;
-                    padding: 10px;
-                    h2
-                    { 
-                        color:$greencolor;
-                        display: inline;
-                        i
-                        {
-                        font-size: 22px;
-                        }
+                h2
+                { 
+                    color:$greencolor;
+                    display: inline;
+                    i
+                    {
+                    font-size: 22px;
                     }
-                    
                 }
-                .body
-                {   padding: 10px;
-                    width:100%;
-                    overflow: hidden;
-                    .body-container
-                    {   background-color: $background;
-                        .post
-                        { padding: 10px;
-                            border-bottom:1px solid $greencolor;
+                
+            }
+            .body
+            {   padding: 10px;
+                width:100%;
+                overflow: hidden;
+                .body-container
+                {   background-color: $background;
+                    .post
+                    { padding: 10px;
+                        border-bottom:1px solid $greencolor;
+                        .image
+                        {  width:80px;
+                            height: 80px;
+                            margin: 0 auto;
+                            margin-top: 18px;
+                            img{
+                                width:100%;
+                                height: 100%;
+                                border-radius:50%;
+                            }
+                            
+                        }
+                        .boxQus
+                        {
+                            width:100%;
+                            height: 100px;
+                            // border:1px solid $grey1;
+                        
+                            textarea
+                            {
+                                width: 100%;
+                                height: 100%;
+                                resize: none;
+                                padding: 10px;
+                                border:1px solid #f3f3f3;
+                                &:focus
+                                {
+                                outline:none;
+                                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+                                }
+                            }
+                        
+        
+                        }
+                        button
+                        {  width:100%;
+                            margin-top: 10px;
+                            color:#fff;
+                            background-color: $greencolor;
+                            border: 1px solid $greencolor;
+                        }
+                        .queBody
+                        {
+                        
+                        padding: 10px;
+                        .queOption
+                        {
+                            text-align: center;
+                            a
+                            {
+                            color: $grey2;
+                            &:hover
+                            {
+                                color:$greencolor
+                            }
+                            }
+                        }
+                        
+                        }
+                        .comment
+                        {
+                            padding: 10px;
+                            border-top:1px solid $greencolor;
                             .image
-                            {  width:80px;
-                                height: 80px;
+                            {  width:60px;
+                                height: 60px;
                                 margin: 0 auto;
                                 margin-top: 18px;
                                 img{
@@ -808,406 +873,354 @@ body
                                 }
                                 
                             }
-                            .boxQus
+                            .queText
                             {
-                                width:100%;
-                                height: 100px;
-                                // border:1px solid $grey1;
-                            
-                                textarea
-                                {
-                                    width: 100%;
-                                    height: 100%;
-                                    resize: none;
-                                    padding: 10px;
-                                    border:1px solid #f3f3f3;
-                                    &:focus
-                                    {
-                                    outline:none;
-                                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-                                    }
-                                }
-                            
-            
+                                font-size:13px;
                             }
-                            button
-                            {  width:100%;
-                                margin-top: 10px;
-                                color:#fff;
-                                background-color: $greencolor;
-                                border: 1px solid $greencolor;
-                            }
-                            .queBody
-                            {
                             
-                            padding: 10px;
-                            .queOption
+                            
+                            a
                             {
-                                text-align: center;
-                                a
-                                {
                                 color: $grey2;
                                 &:hover
                                 {
-                                    color:$greencolor
-                                }
+                                color:$greencolor
                                 }
                             }
                             
-                            }
-                            .comment
-                            {
-                                padding: 10px;
-                                border-top:1px solid $greencolor;
-                                .image
-                                {  width:60px;
-                                    height: 60px;
-                                    margin: 0 auto;
-                                    margin-top: 18px;
-                                    img{
-                                        width:100%;
-                                        height: 100%;
-                                        border-radius:50%;
-                                    }
-                                    
-                                }
-                                .queText
-                                {
-                                    font-size:13px;
-                                }
-                                
-                                
-                                a
-                                {
-                                    color: $grey2;
-                                    &:hover
-                                    {
-                                    color:$greencolor
-                                    }
-                                }
-                                
-                            }
-                            .postComment
-                            {
-                                padding: 10px;
-                                border-top:1px solid $greencolor;
-                                display: none;
-                                .image
-                                {  width:60px;
-                                    height: 60px;
-                                }
-                            }
-                            .prevComment
-                            { height: 30px;
-                            a
-                            {
-                                color:$grey1;
-                            } 
+                        }
+                        .postComment
+                        {
+                            padding: 10px;
+                            border-top:1px solid $greencolor;
+                            display: none;
+                            .image
+                            {  width:60px;
+                                height: 60px;
                             }
                         }
+                        .prevComment
+                        { height: 30px;
+                        a
+                        {
+                            color:$grey1;
+                        } 
+                        }
                     }
-                
+                }
+            
+            }
+            
+        }
+        //End Questions
+
+        //start About Me
+        .aboutMe
+        {
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+            
+            .header
+            {   
+                border-bottom: 1px solid $greencolor;
+                padding: 10px;
+                h2
+                { 
+                    color:$greencolor;
+                    display: inline;
+                    i
+                    {
+                    font-size: 22px;
+                    }
                 }
                 
             }
-           // Questions
-            .aboutMe
-            {
-                background-color: #fff;
-                padding: 10px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
-               
-                .header
-                {   
-                    border-bottom: 1px solid $greencolor;
-                    padding: 10px;
-                    h2
-                    { 
-                        color:$greencolor;
-                        display: inline;
-                        i
-                        {
-                        font-size: 22px;
-                        }
-                    }
+            .body
+            {   padding: 10px;
+                width:100%;
+                overflow: hidden;
+                .body-container
+                {   background-color: $background;
+                    padding: 20px;
+                    margin-top: 20px;
+                    h3
+                    { color:$greencolor;
                     
-                }
-                .body
-                {   padding: 10px;
-                    width:100%;
-                    overflow: hidden;
-                    .body-container
-                    {   background-color: $background;
-                        padding: 20px;
-                        margin-top: 20px;
-                        h3
-                        { color:$greencolor;
-                        
-                            span
-                            {
-                                color:$grey1;
-                            }
-                        }
-                        .readMore
-                        {
-                            transition: background-color 0.5s;
-                            a
-                            {
-                                color:$grey1;
-                            }
-                            &:hover
-                            {
-                                background-color:#f7f7f7;
-                                border-radius: 3px; 
-                            }
-                        }
-                        .infoBasic
-                        {display: none;
-                            .basic
-                            {
-                                .col-lg-2 ,.col-md-3 , .col-4
-                                {
-                                    padding-right: 0px;
-
-                                }
-                                .col-lg-10 ,.col-md-9 , .col-8
-                                {
-                                    padding-left: 0px;
-                                }
-                                
-                            .head
-                            {
-                                color:$grey1;
-                                display: inline;
-                            }
-                            .detalis
-                            {
-                                color:$purple;
-                                display: inline;
-                            }
-                            }
-                        }
-                        .education
-                        {   h4
-                            {
-                                margin-top: 10px;
-                            }
-                            p
-                            {
-                                margin-bottom: 0px;
-                            }
-                        }
-                        .skills
-                        {
-                            .skill
-                            { max-height: 20px;
-                                background: #fff;
-                                border-radius: 10px;
-                            }
-                        }
-                     
-                    }
-                }
-            }
-           .follow
-     
-           {
-                background-color: #fff;
-                padding: 10px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
-                display: none;
-                .header
-                {   
-                    border-bottom: 1px solid $greencolor;
-                    padding: 10px;
-                    h2
-                    { 
-                        color:$greencolor;
-                        display: inline;
-                        i
-                        {
-                        font-size: 20px;
-                        margin-right: 6px;
-                        }
-                    }
-                    
-                }
-                .body
-                {   padding: 10px;
-                    width:100%;
-                    overflow: hidden;
-                    .body-container
-                    {   background-color: $background;
-                        padding: 20px;
-                        margin-top: 20px;
-                    }
-                    .col-sm-8
-                    {
-                        padding-top: 10px; 
-                    }
-                    #custom-search-input {
-                        margin:0;
-                        margin-top: 10px;
-                        padding: 0;
-                    }
-                    
-                    #custom-search-input .search-query 
-                    {
-                        padding-right: 3px;
-                        padding-right: 4px \9;
-                        padding-left: 3px;
-                        padding-left: 4px \9;
-                        /* IE7-8 doesn't have border-radius, so don't indent the padding */
-                    
-                        margin-bottom: 0;
-                        -webkit-border-radius: 3px;
-                        -moz-border-radius: 3px;
-                        border-radius: 3px;
-                    }
-                    
-                    #custom-search-input button 
-                    {
-                        border: 0;
-                        background: none;
-                        /** belows styles are working good */
-                        padding: 2px 5px;
-                        margin-top: 2px;
-                        position: relative;
-                        left: -28px;
-                        /* IE7-8 doesn't have border-radius, so don't indent the padding */
-                        margin-bottom: 0;
-                        -webkit-border-radius: 3px;
-                        -moz-border-radius: 3px;
-                        border-radius: 3px;
-                        color:$grey1;
-                    }
-                    
-                    .search-query:focus + button {
-                        z-index: 3;   
-                    }
-                 
-                   
-                    .person
-                    {  margin-top: 10px;
-                        .followImg
-                        {
-                            img
-                            {
-                                width:70px;
-                                height: 70px;
-                                border-radius: 50%;
-                            }
-                        
-                        }
-                        .messageBtn
-                        {
-                            margin-top: 10px;
-                        }
-                        .delete
-                        {
-                            margin-top: 22px;
-                        }
-                        .dropdown-menu
-                        {
-                            margin: 0.4rem 0 0;
-                            background-color: $greencolor;
-                            .arrow {
-                                width: 0;
-                                height: 0;
-                                margin-left: 15px;
-                                border-left: 7px solid transparent;
-                                border-right: 7px solid transparent;
-                                border-bottom: 9px solid $greencolor;
-                                margin-top: -17px;
-                            }
-                            a
-                            {
-                                color:$grey1;
-                                padding: 0.25rem 0.5rem;
-                                svg ,i {
-                                    height: 20px;
-                                    width: 20px;
-                                    fill: #5a6674;
-                                    opacity: 0.6;
-                                    transition: all .2s ease-in-out;
-                                    pointer-events: none;
-                                  }
-        
-                            }
-                        }
-                    }
-                    
-                    
-
-                }
-            }
-            .Accomplishments
-            {
-              
-                background-color: #fff;
-                padding: 10px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
-                display: none;
-                .header
-                {   
-                    border-bottom: 1px solid $greencolor;
-                    padding: 10px;
-                    h2
-                    { 
-                        color:$greencolor;
-                        display: inline;
-                        i
-                        {
-                        font-size: 20px;
-                        margin-right: 6px;
-                        }
-                    }
-                    
-                }
-                .body
-                {   padding: 10px;
-                    width:100%;
-                    overflow: hidden;
-                    .title
-                    {
                         span
                         {
-                            color:$greencolor;
+                            color:$grey1;
                         }
                     }
-                    .exam
-                    {    border-bottom:1px solid $greencolor;
-                       
-                        .examDetalis
+                    .readMore
+                    {
+                        transition: background-color 0.5s;
+                        a
+                        {
+                            color:$grey1;
+                        }
+                        &:hover
+                        {
+                            background-color:#f7f7f7;
+                            border-radius: 3px; 
+                        }
+                    }
+                                      
+                    .infoBasic
+                    {display: none;
+                        .basic
+                        {
+                            .col-lg-2 ,.col-md-3 , .col-4
+                            {
+                                padding-right: 0px;
+
+                            }
+                            .col-lg-10 ,.col-md-9 , .col-8
+                            {
+                                padding-left: 0px;
+                            }
+                            
+                        .head
+                        {
+                            color:$grey1;
+                            display: inline;
+                        }
+                        .detalis
+                        {
+                            color:$purple;
+                            display: inline;
+                        }
+                        }
+                    }
+                    .education
+                    {   h4
                         {
                             margin-top: 10px;
                         }
-                        .readMore
+                        p
                         {
-                            transition: background-color 0.5s;
-                            a
-                            {
-                                color:$grey1;
-                            }
-                            &:hover
-                            {
-                                background-color:#f7f7f7;
-                                border-radius: 3px; 
-                            }
+                            margin-bottom: 0px;
                         }
                     }
-                    .courses
+                    .skills
                     {
-                        margin-top: 20px;
+                        .skill
+                        { max-height: 20px;
+                            background: #fff;
+                            border-radius: 10px;
+                        }
                     }
-               
+                    
                 }
             }
+        }
+        //End About Me
+
+        //Start Follow
+        .follow
+        {
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+            display: none;
+            .header
+            {   
+                border-bottom: 1px solid $greencolor;
+                padding: 10px;
+                h2
+                { 
+                    color:$greencolor;
+                    display: inline;
+                    i
+                    {
+                    font-size: 20px;
+                    margin-right: 6px;
+                    }
+                }
+                
+            }
+            .body
+            {   padding: 10px;
+                width:100%;
+                overflow: hidden;
+                .body-container
+                {   background-color: $background;
+                    padding: 20px;
+                    margin-top: 20px;
+                }
+                .col-sm-8
+                {
+                    padding-top: 10px; 
+                }
+                #custom-search-input {
+                    margin:0;
+                    margin-top: 10px;
+                    padding: 0;
+                }
+                
+                #custom-search-input .search-query 
+                {
+                    padding-right: 3px;
+                    padding-right: 4px \9;
+                    padding-left: 3px;
+                    padding-left: 4px \9;
+                    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+                
+                    margin-bottom: 0;
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    border-radius: 3px;
+                }
+                
+                #custom-search-input button 
+                {
+                    border: 0;
+                    background: none;
+                    /** belows styles are working good */
+                    padding: 2px 5px;
+                    margin-top: 2px;
+                    position: relative;
+                    left: -28px;
+                    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+                    margin-bottom: 0;
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    border-radius: 3px;
+                    color:$grey1;
+                }
+                
+                .search-query:focus + button {
+                    z-index: 3;   
+                }
+                
+                
+                .person
+                {  margin-top: 10px;
+                    .followImg
+                    {
+                        img
+                        {
+                            width:70px;
+                            height: 70px;
+                            border-radius: 50%;
+                        }
+                    
+                    }
+                    .messageBtn
+                    {
+                        margin-top: 10px;
+                    }
+                    .delete
+                    {
+                        margin-top: 22px;
+                    }
+                    .dropdown-menu
+                    {
+                        margin: 0.4rem 0 0;
+                        background-color: $greencolor;
+                        .arrow {
+                            width: 0;
+                            height: 0;
+                            margin-left: 15px;
+                            border-left: 7px solid transparent;
+                            border-right: 7px solid transparent;
+                            border-bottom: 9px solid $greencolor;
+                            margin-top: -17px;
+                        }
+                        a
+                        {
+                            color:$grey1;
+                            padding: 0.25rem 0.5rem;
+                            svg ,i {
+                                height: 20px;
+                                width: 20px;
+                                fill: #5a6674;
+                                opacity: 0.6;
+                                transition: all .2s ease-in-out;
+                                pointer-events: none;
+                                }
+    
+                        }
+                    }
+                }
+                
+                
+
+            }
+        }
+        //End Follow
+
+        //start Accomplishments
+        .Accomplishments
+        {
+            
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+            display: none;
+            .header
+            {   
+                border-bottom: 1px solid $greencolor;
+                padding: 10px;
+                h2
+                { 
+                    color:$greencolor;
+                    display: inline;
+                    i
+                    {
+                    font-size: 20px;
+                    margin-right: 6px;
+                    }
+                }
+                
+            }
+            .body
+            {   padding: 10px;
+                width:100%;
+                overflow: hidden;
+                .title
+                {
+                    span
+                    {
+                        color:$greencolor;
+                    }
+                }
+                .exam
+                {    border-bottom:1px solid $greencolor;
+                    
+                    .examDetalis
+                    {
+                        margin-top: 10px;
+                    }
+                    .readMore
+                    {
+                        transition: background-color 0.5s;
+                        a
+                        {
+                            color:$grey1;
+                        }
+                        &:hover
+                        {
+                            background-color:#f7f7f7;
+                            border-radius: 3px; 
+                        }
+                    }
+                }
+                .courses
+                {
+                    margin-top: 20px;
+                }
+            
+            }
+        }
+        //end Accomplishments
+        
     }
 }
-.popUpInfo
+
+// End  Profile 
+.popup
 {
-   
     .modal-dialog
     {
         max-width: 700px !important;
@@ -1222,6 +1235,32 @@ body
                     color:$greencolor;
                     text-shadow: none;
                 }
+            }
+            .modal-body
+            {
+               
+            }
+            .modal-footer
+            {   display: block;
+                border-top:none;
+                .save
+                {
+                    background-color: $greencolor;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+.popUpInfo
+{
+   
+    .modal-dialog
+    {
+        .modal-content
+        {
+            .modal-header
+            {
             }
             .modal-body
             {
@@ -1254,21 +1293,44 @@ body
                 }
                
             }
-            .modal-footer
-            {   display: block;
-                border-top:none;
-                .save
-                {
-                    background-color: $greencolor;
-                    color: #fff;
+        }
+    }
+} 
+.popUpEduc
+{
+    .modal-dialog
+    {
+        .modal-content
+        {
+            .modal-header
+            {
+
+            }
+            .modal-body
+            {
+                .educEdit
+                {    padding: 30px;
+                       margin-top: 20px;
+                       border: 1px solid #eee;
+                       h3
+                       {
+                           color:$greencolor;
+                           margin-bottom: 10px;
+                       }
+                       .fromTo
+                       {
+                           margin-top: 10px;
+                           h5{
+                              text-align: center; 
+                           }
+
+                       }
                 }
             }
         }
+        
     }
 }
-
-// End  Profile 
-
 
 
 
