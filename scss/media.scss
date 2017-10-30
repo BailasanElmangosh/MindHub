@@ -95,240 +95,355 @@
                width: 100px !important;
             }
     }
-        header .btnSignLog .btn 
-   {
-    width: 100% !important;
-    height: 20%;
-    
-    }
+    header .btnSignLog .btn 
+        {
+        width: 100% !important;
+        height: 20%;
+        
+        }
     //End landing page
      //start Profile page
-
-
- .profile
- {
-     .box
-     { height: 150px;
-       .profileImg
-       {
-        width: 110px;
-        height: 110px;
-        margin-top: -15px;
-       }
-       .info
-       {margin-right: 0px;
-        margin-left: -32px;
-         h2 
-         {
-           font-size: 1.5em;
-         }
-         p
-         {
-           
-         }
-         .info-count
-         {
-             padding-left: 0px;
-         }
-       }
-      
-       .count
-       {
-       
-        margin-left: -13px;
-        .col-sm-12
+    .profile
+    {
+        .box
+        { height: 150px;
+        .profileImg
         {
-           
+            width: 110px;
+            height: 110px;
+            margin-top: -15px;
         }
-          .iconbg
-          { 
+        .info
+        {margin-right: 0px;
+            margin-left: -32px;
+            h2 
+            {
+            font-size: 1.5em;
+            }
+            p
+            {
             
-             .icon
-             {  
-                 svg ,img,i
-                 {
-                   
-                 }
-             }
-          }
-          .data
-          {
-            
-             .num
-             {
-               
-             }
-             .name
-             {
-             }
-          }
-          
-       }
-       
-     }
-     .profileBody
-     {
-       .overview
-       {
-          .header
-          {
-              h3
-              {
-                  font-size:1rem; 
-              }
-          }
-        .boxOverview
+            }
+            .info-count
+            {
+                padding-left: 0px;
+            }
+        }
+        
+        .count
         {
-           .text
-           {
-               font-size:12px;
-               
-           }
-        } 
-       }
-       .question 
-       {    margin-top: 20px;
-         .body
-         {
-             .body-container
-             {   
-                 .post
-                 {
-                     .image
-                     {
-                         margin-bottom: 10px;
-                     }
-      
-                 }    font-size: 12px;
-             }
-         }
-       }
-       .aboutMe
-       {
-           margin-top: 20px;
-        .header
-           {   
-               h2
-               { 
-                   i
-                   {
-                   }
-               }
-               
-           }
-           .body
-           {  
-               .body-container
-               {  
-                 h3
-                 {
-               
-                     span
-                     {
-                        
-                     }
-                 }
-                 .readMore
-                 {
-                   a
-                   {
-                   }
-                   &:hover
-                   {
-                   }
-                 }
-                 .infoBasic
-                 {
-                   .basic
-                   {
-                     .head
-                     {
-                         
-                     }
-                     .detalis
-                     {   &.mail
-                         {
-                            font-size: 13px;
-                         }
-                         &.birth
-                         {
-                            margin-left: 6px;
-                         }
-                     }
-                   }
-                 }
-                .education
-                {   h4
+        
+            margin-left: -13px;
+            .col-sm-12
+            {
+            
+            }
+            .iconbg
+            { 
+                
+                .icon
+                {  
+                    svg ,img,i
                     {
-                      
-                    }
-                    p
-                    {
-                     
+                    
                     }
                 }
-                .skills
+            }
+            .data
+            {
+                
+                .num
                 {
-                    .skill
-                    { 
+                
+                }
+                .name
+                {
+                }
+            }
+            
+        }
+        
+        }
+        .profileBody
+        {
+        .overview
+        {
+            .header
+            {
+                h3
+                {
+                    font-size:1rem; 
+                }
+            }
+            .boxOverview
+            {
+            .text
+            {
+                font-size:12px;
+                
+            }
+            } 
+        }
+        .question 
+        {    margin-top: 20px;
+            .body
+            {
+                .body-container
+                {   
+                    .post
+                    {
+                        .image
+                        {
+                            margin-bottom: 10px;
+                        }
+        
+                    }    font-size: 12px;
+                }
+            }
+        }
+        .aboutMe
+        {
+            margin-top: 20px;
+            .header
+            {   
+                h2
+                { 
+                    i
+                    {
                     }
                 }
                 
-               }
-           }
-       }
-       .follow
-       {
-        margin-top: 20px;
-        .header
-        {   
-            h2
+            }
+            .body
+            {  
+                .body-container
+                {  
+                    h3
+                    {
+                
+                        span
+                        {
+                            
+                        }
+                    }
+                    .readMore
+                    {
+                    a
+                    {
+                    }
+                    &:hover
+                    {
+                    }
+                    }
+                    .infoBasic
+                    {
+                    .basic
+                    {
+                        .head
+                        {
+                            
+                        }
+                        .detalis
+                        {   &.mail
+                            {
+                                font-size: 13px;
+                            }
+                            &.birth
+                            {
+                                margin-left: 6px;
+                            }
+                        }
+                    }
+                    }
+                    .education
+                    {   h4
+                        {
+                        
+                        }
+                        p
+                        {
+                        
+                        }
+                    }
+                    .skills
+                    {
+                        .skill
+                        { 
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .follow
+        {
+            margin-top: 20px;
+            .header
+            {   
+                h2
+                { 
+                    i
+                    {
+                    
+                    }
+                }
+                
+            }
+            .body
             { 
+                .person
+                {  margin-top: 20px;
+                    background-color: #eee;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                .followImg
+                {
+                    text-align: center;
+                }
+                .followInfo
+                {
+                    text-align: center; 
+                }
+                .messageBtn
+                {
+                    margin-top: 0px;
+                }
+                .delete
+                {
+                    margin-top: 12px;
+                }
+            }
+            } 
+        }
+        }
+        
+    }
+    .modal-dialog
+    {
+        .modal-content
+        {
+            .modal-header
+            {
+
+            }
+            .modal-body
+            {
+                img
+                {
+                }
                 i
                 {
-                
+                    right: -21px !important;
                 }
-            }
+                .line
+                { 
+                    textarea
+                    {
+                        width:400px !important;
+                    }
+                }
             
+            }
         }
-        .body
-        { 
-            .person
-            {  margin-top: 20px;
-                background-color: #eee;
-                padding-top: 10px;
-                padding-bottom: 10px;
-            .followImg
-            {
-                text-align: center;
-            }
-            .followInfo
-            {
-                text-align: center; 
-            }
-            .messageBtn
-            {
-                margin-top: 0px;
-            }
-            .delete
-            {
-                margin-top: 12px;
-            }
-           }
-        } 
-      }
-     }
-}
-    
- 
+    }
  //End start Profile page
 }
 @media (min-width: 576px)
-{
-.modal-dialog {
-    max-width: 350px;
-}
+{   .landingPage
+    {
+         .modal-dialog {
+        max-width: 350px;
+        }
+    }
+       
 
+}
+@media (min-width:100px)and (max-width: 430px)
+{
+    .modal-dialog
+    {
+        .modal-content
+        {
+            .modal-header
+            {
+    
+            }
+            .modal-body
+            {
+                img
+                {
+                }
+                i
+                {
+                    right: -41px !important;
+                }
+                .line
+                { 
+                    textarea
+                    {
+                        width:350px !important;
+                    }
+                }
+               
+            }
+        }
+    }
+}
+@media (min-width: 575px) and(max-width: 610px)
+{
+    .modal-dialog
+    {
+        .modal-content
+        {
+            .modal-header
+            {
+
+            }
+            .modal-body
+            {
+                img
+                {
+                }
+                i
+                {
+                    right: -8px !important;
+                }
+                .line
+                { 
+                }
+               
+            }
+        }
+    }
+    
+}
+@media (min-width: 610px) and(max-width: 690px)
+{
+    .modal-dialog
+    {
+        .modal-content
+        {
+            .modal-header
+            {
+
+            }
+            .modal-body
+            {
+                img
+                {
+                }
+                i
+                {
+                    right: 0px !important;
+                }
+                .line
+                { 
+                }
+               
+            }
+        }
+    }
+    
 }
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767px)and(min-width: 574px) 

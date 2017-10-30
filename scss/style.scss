@@ -1205,6 +1205,63 @@ body
             }
     }
 }
+.popUpInfo
+{
+    .modal-dialog
+    {
+        max-width: 700px !important;
+        .modal-content
+        {
+            .modal-header
+            {
+                background-color: $grey1;
+                color: #fff;
+                .Close
+                {
+                    color:$greencolor;
+                    text-shadow: none;
+                }
+            }
+            .modal-body
+            {
+                img
+                {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                }
+                i
+                {
+                    position: absolute;
+                    top: 83px;
+                    right: 12px;
+                }
+                .line
+                { margin-top: 20px;
+                    .title
+                    {
+                        margin-bottom: 0px;
+                    }
+                    textarea
+                    {
+                        width:500px;
+                        height: 100px;
+                    }
+                }
+               
+            }
+            .modal-footer
+            {   display: block;
+                border-top:none;
+                .save
+                {
+                    background-color: $greencolor;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
 
 // End  Profile 
 
