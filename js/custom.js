@@ -179,7 +179,7 @@ $('#followBtn').click(function()
 //show menu delete person
 $('.delete').click(function(){
    
-  $(this).children('.menuDelete').toggleClass('show')
+  $(this).children('.menuDelete').toggleClass('show');
 });
 $('#accompBtn').click(function()
 {
@@ -194,5 +194,21 @@ $('#accompBtn').click(function()
     $('#quesBtn').removeClass('bgColor');
     $('#followBtn').removeClass('bgColor');  
 });
-
+function fixDiv() {
+    var $cache = $('#overview');
+    if ($(window).scrollTop() > 500)
+      $cache.css({
+        'position': 'fixed',
+        'top': '80px',
+        'width':'26%'
+      });
+    else
+      $cache.css({
+         'position': 'relative',
+        'top': 'auto',
+        'width':'100%'
+      });
+  }
+  $(window).scroll(fixDiv);
+  fixDiv();
 })();

@@ -6,7 +6,7 @@ $grey2:#666666;
 $background:#f0f0f0;
 body
 { 
- background-color: $background;height: 2000px;
+ background-color: $background;
 
 }
 .show
@@ -753,6 +753,7 @@ body
         {   padding: 30px;
             background-color: #fff;
             width:100%;
+             transition: height 0.4s;
             .header
             {
                 border-bottom: 1px solid $greencolor
@@ -815,6 +816,7 @@ body
             padding: 10px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
             display: none;
+            margin-bottom: 100px;
             .header
             {   
                 border-bottom: 1px solid $greencolor;
@@ -961,7 +963,7 @@ body
             background-color: #fff;
             padding: 10px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
-            
+            margin-bottom: 100px;
             .header
             {   
                 border-bottom: 1px solid $greencolor;
@@ -1082,6 +1084,7 @@ body
             padding: 10px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
             display: none;
+            margin-bottom: 100px;
             .header
             {   
                 border-bottom: 1px solid $greencolor;
@@ -1215,7 +1218,7 @@ body
         //start Accomplishments
         .Accomplishments
         {
-            
+            margin-bottom: 100px;
             background-color: #fff;
             padding: 10px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
