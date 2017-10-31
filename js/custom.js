@@ -203,7 +203,7 @@ function fixDiv() {
             'top': '80px',
             'width':'26%'
           });
-          if ($(window).width() < 991)
+          if ($(window).width() > 990)
           {
             $cache.css({
                 'position': 'fixed',
@@ -218,6 +218,14 @@ function fixDiv() {
                 'position': 'fixed',
                 'top': '80px',
                 'width':'25%'
+              });
+          }
+          if ($(window).width() < 767)
+          {
+            $cache.css({
+                'position': 'fixed',
+                'top': '80px',
+                'width':'23%'
               });
           }
           if ($(window).width() < 575)
