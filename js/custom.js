@@ -197,17 +197,49 @@ $('#accompBtn').click(function()
 function fixDiv() {
     var $cache = $('#overview');
     if ($(window).scrollTop() > 500)
-      $cache.css({
-        'position': 'fixed',
-        'top': '80px',
-        'width':'26%'
-      });
+    {
+        $cache.css({
+            'position': 'fixed',
+            'top': '80px',
+            'width':'26%'
+          });
+          if ($(window).width() < 991)
+          {
+            $cache.css({
+                'position': 'fixed',
+                'top': '80px',
+                'width':'23%'
+              });
+          }
+          
+          if ($(window).width() < 790)
+          {
+            $cache.css({
+                'position': 'fixed',
+                'top': '80px',
+                'width':'25%'
+              });
+          }
+          if ($(window).width() < 575)
+          {
+            $cache.css({
+                'position': 'relative',
+                'top': 'auto',
+                'width':'100%'
+              });
+          }
+        
+    }
+     
+     
     else
       $cache.css({
          'position': 'relative',
         'top': 'auto',
         'width':'100%'
       });
+     
+     
   }
   $(window).scroll(fixDiv);
   fixDiv();
