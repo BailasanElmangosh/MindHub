@@ -126,10 +126,15 @@ $('#btnMenuProfile').click(function(){
 $('#aboutBtn').click(function()
 {
     $('#aboutMe').show('slow');
+    $(this).addClass('bgColor');
+
     $('#question').hide('slow');
     $('#follow').hide('slow');
-    $('#Accomplishments').hide('slow');    
-    
+    $('#Accomplishments').hide('slow'); 
+
+    $('#quesBtn').removeClass('bgColor');
+    $('#followBtn').removeClass('bgColor');
+    $('#accompBtn').removeClass('bgColor');    
     
 })
 // show in about me readmore
@@ -142,9 +147,15 @@ $('#readMore').click(function(){
 $('#quesBtn').click(function()
 {
     $('#question').show('slow');
+    $(this).addClass('bgColor');
+
     $('#aboutMe').hide('slow');
     $('#Accomplishments').hide('slow');    
     $('#follow').hide('slow');
+
+    $('#aboutBtn').removeClass('bgColor');
+    $('#followBtn').removeClass('bgColor');
+    $('#accompBtn').removeClass('bgColor');    
 });
 //show in Question comment Box
 $('#answer').click(function(){
@@ -154,22 +165,34 @@ $('#answer').click(function(){
 $('#followBtn').click(function()
 {
     $('#follow').show('slow');
+    $(this).addClass('bgColor');
+
     $('#aboutMe').hide('slow');
     $('#question').hide('slow');
     $('#Accomplishments').hide('slow');    
+
+    $('#aboutBtn').removeClass('bgColor');
+    $('#quesBtn').removeClass('bgColor');
+    $('#accompBtn').removeClass('bgColor');    
     
 });
 //show menu delete person
-$('#delete').click(function(){
-    
-  $('#menuDelete').toggleClass('show')
+$('.delete').click(function(){
+   
+  $(this).children('.menuDelete').toggleClass('show')
 });
 $('#accompBtn').click(function()
 {
-    $('#Accomplishments').show('slow');    
+    $('#Accomplishments').show('slow'); 
+    $(this).addClass('bgColor');
+
     $('#question').hide('slow');
     $('#aboutMe').hide('slow');
     $('#follow').hide('slow');
+
+    $('#aboutBtn').removeClass('bgColor');
+    $('#quesBtn').removeClass('bgColor');
+    $('#followBtn').removeClass('bgColor');  
 });
 
 })();

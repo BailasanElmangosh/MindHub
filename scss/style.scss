@@ -430,7 +430,11 @@ body
                     {
                         opacity: 1;
                     }
-                  
+                    &.notifcation 
+                    {
+                        font-size: 24px;
+                        margin-top: 4px;
+                    }
                 }
                 &:hover:not(:last-child)
                 {
@@ -673,11 +677,44 @@ body
                 {
                     width:20px;
                     height: 20px;
-                 
+                  
                 }
                 i
                 {
                     margin-top: 3px;
+                }
+                span {
+                    position: absolute;
+                    display: block;
+                    text-align: center;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    opacity: 0;
+                    background: #929AA3;
+                    color: #fff;
+                    font-size: 9px;
+                    letter-spacing: 1px;
+                    line-height: 1;
+                    text-transform: uppercase;
+                    padding: 4px 7px;
+                    border-radius: 12px;
+                    top: -18px;
+                    transition: all .2s ease-in-out;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: -3px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-top: 4px solid #929AA3;
+                        border-left: 4px solid transparent;
+                        border-right: 4px solid transparent;
+                        transition: all .2s ease-in-out;
+                        }
+                }
+                &:hover span {
+                    opacity: 1;
+                    top: -21px;
                 }
 
             }
@@ -707,6 +744,10 @@ body
     }
     .profileBody
     {   margin-top: 100px;
+        .bgColor
+        {
+            background-color: $greencolor !important;
+        }
         //start overview
         .overview
         {   padding: 30px;
@@ -1135,14 +1176,17 @@ body
                     .dropdown-menu
                     {
                         margin: 0.4rem 0 0;
-                        background-color: $greencolor;
+                        position: relative;
+                        min-width: 85px;
+                        height: 36px;
+                        float: right;
                         .arrow {
                             width: 0;
                             height: 0;
-                            margin-left: 15px;
+                            margin-left: 46px;
                             border-left: 7px solid transparent;
                             border-right: 7px solid transparent;
-                            border-bottom: 9px solid $greencolor;
+                            border-bottom: 9px solid rgba(0,0,0,.15);
                             margin-top: -17px;
                         }
                         a

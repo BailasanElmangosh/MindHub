@@ -29,6 +29,9 @@
   .logoimage {
     margin-left: 25% !important;
   }
+  .navbar .search-form {
+    width: 260px;
+  }
   .btnSignLog {
     margin: 0 auto;
     margin-top: 50% !important;
