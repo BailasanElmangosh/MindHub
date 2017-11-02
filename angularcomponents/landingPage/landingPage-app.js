@@ -1,2 +1,2 @@
 'use strict';
-var landingPage=angular.module('landingPage',['ngMessages']);
+var landingPage=angular.module('landingPage',['ngMessages','ngCookies']);

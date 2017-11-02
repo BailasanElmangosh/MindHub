@@ -1,6 +1,6 @@
 (function () {
     landingPage
-    .controller("landingPageCtrl", function ($scope, signupSrv,$http,loginSrv) {
+    .controller("landingPageCtrl", function ($scope, signupSrv,loginSrv,cookies) {
         $scope.userSignUp = {};
         $scope.userLogin = {};
         $scope.errorsLogin = {};
@@ -8,6 +8,18 @@
         $scope.showSpinnerLogin = false;
         $scope.showSpinnerSign = false;
         $scope.showSuccesspop = false;
+        // $scope.set=function (token)
+        // {
+        //    $cookies.put('token', token);
+        // };
+
+        // $scope.get=function()
+        // {
+        //       alert($cookies.get('token')); 
+        // };
+        // $scope.remove=function()
+        // {  $cookies.remove('token');
+        // };
         $scope.signUp = function () {
             $scope.showSpinnerSign = true;
             signupSrv.signUp($scope.userSignUp)
@@ -28,22 +40,23 @@
         };
 
         $scope.login = function () {
-    
             loginSrv.login($scope.userLogin)
                 .success(function (data, status) {
                     if (data.status =="Success")
-                    {  
-                        alert(data.token);
+                    { 
+                        cookies.set(data.token)
                     }
-                    if (data.status == "Failed") {
+                    if (data.status == "Failed") 
+                    {
                         $scope.errorsLogin = data;
                     }
                 });
         };
-
-
-         
-
+        
+        $scope.token = function () 
+            {
+                cookies.get();
+            };
     });
 
 })();

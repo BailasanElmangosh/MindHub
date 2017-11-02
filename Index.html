@@ -110,8 +110,9 @@
                                         </div>
                                     </div>
                                     <!-- End forget password -->
-
+                                   
                                 </form>
+                                <button ng-click="token()">Token</button>
                             </div>
                             <!-- End Login pop up -->
                             <!--start Sign Up pop up -->
@@ -224,7 +225,10 @@
 
 
         <!-- end page -->
-      
+   
+    
+   
+  
         <script src="js/lib/jquery-3.2.1.min.js"></script>
         <script src="js/lib/popper.min.js"></script>
         <script src="js/lib/bootstrap.min.js"></script>
@@ -233,14 +237,17 @@
         <script src="js/lib/angular/angular.min.js"></script>
         <script src="js/lib/angular/angular-messages.min.js"></script>
         <script src="js/lib/angular/angular-route.min.js"></script>
+        <script src="js/lib/angular/angular-cookies.min.js"></script>
+        
 
         <script src="angularcomponents/landingPage/landingPage-app.js"></script>
         <script src="angularcomponents/landingPage/Srvs/signup.js"></script>
         <script src="angularcomponents/landingPage/Srvs/login.js"></script>
+        <script src="angularcomponents/landingPage/Srvs/cookies.js"></script>        
         <script src="angularcomponents/landingPage/Ctrl/landingPageCtrl.js"></script>
         <!-- <script src="angularcomponents/landingPage/Ctrl/directivejs"></script> -->
-        
-
+      
+      
 
     </body>
     </html>
