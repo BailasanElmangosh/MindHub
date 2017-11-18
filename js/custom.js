@@ -1,4 +1,22 @@
 (function () {
+
+// $('.landingPage').height($(window).height());
+// $(window).resize(function() {
+//     var bodyheight = $(this).innerHeight();
+//     $(".landingPage").innerHeight(bodyheight);
+// });
+function setHeight() {
+    windowHeight = $(window).innerHeight();
+    $('.landingPage').css('height', windowHeight);
+  };
+  setHeight();
+  
+  $(window).resize(function() {
+    setHeight();
+  });
+
+
+
 // sgin up & login function
 $( "#signBtn" ).click(function() 
     {
