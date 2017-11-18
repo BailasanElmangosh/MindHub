@@ -6,7 +6,7 @@ studentProfile.factory("profileDataSrv", function ($http,$cookies) {
                 url: "http://localhost:8178/api/studentprofile",
                 headers: 
                 {   'Content-Type': 'application/json',
-                    'Authorization':' bearer '+ $cookie.get('token')
+                    'Authorization':' bearer '+ $cookies.get('token')
                 }
             })
         }

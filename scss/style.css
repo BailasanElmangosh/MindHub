@@ -589,7 +589,11 @@ body {
   height: 100px;
 }
 
-.profile .box .profileImg {
+.profile .box .img {
+  background-image: url("../images/profile-avatar.jpg");
+}
+
+.profile .box .img .profileImg {
   width: 150px;
   height: 150px;
   border-radius: 50%;
