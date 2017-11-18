@@ -44,7 +44,7 @@
                 .success(function (data, status) {
                     if (data.status =="Success")
                     { 
-                        cookies.set(data.token)
+                        cookies.set('token',data.token)
                     }
                     if (data.status == "Failed") 
                     {
@@ -55,7 +55,7 @@
         
         $scope.token = function () 
             {
-                cookies.get();
+                cookies.get('token');
             };
             
     });
