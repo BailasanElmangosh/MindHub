@@ -8,18 +8,6 @@
         $scope.showSpinnerLogin = false;
         $scope.showSpinnerSign = false;
         $scope.showSuccesspop = false;
-        // $scope.set=function (token)
-        // {
-        //    $cookies.put('token', token);
-        // };
-
-        // $scope.get=function()
-        // {
-        //       alert($cookies.get('token')); 
-        // };
-        // $scope.remove=function()
-        // {  $cookies.remove('token');
-        // };
         $scope.signUp = function () {
             $scope.showSpinnerSign = true;
             signupSrv.signUp($scope.userSignUp)
@@ -27,8 +15,7 @@
                     $scope.showSuccesspop = true;
                     $scope.showSpinnerSign = false;
                     if (data.status =="Success")
-                    {                           angular.element(document.querySelector('#close')).click();
-                 
+                    {   angular.element(document.querySelector('#close')).click();
                         var signupSuccessPopUp = angular.element(document.querySelector('#popupSeccess'));
                         signupSuccessPopUp.modal('show');
                         angular.element(document.querySelector("#signFrm").reset());
@@ -39,12 +26,12 @@
                 });
         };
 
-        $scope.login = function () {
+        $scope.login = function (key) {
             loginSrv.login($scope.userLogin)
                 .success(function (data, status) {
                     if (data.status =="Success")
                     { 
-                        cookies.set('token',data.token)
+                        cookies.set(key,data.token)
                     }
                     if (data.status == "Failed") 
                     {
@@ -53,9 +40,9 @@
                 });
         };
         
-        $scope.token = function () 
+        $scope.token = function (key) 
             {
-                cookies.get('token');
+                cookies.get(key);
             };
             
     });

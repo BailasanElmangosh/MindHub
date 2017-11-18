@@ -9,7 +9,7 @@
 
         get:function(key)
         {
-              alert($cookies.get(key)); 
+             console.log($cookies.get(key)); 
         },
         remove:function(key)
         { 
