@@ -637,14 +637,19 @@ body
         top: -40px;
       background:#fff;
       height: 100px;
-      .profileImg
-      {
-          
-          width:150px;
-          height: 150px;
-          border-radius: 50%;
-          margin-top: -30px;
-          margin-left: -43px;
+      .img
+      {  
+         
+        background-image: url('../images/profile-avatar.jpg');
+        .profileImg
+          {
+            
+            width:150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: -30px;
+            margin-left: -43px;
+          }
       }
       .info
       {
