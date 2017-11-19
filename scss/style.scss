@@ -637,18 +637,15 @@ body
         top: -40px;
       background:#fff;
       height: 100px;
-      .img
-      {  
-         
-        background-image: url('../images/profile-avatar.jpg');
+      img
+      { width:150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-top: -30px;
+        margin-left: -50px;
+          
         .profileImg
           {
-            
-            width:150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-top: -30px;
-            margin-left: -43px;
           }
       }
       .info

@@ -589,16 +589,12 @@ body {
   height: 100px;
 }
 
-.profile .box .img {
-  background-image: url("../images/profile-avatar.jpg");
-}
-
-.profile .box .img .profileImg {
+.profile .box img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   margin-top: -30px;
-  margin-left: -43px;
+  margin-left: -50px;
 }
 
 .profile .box .info h2, .profile .box .info p {
