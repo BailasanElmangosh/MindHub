@@ -1,6 +1,6 @@
 (function () {
     newsFeedApp
-    .controller("newFeedCtrl", function ($scope,$cookies,feedSrv ) {
+    .controller("newFeedCtrl", function ($scope,$cookies,feedSrv,questionsSrv) {
 
         $scope.Feeds ={};
 
@@ -12,6 +12,15 @@
         })
         .error(function(){
         });
-        
-    })
+       
+        $scope.question={};
+        $scope.addQuestion = function(){
+            questionsSrv.Create($scope.question,$cookies.get('token'))
+                .success(function(data){
+                    console.log(data);
+                })
+                .error(function(){})
+        };
+
+    });
 })();

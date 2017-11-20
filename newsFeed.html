@@ -18,7 +18,7 @@
             </style>  
     </head>
 
-    <body ng-app="studentProfile">
+    <body ng-app="newsFeedApp">
          <!-- start NavBar -->
           <nav class="navbar  fixed-top navbar-expand-lg navbar-light bg-light">
             <div class="container">
@@ -153,7 +153,7 @@
           </svg>
           <!-- End svg paths -->
         <!-- end NavBar -->
-        <section class="profile" ng-controller="studentProfileCtrl">
+        <section class="profile" ng-controller="newFeedCtrl">
         
           <div class="container">
             <div class="row justify-content-center">
@@ -261,13 +261,13 @@
                                                                 <div class="boxQus">
                                                                     <div class="row">
                                                                         <div class="col-md-12">
-                                                                            <textarea rows="4" cols="50" placeholder="Add Your Question here ...."></textarea> 
+                                                                            <textarea ng-model="question.QuestionHead" rows="4" cols="50" placeholder="Add Your Question here ...."></textarea> 
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-md-3 ml-md-auto  ">
-                                                                        <button >Ask</button>
+                                                                        <button ng-click="addQuestion()">Ask</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -276,7 +276,7 @@
                                                     </div> 
                                                     <!-- End write Question box --> 
                                                     <!-- start Questions -->
-                                                    <div class="post" ng-repeat="post in profileData.questions">
+                                                    <div class="post" ng-repeat="post in Feeds">
                                                             <div class="row">
                                                                 <div class="col-md-2">
                                                                         <div class="image">
@@ -302,7 +302,10 @@
                                                                                 <div class="row">
                                                                                     <div class="col-lg-2 col-md-3">
                                                                                             <div class="image">
-                                                                                                <img src="images/profile-avatar.jpg">
+                                                                                                <img  ng-src="{{ comment.userImage || 'https:placehold.it/100' }}"/>
+                                                                                                
+                                                                                                <img ng-if="comment.userImage != null" ng-src='https:placehold.it/100/111'/>
+                                                                                        
                                                                                             </div>
                                                                                     </div>
                                                                                     <div class="col-lg-10 col-md-9">
@@ -384,9 +387,11 @@
         <script src="js/lib/angular/angular-route.min.js"></script>
         <script src="js/lib/angular/angular-cookies.min.js"></script>
         
-        <script src="angularcomponents/studentProfile/studentProfile-app.js"></script>
-        <script src="angularcomponents/studentProfile/Ctrl/studentProfileCtrl.js"></script>
-        <script src="angularcomponents/studentProfile/Srvs/profileData.js"></script>
-        
+
+        <script src="angularcomponents/NewsFeed/newsFeed-app.js"></script>
+        <script src="angularcomponents/NewsFeed/Ctrl/newsFeedCtrl.js"></script>
+        <script src="angularcomponents/NewsFeed/Srvs/getFeedSrv.js"></script>
+        <script src="angularcomponents/NewsFeed/Srvs/getFeedSrv.js"></script>
+        <script src="angularcomponents/NewsFeed/Srvs/questionsSrv.js"></script>
     </body>
 </html>

@@ -3,7 +3,7 @@ dashBoard.factory("skillsSrv", function ($http) {
         skillsPost: function (skill) {
             return $http({
                 method: "Post",
-                url: "http://localhost:8178/api/createskill",
+                url: "http://localhost:2449/api/createskill",
                 data: skill,
                 headers: {
                     'Content-Type': 'application/json'
@@ -15,7 +15,7 @@ dashBoard.factory("skillsSrv", function ($http) {
         skillsGet: function () {
             return $http({
                 method: "Get",
-                url: "http://localhost:8178/api/allskills",
+                url: "http://localhost:2449/api/allskills",
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -24,7 +24,7 @@ dashBoard.factory("skillsSrv", function ($http) {
         deleteSkill: function (id) {
             return $http({
                 method: "Get",
-                url: "http://localhost:8178/api/deleteskill/?id="+id,
+                url: "http://localhost:2449/api/deleteskill/?id="+id,
                 headers: {
                     'Content-Type': 'application/json'
                 }
