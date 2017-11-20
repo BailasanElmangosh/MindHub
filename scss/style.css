@@ -982,6 +982,7 @@ body {
 
 .profile .profileBody .aboutMe .body .body-container .skills .skillRow {
   margin-top: 10px;
+  width: 100%;
 }
 
 .profile .profileBody .aboutMe .body .body-container .skills .skillRow .skillCont {
@@ -1261,6 +1262,10 @@ body {
   margin-top: 35px;
 }
 
+.popUpSkill .modal-dialog .modal-content .modal-body .skillRow .skillCont {
+  margin-bottom: 10px;
+}
+
 .popUpSkill .modal-dialog .modal-content .modal-body .skillRow .skillCont .skill {
   float: left;
   position: relative;
@@ -1277,10 +1282,10 @@ body {
   text-decoration: none;
 }
 
-.popUpSkill .modal-dialog .modal-content .modal-body .skillRow .skillCont:hover .skill:before {
-  content: "\00d7";
-  z-index: 1000;
-  color: rgba(107, 13, 10, 0.952);
+.popUpSkill .modal-dialog .modal-content .modal-body .skillRow .skillCont .skill .btnDelete {
+  background-color: transparent;
+  border-color: transparent;
+  color: #e40b0b;
 }
 
 .popUpSkill .modal-dialog .modal-content .modal-body .skillRow .skillCont .delete {

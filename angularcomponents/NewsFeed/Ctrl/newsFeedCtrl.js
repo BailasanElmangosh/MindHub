@@ -4,10 +4,12 @@
 
         $scope.Feeds ={};
 
+        $scope.studentData={};
         feedSrv.getFeed($cookies.get('token'))
         .success(function(data){
             if(data.status=="Success"){
                 $scope.Feeds =data.feed;
+                $scope.studentData = data.studentData;
             }
         })
         .error(function(){
@@ -17,7 +19,9 @@
         $scope.addQuestion = function(){
             questionsSrv.Create($scope.question,$cookies.get('token'))
                 .success(function(data){
-                    console.log(data);
+                    data.question.image = $scope.studentData.image;
+                    $scope.Feeds.unshift(data.question);  
+                    $scope.question.QuestionHead = '';                  
                 })
                 .error(function(){})
         };

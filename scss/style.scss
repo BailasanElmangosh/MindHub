@@ -1051,6 +1051,7 @@ body
                          .skillRow
                         { 
                             margin-top: 10px;
+                            width: 100%;
                             .skillCont
                             {
                                 margin-bottom: 10px;
@@ -1412,8 +1413,10 @@ body
             {
                 .skillRow
                 {   margin-top: 35px;
+                   
                     .skillCont
                     {
+                        margin-bottom: 10px;
                         .skill
                         {  float:left;
                             position:relative;
@@ -1428,22 +1431,11 @@ body
                             {
                                 text-decoration: none;
                             }
-                        }
-                        &:hover 
-                        { 
-                            .skill
+                            .btnDelete
                             {
-                                // background-color: #666666;
-                                // opacity: 0.2;
-                                // .text
-                                // {display: none;}
-                                &:before
-                                {
-                                    content: "\00d7";
-                                    z-index: 1000;
-                                    color:rgba(107, 13, 10, 0.952);
-                                }
-                                
+                                background-color:transparent;
+                                border-color: transparent; 
+                                color: rgb(228, 11, 11);
                             }
                         }
                         .delete
