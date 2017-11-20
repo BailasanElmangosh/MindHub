@@ -3,7 +3,8 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
            editData: function (data) {
             return $http({
                 method: "Post",
-                url: "http://localhost:2449/api/editstudentprofile"+data,
+                url: "http://localhost:2449/api/editstudentprofile",
+                data:data,
                 headers: 
                 {   'Content-Type': 'application/json',
                     'Authorization':' bearer '+ $cookies.get('token')
@@ -33,12 +34,14 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
                 });
 
             },
-            deleteSkill: function (id) {
+            deleteSkill: function (data) {
                 return $http({
-                    method: "Get",
-                    url: "http://localhost:2449/api/deleteskill/?id="+id,
+                    method: "Post",
+                    url: "http://localhost:2449/api/deletestudentskill",
+                    data:data,
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'Authorization':' bearer '+ $cookies.get('token'),
                     }
                 });
             }

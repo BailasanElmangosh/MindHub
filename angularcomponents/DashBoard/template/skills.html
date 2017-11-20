@@ -16,7 +16,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                 <th>ID</th> 
+                                <th>ID</th> 
                                 <th>Skills</th>                          
                                 <th>Delete</th>
                             </tr>
@@ -25,10 +25,11 @@
                             <tr ng-repeat="skill in getskill" >
                                 <td>{{skill.id}}</td>
                                 <td>{{skill.name}}</td>
-                                <td><button class="btn-danger" ng-click="delete(getskill,skill,skill.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
-
+                                <td><button class="btn-danger" ng-click="delete(getskill,skill,skill.id)">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </button>
+                                </td>
                             </tr>
-                           
                         </tbody>
                     </table>
                 </div>
