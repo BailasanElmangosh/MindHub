@@ -984,6 +984,10 @@ body {
   margin-top: 10px;
 }
 
+.profile .profileBody .aboutMe .body .body-container .skills .skillRow .skillCont {
+  margin-bottom: 10px;
+}
+
 .profile .profileBody .aboutMe .body .body-container .skills .skillRow .skillCont .skill {
   float: left;
   position: relative;

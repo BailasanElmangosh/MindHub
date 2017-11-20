@@ -34,21 +34,6 @@
       });
 
 
-
-
-       // delete skill
-
-       $scope.remove = function(array, index){
-        array.splice($scope.getsubCategorys.indexOf(index), 1);
-        }
-       $scope.delete=function(array, index ,id){
-        $scope.remove(array, index);
-        subCategorySrv.DeleteSubCategory( id)
-        .success(function(data, status){
-       
-        });
-                
-              };
        
       });
      
