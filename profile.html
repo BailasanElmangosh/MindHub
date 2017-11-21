@@ -77,7 +77,7 @@
                  
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/newsFeed.html">
                           <i class="fa fa-home" aria-hidden="true"></i>
                       Home 
                       <span class="sr-only">(current)</span>
@@ -173,8 +173,8 @@
                                         <div class="col-md-4 mr-md-auto col-sm-6">
                                             <div class="row">
                                                 <div class="col-sm-12">
-                                                    <h2>{{profileData.username}}</h2>
-                                                    <p>{{profileData.title}}</p>
+                                                    <h2 ng-bind="profileData.username" ></h2>
+                                                     <p>{{profileData.title}}</p>   
                                                 </div>
                                             </div>
                                         </div>
@@ -355,107 +355,107 @@
                                                             <h3><span>I</span>nfo</h3>
                                                         </div>
                                                         <div class="col-2">
-                                                        <a data-toggle="modal" data-target="#infoEdit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                        <!-- Model EditInfo -->
-                                                        <div class="modal fade popUpInfo popup" id="infoEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                                <div class="modal-dialog" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                    <h5 class="modal-title" id="exampleModalLabel">Edit Info</h5>
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                        <span aria-hidden="true">&times;</span>
-                                                                    </button>
-                                                                    </div>
-                                                                    <div class="modal-body">
-                                                                    <div class="row justify-content-center">
-                                                                        <div class="col-2">
-                                                                            <img src="images\profile-avatar.jpg">
-                                                                            <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row line">
-                                                                        <div class="col-sm-6">
-                                                                            <div class="row">
-                                                                                <div class="col-sm-12">
-                                                                                    <p class="title">Name</p>
-                                                                                </div>
+                                                            <a data-toggle="modal" data-target="#infoEdit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                                            <!-- Model EditInfo -->
+                                                            <div class="modal fade popUpInfo popup" id="infoEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                    <div class="modal-dialog" role="document">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <h5 class="modal-title" id="exampleModalLabel">Edit Info</h5>
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                    <span aria-hidden="true">&times;</span>
+                                                                                </button>
                                                                             </div>
-                                                                            <div class="row">
-                                                                                <div class="col-sm-12">
-                                                                                    <input type="text" class="form-control"  value="{{profileData.username}}">
-                                                                                    <!-- ng-model="editProfile.username" -->
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-sm-6">
-                                                                            <div class="row">
-                                                                                <div class="col-sm-12">
-                                                                                    <p class="title">Title</p>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-sm-12">
-                                                                                    <input type="text" class="form-control" ng-model="editProfile.title" value="{{profileData.title}}">
-                                                                                </div>
-                                                                            </div>      
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row line">
-                                                                            <div class="col-sm-6">
-                                                                                <div class="row">
-                                                                                    <div class="col-sm-12">
-                                                                                        <p class="title">Gender</p>
+                                                                            <div class="modal-body">
+                                                                                <div class="row justify-content-center">
+                                                                                    <div class="col-2">
+                                                                                        <img src="images\profile-avatar.jpg">
+                                                                                        <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="row">
+                                                                                <div class="row line">
+                                                                                    <div class="col-sm-6">
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-12">
+                                                                                                <p class="title">Name</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-12">
+                                                                                                <input type="text" class="form-control"  value="{{profileData.username}}">
+                                                                                                <!-- ng-model="editProfile.username" -->
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-12">
+                                                                                                <p class="title">Title</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-12">
+                                                                                                <input type="text" class="form-control" ng-model="editProfile.title" value="{{profileData.title}}">
+                                                                                            </div>
+                                                                                        </div>      
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row line">
+                                                                                        <div class="col-sm-6">
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-12">
+                                                                                                    <p class="title">Gender</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-12">
+                                                                                                    <select class="form-control" id="exampleSelect1" required name="Gender"  > 
+                                                                                                        <option selected>{{profileData.gender}}</option>
+                                                                                                        <option ng-if="profileData.gender=='Female'">Male</option>
+                                                                                                        <option ng-if="profileData.gender=='Male'">Female</option>
+                                                                                                        <!-- ng-model="editProfile.gender"  -->
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-sm-6">
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-12">
+                                                                                                    <p class="title">BirthDate</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-12">
+                                                                                                        <input type="tel" class="form-control" name="bithDate" id="birthdate" required placeholder="MM/DD/YYYY" data-inputLength="0"value="{{profileData.birthDate}}" />
+                                                                                                        <!-- ng-model="editProfile.birthDate"  -->
+                                                                                                </div>
+                                                                                            </div>      
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="row line">
                                                                                     <div class="col-sm-12">
-                                                                                        <select class="form-control" id="exampleSelect1" required name="Gender"  > 
-                                                                                            <option selected>{{profileData.gender}}</option>
-                                                                                            <option ng-if="profileData.gender=='Female'">Male</option>
-                                                                                            <option ng-if="profileData.gender=='Male'">Female</option>
-                                                                                            <!-- ng-model="editProfile.gender"  -->
-                                                                                        </select>
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-12">
+                                                                                            <p class="title" >Summary</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-12">
+                                                                                                <textarea class="form-control" ng-model="editProfile.info">{{profileData.info}}</textarea>
+                                                                                            </div>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="col-sm-6">
-                                                                                <div class="row">
-                                                                                    <div class="col-sm-12">
-                                                                                        <p class="title">BirthDate</p>
+                                                                            <div class="modal-footer">
+                                                                                <div class="row justify-content-center">
+                                                                                    <div class="col-sm-3">
+                                                                                        <button type="button" class="btn save" ng-click="savedata()">Save changes</button>
                                                                                     </div>
-                                                                                </div>
-                                                                                <div class="row">
-                                                                                    <div class="col-sm-12">
-                                                                                            <input type="tel" class="form-control" name="bithDate" id="birthdate" required placeholder="MM/DD/YYYY" data-inputLength="0"value="{{profileData.birthDate}}" />
-                                                                                            <!-- ng-model="editProfile.birthDate"  -->
-                                                                                    </div>
-                                                                                </div>      
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="row line">
-                                                                        <div class="col-sm-12">
-                                                                            <div class="row">
-                                                                                <div class="col-sm-12">
-                                                                                <p class="title" >Summary</p>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-sm-12">
-                                                                                    <textarea class="form-control" ng-model="editProfile.info">{{profileData.info}}</textarea>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    </div>
-                                                                    <div class="modal-footer">
-                                                                    <div class="row justify-content-center">
-                                                                        <div class="col-sm-3">
-                                                                            <button type="button" class="btn save" ng-click="savedata()">Save changes</button>
-                                                                        </div>
-                                                                    </div>
-                                                                    </div>
-                                                                </div>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -539,66 +539,26 @@
                                                             <h3><span>E</span>ducation</h3>
                                                         </div>
                                                         <div class="col-2">
-                                                        <a data-toggle="modal" data-target="#educEdit"> <i class="fa fa-pencil-square-o" aria-hidden="true"  ></i></a> 
+                                                            <a data-toggle="modal" data-target="#educEdit"> <i class="fa fa-pencil-square-o" aria-hidden="true"  ></i></a> 
                                                             <div class="modal fade popup popUpEduc" id="educEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                                     <div class="modal-dialog" role="document">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                        <h5 class="modal-title" id="exampleModalLabel">Education</h5>
-                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                        </button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <div class="educEdit">
-                                                                                <div class="row">
-                                                                                    <div class="col-sm-12">
-                                                                                        <h3 class="">University </h3>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="row">
-                                                                                    <div class="col-sm-6">
-                                                                                        <input type="text" class="form-control" placeholder="University Name" ng-model="editProfile.university" value="{{profileData.university}}">
-                                                                                    </div>
-                                                                                </div>  
-                                                                                <div class="row justify-content-center fromTo">
-                                                                                <div class="col-sm-3">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <h5 class="modal-title" id="exampleModalLabel">Education</h5>
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                    <span aria-hidden="true">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <div class="educEdit">
                                                                                     <div class="row">
                                                                                         <div class="col-sm-12">
-                                                                                            <h5>From</h5>
+                                                                                            <h3 class="">University </h3>
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="row">
-                                                                                            <div class="col-sm-12">
-                                                                                                <input type="text" class="form-control" ng-model="editProfile.universtyYearFrom" value={{profileData.universtyYearFrom}}>
-                                                                                                
-                                                                                            </div>
-                                                                                        </div>  
-                                                                                    </div>
-                                                                                    <div class="col-sm-3">
-                                                                                        <div class="row">
-                                                                                            <div class="col-sm-12">
-                                                                                                <h5>To</h5>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="row">
-                                                                                            <div class="col-sm-12">
-                                                                                                    <input type="text" class="form-control" ng-model="editProfile.universtyYearTo" value="{{profileData.universtyYearTo}}">
-                                                                                            </div>
-                                                                                        </div>    
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!-- school -->
-                                                                            <div class="educEdit">
-                                                                                    <div class="row">
-                                                                                            <div class="col-sm-12">
-                                                                                                <h3>School </h3>
-                                                                                            </div>
-                                                                                    </div>
-                                                                                    <div class="row ">
                                                                                         <div class="col-sm-6">
-                                                                                            <input type="text" class="form-control" placeholder="School Name"ng-model="editProfile.school" value="{{profileData.school}}" >
+                                                                                            <input type="text" class="form-control" placeholder="University Name" ng-model="editProfile.university" value="{{profileData.university}}">
                                                                                         </div>
                                                                                     </div>  
                                                                                     <div class="row justify-content-center fromTo">
@@ -609,9 +569,9 @@
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="row">
-                                                                                                <div class="col-sm-12">
-                                                                                                        <input type="text" class="form-control" ng-model="editProfile.schholYearFrom" value="{{profileData.schholYearFrom}}">
-                                                                                                </div>
+                                                                                                    <div class="col-sm-12">
+                                                                                                        <input type="text" class="form-control" ng-model="editProfile.universtyYearFrom" value={{profileData.universtyYearFrom}}>
+                                                                                                    </div>
                                                                                             </div>  
                                                                                         </div>
                                                                                         <div class="col-sm-3">
@@ -622,23 +582,62 @@
                                                                                             </div>
                                                                                             <div class="row">
                                                                                                 <div class="col-sm-12">
-                                                                                                        <input type="text" class="form-control" ng-model="editProfile.schholYearTo" value="{{profileData.schholYearTo}}">
+                                                                                                        <input type="text" class="form-control" ng-model="editProfile.universtyYearTo" value="{{profileData.universtyYearTo}}">
                                                                                                 </div>
                                                                                             </div>    
                                                                                         </div>
-                                                                                    </div> 
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- school -->
+                                                                                <div class="educEdit">
+                                                                                        <div class="row">
+                                                                                                <div class="col-sm-12">
+                                                                                                    <h3>School </h3>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                        <div class="row ">
+                                                                                            <div class="col-sm-6">
+                                                                                                <input type="text" class="form-control" placeholder="School Name"ng-model="editProfile.school" value="{{profileData.school}}" >
+                                                                                            </div>
+                                                                                        </div>  
+                                                                                        <div class="row justify-content-center fromTo">
+                                                                                            <div class="col-sm-3">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-sm-12">
+                                                                                                        <h5>From</h5>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-sm-12">
+                                                                                                            <input type="text" class="form-control" ng-model="editProfile.schholYearFrom" value="{{profileData.schholYearFrom}}">
+                                                                                                    </div>
+                                                                                                </div>  
+                                                                                            </div>
+                                                                                            <div class="col-sm-3">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-sm-12">
+                                                                                                        <h5>To</h5>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-sm-12">
+                                                                                                            <input type="text" class="form-control" ng-model="editProfile.schholYearTo" value="{{profileData.schholYearTo}}">
+                                                                                                    </div>
+                                                                                                </div>    
+                                                                                            </div>
+                                                                                        </div> 
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <div class="row justify-content-center">
+                                                                                    <div class="col-sm-3">
+                                                                                        <button type="button" class="btn save" ng-click="savedata()">Save changes</button>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="modal-footer">
-                                                                        <div class="row justify-content-center">
-                                                                            <div class="col-sm-3">
-                                                                                <button type="button" class="btn save" ng-click="savedata()">Save changes</button>
-                                                                            </div>
-                                                                        </div>
-                                                                        </div>
                                                                     </div>
-                                                                    </div>
-                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <!-- End header -->
@@ -662,19 +661,19 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="row">
-                                                                                    <div class=" col-12">
-                                                                                            <p>{{profileData.universtyYearFrom}}-{{profileData.universtyYearTo}}</p>
-                                                                                    </div>
+                                                                                <div class=" col-12">
+                                                                                        <p>{{profileData.universtyYearFrom}}-{{profileData.universtyYearTo}}</p>
+                                                                                </div>
                                                                             </div>
                                                                         
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                            <h4>School</h4>
-                                                                        </div>
+                                                                    <div class="col-sm-12">
+                                                                        <h4>School</h4>
                                                                     </div>
+                                                                </div>
                                                                 <div class="row">
                                                                     <div class="col-md-1 col-2">
                                                                         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
@@ -752,6 +751,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        </div>
                                                     </div>
                                                     <!-- End header -->
                                                     <div class=" col-sm-12">
@@ -773,7 +773,7 @@
                                         </div>
                                     </div>
                             </div>
-                            <!-- start About Me -->
+                            <!-- End About Me -->
                             <!-- start Question -->
                             <div  class="question" id="question">
                                 <div class="row">
@@ -1029,15 +1029,7 @@
                                                         </div>
                                                         <div class="col-6">
                                                             <h5>{{exam.studentDegree}}</h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row examDetalis">
-                                                        <div class="col-6">
-                                                            <h5>Front End</h5>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <h5>70%</h5>
-                                                        </div>
+                                                        </div>  
                                                     </div>
                                                     <!-- start readMore -->
                                                     <div class="row">
@@ -1075,7 +1067,7 @@
                             <!-- End Accomplishments -->
                         </div>
                             
-                    </div>      
+                        </div>      
                     </div>
                </div>
                <!-- End profile container --> 

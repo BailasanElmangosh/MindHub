@@ -77,7 +77,7 @@
                  
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/newsFeed.html">
                           <i class="fa fa-home" aria-hidden="true"></i>
                       Home 
                       <span class="sr-only">(current)</span>
@@ -106,7 +106,7 @@
                       </a>
                       <div class="dropdown-menu" id="menuProfile">
                           <div class="arrow"></div>
-                        <a class="dropdown-item" href="#"> 
+                        <a class="dropdown-item" href="/profile.html"> 
                           <svg class="edit-pen-title">
                             <use xlink:href="#user"></use>
                           </svg>
@@ -155,7 +155,7 @@
         <!-- end NavBar -->
         <section class="profile" ng-controller="newFeedCtrl">
         
-          <div class="container">
+          <div class="container-fluid">
             <div class="row justify-content-center">
                  <!-- start profile nav -->
                 <div class="col-sm-12 col-12">
@@ -165,13 +165,17 @@
                     <div class="profileBody">
                         <div class="row">
                         <!-- start Overview --> 
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <div class="overview" id="overview">
                                 <div class="header">
-                                    <h3>Profile Overview</h3>
+                                    <h3>Student Feed</h3>
+                                    
                                 </div>
                                 <div class="body">
-                                    <div class="boxOverview">
+                                        <img src="images/profile-avatar.jpg" height="75"  width="70">                                        
+                                       <h3> {{studentData.username}}</h3>
+                                       <h5> {{studentData.title}}</h3>
+                                    <!-- <div class="boxOverview">
                                         <div class="row">
                                             <div class="col-lg-2 col-md-3 col-sm-4 col-4 ">
                                             <div class="icon">
@@ -227,12 +231,12 @@
                                                 <button class="text visible-sm" id="accompBtn">Accomp.</button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 </div>
                             </div>
                         <!-- End Overview -->
-                        <div class="col-sm-8 col-12">
+                        <div class="col-sm-9 col-12">
                             <!-- start Question -->
                             <div  class="question" id="question" style="display:block">
                                 <div class="row">

@@ -32,10 +32,7 @@
                     if (data.status =="Success")
                     { 
                         cookies.set(key,data.token)
-                    }
-                    if (data.status == "Failed") 
-                    {
-                        $scope.errorsLogin = data;
+                        window.location ="/profile.html"
                     }
                 });
         };
