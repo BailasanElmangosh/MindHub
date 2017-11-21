@@ -28,7 +28,10 @@
                     info:$scope.editProfile.info, 
                     title:$scope.editProfile.title, 
                     applicationUserId:$scope.editProfile.userId,
-                    id:$scope.editProfile.profileId
+                    id:$scope.editProfile.profileId,
+                    username:$scope.editProfile.username,
+                    gender:$scope.editProfile.gender,
+                    birthdate:$scope.editProfile.birthdate
                    
                  }
                  console.log($scope.editProfile);

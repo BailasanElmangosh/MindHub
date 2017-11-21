@@ -382,7 +382,7 @@
                                                                                         </div>
                                                                                         <div class="row">
                                                                                             <div class="col-sm-12">
-                                                                                                <input type="text" class="form-control"  value="{{profileData.username}}">
+                                                                                                <input type="text" class="form-control" ng-model="editProfile.username"  value="{{profileData.username}}">
                                                                                                 <!-- ng-model="editProfile.username" -->
                                                                                             </div>
                                                                                         </div>
@@ -409,11 +409,11 @@
                                                                                             </div>
                                                                                             <div class="row">
                                                                                                 <div class="col-sm-12">
-                                                                                                    <select class="form-control" id="exampleSelect1" required name="Gender"  > 
+                                                                                                    <select class="form-control" id="exampleSelect1" ng-model="editProfile.gender" required name="Gender"  > 
                                                                                                         <option selected>{{profileData.gender}}</option>
                                                                                                         <option ng-if="profileData.gender=='Female'">Male</option>
                                                                                                         <option ng-if="profileData.gender=='Male'">Female</option>
-                                                                                                        <!-- ng-model="editProfile.gender"  -->
+                                                                                                        <!--   -->
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
@@ -426,8 +426,8 @@
                                                                                             </div>
                                                                                             <div class="row">
                                                                                                 <div class="col-sm-12">
-                                                                                                        <input type="tel" class="form-control" name="bithDate" id="birthdate" required placeholder="MM/DD/YYYY" data-inputLength="0"value="{{profileData.birthDate}}" />
-                                                                                                        <!-- ng-model="editProfile.birthDate"  -->
+                                                                                                        <input type="tel" class="form-control" name="bithDate" ng-model="editProfile.birthDate" id="birthdate" required placeholder="MM/DD/YYYY" data-inputLength="0"value="{{profileData.birthDate}}" />
+                                                                                                        <!--   -->
                                                                                                 </div>
                                                                                             </div>      
                                                                                         </div>
