@@ -32,7 +32,6 @@
                     username:$scope.editProfile.username,
                     gender:$scope.editProfile.gender,
                     birthdate:$scope.editProfile.birthdate
-                   
                  }
                  console.log($scope.editProfile);
                  console.log($scope.somedata);
