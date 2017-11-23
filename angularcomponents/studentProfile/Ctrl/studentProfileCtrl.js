@@ -95,6 +95,32 @@
                     });
                             
                 };
-    });
+               
+               //upload Image
+            //    $scope.url={};
+            //    var url =$scope.url.img
+            //    console.log(url);
+            //    var namesArr = [];
+            //    $scope.fileNameChanged = function (ele) {
+            //     var files = ele.files;
+            //     console.log(files)
+            //     var l = files.length;
+            //   }
+                // $scope.uploadimage=function(ele)
+                // {   console.log(ele.files);
+                //     var fd= new FormData();
+                //     fd.append('file',ele.files)
+                //     fd.append('name',"bailasan")
+                //     profileEditSrv.uploadImage(fd)
+                //     .success(function(data, status){
+                //         if(status="Success")
+                //         {
+                //         }
+                //     });
 
+                // };
+               console.log($cookies.get('token'))
+   
+            });
+             
 })();

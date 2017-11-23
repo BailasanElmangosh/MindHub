@@ -369,8 +369,17 @@
                                                                             <div class="modal-body">
                                                                                 <div class="row justify-content-center">
                                                                                     <div class="col-2">
-                                                                                        <img src="images\profile-avatar.jpg">
-                                                                                        <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
+                                                                                        <img  ng-if="profileData.gender=='Female'" ng-src="{{profileData.image||FemaleImg }}">   
+                                                                                        <img  ng-if="profileData.gender=='Male'" ng-src="{{profileData.image||maleImg}}">
+                                                                                       
+                                                                                        <form id="imageUploadForm" enctype="multipart/form-data">
+                                                                                            <input type="file" name="file"  id="ImageBrowse"multiple  />
+                                                                                            <!-- onchange="angular.element(this).scope().uploadimage(this)" -->
+                                                                                            <label for="ImageBrowse">
+                                                                                                    <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
+                                                                                            </label>
+                                                                                            <button type="submit">Upload</button>
+                                                                                        </form>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="row line">
@@ -842,62 +851,66 @@
                                                                                             </div>
                                                                                     </div>
                                                                             </div>
-                                                                            <div class="comment" id="comment" ng-repeat="comment in post.answers">
-                                                                                <div class="row">
-                                                                                    <div class="col-lg-2 col-md-3">
-                                                                                            <div class="image">
-                                                                                                    <img class="profileImg" ng-if="profileData.gender=='Female'" ng-src="{{comment.userImage||FemaleImg }}">   
-                                                                                                    <img class="profileImg" ng-if="profileData.gender=='Male'" ng-src="{{comment.userImage||maleImg }}">
-                                                                                            </div>
-                                                                                    </div>
-                                                                                    <div class="col-lg-10 col-md-9">
-                                                                                        <div>
-                                                                                            <div class="row">
-                                                                                                <div class="col-md-12">
-                                                                                                        <h4 class="name">{{comment.username}}</h4>
-                                                                                                        <p class="queText">{{comment.answer}}</p>
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-md-4  ml-md-auto">
-                                                                                                                    <span>{{comment.likes}}</span><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-                                                                                                                    |
-                                                                                                                    <span>{{comment.dislikes}}</span><a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+                                                                            <div class="scrollComment">
+                                                                                <div class="comment" id="comment" ng-repeat="comment in post.answers">
+                                                                                    <div class="row">
+                                                                                        <div class="col-lg-2 col-md-3">
+                                                                                                <div class="image">
+                                                                                                        <img class="profileImg" ng-if="profileData.gender=='Female'" ng-src="{{comment.userImage||FemaleImg }}">   
+                                                                                                        <img class="profileImg" ng-if="profileData.gender=='Male'" ng-src="{{comment.userImage||maleImg }}">
+                                                                                                </div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-10 col-md-9">
+                                                                                            <div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-12">
+                                                                                                            <h4 class="name">{{comment.username}}</h4>
+                                                                                                            <p class="queText">{{comment.answer}}</p>
+                                                                                                            <div class="row">
+                                                                                                                <div class="col-md-4  ml-md-auto">
+                                                                                                                        <span>{{comment.likes}}</span><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                                                                                                        |
+                                                                                                                        <span>{{comment.dislikes}}</span><a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+                                                                                                                </div>
                                                                                                             </div>
-                                                                                                        </div>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
+                                                                                            
                                                                                     </div>
-                                                                                        
+                                                                                    
+                                                                                </div> 
+                                                                            </div>   
+                                                                                <div class="prevComment">
+                                                                                        <a href="#">Show Previous Comments <span>({{post.answers.length}})</span></a>
                                                                                 </div>
-                                                                                
-                                                                            </div> 
-                                                                            <div class="prevComment">
-                                                                                    <a href="#">Show Previous Comments <span>({{post.answers.length}})</span></a>
-                                                                            </div>
-                                                                            <div class="postComment" id="commentBox">
-                                                                                <div class="row">
-                                                                                    <div class="col-lg-2 col-md-3">
-                                                                                            <div class="image">
-                                                                                                    <img class="profileImg" ng-if="profileData.gender=='Female'" ng-src="{{profileData.image||FemaleImg }}">   
-                                                                                                    <img class="profileImg" ng-if="profileData.gender=='Male'" ng-src="{{profileData.image||maleImg }}">
-                                                                                            </div>
-                                                                                    </div>
-                                                                                    <div class="col-lg-10 col-md-9">
-                                                                                        <div class="boxQus">
-                                                                                            <div class="row">
-                                                                                                <div class="col-md-12">
-                                                                                                    <textarea rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
+                                                                                <div class="postComment" id="commentBox">
+                                                                                    <div class="row">
+                                                                                        <div class="col-lg-2 col-md-3">
+                                                                                                <div class="image">
+                                                                                                        <img class="profileImg" ng-if="profileData.gender=='Female'" ng-src="{{profileData.image||FemaleImg }}">   
+                                                                                                        <img class="profileImg" ng-if="profileData.gender=='Male'" ng-src="{{profileData.image||maleImg }}">
+                                                                                                </div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-10 col-md-9">
+                                                                                            <div class="boxQus">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-12">
+                                                                                                        <textarea rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
+                                                                                                    </div>
                                                                                                 </div>
                                                                                             </div>
-                                                                                        </div>
-                                                                                        <div class="row">
-                                                                                            <div class="col-lg-4  col-md-5  ml-md-auto">
-                                                                                                <button >Answer</button>
+                                                                                            <div class="row">
+                                                                                                <div class="col-lg-4  col-md-5  ml-md-auto">
+                                                                                                    <button >Answer</button>
+                                                                                                </div>
                                                                                             </div>
-                                                                                        </div>
-                                                                                </div>       
-                                                                                </div>  
-                                                                            </div>
+                                                                                    </div>       
+                                                                                    </div>  
+                                                                                </div>
+                                                                           
+                                                                            
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1028,7 +1041,7 @@
                                                             <h5>{{exam.examName}}</h5>
                                                         </div>
                                                         <div class="col-6">
-                                                            <h5>{{exam.studentDegree}}</h5>
+                                                            <h5><uib-progressbar class="progress-striped" max="100" value="{{exam.studentDegree}}" type="warning">{{exam.studentDegree}}</uib-progressbar></h5>
                                                         </div>  
                                                     </div>
                                                     <!-- start readMore -->
