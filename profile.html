@@ -18,7 +18,7 @@
             </style>  
     </head>
 
-    <body ng-app="studentProfile">
+    <body ng-app="studentProfile" id="profile">
          <!-- start NavBar -->
           <nav class="navbar  fixed-top navbar-expand-lg navbar-light bg-light">
             <div class="container">
@@ -818,7 +818,7 @@
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-md-3 ml-md-auto  ">
-                                                                        <button >Ask</button>
+                                                                        <button id="commentBox" >Ask</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -851,8 +851,8 @@
                                                                                             </div>
                                                                                     </div>
                                                                             </div>
-                                                                            <div class="scrollComment">
-                                                                                <div class="comment" id="comment" ng-repeat="comment in post.answers">
+                                                                            <div class="scrollComment" id="scrollComment">
+                                                                                <div class="comment" id="comment" ng-repeat="comment in post.answers |limitTo:limit">
                                                                                     <div class="row">
                                                                                         <div class="col-lg-2 col-md-3">
                                                                                                 <div class="image">
@@ -882,35 +882,33 @@
                                                                                     
                                                                                 </div> 
                                                                             </div>   
-                                                                                <div class="prevComment">
-                                                                                        <a href="#">Show Previous Comments <span>({{post.answers.length}})</span></a>
-                                                                                </div>
-                                                                                <div class="postComment" id="commentBox">
-                                                                                    <div class="row">
-                                                                                        <div class="col-lg-2 col-md-3">
-                                                                                                <div class="image">
-                                                                                                        <img class="profileImg" ng-if="profileData.gender=='Female'" ng-src="{{profileData.image||FemaleImg }}">   
-                                                                                                        <img class="profileImg" ng-if="profileData.gender=='Male'" ng-src="{{profileData.image||maleImg }}">
-                                                                                                </div>
-                                                                                        </div>
-                                                                                        <div class="col-lg-10 col-md-9">
-                                                                                            <div class="boxQus">
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-12">
-                                                                                                        <textarea rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
-                                                                                                    </div>
-                                                                                                </div>
+                                                                            <div class="prevComment">
+                                                                                <a href=""  id="prevComment" ng-click="comment(post.answers.length)" ng-hide="click" >Show Previous Comments <span>({{post.answers.length}})</a>
+                                                                            </div>
+                                                                            <div class="postComment" id="commentBox">
+                                                                                <div class="row">
+                                                                                    <div class="col-lg-2 col-md-3">
+                                                                                            <div class="image">
+                                                                                                    <img class="profileImg" ng-if="profileData.gender=='Female'" ng-src="{{profileData.image||FemaleImg }}">   
+                                                                                                    <img class="profileImg" ng-if="profileData.gender=='Male'" ng-src="{{profileData.image||maleImg }}">
                                                                                             </div>
+                                                                                    </div>
+                                                                                    <div class="col-lg-10 col-md-9">
+                                                                                        <div class="boxQus">
                                                                                             <div class="row">
-                                                                                                <div class="col-lg-4  col-md-5  ml-md-auto">
-                                                                                                    <button >Answer</button>
+                                                                                                <div class="col-md-12">
+                                                                                                    <textarea rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
                                                                                                 </div>
                                                                                             </div>
-                                                                                    </div>       
-                                                                                    </div>  
-                                                                                </div>
-                                                                           
-                                                                            
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-lg-4  col-md-5  ml-md-auto">
+                                                                                                <button >Answer</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                </div>       
+                                                                                </div>  
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>

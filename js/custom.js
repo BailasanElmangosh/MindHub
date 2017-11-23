@@ -269,7 +269,7 @@ function fixDiv() {
   }
   $(window).scroll(fixDiv);
   fixDiv();
-
+//    upload image
   $('#imageUploadForm').on('submit',(function(e) {
     e.preventDefault();
     var formData = new FormData(this);
@@ -299,8 +299,38 @@ $("#ImageBrowse").on("change", function() {
     $("#imageUploadForm").submit();
 });
 
+// comment show
+// $('#prevComment').click(
+//     function() 
+//         {
+//         alert('hii');
+//         // $.ajax({
+//         //     type:'Get',
+//         //     url: 'http://localhost:2449/api/studentprofile',
+//         //     headers: {"Authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiYWlsYXNhbm1AeWFob28uY29tIiwianRpIjoiMjRjZGQyM2QtYThiMC00ZmFhLTllODktYjk0MGFkZTkzNmU2IiwiZW1haWwiOiJiYWlsYXNhbm1AeWFob28uY29tIiwiU3R1ZGVudCI6IlRydWUiLCJleHAiOjE1MTE3MTY1MzQsImlzcyI6Imh0dHA6Ly9ncmFkdWF0aW9uUHJvamVjdC5jb20iLCJhdWQiOiJodHRwOi8vZ3JhZHVhdGlvblByb2plY3QuY29tIn0.6TAEcj6FvhsCqqhz4FG6H8DRCE87-1r0tMmOgpSYDeQ"},
+//         //     cache:false,
+//         //     contentType: false,
+//         //     processData: false,
+//         //     success:function(data){
+            
+//         //     angular.element($("#profile")).scope().comment(data.questions.answers.length);
+//         //         console.log(data.questions.answers.length);
+//         //     },
+//         //     error: function(data){
+//         //         console.log("error");
+//         //         console.log(data);
+//         //     }
+//         // });
+//         }
+// );
+$("#prevComment").click(function(){
+    alert("hii")
+});
 
-
+function show()
+{
+    alert("hii")
+}
 
 
 

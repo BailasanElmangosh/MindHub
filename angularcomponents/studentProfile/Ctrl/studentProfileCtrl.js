@@ -10,10 +10,54 @@
             .success(function (data, status) {
                 $scope.profileData=data.profile;
                 $scope.editProfile=data.profile;
-               // console.log($scope.profileData);
+                console.log($scope.profileData);
 
             });
-            
+
+            $scope.limit=2;
+            $scope.comment=function(num)
+            {
+                $scope.limit=num;
+                angular.element('#scrollComment')
+                .css(
+                    {
+                        'height': '100px',
+                        'width':'90%',
+                        'height': '150px',
+                        'margin': '0 auto',
+                        'overflow-y':'scroll',
+                        'overflow-x':'hidden',
+                        'position': 'relative',
+                        ' .scrollComment::-webkit-scrollbar-track': '{ " -webkit-box-shadow": "inset 0 0 6px rgba(0,0,0,0.3)","background-color": "#8ccb75"}',
+                        ' .scrollComment::-webkit-scrollbar': '{ "width": "10px","background-color": "#F5F5F5"}',
+                        ' .scrollComment::-webkit-scrollbar-thumb': '{ "border": " 2px solid #555555","background-color": "#555555"}',
+                        
+                    
+                   
+                    }
+                   
+                );
+
+               
+                
+                //     '::-webkit-scrollbar-track'
+                //     {
+                //         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                //         background-color: #F5F5F5;
+                //     }
+                    
+                //     &::-webkit-scrollbar
+                //     {
+                //         width: 10px;
+                //         background-color: #F5F5F5;
+                //     }
+                    
+                //    &::-webkit-scrollbar-thumb
+                //     {
+                //         background-color: #555555;
+                //         border: 2px solid #555555;
+                //     }
+            }
             $scope.savedata=function()
             { 
                 $scope.somedata=
