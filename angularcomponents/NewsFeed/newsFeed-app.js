@@ -1,3 +1,7 @@
-'use strict';
-var newsFeedApp =angular.
-module('newsFeedApp',['ngCookies']);
+
+// var newsFeedApp =
+(function(){
+    angular.module('newsFeedApp',['ngCookies']);
+
+})();
+

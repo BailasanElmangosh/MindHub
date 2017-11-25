@@ -1,4 +1,4 @@
-newsFeedApp.factory("feedSrv",function($http){
+angular. module("newsFeedApp").factory("feedSrv",function($http){
     return {
         getFeed : function(token){
              return $http({
