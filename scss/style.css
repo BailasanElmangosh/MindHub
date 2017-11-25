@@ -1302,6 +1302,234 @@ svg, i {
   width: 20px;
   fill: #5a6674;
 }
+
+.newsFeed .newsFeedBody {
+  margin-top: 100px;
+}
+
+.newsFeed .newsFeedBody .line {
+  border-bottom: 1px solid #8ccb75;
+}
+
+.newsFeed .newsFeedBody .card {
+  background: #fff;
+  text-align: center;
+}
+
+.newsFeed .newsFeedBody .card .profimg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.newsFeed .newsFeedBody .card .line {
+  border-bottom: 1px solid #8ccb75;
+}
+
+.newsFeed .newsFeedBody .card .line .name {
+  margin: 0px;
+}
+
+.newsFeed .newsFeedBody .card .line .title {
+  font-size: 12px;
+  color: rgba(34, 34, 34, 0.466);
+}
+
+.newsFeed .newsFeedBody .card .followNum {
+  color: rgba(34, 34, 34, 0.466);
+  margin: 0px;
+}
+
+.newsFeed .newsFeedBody .question {
+  margin-bottom: 100px;
+}
+
+.newsFeed .newsFeedBody .question .header {
+  border-bottom: 1px solid #8ccb75;
+  padding: 10px;
+}
+
+.newsFeed .newsFeedBody .question .header h2 {
+  color: #8ccb75;
+  display: inline;
+}
+
+.newsFeed .newsFeedBody .question .header h2 i {
+  font-size: 22px;
+}
+
+.newsFeed .newsFeedBody .question .body {
+  width: 100%;
+  overflow: hidden;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .addQue {
+  padding: 10px;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .boxQus {
+  width: 100%;
+  height: 100px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .boxQus textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 10px;
+  border: 1px solid #fff;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .boxQus textarea:focus {
+  outline: none;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container button {
+  width: 100%;
+  margin-top: 10px;
+  color: #fff;
+  background-color: #8ccb75;
+  border: 1px solid #8ccb75;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post {
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .col-md-10, .newsFeed .newsFeedBody .question .body .body-container .post .col-md-12 {
+  padding-left: 0px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .image {
+  width: 50px;
+  height: 50px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .row {
+  margin-left: 0px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .queBody {
+  padding: 10px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .queBody .queOption {
+  text-align: center;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .queBody .queOption a {
+  color: #666666;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .queBody .queOption a:hover {
+  color: #8ccb75;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .queBody .col-md-2 {
+  padding-left: 0px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .queBody .name {
+  font-size: 15px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .queBody .title, .newsFeed .newsFeedBody .question .body .body-container .post .queBody .date {
+  margin-bottom: 0px;
+  color: #595959;
+  font-size: 10px;
+  margin-left: 10px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .queBody .queText {
+  font-size: 15px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .scrollComment::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .scrollComment::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .scrollComment::-webkit-scrollbar-thumb {
+  background-color: #555555;
+  border: 2px solid #555555;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .comment {
+  padding: 10px;
+  background-color: #eee;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .comment .image {
+  width: 50px;
+  height: 50px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .comment .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .comment .col-lg-2 {
+  padding-right: 0px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .comment .name {
+  font-size: 13px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .comment .queText {
+  font-size: 13px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .comment a {
+  color: #666666;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .comment a:hover {
+  color: #8ccb75;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .postComment {
+  padding: 10px;
+  border-top: 1px solid #8ccb75;
+  display: none;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .postComment .image {
+  width: 40px;
+  height: 40px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .prevComment {
+  height: 30px;
+  background-color: #eee;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .prevComment a {
+  color: #595959;
+  margin: 10px;
+}
  
 
  /*# sourceMappingURL= style.css.map */

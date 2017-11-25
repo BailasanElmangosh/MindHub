@@ -153,114 +153,57 @@
           </svg>
           <!-- End svg paths -->
         <!-- end NavBar -->
-        <section class="profile" ng-controller="newFeedCtrl">
+        <section class=" newsFeed" ng-controller="newFeedCtrl">
         
           <div class="container-fluid">
             <div class="row justify-content-center">
-                 <!-- start profile nav -->
+              
                 <div class="col-sm-12 col-12">
-                    
-                    <!-- End profile nav -->
-                    <!-- start profile container -->
-                    <div class="profileBody">
+                    <!-- start NewsFeed container -->
+                    <div class="newsFeedBody">
                         <div class="row">
-                        <!-- start Overview --> 
+                        <!-- start card --> 
                         <div class="col-sm-3">
-                            <div class="overview" id="overview">
-                                <div class="header">
-                                    <h3>Student Feed</h3>
-                                    
-                                </div>
-                                <div class="body">
-                                        <img src="images/profile-avatar.jpg" height="75"  width="70">                                        
-                                       <h3> {{studentData.username}}</h3>
-                                       <h5> {{studentData.title}}</h3>
-                                    <!-- <div class="boxOverview">
+                            <div class="row">
+                                <div class="col-sm-9">
+                                    <div class="card">
                                         <div class="row">
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-4 ">
-                                            <div class="icon">
-                                                <svg >
-                                                    <use xlink:href="#user"></use>
-                                                </svg>
-                                            </div>
-                                                
-                                            </div>
-                                            <div class="col-lg-10 col-md-9 col-sm-8 col-8">
-                                                <button class="text bgColor" id="aboutBtn">About Me</button>
+                                            <div class="col-sm-12">
+                                                <img class="profimg" src="images/profile-avatar.jpg">
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-sm-12" >
+                                                <div class="line">
+                                                <p class="name">Bailasan Elmangosh</p>
+                                                <p class="title">Front-End Developer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <p class="followNum">20</p>
+                                                <p> Followers</p>
+                                                <p class="followNum">20</p>
+                                                <p> Following</p>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
-                                    <div class="boxOverview">
-                                        <div class="row">
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-4">
-                                            <div class="icon">
-                                                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
-                                            </div>
-                                                
-                                            </div>
-                                            <div class="col-lg-10 col-md-9 col-sm-8 col-8">
-                                                <button class="text" id="quesBtn">Questions</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="boxOverview">
-                                        <div class="row">
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-4">
-                                            <div class="icon">
-                                                <i class="fa fa-users" aria-hidden="true"></i>
-                                            </div>
-                                                
-                                            </div>
-                                            <div class="col-lg-10 col-md-9 col-sm-8 col-8">
-                                            <button class="text" id="followBtn">follow</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="boxOverview">
-                                        <div class="row">
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-4">
-                                            <div class="icon">
-                                                <svg >
-                                                    <use xlink:href="#user"></use>
-                                                </svg>
-                                            </div>
-                                                
-                                            </div>
-                                            <div class="col-lg-10 col-md-9 col-sm-8 col-8" >
-                                                <button class="text hidden-sm" id="accompBtn">Accomplishments</button>
-                                                <button class="text visible-sm" id="accompBtn">Accomp.</button>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                </div>
                                 </div>
                             </div>
-                        <!-- End Overview -->
-                        <div class="col-sm-9 col-12">
+                        </div>   
+                        <!-- End card -->
+                        <div class="col-sm-6 col-12">
                             <!-- start Question -->
-                            <div  class="question" id="question" style="display:block">
-                                <div class="row">
-                                    <!-- start Header Question -->
-                                    <div class="col-md-12 ">
-                                        <div class="header">
-                                            <h2><span ><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>Question</h2>
-                                        </div>   
-                                    </div>
-                                    <!-- End Header Question -->
-                                    
-                                </div>
-                                <div class="row">
+                            <div  class=" row " id="question">
+                                <div class="question col-md-12" >
                                     <div class="body"> 
                                         <div class="body-container">
-                                                <div class="col-md-12" >
+                                                <div >
                                                     <!-- start write Question box -->
-                                                    <div class="post">
+                                                    <div class="addQue">
                                                         <div class="row">
-                                                            <div class="col-md-2">
-                                                                    <div class="image">
-                                                                        <img src="images/profile-avatar.jpg">
-                                                                    </div>
-                                                            </div>
                                                             <div class="col-md-10 ">
                                                                 <div class="boxQus">
                                                                     <div class="row">
@@ -280,91 +223,108 @@
                                                     </div> 
                                                     <!-- End write Question box --> 
                                                     <!-- start Questions -->
-                                                    <div class="post" ng-repeat="post in Feeds">
-                                                            <div class="row">
-                                                                <div class="col-md-2">
-                                                                        <div class="image">
-                                                                            <img src="images/profile-avatar.jpg">
-                                                                        </div>
-                                                                </div>
-                                                                <div class="col-md-10">
+                                                    <div class=" row" >
+                                                            <div class="post col-md-12">
+                                                                <div class="">
                                                                     <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <div class="queBody">
-                                                                                    <h3 class="name">{{post.username}}</h3>
-                                                                                    <p class="queText">{{post.questionHead}}</p>
-                                                                                    <div class="row">
+                                                                            <div class="col-md-12 queBody">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-1">
+                                                                                            <div class="image">
+                                                                                                <img src="images/profile-avatar.jpg">
+                                                                                            </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-11">
+                                                                                        <h3 class="name">bailasan</h3>
+                                                                                        <p class="title">Front-end</p>
+                                                                                        <p class="date">1d</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 ">
+                                                                                        <div class="row ">
+                                                                                            <div class="col-md-11 ml-md-auto">
+                                                                                                <p class="queText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                            
+                                                                                        <div class="row">
                                                                                             <div class="col-md-4  ml-md-auto queOption">
                                                                                                 <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
                                                                                                 |
                                                                                                 <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
                                                                                                 <a href="#commentBox" id="answer">Answer</a>
                                                                                             </div>
+                                                                                        </div>
                                                                                     </div>
+                                                                                </div>
                                                                             </div>
-                                                                            <div class="comment" id="comment" ng-repeat="comment in post.answers">
+                                                                    </div>
+                                                                    <div class="row justify-content-center">
+                                                                            <div class="col-md-11 ">
                                                                                 <div class="row">
-                                                                                    <div class="col-lg-2 col-md-3">
-                                                                                            <div class="image">
-                                                                                                <img  ng-src="{{ comment.userImage || 'https:placehold.it/100' }}"/>
-                                                                                                
-                                                                                                <img ng-if="comment.userImage != null" ng-src='https:placehold.it/100/111'/>
-                                                                                        
-                                                                                            </div>
-                                                                                    </div>
-                                                                                    <div class="col-lg-10 col-md-9">
-                                                                                        <div>
-                                                                                            <div class="row">
-                                                                                                <div class="col-md-12">
-                                                                                                        <h4 class="name">{{comment.username}}</h4>
-                                                                                                        <p class="queText">{{comment.answer}}</p>
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-md-4  ml-md-auto">
-                                                                                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-                                                                                                                |
-                                                                                                                <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="comment line" id="comment" >
+                                                                                            <div class="row  ">
+                                                                                                <div class="col-md-12 queBody ">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-1">
+                                                                                                            <div class="image">
+                                                                                                                <img src="images/profile-avatar.jpg">
                                                                                                             </div>
                                                                                                         </div>
+                                                                                                        <div class="col-md-11">
+                                                                                                            <h3 class="name">bailasan</h3>
+                                                                                                            <p class="title">Front-end</p>
+                                                                                                            <p class="date">1d</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-12 ">
+                                                                                                            <div class="row ">
+                                                                                                                <div class="col-md-11 ml-md-auto">
+                                                                                                                    <p class="queText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                             </div>
+                                                                                        </div> 
+                                                                                        <div class="prevComment">
+                                                                                        <a href="#">Show Previous Comments</a>
                                                                                         </div>
-                                                                                    </div>
-                                                                                        
-                                                                                </div>
-                                                                            </div> 
-                                                                            <div class="prevComment">
-                                                                            <a href="#">Show Previous Comments</a>
-                                                                            </div>
-                                                                            <div class="postComment" id="commentBox">
-                                                                                <div class="row">
-                                                                                    <div class="col-lg-2 col-md-3">
-                                                                                            <div class="image">
-                                                                                                <img src="images/profile-avatar.jpg">
-                                                                                            </div>
-                                                                                    </div>
-                                                                                    <div class="col-lg-10 col-md-9">
-                                                                                        <div class="boxQus">
+                                                                                        <div class="postComment" id="commentBox">
                                                                                             <div class="row">
-                                                                                                <div class="col-md-12">
-                                                                                                    <textarea rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
+                                                                                                <div class="col-lg-2 col-md-3">
+                                                                                                        <div class="image">
+                                                                                                            <img src="images/profile-avatar.jpg">
+                                                                                                        </div>
                                                                                                 </div>
-                                                                                            </div>
+                                                                                                <div class="col-lg-10 col-md-9">
+                                                                                                    <div class="boxQus">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12">
+                                                                                                                <textarea rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-lg-4  col-md-5  ml-md-auto">
+                                                                                                            <button >Answer</button>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                            </div>       
+                                                                                            </div>  
                                                                                         </div>
-                                                                                        <div class="row">
-                                                                                            <div class="col-lg-4  col-md-5  ml-md-auto">
-                                                                                                <button >Answer</button>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                </div>       
-                                                                                </div>  
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div> 
                                                     <!-- End Questions -->
-                                                    
                                                 </div>
                                         </div>
                                     </div>
@@ -373,7 +333,7 @@
                             <!-- End Question --> 
                         </div>
                             
-                    </div>      
+                        </div>      
                     </div>
                </div>
                <!-- End profile container --> 
