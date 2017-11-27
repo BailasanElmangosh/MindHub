@@ -59,10 +59,10 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
             addQues: function (data) {
                 return $http({
                     method: "Post",
-                    url: "http://localhost:2449/api/uploadstudentimage",
+                    url: "http://localhost:2449/api/addstudentquestion",
                     data:data,
                     headers: {
-                        'Content-Type': 'multipart/form-data',
+                        'Content-Type': 'application/json',
                         'Authorization':' bearer '+ $cookies.get('token'),
                     }
                 });
