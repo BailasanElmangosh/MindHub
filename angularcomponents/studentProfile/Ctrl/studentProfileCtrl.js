@@ -5,7 +5,7 @@
             $scope.editProfile={};
             $scope.maleImg = "../../../images/default.png";
             $scope.FemaleImg = "../../../images/defaultfemale.jpg";
-            $scope.imgPath={};
+            $scope.imgPath='';
             profileDataSrv.getData()
             .success(function (data, status) {
                 $scope.profileData=data.profile;
