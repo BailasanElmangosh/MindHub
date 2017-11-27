@@ -224,6 +224,24 @@
   .profile .profileBody .follow .body .person .delete {
     margin-top: 12px;
   }
+  .newsFeed .newsFeedBody .question .body .body-container .post .image {
+    width: 30px;
+    height: 30px;
+  }
+  .newsFeed .newsFeedBody .question .body .body-container .post .col-sm-10 {
+    padding-left: 0px;
+  }
+  .newsFeed .newsFeedBody .question .body .body-container .post .queBody .col-sm-12 {
+    padding-left: 0px;
+  }
+  .newsFeed .newsFeedBody .question .body .body-container .post .queBody .queText {
+    margin-left: 20px;
+    font-size: 13px;
+  }
+  .newsFeed .newsFeedBody .question .body .body-container .post .comment .image {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
@@ -270,6 +288,17 @@
   }
   .profile .profileBody .aboutMe .body .body-container .infoBasic .basic .detalis {
     font-size: 85%;
+  }
+  .newsFeed .newsFeedBody .question .body .body-container .post .image {
+    width: 40px;
+    height: 40px;
+  }
+  .newsFeed .newsFeedBody .question .body .body-container .post .queBody .queText {
+    margin-right: 5px;
+  }
+  .newsFeed .newsFeedBody .question .body .body-container .post .comment .image {
+    width: 40px;
+    height: 40px;
   }
 }
 

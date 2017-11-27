@@ -1,6 +1,6 @@
 studentProfile.factory("profileEditSrv", function ($http,$cookies) {
     return {
-           editData: function (data) {
+            editData: function (data) {
             return $http({
                 method: "Post",
                 url: "http://localhost:2449/api/editstudentprofile",
@@ -62,7 +62,8 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
                         'Authorization':' bearer '+ $cookies.get('token'),
                     }
                 });
-            }
+            },
+            
 
     }
 })

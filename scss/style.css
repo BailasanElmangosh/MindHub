@@ -1220,6 +1220,10 @@ body {
   border-radius: 50%;
 }
 
+.popUpInfo .modal-dialog .modal-content .modal-body #ImageBrowse {
+  display: none;
+}
+
 .popUpInfo .modal-dialog .modal-content .modal-body input.file {
   position: absolute;
   z-index: -1;
@@ -1445,14 +1449,12 @@ svg, i {
 .newsFeed .newsFeedBody .question .body .body-container .post .queBody .name {
   font-size: 15px;
   margin-bottom: 0px;
-  margin-left: 10px;
 }
 
 .newsFeed .newsFeedBody .question .body .body-container .post .queBody .title, .newsFeed .newsFeedBody .question .body .body-container .post .queBody .date {
   margin-bottom: 0px;
   color: #595959;
   font-size: 10px;
-  margin-left: 10px;
 }
 
 .newsFeed .newsFeedBody .question .body .body-container .post .queBody .queText {
@@ -1519,6 +1521,11 @@ svg, i {
 .newsFeed .newsFeedBody .question .body .body-container .post .postComment .image {
   width: 40px;
   height: 40px;
+}
+
+.newsFeed .newsFeedBody .question .body .body-container .post .postComment button {
+  width: 60%;
+  height: 50px;
 }
 
 .newsFeed .newsFeedBody .question .body .body-container .post .prevComment {
