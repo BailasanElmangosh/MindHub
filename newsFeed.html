@@ -4,21 +4,22 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>profile</title>
-        <link href="https://fonts.googleapis.com/css?family=Kreon" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Kreon" rel="stylesheet"> -->
         <link rel="icon" type="image/png" href="images/lamp90x90.png" />
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
         <link href="/scss/bootstrap.min.css" rel="stylesheet" />
         <link href="/scss/font-awesome.min.css" rel="stylesheet" />
         <link href="/scss/style.css" rel="stylesheet" />
-        <link href="/scss/media.css" rel="stylesheet" />
         <style>
             *{
                 font-family: 'Kreon', serif;
             }
-            </style>  
+        </style>
+        <link href="/scss/media.css" rel="stylesheet" />
+        <!-- <script src="js/lib/jquery-3.2.1.min.js"></script>    -->
     </head>
-
-    <body ng-app="newsFeedApp">
+    <body id="jquery" ng-app="newsFeedApp" ng-controller="newFeedCtrl">
+           
          <!-- start NavBar -->
           <nav class="navbar  fixed-top navbar-expand-lg navbar-light bg-light">
             <div class="container">
@@ -153,7 +154,11 @@
           </svg>
           <!-- End svg paths -->
         <!-- end NavBar -->
+<<<<<<< HEAD
+        <section class="profile" >
+=======
         <section class=" newsFeed" ng-controller="newFeedCtrl">
+>>>>>>> dcb0e60e5770eaa9ecc240c60f5121504bc6c991
         
           <div class="container-fluid">
             <div class="row justify-content-center">
@@ -164,9 +169,29 @@
                         <div class="row">
                         <!-- start card --> 
                         <div class="col-sm-3">
+<<<<<<< HEAD
+                            <div class="overview" id="overview">
+                                <div class="header">
+                                    <h3>Student Feed</h3>
+                                    
+                                </div>
+                                <div class="body">
+                                        <img src="images/profile-avatar.jpg" height="75"  width="70">                                        
+                                       <h3> {{studentData.username}}</h3>
+                                       <h5> {{studentData.title}}</h3>
+                                        <form name="frm" id="frm" enctype="multipart/form-data">
+                                            <input name="file" type="file" />
+                                            <button type="submit">ok</button>
+                                        </form>
+
+                                 <input type="text" ng-model="img" id="txt"/>
+                                 <input type="text" ng-model="img"/>
+                                    <!-- <div class="boxOverview">
+=======
                             <div class="row">
                                 <div class="col-sm-9">
                                     <div class="card">
+>>>>>>> dcb0e60e5770eaa9ecc240c60f5121504bc6c991
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <img class="profimg" src="images/profile-avatar.jpg">
@@ -223,6 +248,22 @@
                                                     </div> 
                                                     <!-- End write Question box --> 
                                                     <!-- start Questions -->
+<<<<<<< HEAD
+                                                    <div class="post" ng-repeat="(key,post) in Feeds">
+                                                            <div class="row">
+                                                                <div class="col-md-2">
+                                                                        <div class="image">
+                                                                            <img ng-if="post.image != null" ng-src='http://localhost:2449/{{post.image}}'/>                                                                             
+                                                                        </div>
+                                                                </div>
+                                                                <div class="col-md-10">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="queBody">
+                                                                                    <h3 class="name" ng-bind="post.username"></h3>
+                                                                                    <p class="queText" ng-bind="post.questionHead"></p>
+                                                                                    <div class="row">
+=======
                                                     <div class=" row" >
                                                             <div class="post ">
                                                                 <div class="col-sm-12">
@@ -261,7 +302,12 @@
                                                                                         </div>
                                                                                             
                                                                                         <div class="row">
+<<<<<<< HEAD
                                                                                             <div class="col-lg-4 col-md-5 col-sm-8  ml-sm-auto queOption">
+=======
+>>>>>>> dcb0e60e5770eaa9ecc240c60f5121504bc6c991
+                                                                                            <div class="col-md-4  ml-md-auto queOption">
+>>>>>>> 86ed609ad8a7b31a4e058ee129c9064965ee24b6
                                                                                                 <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
                                                                                                 |
                                                                                                 <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
@@ -271,6 +317,33 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
+<<<<<<< HEAD
+                                                                            <div>
+                                                                                <input class="form-control" ng-model="newAnswer[key].questionAnswer" type="text" placeholder="Answer here"/>
+                                                                                <button ng-click="addAnswer(key,post.id)">Add Answer</button>
+                                                                            </div>
+                                                                            <div class="comment" id="comment" ng-repeat="comment in post.answers">
+                                                                                <div class="row">
+                                                                                    <div class="col-lg-2 col-md-3">
+                                                                                            <div class="image">
+                                                                                                 <img ng-if="comment.userImage != null" ng-src='http://localhost:2449/{{comment.userImage}}'/> 
+                                                                                            </div>
+                                                                                    </div>
+                                                                                    <div class="col-lg-10 col-md-9">
+                                                                                        <div>
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-12">
+                                                                                                        <h4 class="name" ng-bind="comment.username"></h4>
+                                                                                                        <p class="queText" ng-bind="comment.questionAnswer"></p>
+                                                                                                      
+                                                                                                        <!-- <div class="row">
+                                                                                                            <div class="col-md-4  ml-md-auto">
+                                                                                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                                                                                                |
+                                                                                                                <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+                                                                                                            </div>
+                                                                                                        </div> -->
+=======
                                                                     </div>
                                                                     <div class="row justify-content-center">
                                                                             <div class="col-md-11 ">
@@ -300,6 +373,7 @@
                                                                                                             </div>
                                                                                                         </div>
                                                                                                     </div>
+>>>>>>> dcb0e60e5770eaa9ecc240c60f5121504bc6c991
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div> 
@@ -350,7 +424,10 @@
           </div>
           </div>
         </section>
-         <script src="js/lib/jquery-3.2.1.min.js"></script>
+          <!-- <script src="js/lib/jquery-3.2.1.min.js"></script>    -->
+          <script src="js/lib/jquery-1.10.2.min.js"></script>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+          
          <script src="js/lib/popper.min.js"></script>
          <script src="js/lib/bootstrap.min.js"></script>
          <script src="js/custom.js"></script>  
@@ -360,12 +437,43 @@
         <script src="js/lib/angular/angular-messages.min.js"></script>
         <script src="js/lib/angular/angular-route.min.js"></script>
         <script src="js/lib/angular/angular-cookies.min.js"></script>
+
         
+
 
         <script src="angularcomponents/NewsFeed/newsFeed-app.js"></script>
         <script src="angularcomponents/NewsFeed/Ctrl/newsFeedCtrl.js"></script>
         <script src="angularcomponents/NewsFeed/Srvs/getFeedSrv.js"></script>
         <script src="angularcomponents/NewsFeed/Srvs/getFeedSrv.js"></script>
         <script src="angularcomponents/NewsFeed/Srvs/questionsSrv.js"></script>
+
+        
+        <script src="js/lib/jquery.signalR-2.2.2.js"></script>
+        <script src="http://localhost:2656/signalr/hubs"></script>
+
+        <script src="js/SignalR/FeedSignalR.js"></script>
+
+        <!--TEST-->
+        <script>
+            $("#frm").submit(function (e) {
+                var token = $.cookie("token");
+         var data = new FormData(this);
+         $.ajax({
+             url: "http://localhost:2449/api/uploadstudentimage",
+             type: "Post",
+             datatype: "Json",
+             data: data,
+             headers: {"Authorization":"bearer "+token},
+             processData: false,
+             contentType: false,
+             success: function (data) {
+                 angular.element($("#jquery")).scope().imgPath(data.imagePath);
+             }
+         })
+         
+     });
+ 
+     </script>
+
     </body>
 </html>

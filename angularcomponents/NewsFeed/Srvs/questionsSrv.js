@@ -1,4 +1,4 @@
-newsFeedApp.factory('questionsSrv',function($http,$cookies){
+angular. module("newsFeedApp").factory('questionsSrv',function($http,$cookies){
     return {
         Create : function(question,token){
             return $http({
@@ -9,6 +9,17 @@ newsFeedApp.factory('questionsSrv',function($http,$cookies){
                     'Authorization':' bearer '+token
                 },
                 data:question
+            })
+        },
+        CreateAnswer : function(answer,token){
+            return $http({
+                method:"Post",
+                url:"http://localhost:2449/api/addanswer",
+                headers:{
+                    'Content-Type': 'application/json',
+                    'Authorization':' bearer '+token
+                },
+                data:answer
             })
         }
     }
