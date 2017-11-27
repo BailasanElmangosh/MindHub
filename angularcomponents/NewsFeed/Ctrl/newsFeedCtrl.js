@@ -6,7 +6,8 @@
         $scope.img="test";
         $scope.imgPath = function(path)
         {
-            $scope.img = path;
+            alert("hiii");
+            $scope.img = "http://localhost:2449/"+path;
             $scope.$apply();
         }
 
@@ -27,6 +28,7 @@
             questionsSrv.Create($scope.question,$cookies.get('token'))
                 .success(function(data){
                     data.question.image = $scope.studentData.image;
+                    console.log(data.question);
                     $scope.Feeds.unshift(data.question);  
                     $scope.question.QuestionHead = '';
                     console.log(data.question);
@@ -43,6 +45,9 @@
                             if(data.status =="Success"){
                                 $scope.newAnswer[key].userImage = data.addedAnswer.userImage;
                                 $scope.newAnswer[key].username = data.addedAnswer.username;
+                                $scope.newAnswer[key].date = data.addedAnswer.date;
+                                $scope.newAnswer[key].title = data.addedAnswer.title;
+                                $scope.newAnswer[key].gender = data.addedAnswer.gender;
                                 $scope.Feeds[key].answers.unshift($scope.newAnswer[key]);        
                                 $scope.newAnswer={};                   
                             }
@@ -54,8 +59,4 @@
     });
 })();
 
-$(function () {
-    $("#press").on("click", function () {
-        angular.element($("#jquery")).scope().callFromJquery('I Called You ! Angular !');
-    });
-});
+    
