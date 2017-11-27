@@ -66,6 +66,7 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
                         'Authorization':' bearer '+ $cookies.get('token'),
                     }
                 });
+            }   
             
 
     }
