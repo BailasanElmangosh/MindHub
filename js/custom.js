@@ -221,6 +221,7 @@
                 'top': '80px',
                 'width':'26%'
               });
+<<<<<<< HEAD
               if ($(window).width() > 990)
               {
                 $cache.css({
@@ -255,6 +256,55 @@
                   });
               }
             
+=======
+          }
+          if ($(window).width() < 575)
+          {
+            $cache.css({
+                'position': 'relative',
+                'top': 'auto',
+                'width':'100%'
+              });
+          }
+        
+    }
+     
+     
+    else
+      $cache.css({
+         'position': 'relative',
+        'top': 'auto',
+        'width':'100%'
+      });
+     
+     
+  }
+  $(window).scroll(fixDiv);
+  fixDiv();
+//    upload image
+var token = $.cookie("token");
+  $('#imageUploadForm').on('submit',(function(e) {
+    e.preventDefault();
+    var formData = new FormData(this);
+    var image;
+  console.log(formData);
+    $.ajax({
+        type:'POST',
+        url: 'http://localhost:2449/api/uploadstudentimage',
+        data:formData,
+        headers: {"Authorization": "bearer "+token},
+        cache:false,
+        contentType: false,
+        processData: false,
+        success:function(data){
+            console.log("success");
+            console.log(data);
+            angular.element($("#profile")).scope().getNewPath(data.imagePath);
+        },
+        error: function(data){
+            console.log("error");
+            console.log(data);
+>>>>>>> 1bc470ee8ba30fa3198544536bad29d21d9aa2f6
         }
          
          
