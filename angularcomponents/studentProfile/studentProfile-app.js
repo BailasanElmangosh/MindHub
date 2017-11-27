@@ -1,2 +1,2 @@
 'use strict';
-var studentProfile=angular.module('studentProfile',['ngMessages','ngCookies']);
+var studentProfile=angular.module('studentProfile',['ngMessages','ngCookies','newsFeedApp']);

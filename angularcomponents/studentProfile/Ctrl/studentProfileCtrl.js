@@ -1,6 +1,6 @@
 (function () {
     
-    studentProfile.controller("studentProfileCtrl", function ($scope,profileDataSrv,profileEditSrv,$cookies) {
+    studentProfile.controller("studentProfileCtrl", function ($scope,profileDataSrv,profileEditSrv,$cookies,questionsSrv) {
             $scope.profileData={};
             $scope.editProfile={};
             $scope.maleImg = "../../../images/default.png";
@@ -141,7 +141,9 @@
                 //     });
 
                 // };
-               console.log($cookies.get('token'))
+
+                //Add Question 
+
    
             });
              

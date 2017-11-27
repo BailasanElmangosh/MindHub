@@ -1,7 +1,7 @@
 
 // var newsFeedApp =
 (function(){
-    angular.module('newsFeedApp',['ngCookies']);
+    newsFeedApp=angular.module('newsFeedApp',['ngCookies']);
 
 })();
 
