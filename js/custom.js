@@ -270,6 +270,7 @@ function fixDiv() {
   $(window).scroll(fixDiv);
   fixDiv();
 //    upload image
+var token = $.cookie("token");
   $('#imageUploadForm').on('submit',(function(e) {
     e.preventDefault();
     var formData = new FormData(this);
@@ -279,7 +280,7 @@ function fixDiv() {
         type:'POST',
         url: 'http://localhost:2449/api/uploadstudentimage',
         data:formData,
-        headers: {"Authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiYWlsYXNhbm1AeWFob28uY29tIiwianRpIjoiZDU3YjJkM2QtNDM3OC00NGU2LWIxODgtMTIwZGJmYzgwYWFkIiwiZW1haWwiOiJiYWlsYXNhbm1AeWFob28uY29tIiwiU3R1ZGVudCI6IlRydWUiLCJleHAiOjE1MTIyMDQ4NTIsImlzcyI6Imh0dHA6Ly9ncmFkdWF0aW9uUHJvamVjdC5jb20iLCJhdWQiOiJodHRwOi8vZ3JhZHVhdGlvblByb2plY3QuY29tIn0.pyOgViUp3vGcczn02hKSnOeMZJ-ooHxdQR9VKQ4KFow"},
+        headers: {"Authorization": "bearer "+token},
         cache:false,
         contentType: false,
         processData: false,
