@@ -71,7 +71,7 @@
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px)
  {
-     //strat landing page
+//strat landing page
    .hidden-xs
    {
        display: none;
@@ -108,8 +108,8 @@
         height: 20%;
         
         }
-    //End landing page
-     //start Profile page
+//End landing page
+//start Profile page
     .profile
     {
         .box
@@ -358,16 +358,17 @@
     }
    
  //End start Profile page
+
+
 }
 @media (min-width: 576px)
-{   .landingPage
-    {
-         .modal-dialog {
-        max-width: 350px;
+{ 
+    .landingPage
+        {
+            .modal-dialog {
+            max-width: 350px;
+            }
         }
-    }
-       
-
 }
 
 @media (min-width: 575px) and(max-width: 610px)
@@ -689,6 +690,161 @@
         
     }
  //End start Profile page
+ // strat News Feed
+ .newsFeed
+ {
+   .newsFeedBody
+   { 
+     .line
+     {
+      
+     }
+     .card
+     {
+        .profimg
+        {
+        }
+        .line
+        {
+        .name
+        {
+         
+        }
+        .title
+        {
+        }
+        }
+        .followNum
+        {
+         
+        }
+     }
+     //Start  Questions
+     .question 
+     {
+         .header
+         { 
+             h2
+             {
+                 i
+                 {
+                 }
+             }
+             
+         }
+         .body
+         {
+             .body-container
+             {   
+                 .addQue
+                 {
+                 }
+                 .boxQus
+                 {
+                     textarea
+                     {
+                         &:focus
+                         {
+                         }
+                     }
+                 }
+                 button
+                 { 
+                 }
+                 .post
+                 {
+                     .image
+                     {  width:30px;
+                         height: 30px;
+                     }
+                     .col-sm-10
+                     {
+                        padding-left: 0px;
+                     }
+                     .row
+                     {
+                     
+                     }
+                     .queBody
+                     {
+                        .col-sm-12
+                        {
+                            padding-left: 0px;
+                        }  
+                           .queOption
+                             {
+                               
+                                 a
+                                 {
+                                 
+                                 &:hover
+                                 {
+                                 
+                                 }
+                                 }
+                             }
+                             .name
+                             {
+                              
+                             }
+                             .title,.date
+                             {
+                             }
+                             .queText
+                             {
+                             margin-left: 20px;
+                             font-size: 13px;
+                             }   
+                         
+                     }
+                     
+                         .comment
+                         { .image
+                             {  width:30px;
+                                 height: 30px; 
+                             }
+                             .name
+                             {  
+                             }
+                             .queText
+                             {
+                             }
+                             a
+                             {
+                                 &:hover
+                                 {
+                                 }
+                             }
+                             
+                         } 
+                         .postComment
+                         {
+                             .image
+                             {
+                             }
+                             button
+                             {
+                             }
+                         }
+                         .prevComment
+                         {
+                             a
+                             {
+                             } 
+                            
+                         }
+                     }
+                     
+                
+                 }
+             }
+         
+         }
+         
+     }
+     //End Questions 
+ } 
+// end newsfeed
  }
 
 
@@ -697,24 +853,24 @@
 @media (max-width: 991px) and (min-width: 768px) 
 { 
 // start Landing page
-     // start header
-header .btnSignLog .btn 
-   {
-    width: 100% !important;
-    height: 8%;
-    }
- header{ .text
-            {
+    // start header
+    header .btnSignLog .btn 
+    {
+        width: 100% !important;
+        height: 8%;
+        }
+    header{ .text
+                {
 
-                h1 
-                    {font-size: 2.5rem;}
-                    h2
-                    {    font-size: 1.5rem; }
-            } 
-  }
-  // end header
+                    h1 
+                        {font-size: 2.5rem;}
+                        h2
+                        {    font-size: 1.5rem; }
+                } 
+    }
+    // end header
 // End Landing page
-  //start Profile page
+//start Profile page
 
   .profile
   {
@@ -877,8 +1033,154 @@ header .btnSignLog .btn
       }
      
   }
-  //End start Profile page
-  
+//End start Profile page
+// start  News feed
+.newsFeed
+{
+  .newsFeedBody
+  { 
+    .line
+    {
+     
+    }
+    .card
+    {
+       .profimg
+       {
+       }
+       .line
+       {
+       .name
+       {
+        
+       }
+       .title
+       {
+       }
+       }
+       .followNum
+       {
+        
+       }
+    }
+    //Start  Questions
+    .question 
+    {
+        .header
+        { 
+            h2
+            {
+                i
+                {
+                }
+            }
+            
+        }
+        .body
+        {
+            .body-container
+            {   
+                .addQue
+                {
+                }
+                .boxQus
+                {
+                    textarea
+                    {
+                        &:focus
+                        {
+                        }
+                    }
+                }
+                button
+                { 
+                }
+                .post
+                {
+                    .image
+                    {  width:40px;
+                        height: 40px;
+                    }
+                    .row
+                    {
+                    
+                    }
+                    .queBody
+                    {
+                            .queOption
+                            {
+                              
+                                a
+                                {
+                                
+                                &:hover
+                                {
+                                
+                                }
+                                }
+                            }
+                            .name
+                            {
+                             
+                            }
+                            .title,.date
+                            {
+                            }
+                            .queText
+                            {
+                                margin-right: 5px;
+                            }   
+                        
+                    }
+                    
+                        .comment
+                        { .image
+                            {  width:40px;
+                                height: 40px; 
+                            }
+                            .name
+                            {  
+                            }
+                            .queText
+                            {
+                               
+                            }
+                            a
+                            {
+                                &:hover
+                                {
+                                }
+                            }
+                            
+                        } 
+                        .postComment
+                        {
+                            .image
+                            {
+                            }
+                            button
+                            {
+                            }
+                        }
+                        .prevComment
+                        {
+                            a
+                            {
+                            } 
+                           
+                        }
+                    }
+                    
+               
+                }
+            }
+        
+        }
+        
+    }
+    //End Questions 
+}  
+// end newsfeed
 
  }
 
