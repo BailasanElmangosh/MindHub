@@ -11,7 +11,7 @@
                 $scope.profileData=data.profile;
                 $scope.editProfile=data.profile;
                 $scope.imgPath="http://localhost:2449/"+$scope.profileData.image
-                console.log($scope.imgPath);
+                console.log($scope.profileData);
             });
 
             $scope.limit=2;

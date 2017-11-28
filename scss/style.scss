@@ -743,6 +743,11 @@ body
       }
       
     }
+    .date
+    { 
+        color:$grey1;
+        font-size: 10px;
+    }
     .profileBody
     {   margin-top: 100px;
         .bgColor
@@ -1569,6 +1574,7 @@ svg ,i {
         {
             width:100%;
             overflow: hidden;
+           
             .body-container
             {   
                 .addQue

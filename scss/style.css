@@ -685,6 +685,11 @@ body {
   font-weight: bold;
 }
 
+.profile .date {
+  color: #595959;
+  font-size: 10px;
+}
+
 .profile .profileBody {
   margin-top: 100px;
 }

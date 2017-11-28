@@ -434,7 +434,7 @@
                                                                                                 </div>
                                                                                                 <div class="row">
                                                                                                     <div class="col-sm-12">
-                                                                                                            <input type="tel" class="form-control" name="bithDate" ng-model="editProfile.birthdate" id="birthdate" required placeholder="MM/DD/YYYY" data-inputLength="0"value="{{profileData.birthDate}}" />
+                                                                                                            <input type="text" class="form-control" name="bithDate" ng-model="editProfile.birthDate" id="birthdate" required placeholder="MM/DD/YYYY" data-inputLength="0" value="{{profileData.birthDate}}" />
                                                                                                            
                                                                                                     </div>
                                                                                                 </div>      
@@ -458,7 +458,7 @@
                                                                                 <div class="modal-footer">
                                                                                     <div class="row justify-content-center">
                                                                                         <div class="col-sm-3">
-                                                                                            <button type="button" class="btn save" ng-click="savedata()">Save changes</button>
+                                                                                            <button type="button" class="btn save" ng-click="savedata()"class="close" data-dismiss="modal" aria-label="Close">Save changes</button>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -639,7 +639,7 @@
                                                                                 <div class="modal-footer">
                                                                                     <div class="row justify-content-center">
                                                                                         <div class="col-sm-3">
-                                                                                            <button type="button" class="btn save" ng-click="savedata()">Save changes</button>
+                                                                                            <button type="button" class="btn save"class="close" data-dismiss="modal" aria-label="Close" ng-click="savedata()">Save changes</button>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -748,13 +748,13 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="modal-footer">
+                                                                        <!-- <div class="modal-footer">
                                                                         <div class="row justify-content-center">
                                                                             <div class="col-sm-3">
                                                                                 <button type="button" class="btn save" >Save changes</button>
                                                                             </div>
                                                                         </div>
-                                                                        </div>
+                                                                        </div> -->
                                                                     </div>
                                                                     </div>
                                                                 </div>
@@ -840,8 +840,8 @@
                                                                             <div class="col-md-12">
                                                                                 <div class="queBody">
                                                                                         <h3 class="name">{{post.username}}</h3>
+                                                                                        <p class="date" ng-bind="post.date"></p>                                                                                        
                                                                                         <p class="queText">{{post.questionHead}}</p>
-                                                                                        <p class="date" ng-bind="comment.date"></p>
                                                                                         <div class="row">
                                                                                                 <div class="col-md-4  ml-md-auto queOption">
                                                                                                     <span>{{post.likes}}</span><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
@@ -865,6 +865,8 @@
                                                                                                     <div class="row">
                                                                                                         <div class="col-md-12">
                                                                                                                 <h4 class="name">{{comment.username}}</h4>
+                                                                                                                <p class="date">{{comment.date}}</p>
+                                                                                                                
                                                                                                                 <p class="queText">{{comment.questionAnswer}}</p>
                                                                                                                 
                                                                                                                 <div class="row">
