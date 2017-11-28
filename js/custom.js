@@ -176,8 +176,16 @@
         $('#accompBtn').removeClass('bgColor');    
     });
     //show in Question comment Box
-    $('#answer').click(function(){
-     $('#commentBox').fadeIn(1000).addClass('show');
+ 
+    // $("#textareaComment").focus(function(){
+    //     alert("textarea focus");
+        
+    // });
+    $(".boxQus > textarea").click(function(){
+        $(this).on("mousedown mouseup click focus blur", function(e) {
+            $("#commentBtn").addClass('show');
+          })
+
     });
     //show follow
     $('#followBtn').click(function()

@@ -143,6 +143,36 @@
                 // };
 
                 //Add Question 
+                $scope.addQues=function()
+                {
+                    questionsSrv.Create($scope.question,$cookies.get('token'))
+                    .success(function(data, status){
+                        if(status="Success")
+                        { console.log(data);
+                            $scope.profileData.questions.unshift(data.question);
+                            $scope.question.QuestionHead = '';
+                            ;
+                        }
+                    });
+                }
+                $scope.newAnswer={};
+                $scope.addAnswer=function(key,id)
+                {     
+                    $scope.newAnswer[key].questionId=id;
+                    questionsSrv.CreateAnswer($scope.newAnswer[key],$cookies.get('token'))
+                    .success(function(data, status){
+                        if(status="Success")
+                        { console.log('Hii')
+                            $scope.newAnswer[key].userImage = data.addedAnswer.userImage;
+                            $scope.newAnswer[key].username = data.addedAnswer.username;
+                            $scope.newAnswer[key].date = data.addedAnswer.date;
+                            $scope.newAnswer[key].title = data.addedAnswer.title;
+                            $scope.newAnswer[key].gender = data.addedAnswer.gender;
+                            $scope.profileData.questions[key].answers.unshift($scope.newAnswer[key]);        
+                            $scope.newAnswer={}; 
+                        }
+                    });
+                }
 
    
             });
