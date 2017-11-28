@@ -3,14 +3,27 @@
 var mainHub = $.connection.mainHub;
 $.connection.hub.url = 'http://localhost:10724/signalr/hubs';
 
-$.connection.hub.qs = { "userId": "3a48b3f6-00ba-493c-b328-9a4a8ab275c2"};
+//data in url .
+$.connection.hub.qs = { "userId": $.cookie('socketid')};
 
-mainHub.client.test = function(data){alert(data);}
-
+var counter = 0;
+var questionsIds = new Array();
 mainHub.client.newQuestion = function(data){
-    alert("SignalR Event");
-    console.log(data);
+    if(counter ==5){
+        //Bind To AngularJs To Call Api And Get Questions.
+        angular.element($("#jquery")).scope().newQuestionsSignalR(questionsIds);
+        counter=0;
+        questionsIds =[];
+    }
+    else{
+        questionsIds.push(data);
+        counter++;
+        console.log(questionsIds);
+    }
+
 }
 
 $.connection.hub.start()
-.done(function(){  });
+.done(function(){  
+    
+});

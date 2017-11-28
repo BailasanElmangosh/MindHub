@@ -43,7 +43,7 @@
             questionsSrv.CreateAnswer($scope.newAnswer[key],$cookies.get('token'))
                         .success(function(data){
                             if(data.status =="Success"){
-                                $scope.newAnswer[key].userImage = data.addedAnswer.userImage;
+                                $scope.newAnswer[key].userImage =data.addedAnswer.userImage;
                                 $scope.newAnswer[key].username = data.addedAnswer.username;
                                 $scope.newAnswer[key].date = data.addedAnswer.date;
                                 $scope.newAnswer[key].title = data.addedAnswer.title;
@@ -54,6 +54,13 @@
                         })  
                         .error(function(){});   
             };
+
+            $scope.newQuestionsSignalR = function(data){
+                questionsSrv.GetQuestionsByIds(data,'aa').
+                    success(function(){
+                        alert();
+                    })
+            }
 
 
     });
