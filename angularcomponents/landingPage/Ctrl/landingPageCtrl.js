@@ -31,8 +31,9 @@
                 .success(function (data, status) {
                     if (data.status =="Success")
                     { 
-                        cookies.set(key,data.token)
-                        window.location ="/profile.html"
+                        cookies.set(key,data.token);
+                        cookies.set('socketid',data.userId);
+                        window.location ="/profile.html";
                     }
                 });
         };

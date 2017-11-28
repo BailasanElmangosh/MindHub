@@ -1,197 +1,198 @@
 <html >
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>profile</title>
-        <link href="https://fonts.googleapis.com/css?family=Kreon" rel="stylesheet">
-        <link rel="icon" type="image/png" href="images/lamp90x90.png" />
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
-        <link href="/scss/bootstrap.min.css" rel="stylesheet" />
-        <link href="/scss/font-awesome.min.css" rel="stylesheet" />
-        <link href="/scss/style.css" rel="stylesheet" />
-        <link href="/scss/media.css" rel="stylesheet" />
-        <style>
-            *{
-                font-family: 'Kreon', serif;
-            }
-            </style>  
-    </head>
-
-    <body ng-app="newsFeedApp">
-         <!-- start NavBar -->
-          <nav class="navbar  fixed-top navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              
-              <div class="collapse navbar-collapse" id="mainNavbar">
-                <a class="navbar-brand" href="#"><img src="images/logoNav.png"></a>
-                   <form class="search-form">
-                        <input type="search" value="" placeholder="Search" class="search-input">
-                        <button type="submit" class="search-button">
-                            <svg class="submit-button">
-                            <use  xlink:href="#search"></use>
-                            </svg>
-                        </button>
-                        <div class="search-option">
-                            <div>
-                            <input name="type" type="radio" value="type-users" id="type-users" checked="">
-                            <label for="type-users">
-                                <svg class="edit-pen-title">
-                                <use xlink:href="#user"></use>
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Student Feed</title>
+            <link href="https://fonts.googleapis.com/css?family=Kreon" rel="stylesheet">
+            <link rel="icon" type="image/png" href="images/lamp90x90.png" />
+            <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
+            <link href="/scss/bootstrap.min.css" rel="stylesheet" />
+            <link href="/scss/font-awesome.min.css" rel="stylesheet" />
+            <link href="/scss/style.css" rel="stylesheet" />
+            <link href="/scss/media.css" rel="stylesheet" />
+            <style>
+                *{
+                    font-family: 'Kreon', serif;
+                }
+                </style>  
+        </head>
+    
+        <body id="jquery" ng-app="newsFeedApp" ng-controller="newFeedCtrl">
+             <!-- start NavBar -->
+              <nav class="navbar  fixed-top navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  
+                  <div class="collapse navbar-collapse" id="mainNavbar">
+                    <a class="navbar-brand" href="#"><img src="images/logoNav.png"></a>
+                       <form class="search-form">
+                            <input type="search" value="" placeholder="Search" class="search-input">
+                            <button type="submit" class="search-button">
+                                <svg class="submit-button">
+                                <use  xlink:href="#search"></use>
                                 </svg>
-                                <span>Users</span>
-                            </label>
-                            </div>
-                            <div>
+                            </button>
+                            <div class="search-option">
+                                <div>
+                                <input name="type" type="radio" value="type-users" id="type-users" checked="">
+                                <label for="type-users">
+                                    <svg class="edit-pen-title">
+                                    <use xlink:href="#user"></use>
+                                    </svg>
+                                    <span>Users</span>
+                                </label>
+                                </div>
+                                <div>
+                                    <input name="type" type="radio" value="type-posts" id="type-posts">
+                                    <label for="type-posts">
+                                    <svg class="edit-pen-title">
+                                        <use xlink:href="#courses"></use>
+                                    </svg>
+                                    <span>Courses</span>
+                                    </label>
+                                </div>
+                                <div>
                                 <input name="type" type="radio" value="type-posts" id="type-posts">
                                 <label for="type-posts">
-                                <svg class="edit-pen-title">
-                                    <use xlink:href="#courses"></use>
-                                </svg>
-                                <span>Courses</span>
+                                    <svg class="edit-pen-title">
+                                    <use xlink:href="#post"></use>
+                                    </svg>
+                                    <span>Posts</span>
                                 </label>
+                                </div>
+                                <div>
+                                <input name="type" type="radio" value="type-special" id="type-special" >
+                                <label for="type-special">
+                                    <svg class="edit-pen-title">
+                                    <use xlink:href="#book"></use>
+                                    </svg>
+                                    <span>Books</span>
+                                </label>
+                                </div>
                             </div>
-                            <div>
-                            <input name="type" type="radio" value="type-posts" id="type-posts">
-                            <label for="type-posts">
-                                <svg class="edit-pen-title">
-                                <use xlink:href="#post"></use>
-                                </svg>
-                                <span>Posts</span>
-                            </label>
-                            </div>
-                            <div>
-                            <input name="type" type="radio" value="type-special" id="type-special" >
-                            <label for="type-special">
-                                <svg class="edit-pen-title">
-                                <use xlink:href="#book"></use>
-                                </svg>
-                                <span>Books</span>
-                            </label>
-                            </div>
-                        </div>
-                    </form>
-                 
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="/newsFeed.html">
-                          <i class="fa fa-home" aria-hidden="true"></i>
-                      Home 
-                      <span class="sr-only">(current)</span>
-                    </a>
-                  </li>
-                  <li class="nav-item ">
-                    <a class="nav-link" href="#">
-                      <img  style="    width: 15px;"src="images/online-course.svg"> 
-                      Courses</a>
-                    
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="fa fa-briefcase" aria-hidden="true"></i>
-                      Jobs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><img  style="    width: 15px;"src="images/exam.svg"> Exams</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link notifcation" href="#" ><i class="fa fa-bell-o" aria-hidden="true"></i></a>
-                  </li>
-                  <li class="nav-item dropdown ">
-                      <a class="nav-link dropdown-toggle" href="#" id="btnMenuProfile">
-                        <img src="images/profile.png">
-                      </a>
-                      <div class="dropdown-menu" id="menuProfile">
-                          <div class="arrow"></div>
-                        <a class="dropdown-item" href="/profile.html"> 
-                          <svg class="edit-pen-title">
-                            <use xlink:href="#user"></use>
-                          </svg>
-                          Profile
+                        </form>
+                     
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="/newsFeed.html">
+                              <i class="fa fa-home" aria-hidden="true"></i>
+                          Home 
+                          <span class="sr-only">(current)</span>
                         </a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-cog" aria-hidden="true"></i>settings</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a>
-                      </div>
-                    </li>
-                </ul>
-              </div>
-           </div>
-          </nav>
-          <!-- start  svg paths -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
-            <symbol id="search" viewBox="0 0 32 32">
-              <path d="M 19.5 3 C 14.26514 3 10 7.2651394 10 12.5 C 10 14.749977 10.810825 16.807458 12.125 18.4375 L 3.28125 27.28125 L 4.71875 28.71875 L 13.5625 19.875 C 15.192542 21.189175 17.250023 22 19.5 22 C 24.73486 22 29 17.73486 29 12.5 C 29 7.2651394 24.73486 3 19.5 3 z M 19.5 5 C 23.65398 5 27 8.3460198 27 12.5 C 27 16.65398 23.65398 20 19.5 20 C 15.34602 20 12 16.65398 12 12.5 C 12 8.3460198 15.34602 5 19.5 5 z" />
-            </symbol>
-            <symbol id="user" viewBox="0 0 32 32">
-              <path d="M 16 4 C 12.145852 4 9 7.1458513 9 11 C 9 13.393064 10.220383 15.517805 12.0625 16.78125 C 8.485554 18.302923 6 21.859881 6 26 L 8 26 C 8 21.533333 11.533333 18 16 18 C 20.466667 18 24 21.533333 24 26 L 26 26 C 26 21.859881 23.514446 18.302923 19.9375 16.78125 C 21.779617 15.517805 23 13.393064 23 11 C 23 7.1458513 19.854148 4 16 4 z M 16 6 C 18.773268 6 21 8.2267317 21 11 C 21 13.773268 18.773268 16 16 16 C 13.226732 16 11 13.773268 11 11 C 11 8.2267317 13.226732 6 16 6 z" /></symbol>
-            <symbol id="post" viewbox="0 0 32 32">
-              <path d="M 3 5 L 3 6 L 3 23 C 3 25.209804 4.7901961 27 7 27 L 25 27 C 27.209804 27 29 25.209804 29 23 L 29 13 L 29 12 L 28 12 L 23 12 L 23 6 L 23 5 L 22 5 L 4 5 L 3 5 z M 5 7 L 21 7 L 21 12 L 21 13 L 21 23 C 21 23.73015 21.221057 24.41091 21.5625 25 L 7 25 C 5.8098039 25 5 24.190196 5 23 L 5 7 z M 7 9 L 7 10 L 7 13 L 7 14 L 8 14 L 18 14 L 19 14 L 19 13 L 19 10 L 19 9 L 18 9 L 8 9 L 7 9 z M 9 11 L 17 11 L 17 12 L 9 12 L 9 11 z M 23 14 L 27 14 L 27 23 C 27 24.190196 26.190196 25 25 25 C 23.809804 25 23 24.190196 23 23 L 23 14 z M 7 15 L 7 17 L 12 17 L 12 15 L 7 15 z M 14 15 L 14 17 L 19 17 L 19 15 L 14 15 z M 7 18 L 7 20 L 12 20 L 12 18 L 7 18 z M 14 18 L 14 20 L 19 20 L 19 18 L 14 18 z M 7 21 L 7 23 L 12 23 L 12 21 L 7 21 z M 14 21 L 14 23 L 19 23 L 19 21 L 14 21 z" />
-            </symbol>
-            <symbol id="book" viewBox="0 0 20 20">
-                <path d="M8.627,7.885C8.499,8.388,7.873,8.101,8.13,8.177L4.12,7.143c-0.218-0.057-0.351-0.28-0.293-0.498c0.057-0.218,0.279-0.351,0.497-0.294l4.011,1.037C8.552,7.444,8.685,7.667,8.627,7.885 M8.334,10.123L4.323,9.086C4.105,9.031,3.883,9.162,3.826,9.38C3.769,9.598,3.901,9.82,4.12,9.877l4.01,1.037c-0.262-0.062,0.373,0.192,0.497-0.294C8.685,10.401,8.552,10.18,8.334,10.123 M7.131,12.507L4.323,11.78c-0.218-0.057-0.44,0.076-0.497,0.295c-0.057,0.218,0.075,0.439,0.293,0.495l2.809,0.726c-0.265-0.062,0.37,0.193,0.495-0.293C7.48,12.784,7.35,12.562,7.131,12.507M18.159,3.677v10.701c0,0.186-0.126,0.348-0.306,0.393l-7.755,1.948c-0.07,0.016-0.134,0.016-0.204,0l-7.748-1.948c-0.179-0.045-0.306-0.207-0.306-0.393V3.677c0-0.267,0.249-0.461,0.509-0.396l7.646,1.921l7.654-1.921C17.91,3.216,18.159,3.41,18.159,3.677 M9.589,5.939L2.656,4.203v9.857l6.933,1.737V5.939z M17.344,4.203l-6.939,1.736v9.859l6.939-1.737V4.203z M16.168,6.645c-0.058-0.218-0.279-0.351-0.498-0.294l-4.011,1.037c-0.218,0.057-0.351,0.28-0.293,0.498c0.128,0.503,0.755,0.216,0.498,0.292l4.009-1.034C16.092,7.085,16.225,6.863,16.168,6.645 M16.168,9.38c-0.058-0.218-0.279-0.349-0.498-0.294l-4.011,1.036c-0.218,0.057-0.351,0.279-0.293,0.498c0.124,0.486,0.759,0.232,0.498,0.294l4.009-1.037C16.092,9.82,16.225,9.598,16.168,9.38 M14.963,12.385c-0.055-0.219-0.276-0.35-0.495-0.294l-2.809,0.726c-0.218,0.056-0.351,0.279-0.293,0.496c0.127,0.506,0.755,0.218,0.498,0.293l2.807-0.723C14.89,12.825,15.021,12.603,14.963,12.385"></path>
-            </symbol>
-            <symbol>
-                <svg id="home" viewBox="0 0 20 20">
-                    <path d="M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z"></path>
-                  </svg>
-            </symbol>
-            <symbol id="courses" viewBox="0 0 20 20">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 297 297" style="enable-background:new 0 0 297 297;" xml:space="preserve" width="20px" height="20px">
-                  <g>
-                    <path d="M17.555,166.935h262.508c5.431,0,9.834-4.403,9.834-9.834V18.077c0-5.43-4.403-9.833-9.834-9.833H17.555   c-5.431,0-9.834,4.403-9.834,9.833v139.023C7.721,162.531,12.124,166.935,17.555,166.935z M27.389,27.911h242.841v119.355H27.389   V27.911z" fill="#5a6674"/>
-                    <path d="M148.811,31.415c-30.967,0-56.16,25.199-56.16,56.172c0,30.975,25.193,56.174,56.16,56.174   c30.965,0,56.155-25.199,56.155-56.174C204.967,56.614,179.776,31.415,148.811,31.415z M148.811,124.094   c-20.122,0-36.493-16.376-36.493-36.507c0-20.128,16.371-36.505,36.493-36.505c20.119,0,36.488,16.377,36.488,36.505   C185.3,107.718,168.931,124.094,148.811,124.094z" fill="#5a6674"/>
-                    <path d="M161.893,83.819l-21.526-13.259c-1.365-0.839-3.079-0.876-4.479-0.095c-1.399,0.781-2.267,2.26-2.267,3.863l0.001,26.518   c0,1.604,0.867,3.082,2.267,3.864c0.672,0.375,1.416,0.562,2.158,0.562c0.806,0,1.61-0.22,2.321-0.658l21.525-13.26   c1.308-0.806,2.105-2.232,2.105-3.768C163.997,86.051,163.2,84.624,161.893,83.819z" fill="#5a6674"/>
-                    <path d="M180.481,242.691c5.65-6.993,9.045-15.883,9.045-25.555c0-22.457-18.265-40.727-40.714-40.727   c-22.454,0-40.72,18.271-40.72,40.727c0,9.671,3.394,18.561,9.045,25.554c-10.278,8.997-16.456,22.13-16.456,36.232   c0,5.43,4.403,9.833,9.834,9.833h76.59c5.431,0,9.833-4.403,9.833-9.833C196.938,264.821,190.761,251.689,180.481,242.691z    M148.813,196.077c11.605,0,21.046,9.447,21.046,21.059c0,11.611-9.44,21.059-21.046,21.059c-11.608,0-21.053-9.447-21.053-21.059   C127.76,205.524,137.204,196.077,148.813,196.077z M122.103,269.089c2.142-5.81,6.147-10.827,11.456-14.201   c4.714,1.912,9.86,2.975,15.253,2.975c5.39,0,10.534-1.063,15.247-2.975c5.309,3.376,9.314,8.393,11.457,14.201H122.103z" fill="#5a6674"/>
-                    <path d="M280.544,242.69c5.65-6.993,9.044-15.883,9.044-25.554c0-22.457-18.265-40.727-40.717-40.727   c-22.451,0-40.717,18.271-40.717,40.727c0,9.671,3.394,18.561,9.045,25.554c-10.279,8.997-16.457,22.13-16.457,36.232   c0,5.43,4.402,9.833,9.833,9.833h76.591c5.431,0,9.834-4.403,9.834-9.833C297,264.821,290.822,251.688,280.544,242.69z    M248.871,196.077c11.606,0,21.05,9.447,21.05,21.059c0,11.611-9.443,21.059-21.05,21.059c-11.607,0-21.049-9.447-21.049-21.059   C227.822,205.524,237.265,196.077,248.871,196.077z M222.164,269.089c2.142-5.81,6.146-10.827,11.457-14.201   c4.714,1.912,9.859,2.975,15.25,2.975c5.392,0,10.537-1.063,15.25-2.975c5.31,3.374,9.315,8.391,11.457,14.201H222.164z" fill="#5a6674"/>
-                    <path d="M79.802,242.691c5.652-6.993,9.046-15.883,9.046-25.555c0-22.457-18.266-40.727-40.716-40.727   c-22.453,0-40.719,18.271-40.719,40.727c0,9.671,3.393,18.561,9.045,25.554C6.179,251.688,0,264.821,0,278.923   c0,5.43,4.403,9.833,9.834,9.833h76.591c5.431,0,9.833-4.403,9.833-9.833C96.258,264.821,90.08,251.689,79.802,242.691z    M48.132,196.077c11.606,0,21.048,9.447,21.048,21.059c0,11.611-9.441,21.059-21.048,21.059c-11.607,0-21.052-9.447-21.052-21.059   C27.08,205.524,36.524,196.077,48.132,196.077z M21.422,269.089c2.142-5.81,6.148-10.827,11.458-14.201   c4.714,1.912,9.859,2.975,15.252,2.975c5.39,0,10.535-1.063,15.249-2.975c5.309,3.375,9.313,8.392,11.455,14.201H21.422z" fill="#5a6674"/>
-                  </g>
-                </svg>
-            </symbol>
-          </svg>
-          <!-- End svg paths -->
-        <!-- end NavBar -->
-        <section class=" newsFeed" ng-controller="newFeedCtrl">
-        
-          <div class="container-fluid">
-            <div class="row justify-content-center">
-              
-                <div class="col-sm-12 col-12">
-                    <!-- start NewsFeed container -->
-                    <div class="newsFeedBody">
-                        <div class="row">
-                        <!-- start card --> 
-                        <div class="col-sm-3">
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link" href="#">
+                          <img  style="    width: 15px;"src="images/online-course.svg"> 
+                          Courses</a>
+                        
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i>
+                          Jobs</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"><img  style="    width: 15px;"src="images/exam.svg"> Exams</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link notifcation" href="#" ><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+                      </li>
+                      <li class="nav-item dropdown ">
+                          <a class="nav-link dropdown-toggle" href="#" id="btnMenuProfile">
+                            <img src="images/profile.png">
+                          </a>
+                          <div class="dropdown-menu" id="menuProfile">
+                              <div class="arrow"></div>
+                            <a class="dropdown-item" href="/profile.html"> 
+                              <svg class="edit-pen-title">
+                                <use xlink:href="#user"></use>
+                              </svg>
+                              Profile
+                            </a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-cog" aria-hidden="true"></i>settings</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a>
+                          </div>
+                        </li>
+                    </ul>
+                  </div>
+               </div>
+              </nav>
+              <!-- start  svg paths -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
+                <symbol id="search" viewBox="0 0 32 32">
+                  <path d="M 19.5 3 C 14.26514 3 10 7.2651394 10 12.5 C 10 14.749977 10.810825 16.807458 12.125 18.4375 L 3.28125 27.28125 L 4.71875 28.71875 L 13.5625 19.875 C 15.192542 21.189175 17.250023 22 19.5 22 C 24.73486 22 29 17.73486 29 12.5 C 29 7.2651394 24.73486 3 19.5 3 z M 19.5 5 C 23.65398 5 27 8.3460198 27 12.5 C 27 16.65398 23.65398 20 19.5 20 C 15.34602 20 12 16.65398 12 12.5 C 12 8.3460198 15.34602 5 19.5 5 z" />
+                </symbol>
+                <symbol id="user" viewBox="0 0 32 32">
+                  <path d="M 16 4 C 12.145852 4 9 7.1458513 9 11 C 9 13.393064 10.220383 15.517805 12.0625 16.78125 C 8.485554 18.302923 6 21.859881 6 26 L 8 26 C 8 21.533333 11.533333 18 16 18 C 20.466667 18 24 21.533333 24 26 L 26 26 C 26 21.859881 23.514446 18.302923 19.9375 16.78125 C 21.779617 15.517805 23 13.393064 23 11 C 23 7.1458513 19.854148 4 16 4 z M 16 6 C 18.773268 6 21 8.2267317 21 11 C 21 13.773268 18.773268 16 16 16 C 13.226732 16 11 13.773268 11 11 C 11 8.2267317 13.226732 6 16 6 z" /></symbol>
+                <symbol id="post" viewbox="0 0 32 32">
+                  <path d="M 3 5 L 3 6 L 3 23 C 3 25.209804 4.7901961 27 7 27 L 25 27 C 27.209804 27 29 25.209804 29 23 L 29 13 L 29 12 L 28 12 L 23 12 L 23 6 L 23 5 L 22 5 L 4 5 L 3 5 z M 5 7 L 21 7 L 21 12 L 21 13 L 21 23 C 21 23.73015 21.221057 24.41091 21.5625 25 L 7 25 C 5.8098039 25 5 24.190196 5 23 L 5 7 z M 7 9 L 7 10 L 7 13 L 7 14 L 8 14 L 18 14 L 19 14 L 19 13 L 19 10 L 19 9 L 18 9 L 8 9 L 7 9 z M 9 11 L 17 11 L 17 12 L 9 12 L 9 11 z M 23 14 L 27 14 L 27 23 C 27 24.190196 26.190196 25 25 25 C 23.809804 25 23 24.190196 23 23 L 23 14 z M 7 15 L 7 17 L 12 17 L 12 15 L 7 15 z M 14 15 L 14 17 L 19 17 L 19 15 L 14 15 z M 7 18 L 7 20 L 12 20 L 12 18 L 7 18 z M 14 18 L 14 20 L 19 20 L 19 18 L 14 18 z M 7 21 L 7 23 L 12 23 L 12 21 L 7 21 z M 14 21 L 14 23 L 19 23 L 19 21 L 14 21 z" />
+                </symbol>
+                <symbol id="book" viewBox="0 0 20 20">
+                    <path d="M8.627,7.885C8.499,8.388,7.873,8.101,8.13,8.177L4.12,7.143c-0.218-0.057-0.351-0.28-0.293-0.498c0.057-0.218,0.279-0.351,0.497-0.294l4.011,1.037C8.552,7.444,8.685,7.667,8.627,7.885 M8.334,10.123L4.323,9.086C4.105,9.031,3.883,9.162,3.826,9.38C3.769,9.598,3.901,9.82,4.12,9.877l4.01,1.037c-0.262-0.062,0.373,0.192,0.497-0.294C8.685,10.401,8.552,10.18,8.334,10.123 M7.131,12.507L4.323,11.78c-0.218-0.057-0.44,0.076-0.497,0.295c-0.057,0.218,0.075,0.439,0.293,0.495l2.809,0.726c-0.265-0.062,0.37,0.193,0.495-0.293C7.48,12.784,7.35,12.562,7.131,12.507M18.159,3.677v10.701c0,0.186-0.126,0.348-0.306,0.393l-7.755,1.948c-0.07,0.016-0.134,0.016-0.204,0l-7.748-1.948c-0.179-0.045-0.306-0.207-0.306-0.393V3.677c0-0.267,0.249-0.461,0.509-0.396l7.646,1.921l7.654-1.921C17.91,3.216,18.159,3.41,18.159,3.677 M9.589,5.939L2.656,4.203v9.857l6.933,1.737V5.939z M17.344,4.203l-6.939,1.736v9.859l6.939-1.737V4.203z M16.168,6.645c-0.058-0.218-0.279-0.351-0.498-0.294l-4.011,1.037c-0.218,0.057-0.351,0.28-0.293,0.498c0.128,0.503,0.755,0.216,0.498,0.292l4.009-1.034C16.092,7.085,16.225,6.863,16.168,6.645 M16.168,9.38c-0.058-0.218-0.279-0.349-0.498-0.294l-4.011,1.036c-0.218,0.057-0.351,0.279-0.293,0.498c0.124,0.486,0.759,0.232,0.498,0.294l4.009-1.037C16.092,9.82,16.225,9.598,16.168,9.38 M14.963,12.385c-0.055-0.219-0.276-0.35-0.495-0.294l-2.809,0.726c-0.218,0.056-0.351,0.279-0.293,0.496c0.127,0.506,0.755,0.218,0.498,0.293l2.807-0.723C14.89,12.825,15.021,12.603,14.963,12.385"></path>
+                </symbol>
+                <symbol>
+                    <svg id="home" viewBox="0 0 20 20">
+                        <path d="M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z"></path>
+                      </svg>
+                </symbol>
+                <symbol id="courses" viewBox="0 0 20 20">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 297 297" style="enable-background:new 0 0 297 297;" xml:space="preserve" width="20px" height="20px">
+                      <g>
+                        <path d="M17.555,166.935h262.508c5.431,0,9.834-4.403,9.834-9.834V18.077c0-5.43-4.403-9.833-9.834-9.833H17.555   c-5.431,0-9.834,4.403-9.834,9.833v139.023C7.721,162.531,12.124,166.935,17.555,166.935z M27.389,27.911h242.841v119.355H27.389   V27.911z" fill="#5a6674"/>
+                        <path d="M148.811,31.415c-30.967,0-56.16,25.199-56.16,56.172c0,30.975,25.193,56.174,56.16,56.174   c30.965,0,56.155-25.199,56.155-56.174C204.967,56.614,179.776,31.415,148.811,31.415z M148.811,124.094   c-20.122,0-36.493-16.376-36.493-36.507c0-20.128,16.371-36.505,36.493-36.505c20.119,0,36.488,16.377,36.488,36.505   C185.3,107.718,168.931,124.094,148.811,124.094z" fill="#5a6674"/>
+                        <path d="M161.893,83.819l-21.526-13.259c-1.365-0.839-3.079-0.876-4.479-0.095c-1.399,0.781-2.267,2.26-2.267,3.863l0.001,26.518   c0,1.604,0.867,3.082,2.267,3.864c0.672,0.375,1.416,0.562,2.158,0.562c0.806,0,1.61-0.22,2.321-0.658l21.525-13.26   c1.308-0.806,2.105-2.232,2.105-3.768C163.997,86.051,163.2,84.624,161.893,83.819z" fill="#5a6674"/>
+                        <path d="M180.481,242.691c5.65-6.993,9.045-15.883,9.045-25.555c0-22.457-18.265-40.727-40.714-40.727   c-22.454,0-40.72,18.271-40.72,40.727c0,9.671,3.394,18.561,9.045,25.554c-10.278,8.997-16.456,22.13-16.456,36.232   c0,5.43,4.403,9.833,9.834,9.833h76.59c5.431,0,9.833-4.403,9.833-9.833C196.938,264.821,190.761,251.689,180.481,242.691z    M148.813,196.077c11.605,0,21.046,9.447,21.046,21.059c0,11.611-9.44,21.059-21.046,21.059c-11.608,0-21.053-9.447-21.053-21.059   C127.76,205.524,137.204,196.077,148.813,196.077z M122.103,269.089c2.142-5.81,6.147-10.827,11.456-14.201   c4.714,1.912,9.86,2.975,15.253,2.975c5.39,0,10.534-1.063,15.247-2.975c5.309,3.376,9.314,8.393,11.457,14.201H122.103z" fill="#5a6674"/>
+                        <path d="M280.544,242.69c5.65-6.993,9.044-15.883,9.044-25.554c0-22.457-18.265-40.727-40.717-40.727   c-22.451,0-40.717,18.271-40.717,40.727c0,9.671,3.394,18.561,9.045,25.554c-10.279,8.997-16.457,22.13-16.457,36.232   c0,5.43,4.402,9.833,9.833,9.833h76.591c5.431,0,9.834-4.403,9.834-9.833C297,264.821,290.822,251.688,280.544,242.69z    M248.871,196.077c11.606,0,21.05,9.447,21.05,21.059c0,11.611-9.443,21.059-21.05,21.059c-11.607,0-21.049-9.447-21.049-21.059   C227.822,205.524,237.265,196.077,248.871,196.077z M222.164,269.089c2.142-5.81,6.146-10.827,11.457-14.201   c4.714,1.912,9.859,2.975,15.25,2.975c5.392,0,10.537-1.063,15.25-2.975c5.31,3.374,9.315,8.391,11.457,14.201H222.164z" fill="#5a6674"/>
+                        <path d="M79.802,242.691c5.652-6.993,9.046-15.883,9.046-25.555c0-22.457-18.266-40.727-40.716-40.727   c-22.453,0-40.719,18.271-40.719,40.727c0,9.671,3.393,18.561,9.045,25.554C6.179,251.688,0,264.821,0,278.923   c0,5.43,4.403,9.833,9.834,9.833h76.591c5.431,0,9.833-4.403,9.833-9.833C96.258,264.821,90.08,251.689,79.802,242.691z    M48.132,196.077c11.606,0,21.048,9.447,21.048,21.059c0,11.611-9.441,21.059-21.048,21.059c-11.607,0-21.052-9.447-21.052-21.059   C27.08,205.524,36.524,196.077,48.132,196.077z M21.422,269.089c2.142-5.81,6.148-10.827,11.458-14.201   c4.714,1.912,9.859,2.975,15.252,2.975c5.39,0,10.535-1.063,15.249-2.975c5.309,3.375,9.313,8.392,11.455,14.201H21.422z" fill="#5a6674"/>
+                      </g>
+                    </svg>
+                </symbol>
+              </svg>
+              <!-- End svg paths -->
+            <!-- end NavBar -->
+            <section class="newsFeed" >
+            
+              <div class="container-fluid">
+                <div class="row justify-content-center">
+                  
+                    <div class="col-sm-12 col-12">
+                        <!-- start NewsFeed container -->
+                        <div class="newsFeedBody">
                             <div class="row">
-                                <div class="col-sm-9">
-                                    <div class="card">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <img class="profimg" src="images/profile-avatar.jpg">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12" >
-                                                <div class="line">
-                                                <p class="name">Bailasan Elmangosh</p>
-                                                <p class="title">Front-End Developer</p>
+                            <!-- start card --> 
+                            <div class="col-sm-3">
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        <div class="card">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                        <img ng-if="studentData.gender=='Female'" ng-src="http://localhost:2449/{{studentData.image||'images/default.png' }}">   
+                                                        <img ng-if="studentData.gender=='Male'" ng-src="http://localhost:2449/{{studentData.image||'images/default.png' }}">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <p class="followNum">20</p>
-                                                <p> Followers</p>
-                                                <p class="followNum">20</p>
-                                                <p> Following</p>
+                                            <div class="row">
+                                                <div class="col-sm-12" >
+                                                    <div class="line">
+                                                    <p class="name" ng-bind="studentData.username"></p>
+                                                    <p class="title" ng-bind="studentData.title"></p>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p class="followNum" ng-bind="studentData.followers"></p>
+                                                    <p> Followers</p>
+                                                    <p class="followNum" ng-bind="studentData.following"></p>
+                                                    <p> Following</p>
+                                                </div>
+                                            </div>
+                                            
                                         </div>
-                                        
                                     </div>
                                 </div>
-<<<<<<< HEAD
                             </div>   
                             <!-- End card -->
                             <div class="col-sm-6 col-12">
@@ -210,36 +211,16 @@
                                                                             <div class="col-md-12">
                                                                                 <textarea ng-model="question.QuestionHead" rows="4" cols="50" placeholder="Add Your Question here ...."></textarea> 
                                                                             </div>
-=======
-                            </div>
-                        </div>   
-                        <!-- End card -->
-                        <div class="col-sm-6 col-12">
-                            <!-- start Question -->
-                            <div  class=" row " id="question">
-                                <div class="question col-sm-12" >
-                                    <div class="body"> 
-                                        <div class="body-container">
-                                                <div >
-                                                    <!-- start write Question box -->
-                                                    <div class="addQue">
-                                                        <div class="row">
-                                                            <div class="col-md-10 ">
-                                                                <div class="boxQus">
+                                                                        </div>
+                                                                    </div>
                                                                     <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <textarea ng-model="question.QuestionHead" rows="4" cols="50" placeholder="Add Your Question here ...."></textarea> 
->>>>>>> 5cad37b9b01e6ed148830d360f1651bb919a8733
+                                                                        <div class="col-md-3 ml-md-auto  ">
+                                                                            <button ng-click="addQuestion()">Ask</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="col-md-3 ml-md-auto  ">
-                                                                        <button ng-click="addQuestion()">Ask</button>
-                                                                    </div>
-                                                                </div>
+                                                                    
                                                             </div>
-<<<<<<< HEAD
                                                         </div> 
                                                         <!-- End write Question box --> 
                                                         <!-- start Questions -->
@@ -251,9 +232,9 @@
                                                                                     <div class="row">
                                                                                         <div class="col-md-1">
                                                                                                 <div class="image">
-                                                                                                        <img ng-if="post.gender=='Female'" ng-src="{{post.image||'images/default.png' }}">   
-                                                                                                        <img ng-if="post.gender=='Male'" ng-src="{{post.image||'images/default.png' }}">
-                                                                                                        <img ng-if="post.image != null" ng-src='http://localhost:2449/{{post.image}}'/>                                                                             
+                                                                                                        <img ng-if="post.gender=='Female'" ng-src="http://localhost:2449/{{post.image||'images/default.png' }}">   
+                                                                                                        <img ng-if="post.gender=='Male'" ng-src="http://localhost:2449/{{post.image||'images/default.png' }}">
+                                                                                                        <!-- <img ng-if="post.image != null" ng-src='http://localhost:2449/{{post.image}}'/>                                                                              -->
                                                                                                 </div>
                                                                                         </div>
                                                                                         <div class="col-md-11">
@@ -277,198 +258,149 @@
                                                                                                     <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
                                                                                                     <a href="#commentBox" id="answer">Answer</a>
                                                                                                 </div>
-=======
-=======
-=======
-                                                                
-                                                        </div>
-                                                    </div> 
-                                                    <!-- End write Question box --> 
-                                                    <!-- start Questions -->
->>>>>>> 5cad37b9b01e6ed148830d360f1651bb919a8733
-                                                    <div class=" row" >
-                                                            <div class="post ">
-                                                                <div class="col-sm-12">
-                                                                    <div class="row">
-                                                                            <div class="col-sm-12 queBody">
-                                                                                <div class="row">
-                                                                                    <div class="col-md-1 col-sm-2">
-                                                                                            <div class="image">
-                                                                                                <img src="images/profile-avatar.jpg">
-                                                                                            </div>
-                                                                                    </div>
-                                                                                    <div class="col-md-11 col-sm-10">
-                                                                                        <div class="row">
-                                                                                            <div class="col-sm-11 ">
-                                                                                                <h3 class="name">bailasan</h3>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="row">
-                                                                                            <div class="col-sm-11">
-                                                                                                <p class="title">Front-end</p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="row">
-                                                                                            <div class="col-sm-11">
-                                                                                                <p class="date">1d</p>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="row">
-                                                                                    <div class="col-sm-12 ">
-                                                                                        <div class="row ">
-                                                                                            <div class=" col-lg-11 col-sm-12 ml-sm-auto">
-                                                                                                <p class="queText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                            
-                                                                                        <div class="row">
-                                                                                            <div class="col-lg-4 col-md-5 col-sm-8  ml-sm-auto queOption">
-                                                                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-                                                                                                |
-                                                                                                <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
-                                                                                                <a href="#commentBox" id="answer">Answer</a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="row justify-content-center">
-                                                                            <div class="col-md-11 ">
-                                                                                <div class="row">
-                                                                                    <div class="col-md-12">
-                                                                                        <div class="comment line" id="comment" >
-                                                                                            <div class="row  ">
-                                                                                                <div class="col-md-12 queBody ">
-                                                                                                    <div class="row">
-                                                                                                        <div class="col-md-1">
-                                                                                                            <div class="image">
-                                                                                                                <img src="images/profile-avatar.jpg">
+                                                                        </div>
+                                                                        <div class="row justify-content-center">
+                                                                                <div class="col-md-11 ">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12">
+                                                                                            <div class="comment line" id="comment" ng-repeat="comment in post.answers">
+                                                                                                <div class="row  ">
+                                                                                                    <div class="col-md-12 queBody ">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-1">
+                                                                                                                <div class="image">
+                                                                                                                        <img ng-if="comment.gender=='Female'" ng-src="http://localhost:2449/{{comment.userImage||'images/default.png' }}">   
+                                                                                                                        <img ng-if="comment.gender=='Male'" ng-src="http://localhost:2449/{{comment.userImage||'images/default.png' }}">
+                                                                                                                        <!-- <img ng-if="comment.userImage != null" ng-src='http://localhost:2449/{{comment.userImage}}'/>  -->
+                                                                                                                    </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-11">
+                                                                                                                <h3 class="name" ng-bind="comment.username"></h3>
+                                                                                                                <p class="title" ng-bind="comment.title"></p>
+                                                                                                                <p class="date" ng-bind="comment.date"></p>
                                                                                                             </div>
                                                                                                         </div>
-                                                                                                        <div class="col-md-11">
-                                                                                                            <h3 class="name">bailasan</h3>
-                                                                                                            <p class="title">Front-end</p>
-                                                                                                            <p class="date">1d</p>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="row">
-                                                                                                        <div class="col-md-12 ">
-                                                                                                            <div class="row ">
-                                                                                                                <div class="col-md-11 ml-md-auto">
-                                                                                                                    <p class="queText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12 ">
+                                                                                                                <div class="row ">
+                                                                                                                    <div class="col-md-11 ml-md-auto">
+                                                                                                                        <p class="queText" ng-bind="comment.questionAnswer"></p>
+                                                                                                                    </div>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
+                                                                                            </div> 
+                                                                                            <div class="prevComment">
+                                                                                            <a href="#">Show Previous Comments</a>
                                                                                             </div>
-                                                                                        </div> 
-                                                                                        <div class="prevComment">
-                                                                                        <a href="#">Show Previous Comments</a>
-                                                                                        </div>
-                                                                                        <div class="postComment" id="commentBox">
-                                                                                            <div class="row">
-                                                                                                <div class="col-lg-2 col-md-3">
-                                                                                                        <div class="image">
-                                                                                                            <img src="images/profile-avatar.jpg">
-                                                                                                        </div>
-                                                                                                </div>
-                                                                                                <div class="col-lg-6 col-md-9">
-                                                                                                    <div class="boxQus">
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-md-12">
-                                                                                                                <textarea rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
+                                                                                            <div class="postComment" id="commentBox" style="display: block; border: 1px solid #191919">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-2 col-md-3">
+                                                                                                            <div class="image">
+                                                                                                                <img src="images/profile-avatar.jpg">
+                                                                                                            </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-lg-10 col-md-9">
+                                                                                                        <div class="boxQus">
+                                                                                                            <div class="row">
+                                                                                                                <div class="col-md-12">
+                                                                                                                    <textarea ng-model="newAnswer[key].questionAnswer" rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
+                                                                                                                </div>
                                                                                                             </div>
                                                                                                         </div>
-                                                                                                    </div>
-                                                                                                </div>   
-                                                                                                <div class="col-lg-4  col-md-5  align-self-center" >
-                                                                                                    <button >Answer</button>
-                                                                                                </div>    
-                                                                                            </div>  
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-lg-4  col-md-5  ml-md-auto">
+                                                                                                                <button ng-click="addAnswer(key,post.id)" >Answer</button>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                </div>       
+                                                                                                </div>  
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </div> 
-                                                    <!-- End Questions -->
-                                                </div>
+                                                            </div> 
+                                                        <!-- End Questions -->
+                                                    </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- End Question --> 
                             </div>
-                            <!-- End Question --> 
+                                
+                            </div>      
                         </div>
-                            
-                        </div>      
-                    </div>
-               </div>
-               <!-- End profile container --> 
-          </div>
-          </div>
-        </section>
-        <script src="js/lib/jquery-1.10.2.min.js"></script>
-       
-       
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-        
-       <script src="js/lib/popper.min.js"></script>
-       <script src="js/lib/bootstrap.min.js"></script>
-       <script src="js/custom.js"></script>  
-       
+                   </div>
+                   <!-- End profile container --> 
+              </div>
+              </div>
+            </section>
+              <!-- <script src="js/lib/jquery-3.2.1.min.js"></script>    -->
+              <script src="js/lib/jquery-1.10.2.min.js"></script>
+              <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+              
+             <script src="js/lib/popper.min.js"></script>
+             <script src="js/lib/bootstrap.min.js"></script>
+             <script src="js/custom.js"></script>  
+             
+    
+            <script src="js/lib/angular/angular.min.js"></script>
+            <script src="js/lib/angular/angular-messages.min.js"></script>
+            <script src="js/lib/angular/angular-route.min.js"></script>
+            <script src="js/lib/angular/angular-cookies.min.js"></script>
+    
+            
+    
+    
+            <script src="angularcomponents/NewsFeed/newsFeed-app.js"></script>
+            <script src="angularcomponents/NewsFeed/Ctrl/newsFeedCtrl.js"></script>
+            <script src="angularcomponents/NewsFeed/Srvs/getFeedSrv.js"></script>
+            <script src="angularcomponents/NewsFeed/Srvs/getFeedSrv.js"></script>
+            <script src="angularcomponents/NewsFeed/Srvs/questionsSrv.js"></script>
+    
+            
+            <script src="js/lib/jquery.signalR-2.2.2.js"></script>
+            <script src="http://localhost:10724/signalr/hubs"></script>
+    
+            <script src="js/SignalR/FeedSignalR.js"></script>
 
-      <script src="js/lib/angular/angular.min.js"></script>
-      <script src="js/lib/angular/angular-messages.min.js"></script>
-      <script src="js/lib/angular/angular-route.min.js"></script>
-      <script src="js/lib/angular/angular-cookies.min.js"></script>
-
-      
-
-
-      <script src="angularcomponents/NewsFeed/newsFeed-app.js"></script>
-      <script src="angularcomponents/NewsFeed/Ctrl/newsFeedCtrl.js"></script>
-      <script src="angularcomponents/NewsFeed/Srvs/getFeedSrv.js"></script>
-      <script src="angularcomponents/NewsFeed/Srvs/getFeedSrv.js"></script>
-      <script src="angularcomponents/NewsFeed/Srvs/questionsSrv.js"></script>
-
-      
-      <script src="js/lib/jquery.signalR-2.2.2.js"></script>
-      <script src="http://localhost:10724/signalr/hubs"></script>
-
-      <script src="js/SignalR/FeedSignalR.js"></script>
-
-      <form id="frm" enctype="multipart/form-data">
-          <input type="file" name="file"/>
-          <button type="submit">submit</button>
-      </form>
-        <!--TEST-->
-        <script>
-          $("#frm").submit(function (e) {
-              var token = $.cookie("token");
-       var data = new FormData(this);
-       $.ajax({
-           url: "http://localhost:2449/api/uploadstudentimage",
-           type: "Post",
-           datatype: "Json",
-           data: data,
-           headers: {"Authorization":"bearer "+token},
-           processData: false,
-           contentType: false,
-           success: function (data) {
-               alert();
-               angular.element($("#jquery")).scope().imgPath(data.imagePath);
-           }
-       })
-       
-   });
-   </script>
-
-
-    </body>
-</html>
+            <!-- <form id="frm" enctype="multipart/form-data">
+                <input type="file" name="file"/>
+                <button type="submit">submit</button>
+            </form>
+            <input type="text" ng-model="img" />
+            <img ng-src="{{img}}" /> -->
+              <!--TEST-->
+              <!-- <script>
+                $("#frm").submit(function (e) {
+                    var token = $.cookie("token");
+             var data = new FormData(this);
+             $.ajax({
+                 url: "http://localhost:2449/api/uploadstudentimage",
+                 type: "Post",
+                 datatype: "Json",
+                 data: data,
+                 headers: {"Authorization":"bearer "+token},
+                 processData: false,
+                 contentType: false,
+                 success: function (data) {
+                     alert();
+                     angular.element($("#jquery")).scope().imgPath(data.imagePath);
+                 }
+             })
+             
+         });
+         </script> -->
+    
+        </body>
+    </html>
