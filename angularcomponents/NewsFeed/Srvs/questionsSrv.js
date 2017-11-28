@@ -21,6 +21,17 @@ angular. module("newsFeedApp").factory('questionsSrv',function($http,$cookies){
                 },
                 data:answer
             })
+        },
+        GetQuestionsByIds : function(ids,token){
+            return $http({
+                method:"Post",
+                url:"http://localhost:2449/api/getquestionsbyid",
+                headers:{
+                    'Content-Type': 'application/json',
+                    'Authorization':' bearer '+token
+                },
+                data:ids
+            })  
         }
     }
 })

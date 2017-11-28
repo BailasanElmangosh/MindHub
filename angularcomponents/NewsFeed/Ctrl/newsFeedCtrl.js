@@ -55,6 +55,13 @@
                         .error(function(){});   
             };
 
+            $scope.newQuestionsSignalR = function(data){
+                questionsSrv.GetQuestionsByIds(data,'aa').
+                    success(function(){
+                        alert();
+                    })
+            }
+
 
     });
 })();
