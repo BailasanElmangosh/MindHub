@@ -57,7 +57,7 @@
 
             $scope.newQuestionsSignalR = function(data){
                 questionsSrv.GetQuestionsByIds(data,'aa').
-                    success(function(){
+                    success(function(data){
                         alert();
                     })
             }
