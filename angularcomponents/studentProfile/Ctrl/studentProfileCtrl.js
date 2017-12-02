@@ -51,7 +51,8 @@
                     id:$scope.editProfile.profileId,
                     username:$scope.editProfile.username,
                     gender:$scope.editProfile.gender,
-                    birthdate:$scope.editProfile.birthdate
+                    birthdate:$scope.editProfile.birthDate,
+                    image:$scope.editProfile.image
                  }
                  console.log($scope.editProfile);
                  console.log($scope.somedata);
@@ -185,8 +186,8 @@
                         if(data.status="Success")
                         { console.log(data);
                             $scope.profileData.questions.unshift(data.question);
-                            $scope.question.QuestionHead = '';
-                            ;
+                            angular.element('#textareaQues').val('');
+                            
                         }
                     });
                 }
