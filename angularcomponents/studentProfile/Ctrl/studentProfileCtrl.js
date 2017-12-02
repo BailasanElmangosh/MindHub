@@ -13,7 +13,7 @@
                 $scope.imgPath="http://localhost:2449/"+$scope.profileData.image
                 console.log($scope.profileData);
             });
-
+          
             $scope.limit=2;
             $scope.comment=function(num)
             {
@@ -67,17 +67,49 @@
             $scope.$apply();
            }
             //Skills
-
                //  Get ALL skills
-               $scope.getskill={};
                profileEditSrv.skillsGet()
                 .success(function(data, status){
-                    $scope.getskill= data.skills;
+                    $scope.skillList= data.skills;
+                  
                 });
+                  $scope.complete = function(string){  
+                       $scope.hidethis = false;  
+                       var output = [];  
+                      
+                       angular.forEach($scope.skillList, function(skillDropDown){  
+                            console.log(skillDropDown);
+                            if(skillDropDown.name.toLowerCase().indexOf(string.toLowerCase()) >= 0)  
+                            {  
+                                 output.push(skillDropDown);  
+                            }  
+                       });  
+                       $scope.height=angular.element('#list-group').width()
+                       angular.element('#dropdownSkill')
+                       .css(
+                           {    'border':'3px solid #eee',
+                                'border-radius': '10px',
+                               'max-height':'100px',
+                               'overflow-y':'scroll',
+                               'overflow-x':'hidden',
+                               ' .scrollComment::-webkit-scrollbar-track': '{ " -webkit-box-shadow": "inset 0 0 6px rgba(0,0,0,0.3)","background-color": "#8ccb75"}',
+                               ' .scrollComment::-webkit-scrollbar': '{ "width": "10px","background-color": "#F5F5F5"}',
+                               ' .scrollComment::-webkit-scrollbar-thumb': '{ "border": " 2px solid #555555","background-color": "#555555"}'
+                           });
+                           angular.element('#dropdownSkill')
+                           .css( 'width', $scope.height);
+                           angular.element('#error')
+                           .css( 'display','none');
+                       $scope.filterSkill = output;  
+                  }  
+                  $scope.fillTextbox = function(string,idS){  
+                       $scope.skillDropDown = string;  
+                       $scope.hidethis = true;
+                       $scope.idSkill=idS;
+
+                  }  
                //add skill
                $scope.skill={};
-             
-              
                $scope.addSkill=function(skillid,studentid){
                 $scope.skilladd=
                 {
@@ -93,10 +125,15 @@
                             id:data.id, 
                             skillName: data.skillName
                         }
-                     if(status="Success")
-                     { 
-                         $scope.profileData.skills.push($scope.data)
-                     }
+                        if(data.status=="Success")
+                        { 
+                            $scope.profileData.skills.push($scope.data);   
+                        }
+                        if(data.status=="Failed")
+                        { 
+                            angular.element('#error')
+                            .css( 'display','block');
+                        }
                  });
                };
                 // delete skill
@@ -111,9 +148,7 @@
                     $scope.remove(array, index);
                     profileEditSrv.deleteSkill($scope.delskill)
                     .success(function(data, status){
-                        if(status="Success")
-                        {
-                        }
+                   
                     });
                             
                 };
@@ -147,7 +182,7 @@
                 {
                     questionsSrv.Create($scope.question,$cookies.get('token'))
                     .success(function(data, status){
-                        if(status="Success")
+                        if(data.status="Success")
                         { console.log(data);
                             $scope.profileData.questions.unshift(data.question);
                             $scope.question.QuestionHead = '';
@@ -161,7 +196,7 @@
                     $scope.newAnswer[key].questionId=id;
                     questionsSrv.CreateAnswer($scope.newAnswer[key],$cookies.get('token'))
                     .success(function(data, status){
-                        if(status="Success")
+                        if(data.status="Success")
                         { console.log('Hii')
                             $scope.newAnswer[key].userImage = data.addedAnswer.userImage;
                             $scope.newAnswer[key].username = data.addedAnswer.username;

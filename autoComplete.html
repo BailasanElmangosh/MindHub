@@ -1,0 +1,109 @@
+<!-- <html>
+    <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>profile</title>
+            <link href="https://fonts.googleapis.com/css?family=Kreon" rel="stylesheet">
+            <link rel="icon" type="image/png" href="images/lamp90x90.png" />
+            <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
+            <link href="/scss/bootstrap.min.css" rel="stylesheet" />
+            <link href="/scss/font-awesome.min.css" rel="stylesheet" />
+            <link href="/scss/angular-matrial.css" rel="stylesheet" />    
+        <style>
+        .autocomplete-custom-template li {
+  border-bottom: 1px solid #ccc;
+  height: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  white-space: normal;
+}
+.autocomplete-custom-template li:last-child {
+  border-bottom-width: 0;
+}
+.autocomplete-custom-template .item-title,
+.autocomplete-custom-template .item-metadata {
+  display: block;
+  line-height: 2;
+}
+.autocomplete-custom-template .item-title md-icon {
+  height: 18px;
+  width: 18px;
+}
+
+        </style>             
+    </head>
+    <body>
+        <div ng-controller="DemoCtrl as ctrl" layout="column" ng-cloak="" class="autocompletedemoCustomTemplate" ng-app="MyApp">
+            <md-content layout-padding="" layout="column">
+                <form ng-submit="$event.preventDefault()">
+                <p>Use <code>md-autocomplete</code> with custom templates to show styled autocomplete results.</p>
+                <md-autocomplete ng-disabled="ctrl.isDisabled" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text-change="ctrl.searchTextChange(ctrl.searchText)" md-search-text="ctrl.searchText" md-selected-item-change="ctrl.selectedItemChange(item)"
+                    md-items="item in ctrl.querySearch(ctrl.searchText)" md-item-text="item.name" md-min-length="0" placeholder="Pick an Angular repository" md-menu-class="autocomplete-custom-template">
+                    <md-item-template>
+                    <span class="item-title">
+                    
+                        <span> {{item.name}} </span>
+                    </span>
+                    <!-- <span class="item-metadata">
+                        <span>
+                        <strong>{{item.watchers}}</strong> watchers
+                        </span>
+                    <span>
+                        <strong>{{item.forks}}</strong> forks
+                        </span>
+                    </span> -->
+                    <!-- </md-item-template>
+                </md-autocomplete>
+                </form>
+            </md-content>
+            <div ng-repeat=" skill in getskill">
+                <span>{{skill.name}}</span>
+            </div>
+        </div>
+          <script src="js/lib/angular/angular.min.js"></script>
+          <script src="js/lib/angular/angular-animate.min.js"></script>
+          <script src="js/lib/angular/angular-route.min.js"></script>          
+          <script src="js/lib/angular/angular-aria.min.js"></script>          
+          <script src="js/lib/angular/angular-messages.min.js"></script>
+          <script src="js/lib/angular/svg-assets-cache.js"></script>
+          <script src="js/lib/angular/angular-material.js"></script>
+         <script src="test.js"></script>   
+    </body>
+</html>
+ -->
+
+ -->
+ 
+ <!DOCTYPE html>  
+ <html>  
+      <head>  
+           <title>Webslesson Tutorial | AngularJS Tutorial - Make Autocomplete Textbox</title>  
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+           <script src="js/lib/angular/angular.min.js"></script>
+           <script src="test.js"></script>    
+           <style>  
+           li{  
+                cursor:pointer;  
+           }  
+           li:hover  
+           {  
+                background-color:#f9f9f9;  
+           }  
+           </style>  
+      </head>  
+      <body>  
+           <br /><br />  
+           <div class="container" style="width:500px;">  
+                <div ng-app="myapp" ng-controller="usercontroller">  
+                     <label>Enter Country Name</label>  
+                     <input type="text" name="skill" id="skill" ng-model="skill" ng-keyup="complete(skill)" class="form-control" />  
+                     <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">  
+                          <li class="list-group-item" ng-repeat="skilldata in filterSkill" ng-click="fillTextbox(skilldata)" ng-bind="skilldata"></li>  
+                     </ul>  
+                </div>  
+           </div> 
+      </body> 
+      
+ </html>  
+ 

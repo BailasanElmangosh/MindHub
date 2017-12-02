@@ -1305,6 +1305,36 @@ body {
   display: none;
 }
 
+.popUpSkill .modal-dialog .modal-content .modal-body .dropdownSkill {
+  position: absolute;
+  z-index: 1000;
+  width: auto;
+}
+
+.popUpSkill .modal-dialog .modal-content .modal-body .dropdownSkill::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.popUpSkill .modal-dialog .modal-content .modal-body .dropdownSkill::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fff;
+}
+
+.popUpSkill .modal-dialog .modal-content .modal-body .dropdownSkill::-webkit-scrollbar-thumb {
+  background-color: #555555;
+  border: 2px solid #555555;
+}
+
+.popUpSkill .modal-dialog .modal-content .modal-body .dropdownSkill li {
+  padding: .5rem .75rem;
+  cursor: pointer;
+}
+
+.popUpSkill .modal-dialog .modal-content .modal-body .error {
+  color: #b30b0b;
+  display: none;
+}
+
 svg, i {
   height: 20px;
   width: 20px;
