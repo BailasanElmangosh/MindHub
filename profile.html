@@ -729,12 +729,20 @@
                                                                         
                                                                         <div class="row"> 
                                                                             <div class="col-sm-6">
-                                                                                <select class="form-control form-control-sm" ng-model="skill"  ng-options="skill as skill.name for skill in getskill" >
+                                                                                <!-- <select class="form-control form-control-sm" ng-model="skill"  ng-options="skill as skill.name for skill in getskill" >
                                                                                   
-                                                                                </select>
+                                                                                </select> -->
+                                                                                <input type="text" name="skill" id="skill" ng-model="skillDropDown" ng-keyup="complete(skillDropDown)" class="form-control" value="" />  
+                                                                                
+                                                                                <ul class="list-group " id="list-group" ng-model="hidethis" >  
+                                                                                    <div class="dropdownSkill" ng-hide="hidethis" id="dropdownSkill">  
+                                                                                    <li class="list-group-item" ng-repeat="skilldata in filterSkill" ng-click="fillTextbox(skilldata.name ,skilldata.id)" ng-bind="skilldata.name"></li>  
+                                                                                </div> 
+                                                                                </ul>  
+                                                                               <p class="error" id="error">This Skill choosen before</p>
                                                                             </div>
                                                                             <div class="col-sm-3">
-                                                                                <button class="btn" ng-click="addSkill(skill.id,profileData.userId)">Add </button>
+                                                                                <button class="btn" ng-click="addSkill(idSkill,profileData.userId)">Add </button>
                                                                             </div>
                                                                         </div>
                                                                        
