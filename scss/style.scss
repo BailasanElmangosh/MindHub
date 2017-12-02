@@ -16,6 +16,11 @@ body
 .hide {
     display: none!important;
 }
+.error
+{
+    color: #b30b0b;
+    display: none;
+}
 // start Landing page
 .landingPage {
     background: url('../images/bg.jpg') no-repeat center;
@@ -1529,11 +1534,7 @@ body
                     }
                     
                 }
-                .error
-                {
-                    color: #b30b0b;
-                    display: none;
-                }
+             
             }
         } 
     }

@@ -156,6 +156,16 @@
                 };
                
                //upload Image
+               $scope.sizeFalse=function()
+               {  
+                angular.element('#size')
+                .css( 'display','block'); 
+               }
+               $scope.sizeTrue=function()
+               {  
+                angular.element('#size')
+                .css( 'display','none'); 
+               }
             //    $scope.url={};
             //    var url =$scope.url.img
             //    console.log(url);

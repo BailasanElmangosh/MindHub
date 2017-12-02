@@ -10,6 +10,11 @@ body {
   display: none !important;
 }
 
+.error {
+  color: #b30b0b;
+  display: none;
+}
+
 .landingPage {
   background: url("../images/bg.jpg") no-repeat center;
   background-size: cover;
@@ -1328,11 +1333,6 @@ body {
 .popUpSkill .modal-dialog .modal-content .modal-body .dropdownSkill li {
   padding: .5rem .75rem;
   cursor: pointer;
-}
-
-.popUpSkill .modal-dialog .modal-content .modal-body .error {
-  color: #b30b0b;
-  display: none;
 }
 
 svg, i {

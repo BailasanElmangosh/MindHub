@@ -306,7 +306,21 @@
     }));
     
     $("#ImageBrowse").on("change", function() {
-        $("#imageUploadForm").submit();
+       
+        var file=$(this)[0].files[0].size
+        console.log(file)
+        if(file<=5000000)
+        {
+          
+            $("#imageUploadForm").submit();
+            angular.element($("#profile")).scope().sizeTrue();  
+        }
+        else
+        {
+           
+            angular.element($("#profile")).scope().sizeFalse();
+           
+        }
     });
     
     
