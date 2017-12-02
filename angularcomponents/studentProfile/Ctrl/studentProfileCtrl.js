@@ -1,3 +1,4 @@
+
 (function () {
     
     studentProfile.controller("studentProfileCtrl", function ($scope,profileDataSrv,profileEditSrv,$cookies,questionsSrv) {
