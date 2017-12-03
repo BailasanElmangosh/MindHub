@@ -852,12 +852,12 @@
                                                                                     <p class="date" ng-bind="post.date"></p>                                                                                        
                                                                                     <p class="queText" ng-bind="post.questionHead"></p>
                                                                                     <div class="row">
-                                                                                            <div class="col-md-4  ml-md-auto queOption">
-                                                                                                <span ng-bind="post.likes"></span><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-                                                                                                |
-                                                                                                <span ng-bind="post.dislikes"></span><a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
-                                                                                                <a href="#commentBox" id="answer">Answer</a>
-                                                                                            </div>
+                                                                                        <div class="col-md-4  ml-md-auto queOption">
+                                                                                            <span ng-bind="countLike"></span><a  ng-class="{colorLike:stateLike{{post.id}}==='like'}" ng-click="likeDislike(post.id,'like',post.likes)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                                                                            |
+                                                                                            <span ng-bind="countDis"></span><a  ng-class="{colorLike:stateDisLike{{post.id}}==='dislike'}" ng-click="likeDislike(post.id,'dislike',post.dislikes)"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+                                                                                            <a href="#commentBox" id="answer">Answer</a>
+                                                                                        </div>
                                                                                     </div>
                                                                             </div>
                                                                             <div class="scrollComment" id="scrollComment">
@@ -997,7 +997,7 @@
                                                                             </div>
                                                                             <div class="col-4 ">
                                                                                 <div class="delete">
-                                                                                    <a  id="delete"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>          
+                                                                                    <a   id="delete"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>          
                                                                                     <div class="dropdown-menu menuDelete" id="">
                                                                                         <div class="arrow"></div>
                                                                                         <a class="dropdown-item" > 

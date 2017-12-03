@@ -861,6 +861,10 @@ body {
   color: #666666;
 }
 
+.profile .profileBody .question .body .body-container .post .queBody .queOption a.colorLike {
+  color: #8ccb75;
+}
+
 .profile .profileBody .question .body .body-container .post .queBody .queOption a:hover {
   color: #8ccb75;
 }

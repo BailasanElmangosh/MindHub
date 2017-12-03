@@ -14,6 +14,7 @@
                 $scope.editProfile=data.profile;
                 $scope.imgPath="http://localhost:2449/"+$scope.profileData.image
                 console.log($scope.profileData);
+                console.log($scope.profileData.questions)
             });
           
             $scope.limit=2;
@@ -228,6 +229,81 @@
                             $scope.profileData.questions[key].answers.unshift($scope.newAnswer[key]);        
                             $scope.newAnswer={}; 
                         }
+                    });
+                }
+                //Like & DisLike
+                $scope.checkLike=new Array();
+                              
+                $scope.likeDislike=function(questionId,state,count)
+                {   
+                     $scope.checkLike.push(state);
+                    if($scope.checkLike.length==2)
+                    {
+                            x=$scope.checkLike[0];
+                            y=$scope.checkLike[1];
+                            if(x==y)
+                            { 
+                                if(x=='like')
+                                {
+                                    $scope.countLike=count-1;
+                                    $scope['stateLike'+questionId]='';
+                                }
+                                else
+                                {
+                                    $scope.countDis=count-1;
+                                    $scope['stateDisLike'+questionId]='';
+                                }
+                                
+                                
+                                $scope.checkLike=[];
+                                return;
+                            }
+                            else
+                            {
+                                $scope['stateLike'+questionId]=state;
+                                $scope['stateDisLike'+questionId]=state;
+                                if(state=='like')
+                                {
+                                    
+                                  $scope.countLike=count+1;
+            
+                                }
+                                else
+                                {
+                                  $scope.countDis=count+1;
+                                  
+                                }
+                                $scope.checkLike=[];
+                            }       
+                    }
+                    else
+                    {
+                        $scope['stateLike'+questionId]=state;
+                        $scope['stateDisLike'+questionId]=state;
+                        if(state=='like')
+                        {    
+                          $scope.countLike=count+1;
+                        }
+                        else
+                        {
+                          $scope.countDis=count+1;  
+                        }
+                    }
+                  
+                  console.log($scope.countLike);
+                  console.log($scope.countDis);
+                  
+                    $scope.likedata={questionId,state}
+                    profileEditSrv.likedislike($scope.likedata).
+                    success(function(data, status)
+                    { if(data.status="Success")
+                         {
+                        }
+                        else
+                        {
+                            alert('error')
+                        }
+                        
                     });
                 }
 

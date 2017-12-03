@@ -202,7 +202,7 @@
     });
     //show menu delete person
     $('.delete').click(function(){
-       
+       alert('hii');
       $(this).children('.menuDelete').toggleClass('show');
     });
     $('#accompBtn').click(function()

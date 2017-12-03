@@ -914,6 +914,11 @@ body
                             a
                             {
                             color: $grey2;
+                            
+                            &.colorLike
+                            {
+                                color:$greencolor
+                            }
                             &:hover
                             {
                                 color:$greencolor

@@ -66,8 +66,19 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
                         'Authorization':' bearer '+ $cookies.get('token'),
                     }
                 });
-            }   
-            
+            } ,
+             
+            likedislike: function (data) {
+                return $http({
+                    method: "Post",
+                    url: "http://localhost:2449/api/likedislikequestion",
+                    data:data,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization':' bearer '+ $cookies.get('token'),
+                    }
+                });
+            } 
 
     }
 })
