@@ -7,6 +7,7 @@
             $scope.maleImg = "../../../images/default.png";
             $scope.FemaleImg = "../../../images/defaultfemale.jpg";
             $scope.imgPath='';
+            $scope.isdisable=false;            
             profileDataSrv.getData()
             .success(function (data, status) {
                 $scope.profileData=data.profile;
@@ -191,14 +192,15 @@
 
                 //Add Question 
                 $scope.addQues=function()
-                {
+                {  $scope.isdisable=true;
                     questionsSrv.Create($scope.question,$cookies.get('token'))
                     .success(function(data, status){
                         if(data.status="Success")
                         { console.log(data);
                             $scope.profileData.questions.unshift(data.question);
                             angular.element('#textareaQues').val('');
-                            
+                             $scope.isdisable=false;
+                    
                         }
                     });
                 }

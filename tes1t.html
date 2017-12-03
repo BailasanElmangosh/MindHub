@@ -174,7 +174,8 @@
                                             <div class="row">
                                                 <div class="col-sm-12">
                                                     <h2 ng-bind="profileData.username" ></h2>
-                                                    <p ng-bind="profileData.title"></p> 
+                                                     <p>{{profileData.title}}</p>   
+
                                                 </div>
                                             </div>
                                         </div>
@@ -377,7 +378,7 @@
                                                                                                 <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
                                                                                             </label>
                                                                                         </form>
-                                                                                        <p class="error" id="size">Size image bigger than 5 Mega</p>
+                                                                                       
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="row line">
@@ -417,7 +418,7 @@
                                                                                             <div class="row">
                                                                                                 <div class="col-sm-12">
                                                                                                     <select class="form-control" id="exampleSelect1" ng-model="editProfile.gender" required name="Gender"  > 
-                                                                                                        <option selected ng-bind="profileData.gender"></option>
+                                                                                                        <option selected>{{profileData.gender}}</option>
                                                                                                         <option ng-if="profileData.gender=='Female'">Male</option>
                                                                                                         <option ng-if="profileData.gender=='Male'">Female</option>
                                                                                                         <!--   -->
@@ -448,7 +449,7 @@
                                                                                         </div>
                                                                                         <div class="row">
                                                                                             <div class="col-sm-12">
-                                                                                                <textarea class="form-control" ng-model="editProfile.info" ng-bind="profileData.info"></textarea>
+                                                                                                <textarea class="form-control" ng-model="editProfile.info">{{profileData.info}}</textarea>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -470,7 +471,8 @@
                                                     <!-- start Summary -->
                                                     <div class="row">
                                                         <div class="col-sm-12">
-                                                            <p ng-bind="profileData.info">
+                                                            <p >
+                                                                {{profileData.info}}
                                                             </p>
                                                         </div>
                                                     </div>
@@ -497,7 +499,7 @@
                                                                                 <p class="head">Email :</p> 
                                                                                 </div>
                                                                                 <div class="col-lg-10 col-9">
-                                                                                    <p class="detalis mail" ng-bind="profileData.email"></p>
+                                                                                    <p class="detalis mail">{{profileData.email}}</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -511,7 +513,7 @@
                                                                                         <p class="head">BirthDate :</p>
                                                                                     </div>
                                                                                     <div class="col-lg-9 col-md-8 col-sm-7  col-8">
-                                                                                        <p class="detalis birth" ng-bind="profileData.birthDate"></p> 
+                                                                                        <p class="detalis birth">{{profileData.birthDate}}</p> 
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -525,7 +527,7 @@
                                                                                     <p class="head">Gender :</p> 
                                                                                     </div>
                                                                                     <div class="col-lg-10 col-md-9 col-8">
-                                                                                    <p class="detalis" ng-bind="profileData.gender"></p>     
+                                                                                    <p class="detalis">{{profileData.gender}}</p>     
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -663,12 +665,12 @@
                                                                         <div class="university">
                                                                             <div class="row">
                                                                                 <div class=" col-12">
-                                                                                <p ng-bind="profileData.university"></p>
+                                                                                <p class="">{{profileData.university}}</p>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="row">
                                                                                 <div class=" col-12">
-                                                                                        <p ng-bind="profileData.universtyYearFrom+'-'+profileData.universtyYearTo"></p>
+                                                                                        <p>{{profileData.universtyYearFrom}}-{{profileData.universtyYearTo}}</p>
                                                                                 </div>
                                                                             </div>
                                                                         
@@ -688,12 +690,12 @@
                                                                         <div class="school ">
                                                                             <div class="row">
                                                                                 <div class="col-12">
-                                                                                    <p ng-bind="profileData.school"> </p>
+                                                                                    <p>{{profileData.school}} </p>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="row">
                                                                                 <div class="col-12">
-                                                                                        <p ng-bind="profileData.schholYearFrom+'-'+profileData.schholYearTo"></p>
+                                                                                        <p>{{profileData.schholYearFrom}}-{{profileData.schholYearTo}}</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -727,27 +729,19 @@
                                                                         
                                                                         <div class="row"> 
                                                                             <div class="col-sm-6">
-                                                                                <!-- <select class="form-control form-control-sm" ng-model="skill"  ng-options="skill as skill.name for skill in getskill" >
+                                                                                <select class="form-control form-control-sm" ng-model="skill"  ng-options="skill as skill.name for skill in getskill" >
                                                                                   
-                                                                                </select> -->
-                                                                                <input type="text" name="skill" id="skill" ng-model="skillDropDown" ng-keyup="complete(skillDropDown)" class="form-control" value="" />  
-                                                                                
-                                                                                <ul class="list-group " id="list-group" ng-model="hidethis" >  
-                                                                                    <div class="dropdownSkill" ng-hide="hidethis" id="dropdownSkill">  
-                                                                                    <li class="list-group-item" ng-repeat="skilldata in filterSkill" ng-click="fillTextbox(skilldata.name ,skilldata.id)" ng-bind="skilldata.name"></li>  
-                                                                                </div> 
-                                                                                </ul>  
-                                                                               <p class="error" id="error">This Skill choosen before</p>
+                                                                                </select>
                                                                             </div>
                                                                             <div class="col-sm-3">
-                                                                                <button class="btn" ng-click="addSkill(idSkill,profileData.userId)">Add </button>
+                                                                                <button class="btn" ng-click="addSkill(skill.id,profileData.userId)">Add </button>
                                                                             </div>
                                                                         </div>
                                                                        
                                                                         <div class="row skillRow">
                                                                             <div class="col-sm-3 skillCont" ng-repeat="skill in profileData.skills ">
                                                                                 <div class="skill"> 
-                                                                                    <a class="text" ng-bind="skill.skillName"> </a>
+                                                                                    <a class="text"> {{skill.skillName}}  </a>
                                                                                     <button type="button " class="btnDelete"  ng-click="delete(profileData.skills,skill,skill.id)">
                                                                                             <i class="fa fa-trash-o" aria-hidden="true"></i>     
                                                                                     </button >
@@ -774,7 +768,7 @@
                                                                 <div class="col-sm-3 skillCont" ng-repeat="skill in profileData.skills ">
                                                                     <div class="">
                                                                         <div class="skill"> 
-                                                                            <a class="text" href="#" ng-bind="skill.skillName"></a>
+                                                                            <a class="text" href="#"> {{skill.skillName}}</a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -823,7 +817,7 @@
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-md-3 ml-md-auto  ">
-                                                                        <button id="commentBox"  class="btnDisable" ng-disabled="isdisable" ng-click="addQues()" >Ask</button>
+                                                                        <button id="commentBox" ng-click="addQues()" >Ask</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -845,14 +839,14 @@
                                                                     <div class="row">
                                                                         <div class="col-md-12">
                                                                             <div class="queBody">
-                                                                                    <h3 class="name" ng-bind="post.username"></h3>
+                                                                                    <h3 class="name">{{post.username}}</h3>
                                                                                     <p class="date" ng-bind="post.date"></p>                                                                                        
-                                                                                    <p class="queText" ng-bind="post.questionHead"></p>
+                                                                                    <p class="queText">{{post.questionHead}}</p>
                                                                                     <div class="row">
                                                                                             <div class="col-md-4  ml-md-auto queOption">
-                                                                                                <span ng-bind="post.likes"></span><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                                                                                <span>{{post.likes}}</span><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
                                                                                                 |
-                                                                                                <span ng-bind="post.dislikes"></span><a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+                                                                                                <span>{{post.dislikes}}</span><a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
                                                                                                 <a href="#commentBox" id="answer">Answer</a>
                                                                                             </div>
                                                                                     </div>
@@ -870,16 +864,16 @@
                                                                                             <div>
                                                                                                 <div class="row">
                                                                                                     <div class="col-md-12">
-                                                                                                            <h4 class="name" ng-bind="comment.username"></h4>
-                                                                                                            <p class="date" ng-bind="comment.date"></p>
+                                                                                                            <h4 class="name">{{comment.username}}</h4>
+                                                                                                            <p class="date">{{comment.date}}</p>
                                                                                                             
-                                                                                                            <p class="queText" ng-bind="comment.questionAnswer"></p>
+                                                                                                            <p class="queText">{{comment.questionAnswer}}</p>
                                                                                                             
                                                                                                             <div class="row">
                                                                                                                 <div class="col-md-4  ml-md-auto">
-                                                                                                                        <span ng-bind="comment.likes"></span><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                                                                                                        <span>{{comment.likes}}</span><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
                                                                                                                         |
-                                                                                                                        <span ng-bind="comment.dislikes"></span><a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+                                                                                                                        <span>{{comment.dislikes}}</span><a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                     </div>
@@ -892,7 +886,7 @@
                                                                                 </div> 
                                                                             </div>   
                                                                             <div class="prevComment">
-                                                                                <a href=""  id="prevComment" ng-click="comment(post.answers.length)" ng-hide="click" >Show Previous Comments <span ng-bind="'('+post.answers.length+')'"></span></a>
+                                                                                <a href=""  id="prevComment" ng-click="comment(post.answers.length)" ng-hide="click" >Show Previous Comments <span>({{post.answers.length}})</a>
                                                                             </div>
                                                                             <div class="postComment" id="commentBox">
                                                                                 <div class="row">
@@ -946,7 +940,7 @@
                                         <div class="col-md-12">
                                             <div class="row">
                                                 <div class="col-sm-12">
-                                                <p class="followNum" ng-bind="profileData.friends.length +' follow'"></p>
+                                                <p class="followNum">50 follow</p>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -976,12 +970,12 @@
                                                                     <div class="col-lg-8 col-md-6 col-12 followInfo">
                                                                         <div class="row">
                                                                         <div class="col-12">
-                                                                            <a href="#" ng-bind="person.name"></a>
+                                                                            <a href="#" >{{person.name}}</a>
                                                                         </div>
                                                                         </div>
                                                                         <div class="row">
                                                                         <div class="col-12">
-                                                                            <p ng-bind="person.title"></p>
+                                                                            <p class="">{{person.title}}</p>
                                                                         </div>
                                                                         </div>
                                                                     </div>
@@ -1045,7 +1039,7 @@
                                                     </div>
                                                     <div class="row examDetalis" ng-repeat="exam in profileData.exams ">
                                                         <div class="col-6">
-                                                            <h5 ng-bind="exam.examName"></h5>
+                                                            <h5>{{exam.examName}}</h5>
                                                         </div>
                                                         <div class="col-6">
                                                             <h5><uib-progressbar class="progress-striped" max="100" value="{{exam.studentDegree}}" type="warning">{{exam.studentDegree}}</uib-progressbar></h5>

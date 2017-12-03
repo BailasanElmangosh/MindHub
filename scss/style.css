@@ -841,6 +841,10 @@ body {
   border: 1px solid #8ccb75;
 }
 
+.profile .profileBody .question .body .body-container .post button.btnDisable[disabled] {
+  opacity: 0.4;
+}
+
 .profile .profileBody .question .body .body-container .post .queBody {
   padding: 10px;
 }
