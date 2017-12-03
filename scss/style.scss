@@ -21,7 +21,10 @@ body
     color: #b30b0b;
     display: none;
 }
-
+.display
+{
+    display:block !important;
+}
 // start Landing page
 .landingPage {
     background: url('../images/bg.jpg') no-repeat center;
@@ -643,16 +646,17 @@ body
         top: -40px;
       background:#fff;
       height: 100px;
-      img
-      { width:150px;
-        height: 150px;
-        border-radius: 50%;
-        margin-top: -30px;
-        margin-left: -50px;
-          
-        .profileImg
-          {
-          }
+    
+      a
+      {
+        img
+        { width:150px;
+          height: 150px;
+          border-radius: 50%;
+          margin-top: -30px;
+          margin-left: -50px;
+         
+        }
       }
       .info
       {

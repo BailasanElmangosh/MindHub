@@ -167,6 +167,14 @@
                 angular.element('#size')
                 .css( 'display','none'); 
                }
+              
+               
+              
+            //    $scope.imgHoverOut=function()
+            //    {
+            //     angular.element('#showImage')
+            //     .removeClass('display'); 
+            //    }
             //    $scope.url={};
             //    var url =$scope.url.img
             //    console.log(url);

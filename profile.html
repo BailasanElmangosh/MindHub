@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
         <link href="/scss/bootstrap.min.css" rel="stylesheet" />
         <link href="/scss/font-awesome.min.css" rel="stylesheet" />
+        <link href="/scss/lightbox.css" rel="stylesheet" />        
         <link href="/scss/style.css" rel="stylesheet" />
         <link href="/scss/media.css" rel="stylesheet" />
         <style>
@@ -163,18 +164,20 @@
                     <div class="row justify-content-center">
                         <div class="col-sm-12 col-10">
                             <div class="row box">
-                                <div class="col-sm-1 col-3" >
-                                    <img class="profileImg" ng-model="imgPath" ng-if="profileData.gender=='Female'" ng-src="{{imgPath||FemaleImg }}">   
-                                    <img class="profileImg" ng-model="imgPath" ng-if="profileData.gender=='Male'" ng-src="{{imgPath||maleImg }}">
-                                     
+                                <div class="col-sm-1 col-3" >   
+                                    <a  href="{{imgPath||FemaleImg }}"  ng-model="imgPath"  data-lightbox="image-1">
+                                            <img  class="profileImg" ng-model="imgPath" ng-if="profileData.gender=='Female'" ng-src="{{imgPath||FemaleImg }}">
+                                            <img class="profileImg"  ng-model="imgPath" ng-if="profileData.gender=='Male'" ng-src="{{imgPath||maleImg }}">
+                                    </a> 
                                 </div>
                                 <div class="col-sm-11 info col-9 ">
                                     <div class="row">
                                         <div class="col-md-4 mr-md-auto col-sm-6">
                                             <div class="row">
                                                 <div class="col-sm-12">
-                                                    <h2 ng-bind="profileData.username" ></h2>
-                                                    <p ng-bind="profileData.title"></p> 
+                                                    <h2 ng-bind="profileData.username" ></h2>  
+                                                    <p ng-bind="profileData.title"></p>
+                                                     
                                                 </div>
                                             </div>
                                         </div>
@@ -1112,6 +1115,7 @@
         <script src="angularcomponents/studentProfile/Srvs/editProfileData.js"></script> 
         <script src="angularcomponents/studentProfile/Ctrl/studentProfileCtrl.js"></script>
         <script src="angularcomponents/studentProfile/Srvs/defultimage.js"></script>
+        <script src="js/lib/lightbox.js"></script>         
         <script src="js/custom.js"></script> 
         
     </body>

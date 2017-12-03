@@ -5,7 +5,10 @@
     //     var bodyheight = $(this).innerHeight();
     //     $(".landingPage").innerHeight(bodyheight);
     // });
-    function setHeight() {
+    $("#testLink").click(function(){alert("hii")});
+
+    function setHeight() 
+       {
         windowHeight = $(window).innerHeight();
         $('.landingPage').css('height', windowHeight);
       };
@@ -176,11 +179,6 @@
         $('#accompBtn').removeClass('bgColor');    
     });
     //show in Question comment Box
- 
-    // $("#textareaComment").focus(function(){
-    //     alert("textarea focus");
-        
-    // });
     $(".boxQus > textarea").click(function(){
         $(this).on("mousedown mouseup click focus blur", function(e) {
             $("#commentBtn").addClass('show');
@@ -322,8 +320,5 @@
            
         }
     });
-    
-    
-    
-    
+
     })();
