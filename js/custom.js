@@ -1,18 +1,5 @@
 (function () {
     
-    // $('.landingPage').height($(window).height());
-    // $(window).resize(function() {
-    //     var bodyheight = $(this).innerHeight();
-    //     $(".landingPage").innerHeight(bodyheight);
-    // });
-    var Day = 24*60*60*1000;
-    var hours = 60*60*1000;  
-    var month =30*24*60*60*1000;       
-    var firstDate = new Date(2008,01,12,20);
-    var secondDate = new Date(2008,03,13);
-    
-    var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(month)));
-    console.log(diffDays)
     function setHeight() 
        {
         windowHeight = $(window).innerHeight();

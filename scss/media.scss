@@ -844,6 +844,32 @@
          
      }
      //End Questions 
+     //start Suggest
+    
+     .suggest
+     {
+        .header
+        {
+        }        
+        img
+        { 
+        } 
+        .name
+        {
+        }
+        button
+        {
+            font-size:10px;
+        }
+        .title
+        {
+        }
+        .line
+        {
+        }
+        
+     }
+     //End Suggest
  } 
 // end newsfeed
  }
@@ -1178,8 +1204,39 @@
         
         }
         
-    }
+    
     //End Questions 
+     //start Suggest
+    
+     .suggest
+     {
+        .header
+        {
+        } 
+        .hidden-md-lg
+        {
+            display: none;
+        }       
+        img
+        { 
+        } 
+        .name
+        {
+        }
+        button
+        {
+            font-size:10px;
+        }
+        .title
+        {
+        }
+        .line
+        {
+        }
+        
+     }
+     //End Suggest
+    }
 }  
 // end newsfeed
 
@@ -1191,12 +1248,12 @@
     // start header
   header
   { .text
-            {
-                h1 
-                    {font-size: 3rem;}
-                    h2
-                    {    font-size: 2rem; }
-            } 
+    {
+        h1 
+            {font-size: 3rem;}
+            h2
+            {    font-size: 2rem; }
+    } 
   }
   
   // end header
@@ -1250,9 +1307,63 @@
             }
         }
 //   End profile page
+// start  News feed
+.newsFeed
+{
+  .newsFeedBody
+  { 
+     //start Suggest
+     .suggest
+     { background-color: aqua;
+        .header
+        {
+        } 
+        .hidden-md-lg
+        {
+            display: none;
+        }       
+        img
+        { 
+        } 
+        .name
+        {
+        }
+        button
+        {
+            font-size:10px;
+        }
+        .title
+        {
+        }
+        .line
+        {
+        }
         
- }
-
+     }
+     //End Suggest
+   }  
+// end newsfeed
+}
+@media (min-width: 1200px)
+{
+    // start  News feed
+.newsFeed
+{
+  .newsFeedBody
+  { 
+     //start Suggest
+     .suggest
+     { 
+        .hidden-md-lg
+        {
+            display: none;
+        } 
+        
+     }
+     //End Suggest
+   }  
+// end newsfeed
+}
  @media (min-width:100px)and (max-width: 430px)
  {
      .modal-dialog

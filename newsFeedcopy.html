@@ -3,7 +3,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>profile</title>
+        <title>Student Feed</title>
         <link href="https://fonts.googleapis.com/css?family=Kreon" rel="stylesheet">
         <link rel="icon" type="image/png" href="images/lamp90x90.png" />
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
@@ -18,7 +18,7 @@
             </style>  
     </head>
 
-    <body ng-app="newsFeedApp">
+    <body id="jquery" ng-app="newsFeedApp" ng-controller="newFeedCtrl">
          <!-- start NavBar -->
           <nav class="navbar  fixed-top navbar-expand-lg navbar-light bg-light">
             <div class="container">
@@ -69,7 +69,7 @@
                                 <svg class="edit-pen-title">
                                 <use xlink:href="#book"></use>
                                 </svg>
-                                <span>Books</span>	
+                                <span>Books</span>
                             </label>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
           </svg>
           <!-- End svg paths -->
         <!-- end NavBar -->
-        <section class="newsFeed" ng-controller="newFeedCtrl">
+        <section class="newsFeed" >
         
           <div class="container-fluid">
             <div class="row justify-content-center">
@@ -169,22 +169,23 @@
                                     <div class="card">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <img class="profimg" src="images/profile-avatar.jpg">
+                                                    <img class="profimg"ng-if="studentData.gender=='Female'" ng-src="http://localhost:2449/{{studentData.image||'images/default.png' }}">   
+                                                    <img class="profimg" ng-if="studentData.gender=='Male'" ng-src="http://localhost:2449/{{studentData.image||'images/default.png' }}">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-12" >
                                                 <div class="line">
-                                                <p class="name">Bailasan Elmangosh</p>
-                                                <p class="title">Front-End Developer</p>
+                                                <p class="name" ng-bind="studentData.username"></p>
+                                                <p class="title" ng-bind="studentData.title"></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <p class="followNum">20</p>
+                                                <p class="followNum" ng-bind="studentData.followers"></p>
                                                 <p> Followers</p>
-                                                <p class="followNum">20</p>
+                                                <p class="followNum" ng-bind="studentData.following"></p>
                                                 <p> Following</p>
                                             </div>
                                         </div>
@@ -197,7 +198,7 @@
                         <div class="col-sm-6 col-12">
                             <!-- start Question -->
                             <div  class=" row " id="question">
-                                <div class="question col-sm-12" >
+                                <div class="question col-md-12" >
                                     <div class="body"> 
                                         <div class="body-container">
                                                 <div >
@@ -224,48 +225,38 @@
                                                     <!-- End write Question box --> 
                                                     <!-- start Questions -->
                                                     <div class=" row" >
-                                                            <div class="post ">
-                                                                <div class="col-sm-12">
+                                                            <div class="post col-md-12" ng-repeat="(key,post) in Feeds">
+                                                                <div class="">
                                                                     <div class="row">
-                                                                            <div class="col-sm-12 queBody">
+                                                                            <div class="col-md-12 queBody">
                                                                                 <div class="row">
-                                                                                    <div class="col-md-1 col-2">
+                                                                                    <div class="col-md-1">
                                                                                             <div class="image">
-                                                                                                <img src="images/profile-avatar.jpg">
+                                                                                                    <img ng-if="post.gender=='Female'" ng-src="http://localhost:2449/{{post.image||'images/default.png' }}">   
+                                                                                                    <img ng-if="post.gender=='Male'" ng-src="http://localhost:2449/{{post.image||'images/default.png' }}">
+                                                                                                    <!-- <img ng-if="post.image != null" ng-src='http://localhost:2449/{{post.image}}'/>                                                                              -->
                                                                                             </div>
                                                                                     </div>
-                                                                                    <div class="col-md-11 col-10">
-                                                                                        <div class="row">
-                                                                                            <div class="col-11 ">
-                                                                                                <h3 class="name">bailasan</h3>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="row">
-                                                                                            <div class="col-11">
-                                                                                                <p class="title">Front-end</p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="row">
-                                                                                            <div class="col-11">
-                                                                                                <p class="date">1d</p>
-                                                                                            </div>
-                                                                                        </div>
+                                                                                    <div class="col-md-11">
+                                                                                        <h3 class="name" ng-bind="post.username"></h3>
+                                                                                        <p class="title" ng-bind="post.title"></p>
+                                                                                        <p class="date" ng-bind="post.date| formatDate"></p>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="row">
-                                                                                    <div class="col-sm-12 ">
+                                                                                    <div class="col-md-12">
                                                                                         <div class="row ">
-                                                                                            <div class=" col-lg-11 col-sm-12 ml-sm-auto">
-                                                                                                <p class="queText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                                                            <div class="col-md-11 ml-md-auto">
+                                                                                                <p class="queText" ng-bind="post.questionHead"></p>
                                                                                             </div>
                                                                                         </div>
                                                                                             
                                                                                         <div class="row">
-                                                                                            <div class="col-lg-4 col-md-5 col-sm-8  ml-sm-auto queOption">
+                                                                                            <div class="col-md-4  ml-md-auto queOption">
                                                                                                 <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
                                                                                                 |
                                                                                                 <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
-                                                                                              
+                                                                                                <a href="#commentBox" id="answer">Answer</a>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -276,38 +267,28 @@
                                                                             <div class="col-md-11 ">
                                                                                 <div class="row">
                                                                                     <div class="col-md-12">
-                                                                                        <div class="comment line" id="comment" >
+                                                                                        <div class="comment line" id="comment" ng-repeat="comment in post.answers">
                                                                                             <div class="row  ">
                                                                                                 <div class="col-md-12 queBody ">
                                                                                                     <div class="row">
-                                                                                                        <div class="col-lg-1 col-md-2 col-2">
+                                                                                                        <div class="col-md-1">
                                                                                                             <div class="image">
-                                                                                                                <img src="images/profile-avatar.jpg">
-                                                                                                            </div>
+                                                                                                                    <img ng-if="comment.gender=='Female'" ng-src="http://localhost:2449/{{comment.userImage||'images/default.png' }}">   
+                                                                                                                    <img ng-if="comment.gender=='Male'" ng-src="http://localhost:2449/{{comment.userImage||'images/default.png' }}">
+                                                                                                                    <!-- <img ng-if="comment.userImage != null" ng-src='http://localhost:2449/{{comment.userImage}}'/>  -->
+                                                                                                                </div>
                                                                                                         </div>
-                                                                                                        <div class="col-lg-11 col-md-10 col-10">
-                                                                                                            <div class="row">
-                                                                                                                <div class="col-11 ">
-                                                                                                                    <h3 class="name">bailasan</h3>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="row">
-                                                                                                                <div class="col-11">
-                                                                                                                    <p class="title">Front-end</p>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="row">
-                                                                                                                <div class="col-11">
-                                                                                                                    <p class="date">1d</p>
-                                                                                                                </div>
-                                                                                                            </div>
+                                                                                                        <div class="col-md-11">
+                                                                                                            <h3 class="name" ng-bind="comment.username"></h3>
+                                                                                                            <p class="title" ng-bind="comment.title"></p>
+                                                                                                            <p class="date" ng-bind="comment.date| formatDate"></p>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                     <div class="row">
                                                                                                         <div class="col-md-12 ">
                                                                                                             <div class="row ">
                                                                                                                 <div class="col-md-11 ml-md-auto">
-                                                                                                                    <p class="queText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                                                                                    <p class="queText" ng-bind="comment.questionAnswer"></p>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -316,27 +297,29 @@
                                                                                             </div>
                                                                                         </div> 
                                                                                         <div class="prevComment">
-                                                                                        <a href="#">Show Previous Comments(2)</a>
+                                                                                        <a href="#">Show Previous Comments</a>
                                                                                         </div>
-                                                                                        <div class="postComment" id="commentBox">
+                                                                                        <div class="postComment" id="commentBox" style="display: block; border: 1px solid #191919">
                                                                                             <div class="row">
                                                                                                 <div class="col-lg-2 col-md-3">
                                                                                                         <div class="image">
                                                                                                             <img src="images/profile-avatar.jpg">
                                                                                                         </div>
                                                                                                 </div>
-                                                                                                <div class="col-lg-6 col-md-9">
+                                                                                                <div class="col-lg-10 col-md-9">
                                                                                                     <div class="boxQus">
                                                                                                         <div class="row">
                                                                                                             <div class="col-md-12">
-                                                                                                                <textarea rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
+                                                                                                                <textarea ng-model="newAnswer[key].questionAnswer" rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
                                                                                                             </div>
                                                                                                         </div>
                                                                                                     </div>
-                                                                                                </div>   
-                                                                                                <div class="col-lg-4  col-md-5  align-self-center" >
-                                                                                                    <button >Answer</button>
-                                                                                                </div>    
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-lg-4  col-md-5  ml-md-auto">
+                                                                                                            <button ng-click="addAnswer(key,post.id)" >Answer</button>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                            </div>       
                                                                                             </div>  
                                                                                         </div>
                                                                                     </div>
@@ -354,198 +337,7 @@
                             </div>
                             <!-- End Question --> 
                         </div>
-                        <div class="col-sm-3 col-12">
-                                <!-- start suggest Pepole -->                            
-                            <div class="row">
-                                <div class="col-12 hidden-xs">
-                                    <div class="suggest">
-                                        <div class="row">
-                                                <div class="col-sm-12" >
-                                                    <div class="header">
-                                                        <h5>Suggest Students</h5>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                        <div class="row ">
-                                            <div class="col-sm-12">
-                                                <div class="row ">
-                                                        <div class="col-md-3 col-2">
-                                                                <div class="image">
-                                                                    <img src="images/profile-avatar.jpg">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-5 col-8">
-                                                                <div class="row">
-                                                                    <div class="col-11 ">
-                                                                        <h3 class="name">bailasan</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-11">
-                                                                        <p class="title">Front-end</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4 col-2">
-                                                                <div class="row">
-                                                                    <button class="btn">Follow<i class="fa fa-user-plus hidden-md-lg" aria-hidden="true"></i></button>
-                                                                </div>
-
-                                                            </div>
-                                                </div>
-                                                <div class="row">
-                                                        <div class="col-md-3 col-2">
-                                                                <div class="image">
-                                                                    <img src="images/profile-avatar.jpg">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-5 col-10">
-                                                                <div class="row">
-                                                                    <div class="col-11 ">
-                                                                        <h3 class="name">bailasan</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-11">
-                                                                        <p class="title">Front-end</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="row">
-                                                                    <button class="btn">Follow</button>
-                                                                </div>
-
-                                                            </div>
-                                                </div>
-                                                <div class="row">
-                                                        <div class="col-md-3 col-2">
-                                                                <div class="image">
-                                                                    <img src="images/profile-avatar.jpg">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-5 col-10">
-                                                                <div class="row">
-                                                                    <div class="col-11 ">
-                                                                        <h3 class="name">bailasan</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-11">
-                                                                        <p class="title">Front-end</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="row">
-                                                                    <button class="btn">Follow</button>
-                                                                </div>
-
-                                                            </div>
-                                                </div> 
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                                <!-- End suggest Pepole -->  
-                                <!-- start suggest Coures -->                                                          
-                            <div class="row">
-                                <div class="col-lg-10 hidden-xs">
-                                    <div class="suggest">
-                                        <div class="row">
-                                                <div class="col-sm-12" >
-                                                    <div class="header">
-                                                        <h5>Suggest Students</h5>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="row">
-                                                        <div class="col-md-3 col-2">
-                                                                <div class="image">
-                                                                    <img src="images/profile-avatar.jpg">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-5 col-10">
-                                                                <div class="row">
-                                                                    <div class="col-11 ">
-                                                                        <h3 class="name">bailasan</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-11">
-                                                                        <p class="title">Front-end</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="row">
-                                                                    <button class="btn">Follow</button>
-                                                                </div>
-
-                                                            </div>
-                                                </div>
-                                                <div class="row">
-                                                        <div class="col-md-3 col-2">
-                                                                <div class="image">
-                                                                    <img src="images/profile-avatar.jpg">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-5 col-10">
-                                                                <div class="row">
-                                                                    <div class="col-11 ">
-                                                                        <h3 class="name">bailasan</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-11">
-                                                                        <p class="title">Front-end</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="row">
-                                                                    <button class="btn">Follow</button>
-                                                                </div>
-
-                                                            </div>
-                                                </div>
-                                                <div class="row">
-                                                        <div class="col-md-3 col-2">
-                                                                <div class="image">
-                                                                    <img src="images/profile-avatar.jpg">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-5 col-10">
-                                                                <div class="row">
-                                                                    <div class="col-11 ">
-                                                                        <h3 class="name">bailasan</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-11">
-                                                                        <p class="title">Front-end</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="row">
-                                                                    <button class="btn">Follow</button>
-                                                                </div>
-
-                                                            </div>
-                                                </div>
-                                                    
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                                <!-- End suggest Coures -->                                
-                        </div>   
+                            
                         </div>      
                     </div>
                </div>
@@ -553,7 +345,10 @@
           </div>
           </div>
         </section>
-         <script src="js/lib/jquery-3.2.1.min.js"></script>
+          <!-- <script src="js/lib/jquery-3.2.1.min.js"></script>    -->
+          <script src="js/lib/jquery-1.10.2.min.js"></script>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+          
          <script src="js/lib/popper.min.js"></script>
          <script src="js/lib/bootstrap.min.js"></script>
          <script src="js/custom.js"></script>  
@@ -563,12 +358,49 @@
         <script src="js/lib/angular/angular-messages.min.js"></script>
         <script src="js/lib/angular/angular-route.min.js"></script>
         <script src="js/lib/angular/angular-cookies.min.js"></script>
+
         
+
 
         <script src="angularcomponents/NewsFeed/newsFeed-app.js"></script>
         <script src="angularcomponents/NewsFeed/Ctrl/newsFeedCtrl.js"></script>
         <script src="angularcomponents/NewsFeed/Srvs/getFeedSrv.js"></script>
         <script src="angularcomponents/NewsFeed/Srvs/getFeedSrv.js"></script>
         <script src="angularcomponents/NewsFeed/Srvs/questionsSrv.js"></script>
+
+        
+        <script src="js/lib/jquery.signalR-2.2.2.js"></script>
+        <script src="http://localhost:10724/signalr/hubs"></script>
+
+        <script src="js/SignalR/FeedSignalR.js"></script>
+
+        <!-- <form id="frm" enctype="multipart/form-data">
+            <input type="file" name="file"/>
+            <button type="submit">submit</button>
+        </form>
+        <input type="text" ng-model="img" />
+        <img ng-src="{{img}}" /> -->
+          <!--TEST-->
+          <!-- <script>
+            $("#frm").submit(function (e) {
+                var token = $.cookie("token");
+         var data = new FormData(this);
+         $.ajax({
+             url: "http://localhost:2449/api/uploadstudentimage",
+             type: "Post",
+             datatype: "Json",
+             data: data,
+             headers: {"Authorization":"bearer "+token},
+             processData: false,
+             contentType: false,
+             success: function (data) {
+                 alert();
+                 angular.element($("#jquery")).scope().imgPath(data.imagePath);
+             }
+         })
+         
+     });
+     </script> -->
+
     </body>
 </html>

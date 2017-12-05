@@ -243,6 +243,9 @@
     width: 30px;
     height: 30px;
   }
+  .newsFeed .suggest button {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
@@ -301,6 +304,12 @@
     width: 40px;
     height: 40px;
   }
+  .newsFeed .suggest .hidden-md-lg {
+    display: none;
+  }
+  .newsFeed .suggest button {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
@@ -316,6 +325,23 @@
   }
   .profile .box .info h2 {
     font-size: 1.5rem;
+  }
+  .newsFeed .newsFeedBody .question .body .body-container .post .image {
+    width: 40px;
+    height: 40px;
+  }
+  .newsFeed .newsFeedBody .question .body .body-container .post .queBody .queText {
+    margin-right: 5px;
+  }
+  .newsFeed .newsFeedBody .question .body .body-container .post .comment .image {
+    width: 40px;
+    height: 40px;
+  }
+  .newsFeed .suggest .hidden-md-lg {
+    display: none;
+  }
+  .newsFeed .suggest button {
+    font-size: 10px;
   }
 }
 
