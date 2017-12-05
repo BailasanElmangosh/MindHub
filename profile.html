@@ -853,8 +853,7 @@
                                                                         <div class="col-md-12">
                                                                             <div class="queBody">
                                                                                     <h3 class="name" ng-bind="post.username"></h3>
-                                                                                    <p class="date" ng-bind="post.date| date:'d/M/yyyy'"></p>  
-                                                                                    <div>Birthday: {{post.date| formatDate}}</div>                                                                                      
+                                                                                    <p class="date" ng-bind="post.date | formatDate "></p>                                                                                    
                                                                                     <p class="queText" ng-bind="post.questionHead"></p>
                                                                                     <div class="row">
                                                                                         <div class="col-md-4  ml-md-auto queOption">
@@ -961,7 +960,7 @@
                                             <div class="col-md-6 col-12 ml-md-auto">
                                                 <div id="custom-search-input">
                                                     <div class="input-group ">
-                                                        <input type="text" class="  search-query form-control" placeholder="Search" />
+                                                        <input type="text" class="  search-query form-control" ng-model="search" placeholder="Search" />
                                                         <span class="input-group-btn">
                                                             <button class="btn " type="button">
                                                                     <i class="fa fa-search" aria-hidden="true"></i>
@@ -971,7 +970,7 @@
                                                 </div>
                                             </div>
                                             </div>
-                                            <div class="person" ng-repeat="person in profileData.friends">
+                                            <div class="person" ng-repeat="person in profileData.friends|filter:{name:search}">
                                                 <div class="row ">
                                                     <div class="col-12">
                                                         <div class="row  justify-content-center">
