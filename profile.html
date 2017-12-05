@@ -375,12 +375,16 @@
                                                                                         <img   ng-if="profileData.gender=='Female'" ng-src="{{imgPath||FemaleImg }}" ng-model="imgPath">   
                                                                                         <img  ng-if="profileData.gender=='Male'" ng-src="{{imgPath||maleImg}}" ng-model="imgPath">
                                                                                         <form id="imageUploadForm" enctype="multipart/form-data">
-                                                                                            <input type="file" name="file"  id="ImageBrowse" multiple  />
+                                                                                            <input type="file" name="file"  id="ImageBrowse" accept="image/png,image/jpg,image/jpeg" />
                                                                                             <label for="ImageBrowse">
                                                                                                 <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
                                                                                             </label>
                                                                                         </form>
-                                                                                        <p class="error" id="size">Size image bigger than 5 Mega</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row justify-content-center">
+                                                                                    <div class="col-4 ">
+                                                                                        <p class="error" id="size">Size image bigger than 5 Mega or Worng Format</p>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="row line">
@@ -849,13 +853,14 @@
                                                                         <div class="col-md-12">
                                                                             <div class="queBody">
                                                                                     <h3 class="name" ng-bind="post.username"></h3>
-                                                                                    <p class="date" ng-bind="post.date"></p>                                                                                        
+                                                                                    <p class="date" ng-bind="post.date| date:'d/M/yyyy'"></p>  
+                                                                                    <div>Birthday: {{post.date| formatDate}}</div>                                                                                      
                                                                                     <p class="queText" ng-bind="post.questionHead"></p>
                                                                                     <div class="row">
                                                                                         <div class="col-md-4  ml-md-auto queOption">
-                                                                                            <span ng-bind="countLike"></span><a  ng-class="{colorLike:stateLike{{post.id}}==='like'}" ng-click="likeDislike(post.id,'like',post.likes)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                                                                            <span ng-bind="post.likes+like"></span><a  ng-class="{colorLike:stateLike{{post.id}}==='like'}" ng-click="likeDislike(post.id,'like')"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
                                                                                             |
-                                                                                            <span ng-bind="countDis"></span><a  ng-class="{colorLike:stateDisLike{{post.id}}==='dislike'}" ng-click="likeDislike(post.id,'dislike',post.dislikes)"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+                                                                                            <span ng-bind="post.dislikes+dislike"></span><a  ng-class="{colorLike:stateDisLike{{post.id}}==='dislike'}" ng-click="likeDislike(post.id,'dislike')"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
                                                                                             <a href="#commentBox" id="answer">Answer</a>
                                                                                         </div>
                                                                                     </div>
@@ -979,7 +984,7 @@
                                                                     <div class="col-lg-8 col-md-6 col-12 followInfo">
                                                                         <div class="row">
                                                                         <div class="col-12">
-                                                                            <a href="#" ng-bind="person.name"></a>
+                                                                            <a href="" ng-bind="person.name" ></a>
                                                                         </div>
                                                                         </div>
                                                                         <div class="row">
@@ -990,21 +995,14 @@
                                                                     </div>
                                                                     <div class="col-lg-4 col-md-6 col-12 ">
                                                                         <div class="row">
-                                                                            <div class="col-md-8 col-5 ml-auto">
-                                                                                <div class="messageBtn">
-                                                                                     <button class="btn">Message</button>
+                                                                            <div class="col-4">
+                                                                                <div class="messageBtn" >
+                                                                                    <i class="fa fa-comment" aria-hidden="true"></i>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="col-4 ">
+                                                                            <div class=" col-md-8 col-5 ml-md-auto">
                                                                                 <div class="delete">
-                                                                                    <a   id="delete"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>          
-                                                                                    <div class="dropdown-menu menuDelete" id="">
-                                                                                        <div class="arrow"></div>
-                                                                                        <a class="dropdown-item" > 
-                                                                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                                                                            Delete
-                                                                                        </a>
-                                                                                    </div> 
+                                                                                   <button class="btn" ng-click="unfollow(profileData.friends,person,person.id)">Unfollow</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>

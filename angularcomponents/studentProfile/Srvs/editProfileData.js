@@ -78,7 +78,19 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
                         'Authorization':' bearer '+ $cookies.get('token'),
                     }
                 });
-            } 
+            } ,
+            unfollow:function(id)
+            { 
+                return $http({
+                    method: "Get",
+                    url: "http://localhost:2449/api/unfollowfriend/?id="+id,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization':' bearer '+ $cookies.get('token'),
+                    }
+                });
+            }
+
 
     }
 })

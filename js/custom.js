@@ -5,8 +5,14 @@
     //     var bodyheight = $(this).innerHeight();
     //     $(".landingPage").innerHeight(bodyheight);
     // });
-    $("#testLink").click(function(){alert("hii")});
-
+    var Day = 24*60*60*1000;
+    var hours = 60*60*1000;  
+    var month =30*24*60*60*1000;       
+    var firstDate = new Date(2008,01,12,20);
+    var secondDate = new Date(2008,03,13);
+    
+    var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(month)));
+    console.log(diffDays)
     function setHeight() 
        {
         windowHeight = $(window).innerHeight();
@@ -41,7 +47,6 @@
                 $("#tabLogin").removeClass("active");
                 $("#tabSign").addClass("active");
             $('#loginDiv').removeClass( "active" ).addClass("hide");
-            console.log("tabsign");
             $('#sginUpDiv').removeClass( "hide" ).addClass("active");
     
             
@@ -58,9 +63,7 @@
                 $("#tabLogin").removeClass("active");
                 $("#tabSign").addClass("active");
             $('#loginDiv').removeClass( "active" ).addClass("hide");
-            console.log("tabsign");
             $('#sginUpDiv').removeClass( "hide" ).addClass("active");
-            console.log("tab");
             
             });
         $('#tabLogin').click(function(){
@@ -96,10 +99,6 @@
                 
             var birthDateLength = birthDateField.attr('data-inputLength');
             var value = jQuery(this).val();
-                
-                console.log('value length' + value.length);
-                console.log('field length' + birthDateLength);
-                
             if ( value.length > birthDateLength ) {
                 
             value = value.replace(/\D/g,'').substring( 0, 8 );
@@ -200,11 +199,6 @@
         $('#accompBtn').removeClass('bgColor');    
         
     });
-    //show menu delete person
-    $('.delete').click(function(){
-       alert('hii');
-      $(this).children('.menuDelete').toggleClass('show');
-    });
     $('#accompBtn').click(function()
     {
         $('#Accomplishments').show('slow'); 
@@ -282,7 +276,6 @@
         var token = $.cookie("token");
         var formData = new FormData(this);
         var image;
-      console.log(formData);
         $.ajax({
             type:'POST',
             url: 'http://localhost:2449/api/uploadstudentimage',
@@ -292,31 +285,22 @@
             contentType: false,
             processData: false,
             success:function(data){
-                console.log("success");
-                console.log(data);
                 angular.element($("#profile")).scope().getNewPath(data.imagePath);
             },
             error: function(data){
-                console.log("error");
-                console.log(data);
+              
             }
         });
     }));
     
     $("#ImageBrowse").on("change", function() {
-       
-        var file=$(this)[0].files[0].size
-        console.log(file)
-        if(file<=5000000)
-        {
-          
-            $("#imageUploadForm").submit();
+        var file=$(this)[0].files[0]
+        if(file.size<=5000000&&file.type=='image/jpeg'||file.type=='image/jpg'||file.type=='image/png')
+        { $("#imageUploadForm").submit();
             angular.element($("#profile")).scope().sizeTrue();  
         }
         else
-        {
-           
-            angular.element($("#profile")).scope().sizeFalse();
+        { angular.element($("#profile")).scope().sizeFalse();
            
         }
     });

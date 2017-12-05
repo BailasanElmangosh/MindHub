@@ -219,7 +219,8 @@
     text-align: center;
   }
   .profile .profileBody .follow .body .person .messageBtn {
-    margin-top: 0px;
+    float: right;
+    margin-top: 20px;
   }
   .profile .profileBody .follow .body .person .delete {
     margin-top: 12px;

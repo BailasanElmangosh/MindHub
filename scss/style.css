@@ -1114,7 +1114,7 @@ body {
 }
 
 .profile .profileBody .follow .body .person .messageBtn {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .profile .profileBody .follow .body .person .delete {
@@ -1316,10 +1316,6 @@ body {
   background-color: transparent;
   border-color: transparent;
   color: #e40b0b;
-}
-
-.popUpSkill .modal-dialog .modal-content .modal-body .skillRow .skillCont .delete {
-  display: none;
 }
 
 .popUpSkill .modal-dialog .modal-content .modal-body .dropdownSkill {
