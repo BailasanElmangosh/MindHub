@@ -6,7 +6,7 @@
       $scope.skills=function(){
         return   $http({
             method: "Get",
-            url: "http://localhost:2449/api/allskills",
+            url: "http://mindhubgp-001-site1.itempurl.com//api/allskills",
             headers: {
                 'Content-Type': 'application/json'
             }

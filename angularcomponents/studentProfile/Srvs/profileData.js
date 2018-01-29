@@ -3,7 +3,7 @@ studentProfile.factory("profileDataSrv", function ($http,$cookies) {
            getData: function () {
             return $http({
                 method: "Get",
-                url: "http://localhost:2449/api/studentprofile",
+                url: "http://mindhubgp-001-site1.itempurl.com/api/studentprofile",
                 headers: 
                 {   'Content-Type': 'application/json',
                     'Authorization':' bearer '+ $cookies.get('token')

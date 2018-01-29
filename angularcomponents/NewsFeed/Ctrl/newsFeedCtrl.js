@@ -7,7 +7,7 @@
         $scope.imgPath = function(path)
         {
             alert("hiii");
-            $scope.img = "http://localhost:2449/"+path;
+            $scope.img = "http://mindhubgp-001-site1.itempurl.com/"+path;
             $scope.$apply();
         }
 

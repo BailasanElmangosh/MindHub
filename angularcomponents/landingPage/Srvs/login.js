@@ -3,7 +3,7 @@
         login: function (user) {
             return $http({
                 method: "Post",
-                url: "http://localhost:2449/api/Login",
+                url: "http://mindhubgp-001-site1.itempurl.com/api/Login",
                 data: user,
                 headers: 
                 {

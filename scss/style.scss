@@ -1825,6 +1825,12 @@ svg ,i {
         {
             padding-left: 1;
         }
+        .col-11
+        {
+            padding-right: 0px;
+         
+            
+        }
        .header
        {
            padding: 10px;
@@ -1832,8 +1838,13 @@ svg ,i {
        img
        {  width:40px;
            height: 40px;
-           
+           margin-left: 20%;
            border-radius: 50%;
+       }
+       .show-lg-md
+       {
+           display: none;
+           margin: 0px;
        } 
        .name
        {
@@ -1850,7 +1861,7 @@ svg ,i {
            border-bottom: 1px solid #8ccb75;
          
        }
-       
+      
     }
     //End Suggest
 }

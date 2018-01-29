@@ -4,19 +4,37 @@
     studentProfile.controller("studentProfileCtrl", function ($scope,profileDataSrv,profileEditSrv,$cookies,questionsSrv) {
             $scope.profileData={};
             $scope.editProfile={};
-            $scope.maleImg = "../../../images/default.png";
-            $scope.FemaleImg = "../../../images/defaultfemale.jpg";
+            $scope.maleImg = "images/default.png";
+            $scope.FemaleImg = "/images/defaultfemale.jpg";
             $scope.imgPath='';
             $scope.isdisable=false;            
             profileDataSrv.getData()
             .success(function (data, status) {
                 $scope.profileData=data.profile;
                 $scope.editProfile=data.profile;
-                $scope.imgPath="http://localhost:2449/"+$scope.profileData.image
-                console.log($scope.profileData.friends);
+                $scope.imgPath="http://mindhubgp-001-site1.itempurl.com/"+$scope.profileData.image
+                console.log($scope.editProfile.gender);
                 console.log($cookies.get('token'))
             });
-          
+            $scope.img=function()
+            {  
+                if($scope.profileData.gender=='Female')
+                {
+                    if($scope.profileData.image==null)
+                    {
+                        return"http://mindhubgp-001-site1.itempurl.com/defaults/female.jpg"
+                    }
+                    return $scope.imgPath
+                }
+                if($scope.profileData.gender=='Male')
+                {
+                    if($scope.profileData.image==null)
+                    {
+                        return"http://mindhubgp-001-site1.itempurl.com/defaults/male.png"
+                    }
+                    return $scope.imgPath
+                }
+            }
             $scope.limit=2;
             $scope.comment=function(num)
             {
@@ -67,7 +85,7 @@
             }
            $scope.getNewPath=function(data)
            {
-            $scope.imgPath="http://localhost:2449/"+data;
+            $scope.imgPath="http://mindhubgp-001-site1.itempurl.com/"+data;
             $scope.$apply();
            }
             //Skills

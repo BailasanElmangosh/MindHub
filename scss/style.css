@@ -1593,6 +1593,10 @@ svg, i {
   padding-left: 1;
 }
 
+.newsFeed .newsFeedBody .suggest .col-11 {
+  padding-right: 0px;
+}
+
 .newsFeed .newsFeedBody .suggest .header {
   padding: 10px;
 }
@@ -1600,7 +1604,13 @@ svg, i {
 .newsFeed .newsFeedBody .suggest img {
   width: 40px;
   height: 40px;
+  margin-left: 20%;
   border-radius: 50%;
+}
+
+.newsFeed .newsFeedBody .suggest .show-lg-md {
+  display: none;
+  margin: 0px;
 }
 
 .newsFeed .newsFeedBody .suggest .name {
@@ -1616,6 +1626,12 @@ svg, i {
 .newsFeed .newsFeedBody .suggest .line {
   border-bottom: 1px solid #8ccb75;
 }
- 
 
- /*# sourceMappingURL= style.css.map */
+.newsFeed .newsFeedBody .suggest .btn {
+  padding: .1rem .5rem;
+}
+
+.newsFeed .newsFeedBody .suggest .btn i {
+  height: 15px;
+}
+/*# sourceMappingURL=style.css.map */

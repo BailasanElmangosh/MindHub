@@ -358,7 +358,189 @@
     }
    
  //End start Profile page
-
+// start  News feed
+.newsFeed
+{
+  .newsFeedBody
+  { 
+    .line
+    {
+     
+    }
+    .card
+    {
+       .profimg
+       {
+       }
+       .line
+       {
+       .name
+       {
+        
+       }
+       .title
+       {
+       }
+       }
+       .followNum
+       {
+        
+       }
+    }
+    //Start  Questions
+    .question 
+    {
+        .header
+        { 
+            h2
+            {
+                i
+                {
+                }
+            }
+            
+        }
+        .body
+        {
+            .body-container
+            {   
+                .addQue
+                {
+                }
+                .boxQus
+                {
+                    textarea
+                    {
+                        &:focus
+                        {
+                        }
+                    }
+                }
+                button
+                { 
+                }
+                .post
+                {
+                    .image
+                    {  width:40px;
+                        height: 40px;
+                    }
+                    .row
+                    {
+                    
+                    }
+                    .queBody
+                    {
+                            .queOption
+                            {
+                              
+                                a
+                                {
+                                
+                                &:hover
+                                {
+                                
+                                }
+                                }
+                            }
+                            .name
+                            {
+                             
+                            }
+                            .title,.date
+                            {
+                            }
+                            .queText
+                            {
+                                margin-right: 5px;
+                            }   
+                        
+                    }
+                    
+                        .comment
+                        { .image
+                            {  width:40px;
+                                height: 40px; 
+                            }
+                            .name
+                            {  
+                            }
+                            .queText
+                            {
+                               
+                            }
+                            a
+                            {
+                                &:hover
+                                {
+                                }
+                            }
+                            
+                        } 
+                        .postComment
+                        {
+                            .image
+                            {
+                            }
+                            button
+                            {
+                            }
+                        }
+                        .prevComment
+                        {
+                            a
+                            {
+                            } 
+                           
+                        }
+                    }
+                    
+               
+                }
+            }
+        
+        }
+        
+    
+    //End Questions 
+     //start Suggest
+    
+     .suggest
+     {
+        .header
+        {
+        } 
+        .hidden-md-lg
+        {
+            display: none;
+        }   
+        .show-lg-md
+        {
+            display: block;
+        }    
+        img
+        { 
+        } 
+        .name
+        {
+        }
+        button
+        {
+            font-size:10px;
+            padding: 0px;
+        }
+        .title
+        {
+        }
+        .line
+        {
+        }
+        
+     }
+     //End Suggest
+    }
+}  
+// end newsfeed
 
 }
 @media (min-width: 576px)
@@ -844,10 +1026,15 @@
          
      }
      //End Questions 
+     .hidden-sm
+        {
+            display: none;
+        }
      //start Suggest
-    
+      
      .suggest
      {
+        
         .header
         {
         }        
@@ -860,6 +1047,7 @@
         button
         {
             font-size:10px;
+            padding: 0px;
         }
         .title
         {
@@ -873,7 +1061,47 @@
  } 
 // end newsfeed
  }
-
+ @media (max-width: 891px) and (min-width: 768px) 
+ {
+// start  News feed
+.newsFeed
+{
+  .newsFeedBody
+  { 
+   
+     //start Suggest
+    
+     .suggest
+     {    text-align: center;
+        .header
+        {
+            h5
+            {
+                font-size: 0.9rem;
+            }
+        }
+        .name
+        {
+            font-size: 13px
+        }
+        img {
+            width: 35px;
+            height: 35px;
+        }
+        .btn
+        {
+         padding: .1rem .5rem;
+         i
+         {
+             height: 15px;
+         }
+        }
+     }
+     //End Suggest
+    }
+}  
+// end newsfeed
+ }
 
 
 // Medium devices (tablets, less than 992px)
@@ -1215,8 +1443,12 @@
         } 
         .hidden-md-lg
         {
+            display: block;
+        }   
+        .show-lg-md
+        {
             display: none;
-        }       
+        }    
         img
         { 
         } 
@@ -1233,7 +1465,14 @@
         .line
         {
         }
-        
+        .btn
+        {
+         padding: .1rem .5rem;
+         i
+         {
+             height: 15px;
+         }
+        }
      }
      //End Suggest
     }
@@ -1314,14 +1553,18 @@
   { 
      //start Suggest
      .suggest
-     { background-color: aqua;
+     {
         .header
         {
         } 
         .hidden-md-lg
         {
             display: none;
-        }       
+        }  
+        .show-lg-md
+        {
+            display: block;
+        }     
         img
         { 
         } 
@@ -1344,6 +1587,7 @@
    }  
 // end newsfeed
 }
+}
 @media (min-width: 1200px)
 {
     // start  News feed
@@ -1358,11 +1602,15 @@
         {
             display: none;
         } 
-        
+        .show-lg-md
+        {
+            display: block;
+        }
      }
      //End Suggest
    }  
 // end newsfeed
+}
 }
  @media (min-width:100px)and (max-width: 430px)
  {

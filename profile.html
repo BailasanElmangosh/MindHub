@@ -166,8 +166,7 @@
                             <div class="row box">
                                 <div class="col-sm-1 col-3" >   
                                     <a  href="{{imgPath||FemaleImg }}"  ng-model="imgPath"  data-lightbox="image-1">
-                                            <img  class="profileImg" ng-model="imgPath" ng-if="profileData.gender=='Female'" ng-src="{{imgPath||FemaleImg }}">
-                                            <img class="profileImg"  ng-model="imgPath" ng-if="profileData.gender=='Male'" ng-src="{{imgPath||maleImg }}">
+                                        <img ng-src="{{img()}}" ng-model="imgPath">   
                                     </a> 
                                 </div>
                                 <div class="col-sm-11 info col-9 ">
@@ -372,8 +371,7 @@
                                                                             <div class="modal-body">
                                                                                 <div class="row justify-content-center">
                                                                                     <div class="col-2">
-                                                                                        <img   ng-if="profileData.gender=='Female'" ng-src="{{imgPath||FemaleImg }}" ng-model="imgPath">   
-                                                                                        <img  ng-if="profileData.gender=='Male'" ng-src="{{imgPath||maleImg}}" ng-model="imgPath">
+                                                                                        <img  ng-src="{{img()}}" ng-model="imgPath">
                                                                                         <form id="imageUploadForm" enctype="multipart/form-data">
                                                                                             <input type="file" name="file"  id="ImageBrowse" accept="image/png,image/jpg,image/jpeg" />
                                                                                             <label for="ImageBrowse">
@@ -424,10 +422,9 @@
                                                                                             <div class="row">
                                                                                                 <div class="col-sm-12">
                                                                                                     <select class="form-control" id="exampleSelect1" ng-model="editProfile.gender" required name="Gender"  > 
-                                                                                                        <option selected ng-bind="profileData.gender"></option>
+                                                                                                        <option selected disabled>{{profileData.gender}}</option>
                                                                                                         <option ng-if="profileData.gender=='Female'">Male</option>
                                                                                                         <option ng-if="profileData.gender=='Male'">Female</option>
-                                                                                                        <!--   -->
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
@@ -869,8 +866,8 @@
                                                                                     <div class="row">
                                                                                         <div class="col-lg-2 col-md-3">
                                                                                                 <div class="image">
-                                                                                                        <img class="profileImg" ng-if="comment.gender=='Female'" ng-src="http://localhost:2449/{{comment.userImage }}">   
-                                                                                                        <img class="profileImg" ng-if="comment.gender=='Male'" ng-src="http://localhost:2449/{{comment.userImage}}">
+                                                                                                        <img class="profileImg" ng-if="comment.gender=='Female'" ng-src="http://mindhubgp-001-site1.itempurl.com//{{comment.userImage }}">   
+                                                                                                        <img class="profileImg" ng-if="comment.gender=='Male'" ng-src="http://mindhubgp-001-site1.itempurl.com//{{comment.userImage}}">
                                                                                                 </div>
                                                                                         </div>
                                                                                         <div class="col-lg-10 col-md-9">
@@ -975,8 +972,8 @@
                                                     <div class="col-12">
                                                         <div class="row  justify-content-center">
                                                             <div class="col-md-2 col-sm-12 followImg ">
-                                                                    <img class="profileImg" ng-if="person.gender=='Female'" ng-src="http://localhost:2449/{{person.friendImage }}">   
-                                                                    <img class="profileImg" ng-if="person.gender=='Male'" ng-src="http://localhost:2449/{{person.friendImage }}">
+                                                                    <img class="profileImg" ng-if="person.gender=='Female'" ng-src="http://mindhubgp-001-site1.itempurl.com//{{person.friendImage }}">   
+                                                                    <img class="profileImg" ng-if="person.gender=='Male'" ng-src="http://mindhubgp-001-site1.itempurl.com//{{person.friendImage }}">
                                                             </div>
                                                             <div class="col-10">
                                                                 <div class="row ">

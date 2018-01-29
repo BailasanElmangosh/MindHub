@@ -157,218 +157,243 @@
         
           <div class="container-fluid">
             <div class="row justify-content-center">
-              
                 <div class="col-sm-12 col-12">
                     <!-- start NewsFeed container -->
                     <div class="newsFeedBody">
                         <div class="row">
-                        <!-- start card --> 
-                        <div class="col-sm-3 col-12">
-                            <div class="row">
-                                <div class="col-lg-9 hidden-xs">
-                                    <div class="card">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <img class="profimg" src="images/profile-avatar.jpg">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12" >
-                                                <div class="line">
-                                                <p class="name">Bailasan Elmangosh</p>
-                                                <p class="title">Front-End Developer</p>
+                            <!-- start card --> 
+                            <div class="col-sm-3 col-12">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-9 hidden-xs ">
+                                        <div class="card">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <img class="profimg" src="images/profile-avatar.jpg">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <p class="followNum">20</p>
-                                                <p> Followers</p>
-                                                <p class="followNum">20</p>
-                                                <p> Following</p>
+                                            <div class="row">
+                                                <div class="col-sm-12" >
+                                                    <div class="line">
+                                                    <p class="name">Bailasan Elmangosh</p>
+                                                    <p class="title">Front-End Developer</p>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p class="followNum">20</p>
+                                                    <p> Followers</p>
+                                                    <p class="followNum">20</p>
+                                                    <p> Following</p>
+                                                </div>
+                                            </div>
+                                            
                                         </div>
-                                        
                                     </div>
                                 </div>
-                            </div>
-                        </div>   
-                        <!-- End card -->
-                        <div class="col-sm-6 col-12">
-                            <!-- start Question -->
-                            <div  class=" row " id="question">
-                                <div class="question col-sm-12" >
-                                    <div class="body"> 
-                                        <div class="body-container">
-                                                <div >
-                                                    <!-- start write Question box -->
-                                                    <div class="addQue">
-                                                        <div class="row">
-                                                            <div class="col-md-10 ">
-                                                                <div class="boxQus">
+                            </div>   
+                            <!-- End card -->
+                            <div class="col-md-6 col-sm-8 col-12">
+                                <!-- start Question -->
+                                <div  class=" row " id="question">
+                                    <div class="question col-sm-12" >
+                                        <div class="body"> 
+                                            <div class="body-container">
+                                                    <div >
+                                                        <!-- start write Question box -->
+                                                        <div class="addQue">
+                                                            <div class="row">
+                                                                <div class="col-md-10 ">
+                                                                    <div class="boxQus">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <textarea ng-model="question.QuestionHead" rows="4" cols="50" placeholder="Add Your Question here ...."></textarea> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                     <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <textarea ng-model="question.QuestionHead" rows="4" cols="50" placeholder="Add Your Question here ...."></textarea> 
+                                                                        <div class="col-md-3 ml-md-auto  ">
+                                                                            <button ng-click="addQuestion()">Ask</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="col-md-3 ml-md-auto  ">
-                                                                        <button ng-click="addQuestion()">Ask</button>
-                                                                    </div>
-                                                                </div>
+                                                                    
                                                             </div>
-                                                                
-                                                        </div>
-                                                    </div> 
-                                                    <!-- End write Question box --> 
-                                                    <!-- start Questions -->
-                                                    <div class=" row" >
-                                                            <div class="post ">
-                                                                <div class="col-sm-12">
-                                                                    <div class="row">
-                                                                            <div class="col-sm-12 queBody">
-                                                                                <div class="row">
-                                                                                    <div class="col-md-1 col-2">
-                                                                                            <div class="image">
-                                                                                                <img src="images/profile-avatar.jpg">
+                                                        </div> 
+                                                        <!-- End write Question box --> 
+                                                        <!-- start Questions -->
+                                                        <div class=" row" >
+                                                                <div class="post ">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="row">
+                                                                                <div class="col-sm-12 queBody">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-1 col-2">
+                                                                                                <div class="image">
+                                                                                                    <img src="images/profile-avatar.jpg">
+                                                                                                </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-11 col-10">
+                                                                                            <div class="row">
+                                                                                                <div class="col-11 ">
+                                                                                                    <h3 class="name">bailasan</h3>
+                                                                                                </div>
                                                                                             </div>
+                                                                                            <div class="row">
+                                                                                                <div class="col-11">
+                                                                                                    <p class="title">Front-end</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div class="col-11">
+                                                                                                    <p class="date">1d</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
                                                                                     </div>
-                                                                                    <div class="col-md-11 col-10">
-                                                                                        <div class="row">
-                                                                                            <div class="col-11 ">
-                                                                                                <h3 class="name">bailasan</h3>
+                                                                                    <div class="row">
+                                                                                        <div class="col-sm-12 ">
+                                                                                            <div class="row ">
+                                                                                                <div class=" col-lg-11 col-sm-12 ml-sm-auto">
+                                                                                                    <p class="queText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                                                                </div>
                                                                                             </div>
-                                                                                        </div>
-                                                                                        <div class="row">
-                                                                                            <div class="col-11">
-                                                                                                <p class="title">Front-end</p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="row">
-                                                                                            <div class="col-11">
-                                                                                                <p class="date">1d</p>
+                                                                                                
+                                                                                            <div class="row">
+                                                                                                <div class="col-lg-4 col-md-5 col-sm-8  ml-sm-auto queOption">
+                                                                                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                                                                                    |
+                                                                                                    <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+                                                                                                
+                                                                                                </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="row">
-                                                                                    <div class="col-sm-12 ">
-                                                                                        <div class="row ">
-                                                                                            <div class=" col-lg-11 col-sm-12 ml-sm-auto">
-                                                                                                <p class="queText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                                        </div>
+                                                                        <div class="row justify-content-center">
+                                                                                <div class="col-md-11 ">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12">
+                                                                                            <div class="comment line" id="comment" >
+                                                                                                <div class="row  ">
+                                                                                                    <div class="col-md-12 queBody ">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-lg-1 col-md-2 col-2">
+                                                                                                                <div class="image">
+                                                                                                                    <img src="images/profile-avatar.jpg">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-lg-11 col-md-10 col-10">
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-11 ">
+                                                                                                                        <h3 class="name">bailasan</h3>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-11">
+                                                                                                                        <p class="title">Front-end</p>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-11">
+                                                                                                                        <p class="date">1d</p>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12 ">
+                                                                                                                <div class="row ">
+                                                                                                                    <div class="col-md-11 ml-md-auto">
+                                                                                                                        <p class="queText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div> 
+                                                                                            <div class="prevComment">
+                                                                                            <a href="#">Show Previous Comments(2)</a>
                                                                                             </div>
-                                                                                        </div>
-                                                                                            
-                                                                                        <div class="row">
-                                                                                            <div class="col-lg-4 col-md-5 col-sm-8  ml-sm-auto queOption">
-                                                                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-                                                                                                |
-                                                                                                <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
-                                                                                              
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                    </div>
-                                                                    <div class="row justify-content-center">
-                                                                            <div class="col-md-11 ">
-                                                                                <div class="row">
-                                                                                    <div class="col-md-12">
-                                                                                        <div class="comment line" id="comment" >
-                                                                                            <div class="row  ">
-                                                                                                <div class="col-md-12 queBody ">
-                                                                                                    <div class="row">
-                                                                                                        <div class="col-lg-1 col-md-2 col-2">
+                                                                                            <div class="postComment" id="commentBox">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-2 col-md-3">
                                                                                                             <div class="image">
                                                                                                                 <img src="images/profile-avatar.jpg">
                                                                                                             </div>
-                                                                                                        </div>
-                                                                                                        <div class="col-lg-11 col-md-10 col-10">
-                                                                                                            <div class="row">
-                                                                                                                <div class="col-11 ">
-                                                                                                                    <h3 class="name">bailasan</h3>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="row">
-                                                                                                                <div class="col-11">
-                                                                                                                    <p class="title">Front-end</p>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="row">
-                                                                                                                <div class="col-11">
-                                                                                                                    <p class="date">1d</p>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
                                                                                                     </div>
-                                                                                                    <div class="row">
-                                                                                                        <div class="col-md-12 ">
-                                                                                                            <div class="row ">
-                                                                                                                <div class="col-md-11 ml-md-auto">
-                                                                                                                    <p class="queText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                                                                    <div class="col-lg-6 col-md-9">
+                                                                                                        <div class="boxQus">
+                                                                                                            <div class="row">
+                                                                                                                <div class="col-md-12">
+                                                                                                                    <textarea rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
-                                                                                                    </div>
-                                                                                                </div>
+                                                                                                    </div>   
+                                                                                                    <div class="col-lg-4  col-md-5  align-self-center" >
+                                                                                                        <button >Answer</button>
+                                                                                                    </div>    
+                                                                                                </div>  
                                                                                             </div>
-                                                                                        </div> 
-                                                                                        <div class="prevComment">
-                                                                                        <a href="#">Show Previous Comments(2)</a>
-                                                                                        </div>
-                                                                                        <div class="postComment" id="commentBox">
-                                                                                            <div class="row">
-                                                                                                <div class="col-lg-2 col-md-3">
-                                                                                                        <div class="image">
-                                                                                                            <img src="images/profile-avatar.jpg">
-                                                                                                        </div>
-                                                                                                </div>
-                                                                                                <div class="col-lg-6 col-md-9">
-                                                                                                    <div class="boxQus">
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-md-12">
-                                                                                                                <textarea rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>   
-                                                                                                <div class="col-lg-4  col-md-5  align-self-center" >
-                                                                                                    <button >Answer</button>
-                                                                                                </div>    
-                                                                                            </div>  
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </div> 
-                                                    <!-- End Questions -->
-                                                </div>
+                                                            </div> 
+                                                        <!-- End Questions -->
+                                                    </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- End Question --> 
                             </div>
-                            <!-- End Question --> 
-                        </div>
-                        <div class="col-sm-3 col-12">
-                                <!-- start suggest Pepole -->                            
-                            <div class="row">
-                                <div class="col-12 hidden-xs">
-                                    <div class="suggest">
-                                        <div class="row">
-                                                <div class="col-sm-12" >
-                                                    <div class="header">
-                                                        <h5>Suggest Students</h5>
+                            <div class="col-md-3  hidden-xs hidden-sm">
+                                    <!-- start suggest Pepole -->                            
+                                <div class="row">
+                                    <div class="col-12 ">
+                                        <div class="suggest ">
+                                            <div class="row">
+                                                    <div class="col-sm-12" >
+                                                        <div class="header">
+                                                            <h5>Suggest Students</h5>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                        </div>
-                                        <div class="row ">
-                                            <div class="col-sm-12">
-                                                <div class="row ">
+                                            </div>
+                                            <div class="row ">
+                                                <div class="col-md-12" >
+                                                    <div class="row ">
+                                                            <div class="col-md-3 col-2">
+                                                                <div class="image">
+                                                                    <img src="images/profile-avatar.jpg">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-5 col-9">
+                                                                <div class="row">
+                                                                    <div class="col-11 ">
+                                                                        <h3 class="name">bailasan Elangosh</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-11">
+                                                                        <p class="title">Front-end</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-1">
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <button class="btn"><p class="show-lg-md">Follow</p><i class="fa fa-user-plus hidden-md-lg" aria-hidden="true"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                    <div class="row ">
                                                         <div class="col-md-3 col-2">
                                                                 <div class="image">
                                                                     <img src="images/profile-avatar.jpg">
@@ -388,164 +413,142 @@
                                                             </div>
                                                             <div class="col-md-4 col-2">
                                                                 <div class="row">
-                                                                    <button class="btn">Follow<i class="fa fa-user-plus hidden-md-lg" aria-hidden="true"></i></button>
-                                                                </div>
+                                                                        <div class="col-12">
+                                                                                <button class="btn"><p class="show-lg-md">Follow</p><i class="fa fa-user-plus hidden-md-lg" aria-hidden="true"></i></button>
+                                                                        </div>                                                            </div>
 
                                                             </div>
                                                 </div>
-                                                <div class="row">
-                                                        <div class="col-md-3 col-2">
-                                                                <div class="image">
-                                                                    <img src="images/profile-avatar.jpg">
+                                                <div class="row ">
+                                                    <div class="col-md-3 col-2">
+                                                            <div class="image">
+                                                                <img src="images/profile-avatar.jpg">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5 col-8">
+                                                            <div class="row">
+                                                                <div class="col-11 ">
+                                                                    <h3 class="name">bailasan</h3>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-5 col-10">
-                                                                <div class="row">
-                                                                    <div class="col-11 ">
-                                                                        <h3 class="name">bailasan</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-11">
-                                                                        <p class="title">Front-end</p>
-                                                                    </div>
+                                                            <div class="row">
+                                                                <div class="col-11">
+                                                                    <p class="title">Front-end</p>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-4">
-                                                                <div class="row">
-                                                                    <button class="btn">Follow</button>
+                                                        </div>
+                                                        <div class="col-md-4 col-2">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                        <button class="btn"><p class="show-lg-md">Follow</p><i class="fa fa-user-plus hidden-md-lg" aria-hidden="true"></i></button>
                                                                 </div>
+                                                            </div>
 
-                                                            </div>
-                                                </div>
-                                                <div class="row">
-                                                        <div class="col-md-3 col-2">
-                                                                <div class="image">
-                                                                    <img src="images/profile-avatar.jpg">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-5 col-10">
-                                                                <div class="row">
-                                                                    <div class="col-11 ">
-                                                                        <h3 class="name">bailasan</h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-11">
-                                                                        <p class="title">Front-end</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="row">
-                                                                    <button class="btn">Follow</button>
-                                                                </div>
-
-                                                            </div>
-                                                </div> 
+                                                        </div>
                                             </div>
+                                                </div>
+                                            </div>
+                                            
                                         </div>
-                                        
                                     </div>
                                 </div>
-                            </div>
-                                <!-- End suggest Pepole -->  
-                                <!-- start suggest Coures -->                                                          
-                            <div class="row">
-                                <div class="col-lg-10 hidden-xs">
-                                    <div class="suggest">
-                                        <div class="row">
-                                                <div class="col-sm-12" >
-                                                    <div class="header">
-                                                        <h5>Suggest Students</h5>
+                                    <!-- End suggest Pepole -->  
+                                    <!-- start suggest Coures -->                                                          
+                                <div class="row">
+                                    <div class="col-lg-10 hidden-xs">
+                                        <div class="suggest">
+                                            <div class="row">
+                                                    <div class="col-sm-12" >
+                                                        <div class="header">
+                                                            <h5>Suggest Students</h5>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="row">
-                                                        <div class="col-md-3 col-2">
-                                                                <div class="image">
-                                                                    <img src="images/profile-avatar.jpg">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-5 col-10">
-                                                                <div class="row">
-                                                                    <div class="col-11 ">
-                                                                        <h3 class="name">bailasan</h3>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="row">
+                                                            <div class="col-md-3 col-2">
+                                                                    <div class="image">
+                                                                        <img src="images/profile-avatar.jpg">
                                                                     </div>
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="col-11">
-                                                                        <p class="title">Front-end</p>
+                                                                <div class="col-md-5 col-10">
+                                                                    <div class="row">
+                                                                        <div class="col-11 ">
+                                                                            <h3 class="name">bailasan</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-11">
+                                                                            <p class="title">Front-end</p>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="row">
-                                                                    <button class="btn">Follow</button>
-                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="row">
+                                                                        <button class="btn">Follow</button>
+                                                                    </div>
 
-                                                            </div>
-                                                </div>
-                                                <div class="row">
-                                                        <div class="col-md-3 col-2">
-                                                                <div class="image">
-                                                                    <img src="images/profile-avatar.jpg">
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-md-5 col-10">
-                                                                <div class="row">
-                                                                    <div class="col-11 ">
-                                                                        <h3 class="name">bailasan</h3>
+                                                    </div>
+                                                    <div class="row">
+                                                            <div class="col-md-3 col-2">
+                                                                    <div class="image">
+                                                                        <img src="images/profile-avatar.jpg">
                                                                     </div>
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="col-11">
-                                                                        <p class="title">Front-end</p>
+                                                                <div class="col-md-5 col-10">
+                                                                    <div class="row">
+                                                                        <div class="col-11 ">
+                                                                            <h3 class="name">bailasan</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-11">
+                                                                            <p class="title">Front-end</p>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="row">
-                                                                    <button class="btn">Follow</button>
-                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="row">
+                                                                        <button class="btn">Follow</button>
+                                                                    </div>
 
-                                                            </div>
-                                                </div>
-                                                <div class="row">
-                                                        <div class="col-md-3 col-2">
-                                                                <div class="image">
-                                                                    <img src="images/profile-avatar.jpg">
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-md-5 col-10">
-                                                                <div class="row">
-                                                                    <div class="col-11 ">
-                                                                        <h3 class="name">bailasan</h3>
+                                                    </div>
+                                                    <div class="row">
+                                                            <div class="col-md-3 col-2">
+                                                                    <div class="image">
+                                                                        <img src="images/profile-avatar.jpg">
                                                                     </div>
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="col-11">
-                                                                        <p class="title">Front-end</p>
+                                                                <div class="col-md-5 col-10">
+                                                                    <div class="row">
+                                                                        <div class="col-11 ">
+                                                                            <h3 class="name">bailasan</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-11">
+                                                                            <p class="title">Front-end</p>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="row">
-                                                                    <button class="btn">Follow</button>
-                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="row">
+                                                                        <button class="btn">Follow</button>
+                                                                    </div>
 
-                                                            </div>
+                                                                </div>
+                                                    </div>
+                                                        
                                                 </div>
-                                                    
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                                <!-- End suggest Coures -->                                
-                        </div>   
+                                    <!-- End suggest Coures -->                                
+                            </div>   
                         </div>      
                     </div>
                </div>

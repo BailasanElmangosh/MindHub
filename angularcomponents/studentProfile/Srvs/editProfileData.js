@@ -3,7 +3,7 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
             editData: function (data) {
             return $http({
                 method: "Post",
-                url: "http://localhost:2449/api/editstudentprofile",
+                url: "http://mindhubgp-001-site1.itempurl.com/api/editstudentprofile",
                 data:data,
                 headers: 
                 {   'Content-Type': 'application/json',
@@ -14,7 +14,7 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
             skillsGet: function () {
                 return $http({
                     method: "Get",
-                    url: "http://localhost:2449/api/allskills",
+                    url: "http://mindhubgp-001-site1.itempurl.com/api/allskills",
                     headers: {
                         'Content-Type': 'application/json'
                     }
@@ -24,7 +24,7 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
             { 
                 return $http({
                     method:'Post',
-                    url:"http://localhost:2449/api/addstudentskill",
+                    url:"http://mindhubgp-001-site1.itempurl.com/api/addstudentskill",
                     data:skill,
                     headers: {
                         'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
             deleteSkill: function (data) {
                 return $http({
                     method: "Post",
-                    url: "http://localhost:2449/api/deletestudentskill",
+                    url: "http://mindhubgp-001-site1.itempurl.com/api/deletestudentskill",
                     data:data,
                     headers: {
                         'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
             uploadImage: function (data) {
                 return $http({
                     method: "Post",
-                    url: "http://localhost:2449/api/uploadstudentimage",
+                    url: "http://mindhubgp-001-site1.itempurl.com/api/uploadstudentimage",
                     data:data,
                     headers: {
                         'Content-Type': 'multipart/form-data',
@@ -59,7 +59,7 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
             addQues: function (data) {
                 return $http({
                     method: "Post",
-                    url: "http://localhost:2449/api/addstudentquestion",
+                    url: "http://mindhubgp-001-site1.itempurl.com/api/addstudentquestion",
                     data:data,
                     headers: {
                         'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
             likedislike: function (data) {
                 return $http({
                     method: "Post",
-                    url: "http://localhost:2449/api/likedislikequestion",
+                    url: "http://mindhubgp-001-site1.itempurl.com/api/likedislikequestion",
                     data:data,
                     headers: {
                         'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
             { 
                 return $http({
                     method: "Get",
-                    url: "http://localhost:2449/api/unfollowfriend/?id="+id,
+                    url: "http://mindhubgp-001-site1.itempurl.com/api/unfollowfriend/?id="+id,
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization':' bearer '+ $cookies.get('token'),

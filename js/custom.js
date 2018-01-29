@@ -265,7 +265,7 @@
         var image;
         $.ajax({
             type:'POST',
-            url: 'http://localhost:2449/api/uploadstudentimage',
+            url: 'http://mindhubgp-001-site1.itempurl.com/api/uploadstudentimage',
             data:formData,
             headers: {"Authorization": "bearer "+token},
             cache:false,

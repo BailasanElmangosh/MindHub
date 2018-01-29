@@ -30,10 +30,13 @@
             loginSrv.login($scope.userLogin)
                 .success(function (data, status) {
                     if (data.status =="Success")
-                    { 
+                    {  
                         cookies.set(key,data.token);
                         cookies.set('socketid',data.userId);
                         window.location ="/profile.html";
+                    }
+                    else{
+                        alert("hi")
                     }
                 });
         };

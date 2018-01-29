@@ -3,7 +3,7 @@ angular. module("newsFeedApp").factory("feedSrv",function($http){
         getFeed : function(token){
              return $http({
                  method: "Get",
-                 url: "http://localhost:2449/api/newsfeed",
+                 url: "http://mindhubgp-001-site1.itempurl.com/api/newsfeed",
                  headers: 
                  {   'Content-Type': 'application/json',
                      'Authorization':' bearer '+token
