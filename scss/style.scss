@@ -1872,6 +1872,20 @@ svg ,i {
             margin-bottom: 0px;
         }
     }
+    .carousel
+    {
+        .carousel-item
+        {
+            .carousel-caption
+            {
+                padding-bottom: 0px;
+                h5
+                {
+                    color:$black;
+                }
+            }
+        }
+    }
     //End Live now
 }
     
