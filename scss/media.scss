@@ -35,21 +35,13 @@
                       
                       .icon
                       { margin-left: -9px;
-                          svg ,img,i
-                          {
-                           
-                          }
                       }
                    }
                    .data
                    {
-                     
-                      .num
+                     .num
                       {
                           margin-left: -6px;
-                      }
-                      .name
-                      {
                       }
                    }
                    
@@ -59,10 +51,6 @@
           }
          
          
-        }
-        .overview
-        {
-
         }
     }
     //End profile page
@@ -127,10 +115,6 @@
             {
             font-size: 1.5em;
             }
-            p
-            {
-            
-            }
             .info-count
             {
                 padding-left: 0px;
@@ -141,32 +125,6 @@
         {
         
             margin-left: -13px;
-            .col-sm-12
-            {
-            
-            }
-            .iconbg
-            { 
-                
-                .icon
-                {  
-                    svg ,img,i
-                    {
-                    
-                    }
-                }
-            }
-            .data
-            {
-                
-                .num
-                {
-                
-                }
-                .name
-                {
-                }
-            }
             
         }
         
@@ -211,45 +169,14 @@
         .aboutMe
         {
             margin-top: 20px;
-            .header
-            {   
-                h2
-                { 
-                    i
-                    {
-                    }
-                }
-                
-            }
             .body
             {  
                 .body-container
                 {  
-                    h3
-                    {
-                
-                        span
-                        {
-                            
-                        }
-                    }
-                    .readMore
-                    {
-                    a
-                    {
-                    }
-                    &:hover
-                    {
-                    }
-                    }
                     .infoBasic
                     {
                     .basic
                     {
-                        .head
-                        {
-                            
-                        }
                         .detalis
                         {   &.mail
                             {
@@ -262,22 +189,6 @@
                         }
                     }
                     }
-                    .education
-                    {   h4
-                        {
-                        
-                        }
-                        p
-                        {
-                        
-                        }
-                    }
-                    .skills
-                    {
-                        .skill
-                        { 
-                        }
-                    }
                     
                 }
             }
@@ -285,17 +196,6 @@
         .follow
         {
             margin-top: 20px;
-            .header
-            {   
-                h2
-                { 
-                    i
-                    {
-                    
-                    }
-                }
-                
-            }
             .body
             { 
                 .person
@@ -332,26 +232,12 @@
         {
             .modal-content
             {
-                .modal-header
-                {
-    
-                }
                 .modal-body
                 {
-                    img
-                    {
-                    }
                     i
                     {
                         right: -21px !important;
                     }
-                    .line
-                    { 
-                        textarea
-                        {
-                        }
-                    }
-                
                 }
             }
         }
@@ -363,139 +249,35 @@
 {
   .newsFeedBody
   { 
-    .line
-    {
-     
-    }
-    .card
-    {
-       .profimg
-       {
-       }
-       .line
-       {
-       .name
-       {
-        
-       }
-       .title
-       {
-       }
-       }
-       .followNum
-       {
-        
-       }
-    }
     //Start  Questions
     .question 
     {
-        .header
-        { 
-            h2
-            {
-                i
-                {
-                }
-            }
-            
-        }
         .body
         {
             .body-container
-            {   
-                .addQue
-                {
-                }
-                .boxQus
-                {
-                    textarea
-                    {
-                        &:focus
-                        {
-                        }
-                    }
-                }
-                button
-                { 
-                }
+            {
                 .post
                 {
                     .image
                     {  width:40px;
                         height: 40px;
                     }
-                    .row
-                    {
-                    
-                    }
                     .queBody
                     {
-                            .queOption
-                            {
-                              
-                                a
-                                {
-                                
-                                &:hover
-                                {
-                                
-                                }
-                                }
-                            }
-                            .name
-                            {
-                             
-                            }
-                            .title,.date
-                            {
-                            }
-                            .queText
-                            {
-                                margin-right: 5px;
-                            }   
+                        .queText
+                        {
+                            margin-right: 5px;
+                        }   
                         
                     }
-                    
-                        .comment
+                     .comment
                         { .image
                             {  width:40px;
                                 height: 40px; 
                             }
-                            .name
-                            {  
-                            }
-                            .queText
-                            {
-                               
-                            }
-                            a
-                            {
-                                &:hover
-                                {
-                                }
-                            }
                             
-                        } 
-                        .postComment
-                        {
-                            .image
-                            {
-                            }
-                            button
-                            {
-                            }
-                        }
-                        .prevComment
-                        {
-                            a
-                            {
-                            } 
-                           
                         }
                     }
-                    
-               
                 }
             }
         
@@ -506,34 +288,18 @@
      //start Suggest
     
      .suggest
-     {
-        .header
-        {
-        } 
-        .hidden-md-lg
+     { .hidden-md-lg
         {
             display: none;
         }   
         .show-lg-md
         {
             display: block;
-        }    
-        img
-        { 
-        } 
-        .name
-        {
         }
         button
         {
             font-size:10px;
             padding: 0px;
-        }
-        .title
-        {
-        }
-        .line
-        {
         }
         
      }
@@ -559,21 +325,11 @@
     {
         .modal-content
         {
-            .modal-header
-            {
-
-            }
             .modal-body
             {
-                img
-                {
-                }
                 i
                 {
                     right: -8px !important;
-                }
-                .line
-                { 
                 }
                
             }
@@ -588,26 +344,11 @@
     {
         .modal-content
         {
-            .modal-header
-            {
-
-            }
             .modal-body
             {
-                img
-                {
-                }
                 i
                 {
                     right: 0px !important;
-                }
-                .line
-                { 
-                    textarea
-                    {
-                       
-                        
-                    }
                 }
                
             }
@@ -695,9 +436,6 @@
                 {
                     margin-left: 4px;
                 }
-                .name
-                {
-                }
             }
             
         }
@@ -753,10 +491,7 @@
                         {   .name
                             {
                             font-size: 1rem; 
-                            }              
-                            .queText
-                            {
-                            }
+                            } 
                         }
         
                     }
@@ -765,83 +500,27 @@
         }
         .aboutMe
         {
-            .header
-            {   
-                h2
-                { 
-                    i
-                    {
-                    }
-                }
-                
-            }
             .body
             {  
                 .body-container
                 {  
-                    h3
-                    {
-                
-                        span
-                        {
-                            
-                        }
-                    }
-                    .readMore
-                    {
-                    a
-                    {
-                    }
-                    &:hover
-                    {
-                    }
-                    }
+                   
                     .infoBasic
                     {
-                    .basic
-                    {
-                        .head
+                        .basic
                         {
-                        }
-                        .detalis
-                        { font-size: 80%;
-                        }
-                    }
-                    }
-                    .education
-                    {   h4
-                        {
-                        
-                        }
-                        p
-                        {
-                        
+                            .detalis
+                            { font-size: 80%;
+                            }
                         }
                     }
-                    .skills
-                    {
-                        .skill
-                        { 
-                        }
-                    }
-                    
+                   
                 }
             }
         }
         .follow
         {
             margin-top: 20px;
-            .header
-            {   
-                h2
-                { 
-                    i
-                    {
-                    
-                    }
-                }
-                
-            }
             .body
             { 
                 .person
@@ -877,63 +556,14 @@
  .newsFeed
  {
    .newsFeedBody
-   { 
-     .line
-     {
-      
-     }
-     .card
-     {
-        .profimg
-        {
-        }
-        .line
-        {
-        .name
-        {
-         
-        }
-        .title
-        {
-        }
-        }
-        .followNum
-        {
-         
-        }
-     }
+   {
      //Start  Questions
      .question 
      {
-         .header
-         { 
-             h2
-             {
-                 i
-                 {
-                 }
-             }
-             
-         }
          .body
          {
              .body-container
-             {   
-                 .addQue
-                 {
-                 }
-                 .boxQus
-                 {
-                     textarea
-                     {
-                         &:focus
-                         {
-                         }
-                     }
-                 }
-                 button
-                 { 
-                 }
+             { 
                  .post
                  {
                      .image
@@ -944,40 +574,19 @@
                      {
                         padding-left: 0px;
                      }
-                     .row
-                     {
-                     
-                     }
                      .queBody
                      {
                         .col-sm-12
                         {
                             padding-left: 0px;
                         }  
-                           .queOption
-                             {
-                               
-                                 a
-                                 {
-                                 
-                                 &:hover
-                                 {
-                                 
-                                 }
-                                 }
-                             }
-                             .name
-                             {
-                              
-                             }
-                             .title,.date
-                             {
-                             }
-                             .queText
-                             {
-                             margin-left: 20px;
-                             font-size: 13px;
-                             }   
+                        
+                            
+                        .queText
+                        {
+                        margin-left: 20px;
+                        font-size: 13px;
+                        }   
                          
                      }
                      
@@ -986,35 +595,7 @@
                              {  width:30px;
                                  height: 30px; 
                              }
-                             .name
-                             {  
-                             }
-                             .queText
-                             {
-                             }
-                             a
-                             {
-                                 &:hover
-                                 {
-                                 }
-                             }
                              
-                         } 
-                         .postComment
-                         {
-                             .image
-                             {
-                             }
-                             button
-                             {
-                             }
-                         }
-                         .prevComment
-                         {
-                             a
-                             {
-                             } 
-                            
                          }
                      }
                      
@@ -1034,28 +615,11 @@
       
      .suggest
      {
-        
-        .header
-        {
-        }        
-        img
-        { 
-        } 
-        .name
-        {
-        }
         button
         {
             font-size:10px;
             padding: 0px;
         }
-        .title
-        {
-        }
-        .line
-        {
-        }
-        
      }
      //End Suggest
  } 
@@ -1157,16 +721,6 @@
                   }
               }
            }
-           .data
-           {
-             
-              .num
-              {
-              }
-              .name
-              {
-              }
-           }
            
         }
         
@@ -1222,65 +776,19 @@
         }   
         .aboutMe
         {
-            .header
-            {   
-                h2
-                { 
-                    i
-                    {
-                    }
-                }
-                
-            }
             .body
             {  
                 .body-container
-                {  
-                  h3
-                  {
-                
-                      span
-                      {
-                         
-                      }
-                  }
-                  .readMore
-                  {
-                    a
-                    {
-                    }
-                    &:hover
-                    {
-                    }
-                  }
+                { 
                   .infoBasic
                   {
                     .basic
                     {
-                      .head
-                      {
-                      }
                       .detalis
                       { font-size: 85%;
                       }
                     }
                   }
-                 .education
-                 {   h4
-                     {
-                       
-                     }
-                     p
-                     {
-                      
-                     }
-                 }
-                 .skills
-                 {
-                     .skill
-                     { 
-                     }
-                 }
                  
                 }
             }
@@ -1294,97 +802,26 @@
 {
   .newsFeedBody
   { 
-    .line
-    {
-     
-    }
-    .card
-    {
-       .profimg
-       {
-       }
-       .line
-       {
-       .name
-       {
-        
-       }
-       .title
-       {
-       }
-       }
-       .followNum
-       {
-        
-       }
-    }
     //Start  Questions
     .question 
     {
-        .header
-        { 
-            h2
-            {
-                i
-                {
-                }
-            }
-            
-        }
         .body
         {
             .body-container
-            {   
-                .addQue
-                {
-                }
-                .boxQus
-                {
-                    textarea
-                    {
-                        &:focus
-                        {
-                        }
-                    }
-                }
-                button
-                { 
-                }
+            { 
                 .post
                 {
                     .image
                     {  width:40px;
                         height: 40px;
                     }
-                    .row
-                    {
-                    
-                    }
                     .queBody
                     {
-                            .queOption
-                            {
-                              
-                                a
-                                {
-                                
-                                &:hover
-                                {
-                                
-                                }
-                                }
-                            }
-                            .name
-                            {
-                             
-                            }
-                            .title,.date
-                            {
-                            }
-                            .queText
-                            {
-                                margin-right: 5px;
-                            }   
+                         
+                        .queText
+                        {
+                            margin-right: 5px;
+                        }   
                         
                     }
                     
@@ -1393,36 +830,7 @@
                             {  width:40px;
                                 height: 40px; 
                             }
-                            .name
-                            {  
-                            }
-                            .queText
-                            {
-                               
-                            }
-                            a
-                            {
-                                &:hover
-                                {
-                                }
-                            }
                             
-                        } 
-                        .postComment
-                        {
-                            .image
-                            {
-                            }
-                            button
-                            {
-                            }
-                        }
-                        .prevComment
-                        {
-                            a
-                            {
-                            } 
-                           
                         }
                     }
                     
@@ -1438,9 +846,6 @@
     
      .suggest
      {
-        .header
-        {
-        } 
         .hidden-md-lg
         {
             display: block;
@@ -1449,21 +854,9 @@
         {
             display: none;
         }    
-        img
-        { 
-        } 
-        .name
-        {
-        }
         button
         {
             font-size:10px;
-        }
-        .title
-        {
-        }
-        .line
-        {
         }
         .btn
         {
@@ -1517,31 +910,7 @@
                 }
               }
              
-              .count
-              {
-                 .iconbg
-                 { 
-                    
-                    .icon
-                    {
-                        svg ,img,i
-                        {
-                         
-                        }
-                    }
-                 }
-                 .data
-                 {
-                   
-                    .num
-                    {
-                    }
-                    .name
-                    {
-                    }
-                 }
-                 
-              }
+            
               
             }
         }
@@ -1553,10 +922,7 @@
   { 
      //start Suggest
      .suggest
-     {
-        .header
-        {
-        } 
+     { 
         .hidden-md-lg
         {
             display: none;
@@ -1565,21 +931,9 @@
         {
             display: block;
         }     
-        img
-        { 
-        } 
-        .name
-        {
-        }
         button
         {
             font-size:10px;
-        }
-        .title
-        {
-        }
-        .line
-        {
         }
         
      }
@@ -1618,27 +972,12 @@
      {
          .modal-content
          {
-             .modal-header
-             {
-     
-             }
              .modal-body
              {
-                 img
-                 {
-                 }
                  i
                  {
                      right: -45px !important;
                  }
-                 .line
-                 { 
-                     textarea
-                     {
-                        
-                     }
-                 }
-                
              }
          }
      }

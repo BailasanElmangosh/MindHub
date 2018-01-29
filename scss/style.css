@@ -162,9 +162,9 @@ body {
 }
 
 .landingPage .modal .modal-dialog .modal-content .modal-body .spinner {
-  display: inline;
   width: 24px;
   height: 24px;
+  display: inline;
   border-radius: 50%;
   text-indent: -9999em;
   position: relative;
@@ -1627,11 +1627,15 @@ svg, i {
   border-bottom: 1px solid #8ccb75;
 }
 
-.newsFeed .newsFeedBody .suggest .btn {
-  padding: .1rem .5rem;
+.newsFeed .newsFeedBody .liveNow {
+  background: #bf0000;
+  padding: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.newsFeed .newsFeedBody .suggest .btn i {
-  height: 15px;
+.newsFeed .newsFeedBody .liveNow h3 {
+  text-align: center;
+  margin-bottom: 0px;
 }
 /*# sourceMappingURL=style.css.map */
