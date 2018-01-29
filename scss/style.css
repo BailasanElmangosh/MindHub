@@ -1647,4 +1647,19 @@ svg, i {
 .newsFeed .newsFeedBody .carousel .carousel-item .carousel-caption h5 {
   color: #1b1b1b;
 }
+
+.newsFeed .newsFeedBody .footer {
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.newsFeed .newsFeedBody .footer p {
+  display: inline;
+  color: #595959;
+}
+
+.newsFeed .newsFeedBody .footer img {
+  height: 20px;
+  display: inline-block;
+}
 /*# sourceMappingURL=style.css.map */

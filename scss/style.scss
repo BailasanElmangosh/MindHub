@@ -1888,6 +1888,23 @@ svg ,i {
         }
     }
     //End Live now
+    // Start Footer 
+    .footer
+    {padding: 10px;
+        padding-left: 20px;
+        p
+        {
+            display: inline;
+           color:$grey1;
+
+        }
+        img
+        {
+            height: 20px;
+            display: inline-block;
+        }
+    }
+    // End Footer
 }
     
 }  
