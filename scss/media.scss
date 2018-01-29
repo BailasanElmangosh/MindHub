@@ -628,42 +628,56 @@
  @media (max-width: 891px) and (min-width: 768px) 
  {
 // start  News feed
-.newsFeed
-{
-  .newsFeedBody
-  { 
-   
-     //start Suggest
+    .newsFeed
+    {
+    .newsFeedBody
+    { 
     
-     .suggest
-     {    text-align: center;
-        .header
-        {
-            h5
+        //start Suggest
+        
+        .suggest
+        {    text-align: center;
+            .header
             {
-                font-size: 0.9rem;
+                h5
+                {
+                    font-size: 0.9rem;
+                }
+            }
+            .name
+            {
+                font-size: 13px
+            }
+            img {
+                width: 35px;
+                height: 35px;
+            }
+            .btn
+            {
+            padding: .1rem .5rem;
+            i
+            {
+                height: 15px;
+            }
             }
         }
-        .name
-        {
-            font-size: 13px
-        }
-        img {
-            width: 35px;
-            height: 35px;
-        }
-        .btn
-        {
-         padding: .1rem .5rem;
-         i
+        //End Suggest
+         //start live course
+     .carousel
+     {
+         .carousel-item
          {
-             height: 15px;
+             .carousel-caption
+             {
+                 left:10%;
+                 bottom: 6px;
+             }
          }
-        }
      }
-     //End Suggest
+     //End live course
     }
-}  
+        
+    }  
 // end newsfeed
  }
 
@@ -860,7 +874,7 @@
         }
         .btn
         {
-         padding: .1rem .5rem;
+         padding: .1rem .3rem;
          i
          {
              height: 15px;
@@ -868,11 +882,12 @@
         }
      }
      //End Suggest
-    }
+    
 }  
 // end newsfeed
 
  }
+}
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199px) and(min-width: 992px)

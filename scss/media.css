@@ -293,6 +293,10 @@
   .newsFeed .newsFeedBody .suggest .btn i {
     height: 15px;
   }
+  .newsFeed .newsFeedBody .carousel .carousel-item .carousel-caption {
+    left: 10%;
+    bottom: 6px;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
@@ -361,7 +365,7 @@
     font-size: 10px;
   }
   .newsFeed .newsFeedBody .suggest .btn {
-    padding: .1rem .5rem;
+    padding: .1rem .3rem;
   }
   .newsFeed .newsFeedBody .suggest .btn i {
     height: 15px;
