@@ -629,12 +629,24 @@ body
 // end Navbar
 .bgCover
 {
-    background: url('../images/bgProfile.jpeg') no-repeat;
+    background: url('../images/1.png') no-repeat;
     background-size: cover;
     height: 270px;
 }
 .profile
-{
+{  .title
+    {
+        display: inline;
+    }
+    .followBtn
+    { 
+        
+        i
+        {
+            color:$greencolor;
+            margin-right: 2px;
+        }
+    }
     .box
     {  padding: 10px;
         position: relative;

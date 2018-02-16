@@ -585,9 +585,18 @@ body {
 }
 
 .bgCover {
-  background: url("../images/bgProfile.jpeg") no-repeat;
+  background: url("../images/1.png") no-repeat;
   background-size: cover;
   height: 270px;
+}
+
+.profile .title {
+  display: inline;
+}
+
+.profile .followBtn i {
+  color: #8ccb75;
+  margin-right: 2px;
 }
 
 .profile .box {

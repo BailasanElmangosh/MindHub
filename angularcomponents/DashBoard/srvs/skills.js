@@ -3,7 +3,7 @@ dashBoard.factory("skillsSrv", function ($http) {
         skillsPost: function (skill) {
             return $http({
                 method: "Post",
-                url: "http://mindhubgp-001-site1.itempurl.comapi/createskill",
+                url: "http://mindhubgp-001-site1.itempurl.com/api/createskill",
                 data: skill,
                 headers: {
                     'Content-Type': 'application/json'
