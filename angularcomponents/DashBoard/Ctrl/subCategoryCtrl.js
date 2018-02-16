@@ -20,7 +20,6 @@
       // Add Sub Category 
       $scope.subCategory ={}
       $scope.addSubCategory=function(){
-        alert($scope.subCategory.MainCategoryId)
       subCategorySrv.CreateSubCategory($scope.subCategory)
         .success(function(data, status){
              $scope.getsubCategorys.push(data.subCategory)
@@ -32,7 +31,17 @@
       .success(function(data, status){
         $scope.getsubCategorys= data.subCategories;
       });
-
+      // delete skill
+      $scope.delskill={}
+      $scope.remove = function(array, index){
+       array.splice($scope.getsubCategorys.indexOf(index), 1);
+       }
+      $scope.delete=function(array, index ,id){
+       $scope.remove(array, index);
+       subCategorySrv.DeleteSubCategory( id)
+       .success(function(data, status){
+           //  alert(data.status);
+       });
 
        
       });
