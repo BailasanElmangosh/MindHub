@@ -30,7 +30,17 @@
               <div class="collapse navbar-collapse" id="mainNavbar">
                 <a class="navbar-brand" href="#"><img src="images/logoNav.png"></a>
                    <form class="search-form">
-                        <input type="search" value="" placeholder="Search" class="search-input">
+                        <input type="search" value="" placeholder="Search" class="search-input"
+                        name="result" id="result" ng-model="resultDropDown" ng-keyup="completeResult(resultDropDown)" class="form-control">
+                        <ul class="list-group " id="list-group" ng-model="hidethisresult" >  
+                            <div class="dropdownSkill" ng-hide="hidethisreult" id="dropdownresult">  
+                            <li class="list-group-item" ng-repeat="resultdata in filterResult" ng-click="fillTextboxresult(resultdata.name ,resultdata.id)" >
+                                <img  class="imgSearch" ng-src="http://mindhubgp-001-site1.itempurl.com/{{resultdata.image}}">
+                                {{resultdata.name}}
+                            </li>  
+
+                        </div> 
+                        </ul> 
                         <button type="submit" class="search-button">
                             <svg class="submit-button">
                             <use  xlink:href="#search"></use>
@@ -39,6 +49,7 @@
                         <div class="search-option">
                             <div>
                             <input name="type" type="radio" value="type-users" id="type-users" checked="">
+                           
                             <label for="type-users">
                                 <svg class="edit-pen-title">
                                 <use xlink:href="#user"></use>
@@ -452,7 +463,7 @@
                                                                                         </div>
                                                                                         <div class="row">
                                                                                             <div class="col-sm-12">
-                                                                                                <textarea class="form-control" ng-model="editProfile.info" ng-bind="profileData.info"></textarea>
+                                                                                                <textarea class="form-control" ng-model="editProfile.info" >{{profileData.info}}</textarea>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>

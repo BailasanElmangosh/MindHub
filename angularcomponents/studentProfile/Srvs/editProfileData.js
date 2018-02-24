@@ -89,8 +89,18 @@ studentProfile.factory("profileEditSrv", function ($http,$cookies) {
                         'Authorization':' bearer '+ $cookies.get('token'),
                     }
                 });
+            },
+            resultSearch:function(key)
+            { 
+                return $http({
+                    method: "Get",
+                    url: "http://mindhubgp-001-site1.itempurl.com/api/studentsresult/?key="+key,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization':' bearer '+ $cookies.get('token'),
+                    }
+                });
             }
-
 
     }
 })

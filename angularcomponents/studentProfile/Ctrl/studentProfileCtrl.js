@@ -98,9 +98,10 @@
                   $scope.complete = function(string){  
                        $scope.hidethis = false;  
                        var output = [];  
+                       console.log($scope.skillList)
                       
-                       angular.forEach($scope.skillList, function(skillDropDown){  
-                            console.log(skillDropDown);
+                       angular.forEach($scope.skillList, function(skillDropDown){ 
+                           console.log(skillDropDown)
                             if(skillDropDown.name.toLowerCase().indexOf(string.toLowerCase()) >= 0)  
                             {  
                                  output.push(skillDropDown);  
@@ -327,6 +328,50 @@
 
                 });
               }
+              $scope.hidethisresult = false;
+              
+                $scope.completeResult = function(result){ 
+                    console.log(result) 
+                     $scope.hidethis = false;  
+                     var outputResult = [];  
+                     profileEditSrv.resultSearch(result)
+                            .success(function(data, status){
+                                $scope.resultlList= data.studentsResult;
+                                console.log($scope.resultlList)
+                            });
+                     angular.forEach($scope.resultlList, function(resultDropDown){ 
+                         console.log(resultDropDown.name);
+                          if(resultDropDown.name.toLowerCase().indexOf(string.toLowerCase()) >= 0)  
+                          {   
+                            outputResult.push(resultDropDown);  
+                            console.log("hii");
+                          }  
+                     });  
+                     $scope.height=angular.element('#list-group').width()
+                     angular.element('#dropdownresult')
+                     .css(
+                         {   'margin-top' :'40px',
+                              'border-radius': '10px',
+                             'max-height':'100px',
+                             'overflow-y':'scroll',
+                             'overflow-x':'hidden',
+                             ' .scrollComment::-webkit-scrollbar-track': '{ " -webkit-box-shadow": "inset 0 0 6px rgba(0,0,0,0.3)","background-color": "#f5f5f5","  border-radius": "10px"}',
+                             ' .scrollComment::-webkit-scrollbar': '{ "width": "12px","hight":"12px"}',
+                             ' .scrollComment::-webkit-scrollbar-thumb': '{ " border-radius": "10px","background": " #ccc"}'
+                          
+                         });
+                         angular.element('#dropdownresult')
+                         .css( 'width', $scope.height);
+                         angular.element('#error')
+                         .css( 'display','none');
+                     $scope.filterResult = outputResult;  
+                }  
+                $scope.fillTextboxresult = function(result,idS){  
+                     $scope.resultDropDown = result;  
+                     $scope.hidethisresult = true;
+                     $scope.idresult=idS;
+
+                }  
    
             });
              

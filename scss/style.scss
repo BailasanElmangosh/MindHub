@@ -493,6 +493,12 @@ body
         &.focus {
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
         }
+        .imgSearch
+        {
+            width:20px;
+            height:20px;
+            border-radius:5px; 
+        }
     }
     
     .search-input {
