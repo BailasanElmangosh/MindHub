@@ -31,14 +31,13 @@
                 <a class="navbar-brand" href="#"><img src="images/logoNav.png"></a>
                    <form class="search-form">
                         <input type="search" value="" placeholder="Search" class="search-input"
-                        name="result" id="result" ng-model="resultDropDown" ng-keyup="completeResult(resultDropDown)" class="form-control">
-                        <ul class="list-group " id="list-group" ng-model="hidethisresult" >  
-                            <div class="dropdownSkill" ng-hide="hidethisreult" id="dropdownresult">  
-                            <li class="list-group-item" ng-repeat="resultdata in filterResult" ng-click="fillTextboxresult(resultdata.name ,resultdata.id)" >
+                        name="result" id="result" ng-model="key" ng-keyup="keyresult(key)" class="form-control" autocomplete="off">
+                        <ul class="list-group " id="list-group" ng-model="hidetHisResult" >  
+                            <div class="dropdownSkill" ng-hide="hidetResult" id="dropdownResult">  
+                            <li class="list-group-item" ng-repeat="resultdata in filterResult" ng-click="fillTextboxResult(resultdata.name ,resultdata.id)" >
                                 <img  class="imgSearch" ng-src="http://mindhubgp-001-site1.itempurl.com/{{resultdata.image}}">
                                 {{resultdata.name}}
-                            </li>  
-
+                            </li>
                         </div> 
                         </ul> 
                         <button type="submit" class="search-button">
