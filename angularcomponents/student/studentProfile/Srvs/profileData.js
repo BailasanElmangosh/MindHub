@@ -1,4 +1,4 @@
-studentProfile.factory("profileDataSrv", function ($http,$cookies) {
+angular.module('student-app').factory("profileDataSrv", function ($http,$cookies) {
     return {
            getData: function () {
             return $http({

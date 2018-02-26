@@ -1,4 +1,4 @@
-studentProfile.factory("profileEditSrv", function ($http,$cookies) {
+angular.module('student-app').factory("profileEditSrv", function ($http,$cookies) {
     return {
             editData: function (data) {
             return $http({

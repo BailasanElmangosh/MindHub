@@ -1,7 +1,5 @@
 
-// var newsFeedApp =
-(function(){
-    newsFeedApp=angular.module('newsFeedApp',['ngCookies']);
+    newsFeedApp=angular.module('student-app',['ngCookies']);
     newsFeedApp.filter('formatDate', function($filter) {
         // alert('hii');
         return function (myDate) {
@@ -42,5 +40,3 @@
         };
       });
       
-})();
-

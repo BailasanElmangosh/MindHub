@@ -1,5 +1,5 @@
-(function () {
-    angular. module("newsFeedApp")
+
+    angular. module("student-app")
     .controller("newFeedCtrl", function ($scope,$cookies,feedSrv,questionsSrv) {
 
         $scope.Feeds ={};
@@ -64,6 +64,6 @@
 
 
     });
-})();
+
 
     

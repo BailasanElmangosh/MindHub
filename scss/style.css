@@ -463,6 +463,14 @@ body {
   border-radius: 5px;
 }
 
+.navbar .search-form .list-group .list-group-item:hover {
+  background-color: #eee;
+}
+
+.navbar .search-form .list-group .list-group-item a {
+  text-decoration: none;
+}
+
 .navbar .search-input {
   position: absolute;
   top: 10px;

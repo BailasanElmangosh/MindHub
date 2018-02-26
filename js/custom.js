@@ -272,16 +272,29 @@
             contentType: false,
             processData: false,
             success:function(data){
-                angular.element($("#profile")).scope().getNewPath(data.imagePath);
+                if(data.status=='Success')
+                {
+                    angular.element($("#profile")).scope().getNewPath(data.imagePath);
+                    alert('sucess');
+                    console.log(data);
+                }
+                else
+                {
+                    alert('faild');
+                    console.log(data);
+                    
+                }
+               
             },
             error: function(data){
-              
+              alert('faild');
             }
         });
     }));
     
     $("#ImageBrowse").on("change", function() {
         var file=$(this)[0].files[0]
+        console.log(file.size);
         if(file.size<=5000000&&file.type=='image/jpeg'||file.type=='image/jpg'||file.type=='image/png')
         { $("#imageUploadForm").submit();
             angular.element($("#profile")).scope().sizeTrue();  
@@ -291,8 +304,8 @@
            
         }
     });
-    $("body").click(function(){
-        angular.element($("#list-group")).scope().hideDropdown();
-    });
+    // $("body").click(function(){
+    //     angular.element($("#list-group")).scope().hideDropdown();
+    // });
        
     })();

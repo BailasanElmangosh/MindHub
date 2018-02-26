@@ -1,7 +1,5 @@
 
-(function () {
-    
-    studentProfile.controller("studentProfileCtrl", function ($scope,profileDataSrv,profileEditSrv,$cookies,questionsSrv) {
+    angular.module('student-app').controller("studentProfileCtrl", function ($scope,profileDataSrv,profileEditSrv,$cookies,questionsSrv) {
             $scope.profileData={};
             $scope.editProfile={};
             $scope.maleImg = "images/default.png";
@@ -188,37 +186,8 @@
                 .css( 'display','none'); 
                }
               
-               
-              
-            //    $scope.imgHoverOut=function()
-            //    {
-            //     angular.element('#showImage')
-            //     .removeClass('display'); 
-            //    }
-            //    $scope.url={};
-            //    var url =$scope.url.img
-            //    console.log(url);
-            //    var namesArr = [];
-            //    $scope.fileNameChanged = function (ele) {
-            //     var files = ele.files;
-            //     console.log(files)
-            //     var l = files.length;
-            //   }
-                // $scope.uploadimage=function(ele)
-                // {   console.log(ele.files);
-                //     var fd= new FormData();
-                //     fd.append('file',ele.files)
-                //     fd.append('name',"bailasan")
-                //     profileEditSrv.uploadImage(fd)
-                //     .success(function(data, status){
-                //         if(status="Success")
-                //         {
-                //         }
-                //     });
-
-                // };
-
-                //Add Question 
+         
+              //  Add Question 
                 $scope.addQues=function()
                 {  $scope.isdisable=true;
                     questionsSrv.Create($scope.question,$cookies.get('token'))
@@ -335,18 +304,15 @@
               });
           
             $scope.keyresult=function(string)
-            {
-                // key=string;
+            {   $scope.allResult=true;
                 if(string=="")
                 {   $scope.filterResult=null;
+                    $scope.allResult=false;
                     return;
                 }
-                console.log(string);
                 profileEditSrv.resultSearch(string)
                 .success(function(data, status){
                     $scope.resultList= data.studentsResult;
-                   console.log($scope.resultList)
-                  
                    $scope.completeResult(string,$scope.resultList);
                   
                 });
@@ -358,31 +324,21 @@
                      $scope.hidetResult = false; 
                      $scope.showResult = true;
                      var output = [];
-                     angular.forEach(array, function(resultDropDown){ 
-                         console.log(resultDropDown)
+                     angular.forEach(array, function(resultDropDown){
                           if(resultDropDown.name.toLowerCase().indexOf(string.toLowerCase()) >= 0)  
                           {  
                                output.push(resultDropDown);  
-                               console.log(output)
                           }  
                      });  
-                     $scope.height=angular.element('#list-group').width()
-                     angular.element('#dropdownResult')
+                     
+                   angular.element('#dropdownResult')
                      .css(
                          {   'margin-top':'40px',
-                              'border-radius': '10px',
-                             'max-height':'100px',
-                             'overflow-y':'scroll',
-                             'overflow-x':'hidden',
-                             ' .scrollComment::-webkit-scrollbar-track': '{ " -webkit-box-shadow": "inset 0 0 6px rgba(0,0,0,0.3)","background-color": "#8ccb75"}',
-                             ' .scrollComment::-webkit-scrollbar': '{ "width": "10px","background-color": "#F5F5F5"}',
-                             ' .scrollComment::-webkit-scrollbar-thumb': '{ "border": " 2px solid #555555","background-color": "#555555"}'
+                             'max-height':'200px'
                          });
-                         angular.element('#dropdownSkill')
-                         .css( 'width', $scope.height);
-                         angular.element('#error')
-                         .css( 'display','none');
+                         
                      $scope.filterResult = output;  
+                     
                 }  
                 $scope.fillTextboxResult = function(string,idS){  
                      $scope.ResultlDropDown = string;  
@@ -391,11 +347,10 @@
                 }  
                
                 
-               $scope.hideDropdown=function()
-               {
-                $scope.showResult = false;
-                $scope.$apply();
-               }
+            //    $scope.hideDropdown=function()
+            //    {
+            //     $scope.showResult = false;
+            //     $scope.$apply();
+            //    }
             });
              
-})();

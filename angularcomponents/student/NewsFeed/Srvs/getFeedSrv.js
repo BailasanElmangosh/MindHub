@@ -1,4 +1,4 @@
-angular. module("newsFeedApp").factory("feedSrv",function($http){
+angular. module("student-app").factory("feedSrv",function($http){
     return {
         getFeed : function(token){
              return $http({

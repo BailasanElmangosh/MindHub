@@ -1,4 +1,4 @@
-angular. module("newsFeedApp").factory('questionsSrv',function($http,$cookies){
+angular.module("student-app").factory('questionsSrv',function($http,$cookies){
     return {
         Create : function(question,token){
             return $http({

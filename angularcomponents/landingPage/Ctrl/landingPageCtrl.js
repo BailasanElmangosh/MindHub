@@ -33,10 +33,9 @@
                     {  
                         cookies.set(key,data.token);
                         cookies.set('socketid',data.userId);
-                        window.location ="/profile.html";
+                        window.location ="/angularcomponents/student/template/student.html#/profile";
                     }
                     else{
-                        alert("hi")
                     }
                 });
         };
@@ -44,6 +43,7 @@
         $scope.token = function (key) 
             {
                 cookies.get(key);
+                console.log(key);
             };
             
     });
