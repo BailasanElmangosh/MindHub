@@ -291,5 +291,8 @@
            
         }
     });
-
+    $("body").click(function(){
+        angular.element($("#list-group")).scope().hideDropdown();
+    });
+       
     })();

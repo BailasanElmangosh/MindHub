@@ -333,25 +333,31 @@
                   $scope.List= data.skills;
                  console.log($scope.resultList)
               });
-            var key;
+          
             $scope.keyresult=function(string)
             {
                 // key=string;
+                console.log(string);
                 profileEditSrv.resultSearch(string)
                 .success(function(data, status){
                     $scope.resultList= data.studentsResult;
                    console.log($scope.resultList)
                    $scope.completeResult(string,$scope.resultList);
+                  
                 });
-                
-                console.log(key)
+                if(string=="")
+                {  
+                   
+                    $scope.filterResult=null;
+                return;
+                }
             }
            
                 $scope.completeResult = function(string,array){ 
                     
-                     $scope.hidetHisResult = false;  
-                     var output = [];  
-                    
+                     $scope.hidetResult = false; 
+                     $scope.showResult = true;
+                     var output = [];
                      angular.forEach(array, function(resultDropDown){ 
                          console.log(resultDropDown)
                           if(resultDropDown.name.toLowerCase().indexOf(string.toLowerCase()) >= 0)  
@@ -380,15 +386,16 @@
                 }  
                 $scope.fillTextboxResult = function(string,idS){  
                      $scope.ResultlDropDown = string;  
-                     $scope.hidetHisResult = true;
+                     $scope.showResult = true;
                      $scope.idResult=idS;
-                    
                 }  
-                window.onclick =function()
-                {
-                   
-                //    $scope.hidetResult=true;
-                }
+               
+                
+               $scope.hideDropdown=function()
+               {
+                $scope.showResult = false;
+                $scope.$apply();
+               }
             });
              
 })();
