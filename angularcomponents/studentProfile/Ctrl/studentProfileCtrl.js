@@ -337,20 +337,20 @@
             $scope.keyresult=function(string)
             {
                 // key=string;
+                if(string=="")
+                {   $scope.filterResult=null;
+                    return;
+                }
                 console.log(string);
                 profileEditSrv.resultSearch(string)
                 .success(function(data, status){
                     $scope.resultList= data.studentsResult;
                    console.log($scope.resultList)
+                  
                    $scope.completeResult(string,$scope.resultList);
                   
                 });
-                if(string=="")
-                {  
-                   
-                    $scope.filterResult=null;
-                return;
-                }
+               
             }
            
                 $scope.completeResult = function(string,array){ 
