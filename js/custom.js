@@ -1,5 +1,5 @@
 (function () {
-    
+     
     function setHeight() 
        {
         windowHeight = $(window).innerHeight();
@@ -155,7 +155,7 @@
     {
         $('#question').show('slow');
         $(this).addClass('bgColor');
-    
+        
         $('#aboutMe').hide('slow');
         $('#Accomplishments').hide('slow');    
         $('#follow').hide('slow');
@@ -307,5 +307,7 @@
     // $("body").click(function(){
     //     angular.element($("#list-group")).scope().hideDropdown();
     // });
-       
+    $('#courses').click(function(){
+        alert('hii');
+    });
     })();
