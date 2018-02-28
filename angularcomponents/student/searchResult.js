@@ -15,4 +15,4 @@ angular.module('student-app').factory("searchSrv", function ($http,$cookies) {
         }
         }
     }
-})
+)

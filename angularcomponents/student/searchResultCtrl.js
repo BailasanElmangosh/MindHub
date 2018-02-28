@@ -1,6 +1,5 @@
 angular.module('student-app').controller("searchResultCtrl",function($scope,searchSrv){
 
-
     $scope.keyresult=function(string)
     {   $scope.allResult=true;
         if(string=="")
@@ -8,17 +7,21 @@ angular.module('student-app').controller("searchResultCtrl",function($scope,sear
             $scope.allResult=false;
             return;
         }
-        profileEditSrv.resultSearch(string)
+        searchSrv.resultSearch(string)
         .success(function(data, status){
             $scope.resultList= data.studentsResult;
            $scope.completeResult(string,$scope.resultList);
           
         });
+        $scope.results=$scope.resultList;
+          
        
     }
-   
+    console.log($scope.results)
+    
+        
         $scope.completeResult = function(string,array){ 
-            
+            console.log($scope.resultList)
              $scope.hidetResult = false; 
              $scope.showResult = true;
              var output = [];
@@ -36,7 +39,6 @@ angular.module('student-app').controller("searchResultCtrl",function($scope,sear
                  });
                  
              $scope.filterResult = output;  
-             
         }  
         $scope.fillTextboxResult = function(string,idS){  
              $scope.ResultlDropDown = string;  

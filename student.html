@@ -28,7 +28,7 @@
               
               <div class="collapse navbar-collapse" id="mainNavbar">
                 <a class="navbar-brand" href="#"><img src=" /images/logoNav.png"></a>
-                   <form class="search-form">
+                   <form class="search-form" ng-controller="searchResultCtrl">
                         <input type="search" value="" placeholder="Search" class="search-input"
                         name="result" id="result" ng-model="key" ng-keyup="keyresult(key)" class="form-control" autocomplete="off">
                         <ul class="list-group " id="listResult" ng-show="showResult" >  
@@ -37,7 +37,7 @@
                                     <img  class="imgSearch" ng-src="http://mindhubgp-001-site1.itempurl.com/{{resultdata.image}}">
                                     {{resultdata.name}}
                                 </li>
-                                <li class="list-group-item" ng-show="allResult"><a href="">See all result {{key}}</a></li>
+                                <li class="list-group-item" ng-show="allResult"><a href="#/Search">See all result {{key}}</a></li>
                             </div> 
                         </ul> 
                         <button type="submit" class="search-button">
@@ -174,7 +174,7 @@
        <script src="/js/lib/angular/angular-messages.min.js"></script>
        <script src="/js/lib/angular/angular-route.min.js"></script>
        <script src="/js/lib/angular/angular-cookies.min.js"></script>
-       <script src="/angularcomponents/student/student-app.js"></script>
+       <script src="\angularcomponents\student\student-app.js"></script>
        <script src="/angularcomponents/student/searchResult.js"></script>
        <script src="/angularcomponents/student/searchResultCtrl.js"></script>    
        <script src="/angularcomponents/student/studentProfile/Srvs/profileData.js"></script>
