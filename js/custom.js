@@ -121,7 +121,6 @@
             
         });
       
-    //  Birthdate
     
     //dropdown navbar
     $('#btnMenuProfile').click(function(){

@@ -1,38 +1,40 @@
-<div class="container">
-    <div class="person" ng-repeat="result in results">
-        <div class="row ">
+<div class="container SearchResult" >
+     <h1 class="header">
+         All result
+     </h1>
+    <div  class="search ">
+        <div class="row person justify-content-center" ng-repeat="result in results">
             <div class="col-12">
-                <h1></h1>
                 <div class="row  justify-content-center">
-                    <div class="col-md-2 col-sm-12 followImg ">
-                            <img class="profileImg"  ng-src="http://mindhubgp-001-site1.itempurl.com//{{result.image }}">
+                    <div class="col-lg-2 col-md-3 col-sm-4 followImg ">
+                        <img class="followImg"  ng-src="http://mindhubgp-001-site1.itempurl.com//{{result.image }}">
                     </div>
-                    <div class="col-10">
+                    <div class="col-lg-10 col-md-9 col-sm-8">
                         <div class="row ">
-                            <div class="col-lg-8 col-md-6 col-12 followInfo">
+                            <div class="col-lg-3 col-md-6 col-sm-4 followInfo">
                                 <div class="row">
                                 <div class="col-12">
-                                    <a href="" ng-bind="result.name" ></a>
+                                    <a class="followName" href="" ng-bind="result.name"></a>
                                 </div>
                                 </div>
-                                <!-- <div class="row">
+                                <div class="row">
                                 <div class="col-12">
                                     <p ng-bind="person.title"></p>
                                 </div>
-                                </div> -->
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-12 ">
+                            <div class="col-lg-4 col-md-6 col-sm-8 ">
                                 <div class="row">
                                     <div class="col-4">
                                         <div class="messageBtn" >
                                             <i class="fa fa-comment" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    <!-- <div class=" col-md-8 col-5 ml-md-auto">
+                                    <div class=" col-md-8 col-5 ml-md-auto">
                                         <div class="delete">
                                             <button class="btn" ng-click="unfollow(profileData.friends,person,person.id)">Unfollow</button>
                                         </div>
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                         </div> 

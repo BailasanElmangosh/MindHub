@@ -394,6 +394,12 @@ body {
   opacity: 0.8;
 }
 
+.navbar .collapse .navbar-nav .nav-item .nav-link img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
 .navbar .collapse .navbar-nav .nav-item .nav-link .icon {
   width: 24px;
   height: 24px;
@@ -1684,5 +1690,40 @@ svg, i {
 .newsFeed .newsFeedBody .footer img {
   height: 20px;
   display: inline-block;
+}
+
+.SearchResult {
+  margin-top: 100px;
+}
+
+.SearchResult .header {
+  color: #8ccb75;
+}
+
+.SearchResult .search {
+  padding: 30px 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 100px;
+}
+
+.SearchResult .search .person {
+  margin-bottom: 10px;
+}
+
+.SearchResult .search .person .followImg {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.SearchResult .search .person .followName {
+  text-decoration: none;
+  color: #222;
+}
+
+.SearchResult .search .person .followName:hover {
+  color: #595959;
 }
 /*# sourceMappingURL=style.css.map */
