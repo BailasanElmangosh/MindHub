@@ -11,9 +11,8 @@
                 $scope.profileData=data.profile;
                 $scope.editProfile=data.profile;
                 $scope.imgPath="http://mindhubgp-001-site1.itempurl.com/"+$scope.profileData.image
-                console.log($scope.editProfile.gender);
-                console.log($cookies.get('token'))
             });
+         
             $scope.img=function()
             {  
                 if($scope.profileData.gender=='Female')
@@ -185,7 +184,51 @@
                 angular.element('#size')
                 .css( 'display','none'); 
                }
-              
+               $scope.jquery=function()
+               {
+                   //    upload image
+                   $('#imageUploadForm').on('submit',(function(e) {
+                       e.preventDefault();
+                       var token = $.cookie("token");
+                       var formData = new FormData(this);
+                       var image;
+                       $.ajax({
+                           type:'POST',
+                           url: 'http://mindhubgp-001-site1.itempurl.com/api/uploadstudentimage',
+                           data:formData,
+                           headers: {"Authorization": "bearer "+token},
+                           cache:false,
+                           contentType: false,
+                           processData: false,
+                           success:function(data){
+                               if(data.status=='Success')
+                               {
+                                   $scope.getNewPath(data.imagePath);
+                               }
+                               else
+                               {  
+                               }
+                           
+                           },
+                           error: function(data){
+                           }
+                       });
+                   }));
+                   
+                   $("#ImageBrowse").on("change", function() {
+                       var file=$(this)[0].files[0]
+                       console.log(file.size);
+                       if(file.size<=5000000&&file.type=='image/jpeg'||file.type=='image/jpg'||file.type=='image/png')
+                       { $("#imageUploadForm").submit();
+                       $scope.sizeTrue();  
+                       }
+                       else
+                       {$scope.sizeFalse();
+                       }
+                   });
+               
+               } 
+                $scope.jquery();
          
               //  Add Question 
                 $scope.addQues=function()
@@ -310,5 +353,7 @@
             //     $scope.showResult = false;
             //     $scope.$apply();
             //    }
+
+          
             });
              

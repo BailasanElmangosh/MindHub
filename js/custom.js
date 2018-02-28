@@ -255,58 +255,9 @@
       }
       $(window).scroll(fixDiv);
       fixDiv();
-    //    upload image
-
-      $('#imageUploadForm').on('submit',(function(e) {
-        e.preventDefault();
-        var token = $.cookie("token");
-        var formData = new FormData(this);
-        var image;
-        $.ajax({
-            type:'POST',
-            url: 'http://mindhubgp-001-site1.itempurl.com/api/uploadstudentimage',
-            data:formData,
-            headers: {"Authorization": "bearer "+token},
-            cache:false,
-            contentType: false,
-            processData: false,
-            success:function(data){
-                if(data.status=='Success')
-                {
-                    angular.element($("#profile")).scope().getNewPath(data.imagePath);
-                    alert('sucess');
-                    console.log(data);
-                }
-                else
-                {
-                    alert('faild');
-                    console.log(data);
-                    
-                }
-               
-            },
-            error: function(data){
-              alert('faild');
-            }
-        });
-    }));
     
-    $("#ImageBrowse").on("change", function() {
-        var file=$(this)[0].files[0]
-        console.log(file.size);
-        if(file.size<=5000000&&file.type=='image/jpeg'||file.type=='image/jpg'||file.type=='image/png')
-        { $("#imageUploadForm").submit();
-            angular.element($("#profile")).scope().sizeTrue();  
-        }
-        else
-        { angular.element($("#profile")).scope().sizeFalse();
-           
-        }
-    });
     // $("body").click(function(){
     //     angular.element($("#list-group")).scope().hideDropdown();
     // });
-    $('#courses').click(function(){
-        alert('hii');
-    });
+ 
     })();
