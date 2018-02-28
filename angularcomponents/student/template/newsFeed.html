@@ -15,7 +15,7 @@
                                         <div class="card">
                                             <div class="row">
                                                 <div class="col-sm-12">
-                                                    <img class="profimg" src="images/profile-avatar.jpg">
+                                                    <img class="profimg" src="http://mindhubgp-001-site1.itempurl.com/{{studentData.image}}">
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -30,7 +30,7 @@
                                                 <div class="col-sm-12">
                                                     <p class="followNum" ng-bind="studentData.followers"></p>
                                                     <p> Followers</p>
-                                                    <p class="followNum" ng-bind="studentData.title"></p>
+                                                    <p class="followNum" ng-bind="studentData.following"></p>
                                                     <p> Following</p>
                                                 </div>
                                             </div>
@@ -77,7 +77,7 @@
                                                                                     <div class="row">
                                                                                         <div class="col-md-1 col-2">
                                                                                                 <div class="image">
-                                                                                                    <img src="images/profile-avatar.jpg">
+                                                                                                    <img src="http://mindhubgp-001-site1.itempurl.com/{{post.image}}">
                                                                                                 </div>
                                                                                         </div>
                                                                                         <div class="col-md-11 col-10">
@@ -128,7 +128,7 @@
                                                                                                         <div class="row">
                                                                                                             <div class="col-lg-1 col-md-2 col-2">
                                                                                                                 <div class="image">
-                                                                                                                    <img src="images/profile-avatar.jpg">
+                                                                                                                    <img src="http://mindhubgp-001-site1.itempurl.com/{{comment.userImage}}">
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                             <div class="col-lg-11 col-md-10 col-10">
@@ -168,7 +168,7 @@
                                                                                                 <div class="row">
                                                                                                     <div class="col-lg-2 col-md-3">
                                                                                                             <div class="image">
-                                                                                                                <img src="images/profile-avatar.jpg">
+                                                                                                                <img src="http://mindhubgp-001-site1.itempurl.com/{{studentData.image}}">
                                                                                                             </div>
                                                                                                     </div>
                                                                                                     <div class="col-lg-6 col-md-9">
@@ -214,21 +214,21 @@
                                             </div>
                                             <div class="row ">
                                                 <div class="col-md-12" >
-                                                    <div class="row ">
+                                                    <div class="row" ng-repeat="student in suggestedStudents" >
                                                             <div class="col-md-3 col-2">
                                                                 <div class="image">
-                                                                    <img src="images/profile-avatar.jpg">
+                                                                    <img src="http://mindhubgp-001-site1.itempurl.com/{{student.image}}">
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-5 col-9">
                                                                 <div class="row">
                                                                     <div class="col-11 ">
-                                                                        <h3 class="name">bailasan Elangosh</h3>
+                                                                        <h3 class="name" ng-bind="student.name"></h3>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-11">
-                                                                        <p class="title">Front-end</p>
+                                                                        <p class="title" ng-bind="student.title"></p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -239,58 +239,6 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="col-md-3 col-2">
-                                                            <div class="image">
-                                                                <img src="images/profile-avatar.jpg">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-5 col-9">
-                                                            <div class="row">
-                                                                <div class="col-11 ">
-                                                                    <h3 class="name">bailasan Elangosh</h3>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-11">
-                                                                    <p class="title">Front-end</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 col-1">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <button class="btn"><p class="show-lg-md">Follow</p><i class="fa fa-user-plus hidden-md-lg" aria-hidden="true"></i></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="col-md-3 col-2">
-                                                            <div class="image">
-                                                                <img src="images/profile-avatar.jpg">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-5 col-9">
-                                                            <div class="row">
-                                                                <div class="col-11 ">
-                                                                    <h3 class="name">bailasan Elangosh</h3>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-11">
-                                                                    <p class="title">Front-end</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 col-1">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <button class="btn"><p class="show-lg-md">Follow</p><i class="fa fa-user-plus hidden-md-lg" aria-hidden="true"></i></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

@@ -17,6 +17,8 @@
             if(data.status=="Success"){
                 $scope.Feeds =data.feed;
                 $scope.studentData = data.studentData;
+                $scope.suggestedStudents = data.suggestedStudents;
+
             }
         })
         .error(function(){
@@ -27,18 +29,15 @@
             questionsSrv.Create($scope.question,$cookies.get('token'))
                 .success(function(data){
                     data.question.image = $scope.studentData.image;
-                    console.log(data.question);
                     $scope.Feeds.unshift(data.question);  
                     $scope.question.QuestionHead = '';
-                    console.log(data.question);
                 })
                 .error(function(){})
         };
 
         $scope.newAnswer={};     
         $scope.addAnswer = function(key,id){
-            $scope.newAnswer[key].questionId=id;
-            console.log($scope.Feeds[key]);      
+            $scope.newAnswer[key].questionId=id;  
             questionsSrv.CreateAnswer($scope.newAnswer[key],$cookies.get('token'))
                         .success(function(data){
                             if(data.status =="Success"){
