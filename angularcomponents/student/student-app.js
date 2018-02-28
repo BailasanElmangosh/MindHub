@@ -9,7 +9,16 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
            {
            templateUrl: "/angularcomponents/student/template/newsFeed.html",
            controller: 'newFeedCtrl'  
-          })
+          }).when('/Search',
+          {
+          templateUrl: "/angularcomponents/student/template/searchResult.html",
+          controller: 'searchResultCtrl'  
+         })
+          .when('/', {
+            templateUrl: '/angularcomponents/student/template/newsFeed.html',
+            controller: 'newFeedCtrl'
+         })
+         .otherwise({redirectTo:'/'});
     });
   
       student.filter('formatDate', function($filter) {
@@ -51,3 +60,15 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
           }
         };
       });
+
+      student.controller("studentCtrl",function($scope,$cookies){
+
+        
+        $scope.logout=function()
+        {
+          $cookies.remove('token');
+          window.location ="/index.html";
+        }
+          
+      })
+      

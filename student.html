@@ -18,7 +18,7 @@
             }
             </style>  
     </head>
-    <body >
+    <body ng-controller="studentCtrl">
          <!-- start NavBar -->
           <nav class="navbar  fixed-top navbar-expand-lg navbar-light bg-light">
             <div class="container">
@@ -123,7 +123,7 @@
                           Profile
                         </a>
                         <a class="dropdown-item" href="#"><i class="fa fa-cog" aria-hidden="true"></i>settings</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a>
+                        <a class="dropdown-item" href="#"ng-click="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a>
                       </div>
                     </li>
                 </ul>
@@ -175,11 +175,13 @@
        <script src="/js/lib/angular/angular-route.min.js"></script>
        <script src="/js/lib/angular/angular-cookies.min.js"></script>
        <script src="/angularcomponents/student/student-app.js"></script>
+       <script src="/angularcomponents/student/searchResult.js"></script>
+       <script src="/angularcomponents/student/searchResultCtrl.js"></script>    
        <script src="/angularcomponents/student/studentProfile/Srvs/profileData.js"></script>
        <script src="/angularcomponents/student/studentProfile/Srvs/editProfileData.js"></script> 
        <script src="/angularcomponents/student/NewsFeed/Ctrl/newsFeedCtrl.js"></script>
        <script src="/angularcomponents/student/NewsFeed/Srvs/getFeedSrv.js"></script>
-       <script src="/angularcomponents/student/NewsFeed/Srvs/questionsSrv.js"></script>
+       <script src="/angularcomponents/student/NewsFeed/Srvs/questionsSrv.js"></script>   
        <script src="/angularcomponents/student/studentProfile/Ctrl/studentProfileCtrl.js"></script>
        <script src="/js/lib/lightbox.js"></script>
        <script src="/js/custom.js"></script> 

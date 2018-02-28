@@ -33,7 +33,7 @@
                     {  
                         cookies.set(key,data.token);
                         cookies.set('socketid',data.userId);
-                        window.location ="/angularcomponents/student/template/student.html#/profile";
+                        window.location ="/student.html#/profile";
                     }
                     else{
                     }
