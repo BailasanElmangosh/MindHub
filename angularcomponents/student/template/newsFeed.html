@@ -1,6 +1,6 @@
 <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
 <script src=" ../../../js/custom.js"></script>
-        <section class="newsFeed" ng-controller="newFeedCtrl">
+        <section class="newsFeed" >
         
           <div class="container-fluid">
             <div class="row justify-content-center">
@@ -21,16 +21,16 @@
                                             <div class="row">
                                                 <div class="col-sm-12" >
                                                     <div class="line">
-                                                    <p class="name">Bailasan Elmangosh</p>
-                                                    <p class="title">Front-End Developer</p>
+                                                    <p class="name" ng-bind="studentData.username"></p>
+                                                    <p class="title" ng-bind="studentData.title"></p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-12">
-                                                    <p class="followNum">20</p>
+                                                    <p class="followNum" ng-bind="studentData.followers"></p>
                                                     <p> Followers</p>
-                                                    <p class="followNum">20</p>
+                                                    <p class="followNum" ng-bind="studentData.title"></p>
                                                     <p> Following</p>
                                                 </div>
                                             </div>
@@ -70,7 +70,7 @@
                                                         <!-- End write Question box --> 
                                                         <!-- start Questions -->
                                                         <div class=" row" >
-                                                                <div class="post ">
+                                                                <div class="post"  ng-repeat="(key,post) in Feeds">
                                                                     <div class="col-sm-12">
                                                                         <div class="row">
                                                                                 <div class="col-sm-12 queBody">
@@ -83,17 +83,17 @@
                                                                                         <div class="col-md-11 col-10">
                                                                                             <div class="row">
                                                                                                 <div class="col-11 ">
-                                                                                                    <h3 class="name">bailasan</h3>
+                                                                                                    <h3 class="name" ng-bind="post.username"></h3>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="row">
                                                                                                 <div class="col-11">
-                                                                                                    <p class="title">Front-end</p>
+                                                                                                    <p class="title" ng-bind="post.title"></p>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="row">
                                                                                                 <div class="col-11">
-                                                                                                    <p class="date">1d</p>
+                                                                                                    <p class="date" ng-bind="post.date| formatDate"></p>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -102,16 +102,16 @@
                                                                                         <div class="col-sm-12 ">
                                                                                             <div class="row ">
                                                                                                 <div class=" col-lg-11 col-sm-12 ml-sm-auto">
-                                                                                                    <p class="queText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                                                                    <p class="queText" ng-bind="post.questionHead"></p>
                                                                                                 </div>
                                                                                             </div>
                                                                                                 
                                                                                             <div class="row">
                                                                                                 <div class="col-lg-4 col-md-5 col-sm-8  ml-sm-auto queOption">
-                                                                                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                                                                                    <!-- <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
                                                                                                     |
                                                                                                     <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
-                                                                                                
+                                                                                                 -->
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -122,7 +122,7 @@
                                                                                 <div class="col-md-11 ">
                                                                                     <div class="row">
                                                                                         <div class="col-md-12">
-                                                                                            <div class="comment line" id="comment" >
+                                                                                            <div class="comment line" id="comment" ng-repeat="comment in post.answers">
                                                                                                 <div class="row  ">
                                                                                                     <div class="col-md-12 queBody ">
                                                                                                         <div class="row">
@@ -134,17 +134,17 @@
                                                                                                             <div class="col-lg-11 col-md-10 col-10">
                                                                                                                 <div class="row">
                                                                                                                     <div class="col-11 ">
-                                                                                                                        <h3 class="name">bailasan</h3>
+                                                                                                                        <h3 class="name" ng-bind="comment.username"></h3>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                                 <div class="row">
                                                                                                                     <div class="col-11">
-                                                                                                                        <p class="title">Front-end</p>
+                                                                                                                        <p class="title" ng-bind="comment.title"></p>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                                 <div class="row">
                                                                                                                     <div class="col-11">
-                                                                                                                        <p class="date">1d</p>
+                                                                                                                        <p class="date" ng-bind="comment.date| formatDate"></p>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
@@ -153,7 +153,7 @@
                                                                                                             <div class="col-md-12 ">
                                                                                                                 <div class="row ">
                                                                                                                     <div class="col-md-11 ml-md-auto">
-                                                                                                                        <p class="queText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                                                                                        <p class="queText"ng-bind="comment.questionAnswer"></p>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
@@ -162,7 +162,7 @@
                                                                                                 </div>
                                                                                             </div> 
                                                                                             <div class="prevComment">
-                                                                                            <a href="#">Show Previous Comments(2)</a>
+                                                                                            <!-- <a href="#">Show Previous Comments(2)</a> -->
                                                                                             </div>
                                                                                             <div class="postComment" id="commentBox">
                                                                                                 <div class="row">
@@ -175,13 +175,13 @@
                                                                                                         <div class="boxQus">
                                                                                                             <div class="row">
                                                                                                                 <div class="col-md-12">
-                                                                                                                    <textarea rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
+                                                                                                                    <textarea ng-model="newAnswer[key].questionAnswer" rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                     </div>   
                                                                                                     <div class="col-lg-4  col-md-5  align-self-center" >
-                                                                                                        <button >Answer</button>
+                                                                                                        <button ng-click="addAnswer(key,post.id)" >Answer</button>
                                                                                                     </div>    
                                                                                                 </div>  
                                                                                             </div>

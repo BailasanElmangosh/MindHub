@@ -6,7 +6,6 @@
         $scope.img="test";
         $scope.imgPath = function(path)
         {
-            alert("hiii");
             $scope.img = "http://mindhubgp-001-site1.itempurl.com/"+path;
             $scope.$apply();
         }
@@ -55,12 +54,12 @@
                         .error(function(){});   
             };
 
-            $scope.newQuestionsSignalR = function(data){
-                questionsSrv.GetQuestionsByIds(data,'aa').
-                    success(function(data){
-                        alert();
-                    })
-            }
+            // $scope.newQuestionsSignalR = function(data){
+            //     questionsSrv.GetQuestionsByIds(data,'aa').
+            //         success(function(data){
+            //             alert();
+            //         })
+            // }
 
 
     });
