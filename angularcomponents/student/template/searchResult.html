@@ -1,19 +1,25 @@
 <div class="container">
-    <div class="person" >
+    <div class="person" ng-repeat="result in results">
         <div class="row ">
             <div class="col-12">
+                <h1></h1>
                 <div class="row  justify-content-center">
                     <div class="col-md-2 col-sm-12 followImg ">
-                            <img class="profileImg"  ng-src="../../../images/profile-avatar.jpg">
+                            <img class="profileImg"  ng-src="http://mindhubgp-001-site1.itempurl.com//{{result.image }}">
                     </div>
                     <div class="col-10">
                         <div class="row ">
                             <div class="col-lg-8 col-md-6 col-12 followInfo">
                                 <div class="row">
                                 <div class="col-12">
-                                    <a href=""  >bailasan Elmangosh</a>
+                                    <a href="" ng-bind="result.name" ></a>
                                 </div>
                                 </div>
+                                <!-- <div class="row">
+                                <div class="col-12">
+                                    <p ng-bind="person.title"></p>
+                                </div>
+                                </div> -->
                             </div>
                             <div class="col-lg-4 col-md-6 col-12 ">
                                 <div class="row">
@@ -22,6 +28,11 @@
                                             <i class="fa fa-comment" aria-hidden="true"></i>
                                         </div>
                                     </div>
+                                    <!-- <div class=" col-md-8 col-5 ml-md-auto">
+                                        <div class="delete">
+                                            <button class="btn" ng-click="unfollow(profileData.friends,person,person.id)">Unfollow</button>
+                                        </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div> 
