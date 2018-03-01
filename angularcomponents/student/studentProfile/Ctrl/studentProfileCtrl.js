@@ -10,7 +10,8 @@
             .success(function (data, status) {
                 $scope.profileData=data.profile;
                 $scope.editProfile=data.profile;
-                $scope.imgPath="http://mindhubgp-001-site1.itempurl.com/"+$scope.profileData.image
+                $scope.imgPath="http://mindhubgp-001-site1.itempurl.com/"+$scope.profileData.image;
+                $scope.showLoading=false;
             });
          
             $scope.img=function()

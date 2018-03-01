@@ -74,5 +74,6 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
           {
             $scope.hideDropDown=!$scope.hideDropDown;
           }
+          $scope.showLoading=true;
       })
       

@@ -389,6 +389,7 @@ body {
 .navbar .collapse .navbar-nav .nav-item button {
   background: transparent;
   border: none;
+  margin-top: 6px;
 }
 
 .navbar .collapse .navbar-nav .nav-item button:focus {

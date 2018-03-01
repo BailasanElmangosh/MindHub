@@ -18,7 +18,7 @@
                 $scope.Feeds =data.feed;
                 $scope.studentData = data.studentData;
                 $scope.suggestedStudents = data.suggestedStudents;
-
+                $scope.showLoading=false;
             }
         })
         .error(function(){
