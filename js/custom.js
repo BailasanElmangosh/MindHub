@@ -125,7 +125,7 @@
     //dropdown navbar
     $('#btnMenuProfile').click(function(){
     
-        $('#menuProfile').toggleClass('show')
+        $('#menuProfile').toggleclass('show')
     });
     // overview show
     //show About Me

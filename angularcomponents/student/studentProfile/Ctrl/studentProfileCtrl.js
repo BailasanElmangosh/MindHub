@@ -229,7 +229,6 @@
                
                } 
                 $scope.jquery();
-         
               //  Add Question 
                 $scope.addQues=function()
                 {  $scope.isdisable=true;

@@ -69,6 +69,10 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
           $cookies.remove('token');
           window.location ="/index.html";
         }
-          
+          $scope.hideDropDown=true;
+          $scope.showDropDown=function()
+          {
+            $scope.hideDropDown=!$scope.hideDropDown;
+          }
       })
       

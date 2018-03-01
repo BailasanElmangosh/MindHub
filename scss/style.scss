@@ -417,7 +417,19 @@ body
             .nav-item
             {
                height: 50px;
-              
+              button
+              {
+                background: transparent;
+                border: none;
+                &:focus {outline:0;}
+
+                img
+                {
+                    width:30px;
+                    height: 30px;
+                    border-radius:50%;
+                }
+              }
                 .nav-link
                 {
                     color:#fff;
@@ -425,21 +437,13 @@ body
                     margin-top: 2px;
                     font-family: 'Raleway', sans-serif;
                     opacity: 0.8;
-                    img
-                    {
-                        width:30px;
-                        height: 30px;
-                        border-radius:50%;
-                    }
+                   
                     .icon
                     {
                         width: 24px;
                         height: 24px;
                     }   
-                    &:hover
-                    {
-                        opacity: 1;
-                    }
+                  
                     &.notifcation 
                     {
                         font-size: 24px;
@@ -450,34 +454,71 @@ body
                 {
                     border-bottom: 3px solid $greencolor;
                 }
-                .dropdown-menu
-                {
-                    margin: 0.4rem 0 0;
-                    background-color: $greencolor;
-                    .arrow {
-                        width: 0;
-                        height: 0;
-                        margin-left: 15px;
-                        border-left: 7px solid transparent;
-                        border-right: 7px solid transparent;
-                        border-bottom: 9px solid $greencolor;
-                        margin-top: -17px;
-                    }
-                    a
+                &.dropdownNav
+                {    position: relative;
+                  
+                    .dropdownNav-menu
                     {
-                        color:$grey1;
-                        padding: 0.25rem 0.5rem;
-                        svg ,i {
-                            height: 20px;
-                            width: 20px;
-                            fill: #5a6674;
-                            opacity: 0.6;
-                            transition: all .2s ease-in-out;
-                            pointer-events: none;
-                          }
-
+                        margin: 0.4rem 0 0;
+                        background-color: #8ccb75;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        z-index: 1000;
+                        float: left;
+                        min-width: 10rem;
+                        padding: .5rem 0;
+                        margin: .125rem 0 0;
+                        font-size: 1rem;
+                        color: #212529;
+                        text-align: left;
+                        list-style: none;
+                        background-clip: padding-box;
+                        border: 1px solid rgba(0,0,0,.15);
+                        border-radius: .25rem;
+                        .arrow {
+                            width: 0;
+                            height: 0;
+                            margin-left: 15px;
+                            border-left: 7px solid transparent;
+                            border-right: 7px solid transparent;
+                            border-bottom: 9px solid $greencolor;
+                            margin-top: -17px;
+                        }
+                        .dropdown-item
+                        {
+                            display: block;
+                            width: 100%;
+                            padding: .25rem 1.5rem;
+                            clear: both;
+                            font-weight: 400;
+                            color: #212529;
+                            text-align: inherit;
+                            white-space: nowrap;
+                            background: 0 0;
+                            border: 0;
+                            &:hover
+                            {
+                                background-color: #fff;
+                            }
+                        }
+                        a
+                        {
+                            color:$grey1;
+                            padding: 0.25rem 0.5rem;
+                            svg ,i {
+                                height: 20px;
+                                width: 20px;
+                                fill: #5a6674;
+                                opacity: 0.6;
+                                transition: all .2s ease-in-out;
+                                pointer-events: none;
+                              }
+    
+                        }
                     }
                 }
+            
              
             }
         }

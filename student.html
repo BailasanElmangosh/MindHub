@@ -116,21 +116,21 @@
                   <li class="nav-item">
                     <a class="nav-link notifcation" href="#" ><i class="fa fa-bell-o" aria-hidden="true"></i></a>
                   </li>
-                  <li class="nav-item dropdown " ng-controller="studentProfileCtrl">
-                      <a class="nav-link dropdown-toggle" href="#" id="btnMenuProfile">
-                        <img src="{{img()}}">
-                      </a>
-                      <div class="dropdown-menu" id="menuProfile">
-                          <div class="arrow"></div>
-                        <a class="dropdown-item" href="#/profile"> 
-                          <svg class="edit-pen-title">
-                            <use xlink:href="#user"></use>
-                          </svg>
-                          Profile
-                        </a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-cog" aria-hidden="true"></i>settings</a>
-                        <a class="dropdown-item" href="#"ng-click="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a>
-                      </div>
+                  <li class="nav-item dropdownNav" ng-controller="studentProfileCtrl">
+                      <button class=""  ng-click="showDropDown()">
+                          <img src="{{img()}}">
+                        </button>
+                        <div class="dropdownNav-menu"ng-hide="hideDropDown" >
+                            <div class="arrow"></div>
+                          <a class="dropdown-item" href="#/profile"> 
+                            <svg class="edit-pen-title">
+                              <use xlink:href="#user"></use>
+                            </svg>
+                            Profile
+                          </a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-cog" aria-hidden="true"></i>settings</a>
+                          <a class="dropdown-item" href="#"ng-click="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a>
+                        </div>
                     </li>
                 </ul>
               </div>
@@ -169,6 +169,7 @@
           </svg>
           <!-- End svg paths -->
          <!-- end NavBar -->
+        
         <div ng-view>
           
         </div>
