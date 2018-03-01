@@ -167,7 +167,7 @@
                         name="result" id="result" ng-model="key" ng-keyup="keyresult(key)" class="form-control" autocomplete="off">
                         <ul class="list-group " id="listResult" ng-show="showResult" >  
                            <div class="dropdownSkill" id="dropdownResult">  
-                                <li class="list-group-item" ng-repeat="resultdata in filterResult" ng-click="fillTextboxResult(resultdata.name ,resultdata.id)" >
+                                <li class="list-group-item" ng-repeat="resultdata in filterResult" ng-click="showFriend(resultdata.id)" >
                                     <img  class="imgSearch ng-cloak" ng-src="http://mindhubgp-001-site1.itempurl.com/{{resultdata.image}}">
                                     <span ng-bind="resultdata.name"></span>
                                 </li>

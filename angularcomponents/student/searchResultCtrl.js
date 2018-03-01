@@ -40,10 +40,12 @@ angular.module('student-app').controller("searchResultCtrl",function($scope,sear
              console.log($scope.filterResult );
         } 
        
-        $scope.fillTextboxResult = function(string,idS){  
-             $scope.ResultlDropDown = string;  
-             $scope.showResult = true;
-             $scope.idResult=idS;
+        $scope.showFriend = function(idS){  
+            searchSrv.showProfile(idS)
+            .success(function(data,status){
+                $scope.profileData=data.studentProfile; 
+                 window.location ="/friendProfile.html";
+            })
         }  
         searchSrv.resultSearch("a")
         .success(function(data, status){

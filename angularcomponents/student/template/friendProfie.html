@@ -1,0 +1,648 @@
+
+<script src=" ../../../js/custom.js"></script> 
+
+<section class="profile" >
+    <div class="bgCover"></div>
+    <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-12">
+            <h1 ng-bind="message"></h1>
+            <!-- start profile nav -->
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-10">
+                    <div class="row box">
+                        <div class="col-sm-1 col-3" >   
+                            <a  href="{{imgPath||FemaleImg }}"  ng-model="imgPath"  data-lightbox="image-1">
+                                <img ng-src="{{img()}}" ng-model="imgPath">   
+                            </a> 
+                        </div>
+                        <div class="col-sm-11 info col-9 ">
+                            <div class="row">
+                                <div class="col-md-4 mr-md-auto col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h2 ng-bind="profileData.username" ></h2>  
+                                            <p ng-bind="profileData.title"></p>
+                                                
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-sm-6 col-12  ">
+                                    <div class="info-count ">
+                                        <div class="row ">
+                                            <div class="col-12 ">
+                                            <div class="row justify-content-center">
+                                                <div class="col-sm-2 col-2 ">
+                                                    <div class="row count">
+                                                        <div class="col-sm-12 iconbg ">
+                                                            <div class="icon" id="courses">
+                                                                <img src="images/online-course.svg">
+                                                                <span>
+                                                                    Courses
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 data ">
+                                                            <span class="num">23</span>
+                                                            <!-- <span class="name">Courses</span> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2 col-2 ">
+                                                    <div class="row count">
+                                                    <div class="col-sm-12 iconbg ">
+                                                        <div class="icon">
+                                                            <svg class="">
+                                                                <use xlink:href="#user"></use>
+                                                            </svg>
+                                                            <span>
+                                                                follows
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 data ">
+                                                        <span class="num">23</span>
+                                                        <!-- <span class="name">Follwers</span> -->
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2 col-2 ">
+                                                    <div class="row count">
+                                                        <div class="col-sm-12 iconbg ">
+                                                        <div class="icon">
+                                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                                            <span>
+                                                                Favorites
+                                                            </span>
+                                                        </div>
+                                                        </div>
+                                                        <div class="col-sm-12 data ">
+                                                            <span class="num">23</span>
+                                                            <!-- <span class="name">Favorites</span> -->
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                <div class="col-sm-2 col-2">
+                                                    <div class="row count">
+                                                    <div class="col-sm-12 iconbg ">
+                                                            <div class="icon">
+                                                                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                                                                <span>
+                                                                    Questions
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    <div class="col-sm-12 data ">
+                                                        <span class="num">23</span>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End profile nav -->
+            <!-- start profile container -->
+            <div class="profileBody">
+                <div class="row">
+                <!-- start Overview --> 
+                <div class="col-sm-4">
+                    <div class="overview" id="overview">
+                        <div class="header">
+                            <h3>Profile Overview</h3>
+                        </div>
+                        <div class="body">
+                            <div class="boxOverview">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-sm-4 col-4 ">
+                                    <div class="icon">
+                                        <svg >
+                                            <use xlink:href="#user"></use>
+                                        </svg>
+                                    </div>
+                                        
+                                    </div>
+                                    <div class="col-lg-10 col-md-9 col-sm-8 col-8">
+                                        <button class="text bgColor" id="aboutBtn">About Me</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxOverview">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                                    <div class="icon">
+                                        <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                                    </div>
+                                        
+                                    </div>
+                                    <div class="col-lg-10 col-md-9 col-sm-8 col-8">
+                                        <button class="text" id="quesBtn">Questions</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxOverview">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                                    <div class="icon">
+                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                    </div>
+                                        
+                                    </div>
+                                    <div class="col-lg-10 col-md-9 col-sm-8 col-8">
+                                    <button class="text" id="followBtn">follow</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxOverview">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                                    <div class="icon">
+                                        <svg >
+                                            <use xlink:href="#user"></use>
+                                        </svg>
+                                    </div>
+                                        
+                                    </div>
+                                    <div class="col-lg-10 col-md-9 col-sm-8 col-8" >
+                                        <button class="text hidden-sm" id="accompBtn">Accomplishments</button>
+                                        <button class="text visible-sm" id="accompBtn">Accomp.</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                <!-- End Overview -->
+                <div class="col-sm-8 col-12">
+                    <!-- start About Me -->
+                    <div class="aboutMe" id="aboutMe">
+                            <div class="row">
+                                    <!-- start Header About me -->
+                                    <div class="col-md-12 ">
+                                        <div class="header">
+                                            <h2><i class="fa fa-user" aria-hidden="true"></i>About Me</h2>
+                                        </div>   
+                                    </div>
+                                    <!-- End Header About me -->
+                                    
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-md-10"> 
+                                    <div class=" body">
+                                        <!-- start info  -->
+                                        <div class="body-container">
+                                            <!-- start header -->
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <h3><span>I</span>nfo</h3>
+                                                </div>
+                                            </div>
+                                            <!-- End header -->
+                                            <!-- start Summary -->
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p ng-bind="profileData.info">
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- End Summary -->
+                                            <!-- start read more   -->
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div id="readMore" class="readMore text-center">
+                                                        <a><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End read more   -->
+                                            <!-- start Basic info -->
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="infoBasic" id="infoBasic">
+                                                        <div class="basic">
+                                                            <div class="row">
+                                                                <div class="col-sm-12">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-2 col-3 ">
+                                                                        <p class="head">Email :</p> 
+                                                                        </div>
+                                                                        <div class="col-lg-10 col-9">
+                                                                            <p class="detalis mail" ng-bind="profileData.email"></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="basic">
+                                                            <div class="row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-3 col-md-4  col-sm-5 col-4">
+                                                                                <p class="head">BirthDate :</p>
+                                                                            </div>
+                                                                            <div class="col-lg-9 col-md-8 col-sm-7  col-8">
+                                                                                <p class="detalis birth" ng-bind="profileData.birthDate"></p> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="basic">
+                                                            <div class="row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-2 col-md-3 col-4">
+                                                                            <p class="head">Gender :</p> 
+                                                                            </div>
+                                                                            <div class="col-lg-10 col-md-9 col-8">
+                                                                            <p class="detalis" ng-bind="profileData.gender"></p>     
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end Basic info -->
+                                        </div>
+                                        <!-- End info  -->
+                                        <!-- start Education-->
+                                        <div class="body-container">
+                                            <!-- start header -->
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <h3><span>E</span>ducation</h3>
+                                                </div>
+                                               
+                                            </div>
+                                            <!-- End header -->
+                                            <div class="education">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <h4 >University</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-1 col-2">
+                                                                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="col-md-11 col-10">
+                                                                <div class="university">
+                                                                    <div class="row">
+                                                                        <div class=" col-12">
+                                                                        <p ng-bind="profileData.university"></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class=" col-12">
+                                                                                <p ng-bind="profileData.universtyYearFrom+'-'+profileData.universtyYearTo"></p>
+                                                                        </div>
+                                                                    </div>
+                                                                
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <h4>School</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-1 col-2">
+                                                                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="col-md-11  col-10">
+                                                                <div class="school ">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <p ng-bind="profileData.school"> </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                                <p ng-bind="profileData.schholYearFrom+'-'+profileData.schholYearTo"></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>   
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div> 
+                                        <!-- End Education-->
+                                        <!-- start skills -->
+                                        <div class="body-container">
+                                            <!-- start header -->
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <h3><span>S</span>kills</h3>
+                                                </div>
+                                            </div>
+                                            <!-- End header -->
+                                            <div class=" col-sm-12">
+                                                <div class="row skills">
+                                                    <div class="row skillRow" >
+                                                        <div class="col-sm-3 skillCont" ng-repeat="skill in profileData.skills ">
+                                                            <div class="">
+                                                                <div class="skill"> 
+                                                                    <a class="text" href="#" ng-bind="skill.skillName"></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>      
+                                        </div>
+                                        <!-- End skills -->
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- End About Me -->
+                    <!-- start Question -->
+                    <div  class="question" id="question">
+                        <div class="row">
+                            <!-- start Header Question -->
+                            <div class="col-md-12 ">
+                                <div class="header">
+                                    <h2><span ><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>Question</h2>
+                                </div>   
+                            </div>
+                            <!-- End Header Question -->
+                            
+                        </div>
+                        <div class="row">
+                            <div class="body"> 
+                                <div class="body-container">
+                                        <div class="col-md-12" >
+                                            <!-- start Questions -->
+                                            <div class="post" ng-repeat="(key,post) in profileData.questions">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                                <div class="image">
+                                                                    <!-- <img src="images/profile-avatar.jpg"> -->
+                                                                    <img ng-if="profileData.gender=='Female'" ng-src="{{imgPath||FemaleImg }}">   
+                                                                    <img ng-if="profileData.gender=='Male'" ng-src="{{imgPath||maleImg }}">
+                                                                </div>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="queBody">
+                                                                            <h3 class="name" ng-bind="post.username"></h3>
+                                                                            <p class="date" ng-bind="post.date | formatDate "></p>                                                                                    
+                                                                            <p class="queText" ng-bind="post.questionHead"></p>
+                                                                            <div class="row">
+                                                                                <div class="col-md-4  ml-md-auto queOption">
+                                                                                    <span ng-bind="post.likes+like"></span><a  ng-class="{colorLike:stateLike{{post.id}}==='like'}" ng-click="likeDislike(post.id,'like')"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                                                                    |
+                                                                                    <span ng-bind="post.dislikes+dislike"></span><a  ng-class="{colorLike:stateDisLike{{post.id}}==='dislike'}" ng-click="likeDislike(post.id,'dislike')"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+                                                                                    <a href="#commentBox" id="answer">Answer</a>
+                                                                                </div>
+                                                                            </div>
+                                                                    </div>
+                                                                    <div class="scrollComment" id="scrollComment">
+                                                                        <div class="comment" id="comment" ng-repeat="comment in post.answers |limitTo:limit">
+                                                                            <div class="row">
+                                                                                <div class="col-lg-2 col-md-3">
+                                                                                        <div class="image">
+                                                                                                <img class="profileImg" ng-if="comment.gender=='Female'" ng-src="http://mindhubgp-001-site1.itempurl.com//{{comment.userImage }}">   
+                                                                                                <img class="profileImg" ng-if="comment.gender=='Male'" ng-src="http://mindhubgp-001-site1.itempurl.com//{{comment.userImage}}">
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-lg-10 col-md-9">
+                                                                                    <div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12">
+                                                                                                    <h4 class="name" ng-bind="comment.username"></h4>
+                                                                                                    <p class="date" ng-bind="comment.date| formatDate"></p>
+                                                                                                    
+                                                                                                    <p class="queText" ng-bind="comment.questionAnswer"></p>
+                                                                                                    
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-4  ml-md-auto">
+                                                                                                                <span ng-bind="comment.likes"></span><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                                                                                                |
+                                                                                                                <span ng-bind="comment.dislikes"></span><a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                    
+                                                                            </div>
+                                                                            
+                                                                        </div> 
+                                                                    </div>   
+                                                                    <div class="prevComment">
+                                                                        <a href=""  id="prevComment" ng-click="comment(post.answers.length)" ng-hide="click" >Show Previous Comments <span ng-bind="'('+post.answers.length+')'"></span></a>
+                                                                    </div>
+                                                                    <div class="postComment" id="commentBox">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-2 col-md-3">
+                                                                                    <div class="image">
+                                                                                            <img class="profileImg" ng-if="profileData.gender=='Female'" ng-src="{{imgPath||FemaleImg }}">   
+                                                                                            <img class="profileImg" ng-if="profileData.gender=='Male'" ng-src="{{imgPath||maleImg }}">
+                                                                                    </div>
+                                                                            </div>
+                                                                            <div class="col-lg-10 col-md-9">
+                                                                                <div class="boxQus">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12">
+                                                                                            <textarea class="textareaComment" ng-model="newAnswer[key].questionAnswer" rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-lg-4  col-md-5  ml-md-auto">
+                                                                                        <button id="commentBtn" ng-click="addAnswer(key,post.id)">Answer</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                        </div>       
+                                                                        </div>  
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            <!-- End Questions -->
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Question --> 
+                    <!-- start Follow -->
+                    <div class="follow" id="follow">
+                        <div class="row">
+                            <!-- start Header Follow -->
+                            <div class="col-md-12 ">
+                                <div class="header">
+                                    <h2><i class="fa fa-users" aria-hidden="true"></i>Follow</h2>
+                                </div>   
+                            </div>
+                            <!-- End Header Follow -->
+                        </div>
+                        <div class="row justify-content-md-center">
+                            <div class="body"> 
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                        <p class="followNum" ng-bind="profileData.friends.length +' follow'"></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                    <div class="col-md-6 col-12 ml-md-auto">
+                                        <div id="custom-search-input">
+                                            <div class="input-group ">
+                                                <input type="text" class="  search-query form-control" ng-model="search" placeholder="Search" />
+                                                <span class="input-group-btn">
+                                                    <button class="btn " type="button">
+                                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="person" ng-repeat="person in profileData.friends|filter:{name:search}">
+                                        <div class="row ">
+                                            <div class="col-12">
+                                                <div class="row  justify-content-center">
+                                                    <div class="col-md-2 col-sm-12 followImg ">
+                                                            <img class="profileImg" ng-if="person.gender=='Female'" ng-src="http://mindhubgp-001-site1.itempurl.com//{{person.friendImage }}">   
+                                                            <img class="profileImg" ng-if="person.gender=='Male'" ng-src="http://mindhubgp-001-site1.itempurl.com//{{person.friendImage }}">
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="row ">
+                                                            <div class="col-lg-8 col-md-6 col-12 followInfo">
+                                                                <div class="row">
+                                                                <div class="col-12">
+                                                                    <a href="" ng-bind="person.name" ></a>
+                                                                </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                <div class="col-12">
+                                                                    <p ng-bind="person.title"></p>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6 col-12 ">
+                                                                <div class="row">
+                                                                    <div class="col-4">
+                                                                        <div class="messageBtn" >
+                                                                            <i class="fa fa-comment" aria-hidden="true"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class=" col-md-8 col-5 ml-md-auto">
+                                                                        <div class="delete">
+                                                                            <button class="btn" ng-click="unfollow(profileData.friends,person,person.id)">Unfollow</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>   
+                                        </div>
+                                    </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Follow -->
+                    <!-- start Accomplishments -->
+                    <div class="Accomplishments" id="Accomplishments">
+                        <div class="row">
+                                <!-- start Header Accomplishments -->
+                                <div class="col-md-12 ">
+                                    <div class="header">
+                                        <h2>Accomplishments</h2>
+                                    </div>   
+                                </div>
+                                <!-- End Header Accomplishments -->
+                        </div>
+                        <div class="row justify-content-md-center">
+                            <div class="body"> 
+                                <div class="body-container">
+                                    <div class="col-md-12 ">
+                                        <!-- start exams -->
+                                        <div class="exam">
+                                            <!-- strat dgree & exam -->
+                                            <div class="row title">
+                                                <div class="col-6">
+                                                    <h4><span >E</span>xams</h4>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h4><span>D</span>egree</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row examDetalis" ng-repeat="exam in profileData.exams ">
+                                                <div class="col-6">
+                                                    <h5 ng-bind="exam.examName"></h5>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h5><uib-progressbar class="progress-striped" max="100" value="{{exam.studentDegree}}" type="warning">{{exam.studentDegree}}</uib-progressbar></h5>
+                                                </div>  
+                                            </div>
+                                            <!-- start readMore -->
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div id="readMore" class="readMore text-center">
+                                                        <a><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>    
+                                            <!-- start readMore -->
+                                        </div>
+                                        <!-- End exams -->
+                                        <!-- start Courses -->
+                                        <div class="courses">
+                                            <div class="row title">
+                                                <div class="col-12">
+                                                    <h4><span >C</span>ourses</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row examDetalis">
+                                                    <div class="col-6">
+                                                        <h5>Front End course</h5>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <h5>completed</h5>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Courses -->
+                                    </div>           
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Accomplishments -->
+                </div>
+                    
+                </div>      
+            </div>
+        </div>
+        <!-- End profile container --> 
+    </div>
+    </div>
+    
+ 
+</section>

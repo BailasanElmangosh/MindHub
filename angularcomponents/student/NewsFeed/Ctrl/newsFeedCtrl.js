@@ -1,6 +1,6 @@
 
     angular. module("student-app")
-    .controller("newFeedCtrl", function ($scope,$cookies,feedSrv,questionsSrv) {
+    .controller("newFeedCtrl", function ($scope,$cookies,feedSrv,questionsSrv,$timeout) {
 
         $scope.Feeds ={};
         $scope.img="test";
@@ -18,7 +18,11 @@
                 $scope.Feeds =data.feed;
                 $scope.studentData = data.studentData;
                 $scope.suggestedStudents = data.suggestedStudents;
-                $scope.showLoading=false;
+                $scope.load=function()
+                {
+                  $scope.showLoading=false;
+                }
+                $timeout($scope.load, 3000);
             }
         })
         .error(function(){

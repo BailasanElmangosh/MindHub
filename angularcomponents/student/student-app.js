@@ -13,7 +13,11 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
           {
           templateUrl: "/angularcomponents/student/template/searchResult.html",
           controller: 'searchResultCtrl'  
-         })
+         }).when('/FriendProfile',
+         {
+         templateUrl: "/angularcomponents/student/template/friendProfie.html",
+         controller: 'searchResultCtrl'  
+        })
           .when('/', {
             templateUrl: '/angularcomponents/student/template/newsFeed.html',
             controller: 'newFeedCtrl'
@@ -74,6 +78,8 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
           {
             $scope.hideDropDown=!$scope.hideDropDown;
           }
-          $scope.showLoading=true;
+       
+            $scope.showLoading=true;
+          
       })
       
