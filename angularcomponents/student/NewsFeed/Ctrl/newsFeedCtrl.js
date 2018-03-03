@@ -19,6 +19,7 @@
                 $scope.studentData = data.studentData;
                 $scope.suggestedStudents = data.suggestedStudents;
                 Person.setshow(false);
+                console.log(Person.getshow()+"Hello from news feed")
 
             }
         })

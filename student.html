@@ -151,7 +151,7 @@
     <body ng-controller="studentCtrl">
         
 
-    <div ng-show="show"  class="loading">Loading&#8230;</div>
+    <div ng-show="show()"  class="loading">Loading&#8230;</div>
 
          <!-- start NavBar -->
           <nav class="navbar  fixed-top navbar-expand-lg navbar-light bg-light">
@@ -222,9 +222,9 @@
                  
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#/newsfeed">
+                    <a class="nav-link" href="#/newsfeed" ng-click="restartSplashScreen()">
                           <i class="fa fa-home" aria-hidden="true"></i>
-                      Home 
+                          Home 
                       <span class="sr-only">(current)</span>
                     </a>
                   </li>
@@ -250,7 +250,7 @@
                         </button>
                         <div class="dropdownNav-menu"ng-hide="hideDropDown" >
                             <div class="arrow"></div>
-                          <a class="dropdown-item" href="#/profile"> 
+                          <a class="dropdown-item" href="#/profile" ng-click="restartSplashScreen()"> 
                             <svg class="edit-pen-title">
                               <use xlink:href="#user"></use>
                             </svg>

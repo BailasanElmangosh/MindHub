@@ -68,6 +68,7 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
         var show = true;
         this.getshow = function() {
             return show;
+
         };
         this.setshow = function(Show) {
             show = Show;
@@ -86,7 +87,15 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
           {
             $scope.hideDropDown=!$scope.hideDropDown;
           }
-          $scope.show=Person.show;
+          $scope.show=function ()
+          {
+             return Person.getshow();
+          };
+          console.log($scope.show+"main")
+          $scope.restartSplashScreen=function()
+          {  Person.setshow(true)
+            console.log(Person.getshow()+"click news")
+          }
           
       });
     

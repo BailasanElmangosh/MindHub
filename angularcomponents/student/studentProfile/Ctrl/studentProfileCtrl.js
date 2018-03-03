@@ -12,7 +12,7 @@
                 $scope.editProfile=data.profile;
                 $scope.imgPath="http://mindhubgp-001-site1.itempurl.com/"+$scope.profileData.image;
                 Person.setshow(false);
-                console.log(Person.getshow());
+                console.log(Person.getshow()+"hello from profile");
             });
          
             $scope.img=function()
