@@ -1,5 +1,5 @@
 
-    angular.module('student-app').controller("studentProfileCtrl", function ($scope,profileDataSrv,profileEditSrv,$cookies,questionsSrv) {
+    angular.module('student-app').controller("studentProfileCtrl", function ($scope,profileDataSrv,profileEditSrv,$cookies,questionsSrv,Person) {
             $scope.profileData={};
             $scope.editProfile={};
             $scope.maleImg = "images/default.png";
@@ -11,7 +11,8 @@
                 $scope.profileData=data.profile;
                 $scope.editProfile=data.profile;
                 $scope.imgPath="http://mindhubgp-001-site1.itempurl.com/"+$scope.profileData.image;
-                $scope.showLoading=false;
+                Person.setshow(false);
+                console.log(Person.getshow());
             });
          
             $scope.img=function()
@@ -346,13 +347,6 @@
                  console.log($scope.resultList)
               });
           
-
-                
-            //    $scope.hideDropdown=function()
-            //    {
-            //     $scope.showResult = false;
-            //     $scope.$apply();
-            //    }
 
           
             });

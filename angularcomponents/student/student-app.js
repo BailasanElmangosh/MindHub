@@ -24,7 +24,7 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
          })
          .otherwise({redirectTo:'/'});
     });
-  
+    
       student.filter('formatDate', function($filter) {
         // alert('hii');
         return function (myDate) {
@@ -64,10 +64,18 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
           }
         };
       });
+      angular.module('student-app').service('Person', function() {
+        var show = true;
+        this.getshow = function() {
+            return show;
+        };
+        this.setshow = function(Show) {
+            show = Show;
+        };
 
-      student.controller("studentCtrl",function($scope,$cookies){
+   })
+      student.controller("studentCtrl",function($scope,$cookies,Person){
 
-        
         $scope.logout=function()
         {
           $cookies.remove('token');
@@ -78,8 +86,8 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
           {
             $scope.hideDropDown=!$scope.hideDropDown;
           }
-       
-            $scope.showLoading=true;
+          $scope.show=Person.show;
           
-      })
-      
+      });
+    
+     
