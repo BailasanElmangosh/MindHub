@@ -1,10 +1,10 @@
 
 // var chanceOwner=angular.module('chanceOwner-app');
 'use strict';
-var chanceOwner=angular.module('chanceOwner-app',['ngMessages','ngCookies']);
+var chanceOwner=angular.module('chanceOwner-app',['ngMessages','ngCookies','ngRoute']);
 chanceOwner.config(function($routeProvider, $locationProvider){ 
     $routeProvider.when('/liveCourse',{
-        templateUrl: "/angularcomponents/student/template/profile.html",
+        templateUrl: "/angularcomponents/ChanceOwner/Template/liveCourse.html",
             controller: 'liveCouresCtrl' 
 
     }).when('/createLive',{
@@ -12,5 +12,3 @@ chanceOwner.config(function($routeProvider, $locationProvider){
         controller: 'liveCouresCtrl' 
     })
 });
-
-alert('hi');
