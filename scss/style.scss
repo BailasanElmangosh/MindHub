@@ -1990,9 +1990,6 @@ svg ,i {
     
 }  
 // end newsfeed
-
-
-
 // start search
 .SearchResult
 {margin-top: 100px;
@@ -2031,3 +2028,39 @@ svg ,i {
    
 }
 //End search
+
+//start chanceOwner
+.chanceOwner
+{ .navbar
+    {
+        .collapse
+        {
+            .navbar-nav
+            {
+               margin-right: 250px; 
+            }
+        }
+    }
+    margin-top: 60px;
+    .createBtn
+    {
+    padding-top: 30px;
+    }
+    .liveCourse
+    {  margin-top: 50px;
+        text-align: center;
+        img
+        { 
+            width: 200px;
+        }
+        .date
+        {
+            background-color: #FC2517;
+        }
+        button 
+        {
+            background-color: $greencolor;
+        }
+    }
+}
+//end chanceOwner
