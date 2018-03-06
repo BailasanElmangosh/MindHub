@@ -2084,10 +2084,24 @@ svg ,i {
                     }
                     button 
                     {
-                        background-color: $greencolor;
-                        margin: 0 auto;
+                        &.live
+                        {
+                            background-color: $greencolor;
+                        }
                         
                     }
+                    .modal
+                    { text-align: left;
+                     .title
+                        {
+                            display: inline;
+                        }  
+                        .line
+                        {
+                            margin-top: 20px;
+                        } 
+                    }
+                    
                 }
             }
          

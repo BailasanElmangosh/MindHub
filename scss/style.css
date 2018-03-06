@@ -1820,8 +1820,19 @@ svg, i {
   font-size: 12px;
 }
 
-.chanceOwner .liveCourse .course .thumbnail .caption button {
+.chanceOwner .liveCourse .course .thumbnail .caption button.live {
   background-color: #8ccb75;
-  margin: 0 auto;
+}
+
+.chanceOwner .liveCourse .course .thumbnail .caption .modal {
+  text-align: left;
+}
+
+.chanceOwner .liveCourse .course .thumbnail .caption .modal .title {
+  display: inline;
+}
+
+.chanceOwner .liveCourse .course .thumbnail .caption .modal .line {
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */
