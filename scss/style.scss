@@ -574,12 +574,8 @@ body
         width: 195px;
         height: 20px;
         border: none;
-        appearance: none;
         outline: none;
     
-        &::-webkit-search-cancel-button {
-        appearance: none;
-        }
     }
   
     .search-button {
@@ -1072,10 +1068,6 @@ body
                             {  width:60px;
                                 height: 60px;
                             }
-                            button
-                            {
-                                
-                            }
                         }
                         .prevComment
                         { height: 30px;
@@ -1438,10 +1430,6 @@ body
                     text-shadow: none;
                 }
             }
-            .modal-body
-            {
-               
-            }
             .modal-footer
             {   display: block;
                 border-top:none;
@@ -1461,9 +1449,8 @@ body
     {
         .modal-content
         {
-            .modal-header
-            {
-            }
+            
+            
             .modal-body
             {
                 img
@@ -1497,9 +1484,6 @@ body
                     {
                         margin-bottom: 0px;
                     }
-                    .form-control
-                    {
-                    }
                     textarea
                     {
                         width:100%;
@@ -1517,10 +1501,6 @@ body
     {
         .modal-content
         {
-            .modal-header
-            {
-
-            }
             .modal-body
             {
                 .educEdit
@@ -1552,10 +1532,6 @@ body
     {
         .modal-content
         {
-            .modal-header
-            {
-
-            }
             .modal-body
             {
                 .skillRow
@@ -2046,6 +2022,18 @@ svg ,i {
     .createBtn
     {
     padding-top: 30px;
+    
+    a
+    {
+       background-color: $greencolor; 
+       text-decoration: none;
+       color:#222;
+       &:hover
+       {
+       color:#222;           
+       }
+    }
+   
     }
     .liveCourse
     {  margin-top: 50px;
@@ -2108,5 +2096,48 @@ svg ,i {
         }
    
     }
+    .modal-backdrop
+    {z-index: 1020;}
 }
 //end chanceOwner
+// start CreateLive
+.CreateLive
+{
+    margin-top: 60px;
+    .header
+    {
+       padding-top: 20px;
+    }
+    
+    .line
+    {
+        margin-top: 10px;
+        img
+        {
+            width:100%;
+        }
+        input[type="file"]
+        {
+            display: none;
+        }
+        #imgCourse
+        {
+            display: block;
+            margin-left: 120px;
+            margin-top: -11px;
+        }
+        select
+        {
+            display: block;
+            width: 100%;
+        }
+        button
+        {
+            background-color: $greencolor;
+            width:150px;
+        }
+    }
+  
+    
+}
+//End CreateLive

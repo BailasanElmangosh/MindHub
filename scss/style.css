@@ -529,12 +529,7 @@ body {
   width: 195px;
   height: 20px;
   border: none;
-  appearance: none;
   outline: none;
-}
-
-.navbar .search-input::-webkit-search-cancel-button {
-  appearance: none;
 }
 
 .navbar .search-button {
@@ -1782,6 +1777,16 @@ svg, i {
   padding-top: 30px;
 }
 
+.chanceOwner .createBtn a {
+  background-color: #8ccb75;
+  text-decoration: none;
+  color: #222;
+}
+
+.chanceOwner .createBtn a:hover {
+  color: #222;
+}
+
 .chanceOwner .liveCourse {
   margin-top: 50px;
   overflow: hidden;
@@ -1835,5 +1840,45 @@ svg, i {
 
 .chanceOwner .liveCourse .course .thumbnail .caption .modal .line {
   margin-top: 20px;
+}
+
+.chanceOwner .modal-backdrop {
+  z-index: 1020;
+}
+
+.CreateLive {
+  margin-top: 60px;
+}
+
+.CreateLive .header {
+  padding-top: 20px;
+}
+
+.CreateLive .line {
+  margin-top: 10px;
+}
+
+.CreateLive .line img {
+  width: 100%;
+}
+
+.CreateLive .line input[type="file"] {
+  display: none;
+}
+
+.CreateLive .line #imgCourse {
+  display: block;
+  margin-left: 120px;
+  margin-top: -11px;
+}
+
+.CreateLive .line select {
+  display: block;
+  width: 100%;
+}
+
+.CreateLive .line button {
+  background-color: #8ccb75;
+  width: 150px;
 }
 /*# sourceMappingURL=style.css.map */
