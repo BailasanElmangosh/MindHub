@@ -3,12 +3,12 @@
     .controller("newFeedCtrl", function ($scope,$cookies,feedSrv,questionsSrv,$timeout,Person) {
       
         $scope.Feeds ={};
-        $scope.img="test";
-        $scope.imgPath = function(path)
-        {
-            $scope.img = "http://mindhubgp-001-site1.itempurl.com/"+path;
-            $scope.$apply();
-        }
+
+        // $scope.imgPath = function(path)
+        // {
+        //     $scope.img = "http://mindhubgp-001-site1.itempurl.com/"+path;
+        //     $scope.$apply();
+        // }
 
 
         $scope.studentData={};
@@ -19,8 +19,8 @@
                 $scope.studentData = data.studentData;
                 $scope.suggestedStudents = data.suggestedStudents;
                 Person.setshow(false);
-                console.log(Person.getshow()+"Hello from news feed")
 
+                Person.setImg("http://mindhubgp-001-site1.itempurl.com/"+$scope.studentData.image);
             }
         })
         .error(function(){

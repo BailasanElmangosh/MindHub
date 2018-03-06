@@ -73,7 +73,14 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
         this.setshow = function(Show) {
             show = Show;
         };
+        var img;
+        this.getImg = function() {
+          return img;
 
+      };
+      this.setImg = function(Img) {
+          img = Img;
+      };
    })
       student.controller("studentCtrl",function($scope,$cookies,Person){
 
@@ -93,10 +100,23 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
           };
           console.log($scope.show+"main")
           $scope.restartSplashScreen=function()
-          {  Person.setshow(true)
+          { 
+            if(Person.getshow()==false)
+            {
+              Person.setshow(true);
+              setTimeout(function(){
+              Person.setshow(false);
+              $scope.$apply();
+              alert(Person.getshow());
+              },2000)
+            }
             console.log(Person.getshow()+"click news")
           }
-          
+          $scope.img=function()
+          {
+            // console.log(Person.getImg());
+            return Person.getImg();
+          }
       });
     
      

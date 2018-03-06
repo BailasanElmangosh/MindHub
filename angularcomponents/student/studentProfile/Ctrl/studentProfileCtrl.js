@@ -13,6 +13,7 @@
                 $scope.imgPath="http://mindhubgp-001-site1.itempurl.com/"+$scope.profileData.image;
                 Person.setshow(false);
                 console.log(Person.getshow()+"hello from profile");
+                Person.setImg($scope.img());
             });
          
             $scope.img=function()
