@@ -2056,7 +2056,10 @@ svg ,i {
            
             .thumbnail
             {  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
-            
+                img
+                { 
+                    width: 100%;
+                }
                 .caption
                 {
                     background-color: #fff; 
@@ -2068,10 +2071,7 @@ svg ,i {
                         text-align: center;
                         padding: 5 0;
                     }
-                    img
-                    { 
-                        width: 100%;
-                    }
+                   
                     p
                     {
                         font-size: 15px;

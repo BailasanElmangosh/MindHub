@@ -1795,6 +1795,10 @@ svg, i {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
+.chanceOwner .liveCourse .course .thumbnail img {
+  width: 100%;
+}
+
 .chanceOwner .liveCourse .course .thumbnail .caption {
   background-color: #fff;
   padding-bottom: 10px;
@@ -1805,10 +1809,6 @@ svg, i {
   color: #fff;
   text-align: center;
   padding: 5 0;
-}
-
-.chanceOwner .liveCourse .course .thumbnail .caption img {
-  width: 100%;
 }
 
 .chanceOwner .liveCourse .course .thumbnail .caption p {
