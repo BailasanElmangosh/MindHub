@@ -1789,6 +1789,7 @@ svg, i {
 
 .chanceOwner .liveCourse .course {
   text-align: center;
+  margin-top: 10px;
 }
 
 .chanceOwner .liveCourse .course .thumbnail {
