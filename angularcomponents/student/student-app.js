@@ -100,7 +100,6 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
           };
           console.log($scope.show+"main")
           $scope.restartSplashScreen=function()
-<<<<<<< HEAD
           { 
             if(Person.getshow()==false)
             {
@@ -110,12 +109,6 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
               $scope.$apply();
               alert(Person.getshow());
               },2000)
-=======
-          {  Person.setshow(true)
-            if()
-            {
-              
->>>>>>> 269530272a9a836bbe7415d80845ad9674d096e6
             }
             console.log(Person.getshow()+"click news")
           }
