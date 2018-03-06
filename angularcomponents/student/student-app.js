@@ -94,6 +94,10 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
           console.log($scope.show+"main")
           $scope.restartSplashScreen=function()
           {  Person.setshow(true)
+            if()
+            {
+              
+            }
             console.log(Person.getshow()+"click news")
           }
           

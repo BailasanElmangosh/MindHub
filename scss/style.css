@@ -1768,4 +1768,33 @@ svg, i {
 .SearchResult .search .person .followName:hover {
   color: #595959;
 }
+
+.chanceOwner {
+  margin-top: 60px;
+}
+
+.chanceOwner .navbar .collapse .navbar-nav {
+  margin-right: 250px;
+}
+
+.chanceOwner .createBtn {
+  padding-top: 30px;
+}
+
+.chanceOwner .liveCourse {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.chanceOwner .liveCourse img {
+  width: 200px;
+}
+
+.chanceOwner .liveCourse .date {
+  background-color: #FC2517;
+}
+
+.chanceOwner .liveCourse button {
+  background-color: #8ccb75;
+}
 /*# sourceMappingURL=style.css.map */
