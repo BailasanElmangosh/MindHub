@@ -2031,7 +2031,8 @@ svg ,i {
 
 //start chanceOwner
 .chanceOwner
-{ .navbar
+{  height: 2000px;
+    .navbar
     {
         .collapse
         {
@@ -2048,19 +2049,45 @@ svg ,i {
     }
     .liveCourse
     {  margin-top: 50px;
-        text-align: center;
-        img
-        { 
-            width: 200px;
+       
+        overflow: hidden;
+        .course
+        {  text-align: center;
+            
+            .thumbnail
+            { border:1px solid #222;
+                .caption
+                {
+                    padding: 5px;
+                    background-color: #fff;
+                }
+            }
+            h4
+            {
+                background-color: $grey2;
+                color:#fff;
+                text-align: center;
+            }
+            img
+            { 
+                width: 100%;
+            }
+            p
+            {
+                font-size: 15px;
+            }
+            .date
+            {
+               
+                font-size: 12px;
+            }
+            button 
+            {
+                background-color: $greencolor;
+                margin: 0 auto;
+            }
         }
-        .date
-        {
-            background-color: #FC2517;
-        }
-        button 
-        {
-            background-color: $greencolor;
-        }
+   
     }
 }
 //end chanceOwner

@@ -1770,6 +1770,7 @@ svg, i {
 }
 
 .chanceOwner {
+  height: 2000px;
   margin-top: 60px;
 }
 
@@ -1783,18 +1784,42 @@ svg, i {
 
 .chanceOwner .liveCourse {
   margin-top: 50px;
+  overflow: hidden;
+}
+
+.chanceOwner .liveCourse .course {
   text-align: center;
 }
 
-.chanceOwner .liveCourse img {
-  width: 200px;
+.chanceOwner .liveCourse .course .thumbnail {
+  border: 1px solid #222;
 }
 
-.chanceOwner .liveCourse .date {
-  background-color: #FC2517;
+.chanceOwner .liveCourse .course .thumbnail .caption {
+  padding: 5px;
+  background-color: #fff;
 }
 
-.chanceOwner .liveCourse button {
+.chanceOwner .liveCourse .course h4 {
+  background-color: #666666;
+  color: #fff;
+  text-align: center;
+}
+
+.chanceOwner .liveCourse .course img {
+  width: 100%;
+}
+
+.chanceOwner .liveCourse .course p {
+  font-size: 15px;
+}
+
+.chanceOwner .liveCourse .course .date {
+  font-size: 12px;
+}
+
+.chanceOwner .liveCourse .course button {
   background-color: #8ccb75;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
