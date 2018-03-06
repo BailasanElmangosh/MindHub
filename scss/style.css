@@ -1792,33 +1792,34 @@ svg, i {
 }
 
 .chanceOwner .liveCourse .course .thumbnail {
-  border: 1px solid #222;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .chanceOwner .liveCourse .course .thumbnail .caption {
-  padding: 5px;
   background-color: #fff;
+  padding-bottom: 10px;
 }
 
-.chanceOwner .liveCourse .course h4 {
+.chanceOwner .liveCourse .course .thumbnail .caption h4 {
   background-color: #666666;
   color: #fff;
   text-align: center;
 }
 
-.chanceOwner .liveCourse .course img {
+.chanceOwner .liveCourse .course .thumbnail .caption img {
   width: 100%;
 }
 
-.chanceOwner .liveCourse .course p {
+.chanceOwner .liveCourse .course .thumbnail .caption p {
   font-size: 15px;
+  padding: 5px;
 }
 
-.chanceOwner .liveCourse .course .date {
+.chanceOwner .liveCourse .course .thumbnail .caption .date {
   font-size: 12px;
 }
 
-.chanceOwner .liveCourse .course button {
+.chanceOwner .liveCourse .course .thumbnail .caption button {
   background-color: #8ccb75;
   margin: 0 auto;
 }

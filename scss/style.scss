@@ -2053,39 +2053,43 @@ svg ,i {
         overflow: hidden;
         .course
         {  text-align: center;
-            
+           
             .thumbnail
-            { border:1px solid #222;
+            {  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+            
                 .caption
                 {
-                    padding: 5px;
-                    background-color: #fff;
+                    background-color: #fff; 
+                    padding-bottom: 10px;
+                      h4
+                    {
+                        background-color: $grey2;
+                        color:#fff;
+                        text-align: center;
+                    }
+                    img
+                    { 
+                        width: 100%;
+                    }
+                    p
+                    {
+                        font-size: 15px;
+                        padding: 5px;
+                    }
+                    .date
+                    {
+                    
+                        font-size: 12px;
+                    }
+                    button 
+                    {
+                        background-color: $greencolor;
+                        margin: 0 auto;
+                        
+                    }
                 }
             }
-            h4
-            {
-                background-color: $grey2;
-                color:#fff;
-                text-align: center;
-            }
-            img
-            { 
-                width: 100%;
-            }
-            p
-            {
-                font-size: 15px;
-            }
-            .date
-            {
-               
-                font-size: 12px;
-            }
-            button 
-            {
-                background-color: $greencolor;
-                margin: 0 auto;
-            }
+         
         }
    
     }
