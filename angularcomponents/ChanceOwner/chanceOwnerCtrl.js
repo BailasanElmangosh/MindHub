@@ -1,5 +1,5 @@
 
-    angular.module('chanceOwner-app',[]).controller("chanceOwnerCtrl",function($scope){
+    angular.module('chanceOwner-app').controller("chanceOwnerCtrl",function($scope){
         $scope.hideDropDown=true;
         $scope.showDropDown=function()
         {

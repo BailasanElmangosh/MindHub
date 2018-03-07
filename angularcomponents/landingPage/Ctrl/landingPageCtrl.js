@@ -32,8 +32,17 @@
                     if (data.status =="Success")
                     {  
                         cookies.set(key,data.token);
+                        console.log(data.token)
                         cookies.set('socketid',data.userId);
-                        window.location ="/student.html#/profile";
+                        if(data.userType=="Chance owner")
+                        {
+                            window.location ="/chanceOwner.html#/liveCourse";
+                        }
+                        else
+                        {
+                             window.location ="/student.html#/profile";
+                        }
+                       
                     }
                     else{
                     }

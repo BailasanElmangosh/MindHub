@@ -2007,7 +2007,7 @@ svg ,i {
 
 //start chanceOwner
 .chanceOwner
-{  height: 2000px;
+{  margin-top: 58px;
     .navbar
     {
         .collapse
@@ -2018,21 +2018,22 @@ svg ,i {
             }
         }
     }
-    margin-top: 60px;
+    .modal-backdrop
+    {z-index: 1020;}
+    
     .createBtn
     {
-    padding-top: 30px;
-    
-    a
-    {
-       background-color: $greencolor; 
-       text-decoration: none;
-       color:#222;
-       &:hover
-       {
-       color:#222;           
-       }
-    }
+        padding-top: 30px;
+        a
+        {
+            background-color: $greencolor; 
+            text-decoration: none;
+            color:#222;
+            &:hover
+            {
+            color:#222;           
+            }
+        }
    
     }
     .liveCourse
@@ -2069,15 +2070,22 @@ svg ,i {
                     {
                     
                         font-size: 12px;
-                    }
-                    button 
+                    } 
+                    a
                     {
+                        background-color: $greencolor; 
+                        text-decoration: none;
+                        color:#222;
+                        &:hover
+                        {
+                        color:#222;           
+                        }
                         &.live
                         {
                             background-color: $greencolor;
                         }
-                        
-                    }
+                    }   
+                   
                     .modal
                     { text-align: left;
                      .title
@@ -2096,48 +2104,75 @@ svg ,i {
         }
    
     }
-    .modal-backdrop
-    {z-index: 1020;}
+    // start CreateLive
+    .CreateLive
+    {
+        margin-top: 60px;
+        .header
+        {
+        padding-top: 20px;
+        }
+        
+        .line
+        {
+            margin-top: 10px;
+            img
+            {
+                width:100%;
+            }
+            input[type="file"]
+            {
+                display: none;
+            }
+            #imgCourse
+            {
+                display: block;
+                margin-left: 120px;
+                margin-top: -11px;
+            }
+            select
+            {
+                display: block;
+                width: 100%;
+            }
+            button
+            {
+                background-color: $greencolor;
+                width:150px;
+            }
+        }
+    
+        
+    }
+    //End CreateLive 
+    //start liveRoom
+    .liveRoom
+    {   border:2px solid #fff;
+        background-color: $grey1;
+        padding: 10px;
+        height:604px ;
+         .col-6
+        {
+            padding-left: 0px; 
+        }
+        .whiteBoard
+        {
+            background-color: #fff;
+            height:100%;
+        }
+        
+        .live
+        {
+            height:50%;
+            border:2px solid #fff;
+            margin-bottom: 5px;
+        }
+        .chat
+        {
+            height:50%;
+            border:2px solid #fff;
+        }
+    }
+    //End liveRoom
 }
 //end chanceOwner
-// start CreateLive
-.CreateLive
-{
-    margin-top: 60px;
-    .header
-    {
-       padding-top: 20px;
-    }
-    
-    .line
-    {
-        margin-top: 10px;
-        img
-        {
-            width:100%;
-        }
-        input[type="file"]
-        {
-            display: none;
-        }
-        #imgCourse
-        {
-            display: block;
-            margin-left: 120px;
-            margin-top: -11px;
-        }
-        select
-        {
-            display: block;
-            width: 100%;
-        }
-        button
-        {
-            background-color: $greencolor;
-            width:150px;
-        }
-    }
-  
-    
-}
-//End CreateLive

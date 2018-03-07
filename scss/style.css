@@ -1765,12 +1765,15 @@ svg, i {
 }
 
 .chanceOwner {
-  height: 2000px;
-  margin-top: 60px;
+  margin-top: 58px;
 }
 
 .chanceOwner .navbar .collapse .navbar-nav {
   margin-right: 250px;
+}
+
+.chanceOwner .modal-backdrop {
+  z-index: 1020;
 }
 
 .chanceOwner .createBtn {
@@ -1826,7 +1829,17 @@ svg, i {
   font-size: 12px;
 }
 
-.chanceOwner .liveCourse .course .thumbnail .caption button.live {
+.chanceOwner .liveCourse .course .thumbnail .caption a {
+  background-color: #8ccb75;
+  text-decoration: none;
+  color: #222;
+}
+
+.chanceOwner .liveCourse .course .thumbnail .caption a:hover {
+  color: #222;
+}
+
+.chanceOwner .liveCourse .course .thumbnail .caption a.live {
   background-color: #8ccb75;
 }
 
@@ -1842,43 +1855,66 @@ svg, i {
   margin-top: 20px;
 }
 
-.chanceOwner .modal-backdrop {
-  z-index: 1020;
-}
-
-.CreateLive {
+.chanceOwner .CreateLive {
   margin-top: 60px;
 }
 
-.CreateLive .header {
+.chanceOwner .CreateLive .header {
   padding-top: 20px;
 }
 
-.CreateLive .line {
+.chanceOwner .CreateLive .line {
   margin-top: 10px;
 }
 
-.CreateLive .line img {
+.chanceOwner .CreateLive .line img {
   width: 100%;
 }
 
-.CreateLive .line input[type="file"] {
+.chanceOwner .CreateLive .line input[type="file"] {
   display: none;
 }
 
-.CreateLive .line #imgCourse {
+.chanceOwner .CreateLive .line #imgCourse {
   display: block;
   margin-left: 120px;
   margin-top: -11px;
 }
 
-.CreateLive .line select {
+.chanceOwner .CreateLive .line select {
   display: block;
   width: 100%;
 }
 
-.CreateLive .line button {
+.chanceOwner .CreateLive .line button {
   background-color: #8ccb75;
   width: 150px;
+}
+
+.chanceOwner .liveRoom {
+  border: 2px solid #fff;
+  background-color: #595959;
+  padding: 10px;
+  height: 604px;
+}
+
+.chanceOwner .liveRoom .col-6 {
+  padding-left: 0px;
+}
+
+.chanceOwner .liveRoom .whiteBoard {
+  background-color: #fff;
+  height: 100%;
+}
+
+.chanceOwner .liveRoom .live {
+  height: 50%;
+  border: 2px solid #fff;
+  margin-bottom: 5px;
+}
+
+.chanceOwner .liveRoom .chat {
+  height: 50%;
+  border: 2px solid #fff;
 }
 /*# sourceMappingURL=style.css.map */
