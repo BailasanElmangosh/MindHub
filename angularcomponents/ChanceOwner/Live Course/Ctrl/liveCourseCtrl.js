@@ -20,61 +20,59 @@ angular.module('chanceOwner-app').controller("liveCouresCtrl",function($scope,$c
         }
     }); 
     }
-    //upload Image
-    $scope.jquery=function()
-               {
-                   //    upload image
-                //    $('#imgCourseForm').on('submit',(function(e) {
+    $(document).ready(function(){ $("#createFrm").on('submit',function(e){ alert("frm"); e.preventDefault(); var formData = new FormData(this); console.log(formData); var token = $.cookie("token"); $.ajax({ type:'POST', datatype:"Json", url: 'http://mindhubgp-001-site1.itempurl.com/api/createlcourse', data:formData, headers: {"Authorization": "bearer "+token}, cache:false, contentType: false, processData: false, success:function(){ alert("DONE"); }, error:function(){ alert("ERROR") } }) }) });
+                //    //    upload image
+                //    $('#createFrm').on('submit',(function(e) {
                 //        e.preventDefault();
                 //        var token = $.cookie("token");
+
                 //        var formData = new FormData(this);
-                //        var image;
-                //        $.ajax({
-                //            type:'POST',
-                //            url: 'http://mindhubgp-001-site1.itempurl.com/api/uploadstudentimage',
-                //            data:formData,
-                //            headers: {"Authorization": "bearer "+token},
-                //            cache:false,
-                //            contentType: false,
-                //            processData: false,
-                //            success:function(data){
-                //                if(data.status=='Success')
-                //                {
-                //                    $scope.getNewPath(data.imagePath);
-                //                }
-                //                else
-                //                {  
-                //                }
-                           
-                //            },
-                //            error: function(data){
-                //            }
-                //        });
+                //        console.log(token)
+                   
+                //     $.ajax({
+                //         type:'POST',
+                //         datatype:"Json",
+                //         url: 'http://mindhubgp-001-site1.itempurl.com/api/createlcourse',
+                //         data:formData,
+                //         headers: {"Authorization": "bearer "+token},
+                //         cache:false,
+                //         contentType: false,
+                //         processData: false,
+                //         success:function(data){
+                //             if(data.status=='Success')
+                //             {
+                //                 alert('hii');
+                //             }
+                //             else
+                //             {  
+                //             }
+                //         },
+                //         error: function(data){
+                //         }
+                //     });
+                      
                 //    }));
-                    $scope.sizeFalse=function()
-                    {  
-                        angular.element('#size')
-                        .css( 'display','block'); 
-                    }
-                    $scope.sizeTrue=function()
-                    {  
-                        angular.element('#size')
-                        .css( 'display','none'); 
-                    }
-                   $("#ImageBrowse").on("change", function() {
-                       var file=$(this)[0].files[0]
-                       console.log(file.size);
-                       if(file.size<=5000000&&file.type=='image/jpeg'||file.type=='image/jpg'||file.type=='image/png')
-                       { $scope.createLiveCourse.Image=file;
-                        console.log($scope.createLiveCourse.Image)
-                         $scope.sizeTrue();  
-                       }
-                       else
-                       {$scope.sizeFalse();
-                       }
-                   });
+                    //    var file=$(this)[0].files[0]
+                    //     if(file.size<=5000000&&file.type=='image/jpeg'||file.type=='image/jpg'||file.type=='image/png')
+                    //     { 
+                    //         $scope.sizeTrue();  
+                    //         var image;
+                           
+                    //     }
+                    //     else
+                    //     {$scope.sizeFalse();
+                    //     }
+                    // $scope.sizeFalse=function()
+                    // {  
+                    //     angular.element('#size')
+                    //     .css( 'display','block'); 
+                    // }
+                    // $scope.sizeTrue=function()
+                    // {  
+                    //     angular.element('#size')
+                    //     .css( 'display','none'); 
+                    // }
                
-               } 
-                $scope.jquery();
+             
    
 });

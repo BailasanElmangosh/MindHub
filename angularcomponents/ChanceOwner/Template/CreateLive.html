@@ -2,45 +2,41 @@
     <div class="header">
         <h2>Create Live</h2> 
     </div>
-  
-        
-    
+    <form id="createFrm" enctype="multipart/form-data">
         <div class="row line ">
             <div class="col-lg-2 col-sm-3">
                 <img  src="../../../images/defaultfemale.jpg" class="img-responsive">
-                <form id="imgCourseForm" enctype="multipart/form-data">
-                    <input type="file" name="file"  id="ImageBrowse" accept="image/png,image/jpg,image/jpeg" />
-                    <label id="imgCourse" for="ImageBrowse">
-                        <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
-                    </label>
-                </form>
+                <input type="file" name="file"  id="ImageBrowse" accept="image/png,image/jpg,image/jpeg" />
+                <label id="imgCourse" for="ImageBrowse">
+                    <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
+                </label>
                 <div class="row justify-content-center">
-                        <div class="col-4 ">
-                            <p class="error" id="size">Size image bigger than 5 Mega or Worng Format</p>
-                        </div>
+                    <div class="col-4 ">
+                        <p class="error" id="size">Size image bigger than 5 Mega or Worng Format</p>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-10 col-sm-9">
                 <div class="row line">
                     <div class="col-md-4 col-6">
                             <label>Name</label>
-                            <input type="text" class="form-control" ng-model="createLiveCourse.Name">
-                        </div>
-                            <div class="col-md-4 col-6">
-                            <label>Time</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="Name">
                     </div>
+                        <div class="col-md-4 col-6">
+                        <label>Time</label>
+                        <input type="text" class="form-control">
+                        </div>
                 </div>
                 <div class="row line">
                     <div class="col-md-4 col-6">
                             <label>Category</label>
-                            <select  class="btn" ng-model="createLiveCourse.SubCategoryId"  ng-model="filterCondition" >
+                            <select  class="btn"  ng-model="filterCondition" >
                                 <option ng-repeat="c in getcategory" value='{{c.id}}' >{{c.name}}</option>
                             </select>
                         </div>
                         <div class="col-md-4 col-6">
                             <label>Sub Category</label>
-                            <select  class="btn" ng-model="subCategory.MainCategoryId"  ng-model="filterCondition" >
+                            <select  class="btn" name="SubCategoryId"  ng-model="subCategory.MainCategoryId"  ng-model="filterCondition" >
                                 <option ng-repeat="c in getsubCategorys" value='{{c.id}}' >{{c.name}}</option>
                             </select>
                     </div>
@@ -48,7 +44,7 @@
                 <div class="row line">
                     <div class="col-md-8 col-12">
                             <label>Description</label>
-                            <textarea class="form-control"  ng-model="createLiveCourse.Info"></textarea>
+                            <textarea class="form-control"  name="Info"></textarea>
                     </div>
                 </div> 
             </div>
@@ -56,8 +52,8 @@
         </div>
         <div class="row justify-content-center line">
             <div class="col-3">
-                <button class="btn" type="submit" ng-click="create()">Create</button>
+                <button class="btn" type="submit" >Create</button>
             </div>
         </div>      
-    
+    </form>
     </div>
