@@ -169,7 +169,7 @@
                                     <img  class="imgSearch ng-cloak" ng-src="http://mindhubgp-001-site1.itempurl.com/{{resultdata.image}}">
                                     <span ng-bind="resultdata.name"></span>
                                 </li>
-                                <li class="list-group-item" ng-show="allResult"><a href="#/Search" ng-bind="key">See all result </a></li>
+                                <li class="list-group-item" ng-show="allResult"><a href="#/Search/{{key}}">See all result </a></li>
                             </div> 
                         </ul> 
                         <button type="submit" class="search-button">
@@ -227,7 +227,7 @@
                     </a>
                   </li>
                   <li class="nav-item ">
-                    <a class="nav-link" href="#" >
+                    <a class="nav-link" href="#/liveCourses/" >
                       <img  style="    width: 15px;"src=" /images/online-course.svg"> 
                       Courses</a>
                   </li>
@@ -316,6 +316,8 @@
        <script src="/angularcomponents/student/NewsFeed/Srvs/getFeedSrv.js"></script>
        <script src="/angularcomponents/student/NewsFeed/Srvs/questionsSrv.js"></script>   
        <script src="/angularcomponents/student/studentProfile/Ctrl/studentProfileCtrl.js"></script>
+       <script src="/angularcomponents/student/FriendProfile/Controllers/friendProfileCtrl.js"></script>
+       <script src="/angularcomponents\student\LiveCourses\Controllers\liveCoursesCtrl.js"></script>
        <script src="/js/lib/lightbox.js"></script>
        <script src="/js/custom.js"></script> 
    </body>

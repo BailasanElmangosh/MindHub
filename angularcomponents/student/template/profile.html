@@ -701,10 +701,10 @@
                                                                             <p class="queText" ng-bind="post.questionHead"></p>
                                                                             <div class="row">
                                                                                 <div class="col-md-4  ml-md-auto queOption">
-                                                                                    <span ng-bind="post.likes+like"></span><a  ng-class="{colorLike:stateLike{{post.id}}==='like'}" ng-click="likeDislike(post.id,'like')"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                                                                    <!-- <span ng-bind="post.likes+like"></span><a  ng-class="{colorLike:stateLike{{post.id}}==='like'}" ng-click="likeDislike(post.id,'like')"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
                                                                                     |
                                                                                     <span ng-bind="post.dislikes+dislike"></span><a  ng-class="{colorLike:stateDisLike{{post.id}}==='dislike'}" ng-click="likeDislike(post.id,'dislike')"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
-                                                                                    <a href="#commentBox" id="answer">Answer</a>
+                                                                                    <a href="#commentBox" id="answer">Answer</a> -->
                                                                                 </div>
                                                                             </div>
                                                                     </div>
@@ -728,9 +728,9 @@
                                                                                                     
                                                                                                     <div class="row">
                                                                                                         <div class="col-md-4  ml-md-auto">
-                                                                                                                <span ng-bind="comment.likes"></span><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                                                                                                <!-- <span ng-bind="comment.likes"></span><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
                                                                                                                 |
-                                                                                                                <span ng-bind="comment.dislikes"></span><a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+                                                                                                                <span ng-bind="comment.dislikes"></span><a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a> -->
                                                                                                         </div>
                                                                                                     </div>
                                                                                             </div>
@@ -827,7 +827,7 @@
                                                             <div class="col-lg-8 col-md-6 col-12 followInfo">
                                                                 <div class="row">
                                                                 <div class="col-12">
-                                                                    <a href="" ng-bind="person.name" ></a>
+                                                                    <a href="#/FriendProfile/{{person.friendId}}" ng-bind="person.name" ></a>
                                                                 </div>
                                                                 </div>
                                                                 <div class="row">

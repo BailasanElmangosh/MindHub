@@ -20,7 +20,37 @@ angular.module('chanceOwner-app').controller("liveCouresCtrl",function($scope,$c
         }
     }); 
     }
-    $(document).ready(function(){ $("#createFrm").on('submit',function(e){ alert("frm"); e.preventDefault(); var formData = new FormData(this); console.log(formData); var token = $.cookie("token"); $.ajax({ type:'POST', datatype:"Json", url: 'http://mindhubgp-001-site1.itempurl.com/api/createlcourse', data:formData, headers: {"Authorization": "bearer "+token}, cache:false, contentType: false, processData: false, success:function(){ alert("DONE"); }, error:function(){ alert("ERROR") } }) }) });
+
+    $scope.jquery = function(){
+        $(document).ready(function(){
+            $("#createFrm").on('submit',function(e){
+                alert("frm");
+                e.preventDefault();
+                var formData = new FormData(this);
+                console.log(formData);
+                var token = $.cookie("token");
+                $.ajax({
+                    type:'POST',
+                    datatype:"Json",
+                    url: 'http://mindhubgp-001-site1.itempurl.com/api/createlcourse',
+                    data:formData,
+                    headers: {"Authorization": "bearer "+token},
+                    cache:false,
+                    contentType: false,
+                    processData: false,
+                    success:function(){
+                        alert("DONE");
+                    },
+                    error:function(){
+                        alert("ERROR")
+                    }
+                })
+            })
+        });
+    }
+
+    $scope.jquery();
+    // $(document).ready(function(){ $("#createFrm").on('submit',function(e){ alert("frm"); e.preventDefault(); var formData = new FormData(this); console.log(formData); var token = $.cookie("token"); $.ajax({ type:'POST', datatype:"Json", url: 'http://mindhubgp-001-site1.itempurl.com/api/createlcourse', data:formData, headers: {"Authorization": "bearer "+token}, cache:false, contentType: false, processData: false, success:function(){ alert("DONE"); }, error:function(){ alert("ERROR") } }) }) });
                 //    //    upload image
                 //    $('#createFrm').on('submit',(function(e) {
                 //        e.preventDefault();
