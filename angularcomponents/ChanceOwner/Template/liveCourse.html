@@ -4,110 +4,16 @@
                 </div>
                 <div class="liveCourse">
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-6 course">
-                            <div class="thumbnail">
-                                <img src="images/course.jpg" alt="ALT NAME" class="img-responsive" />
-                                <div class="caption">
-                                        <h4>C# Advenced</h4>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                        <p>Time : <span class="date">Thursday 10:00-11:30</span></p>
-                                    <button class="btn live">Go live</button>
-                                    <button class="btn" data-toggle="modal" data-target="#editeCourse">Edit</button>
-                                    <button class="btn btn-danger">Delete</button>
-                                    <!-- Model EditInfo -->
-                                    <div class="modal fade popUpInfo popup" id="editeCourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Edit Course</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="row justify-content-center">
-                                                            
-                                                        </div>
-                                                        <div class="row line">
-                                                            <div class="col-sm-6">
-                                                                <div class="row">
-                                                                    <div class="col-sm-12">
-                                                                        <p class="title">Name Course</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-sm-12">
-                                                                        <input type="text" class="form-control" >
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <div class="row">
-                                                                    <div class="col-sm-12">
-                                                                        <p class="title">Title</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-sm-12">
-                                                                        <input type="text" class="form-control" >
-                                                                    </div>
-                                                                </div>      
-                                                            </div>
-                                                        </div>
-                                                        <div class="row line">
-                                                                <div class="col-sm-6">
-                                                                        <div class="row">
-                                                                            <div class="col-sm-12">
-                                                                                <p class="title">Time</p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-sm-12">
-                                                                                <input type="text" class="form-control" >
-                                                                            </div>
-                                                                        </div>      
-                                                                    </div>
-                                                            </div>
-                                                        <div class="row line">
-                                                            <div class="col-sm-12">
-                                                                <div class="row">
-                                                                    <div class="col-sm-12">
-                                                                    <p class="title" >Description</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-sm-12">
-                                                                        <textarea class="form-control"  ></textarea>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <div class="row justify-content-center">
-                                                            <div class="col-sm-3">
-                                                                <button type="button" class="btn save" ng-click=""class="close" data-dismiss="modal" aria-label="Close">Save changes</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 course">
+                        <div class="col-lg-3 col-md-4 col-sm-6 course"  ng-repeat="course in getLiveCoures">
                                 <div class="thumbnail">
-                                    <img src="images/course.jpg" alt="ALT NAME" class="img-responsive" />
+                                    <img src="http://mindhubgp-001-site1.itempurl.com/{{course.image}}" alt="ALT NAME" class="img-responsive" />
                                     <div class="caption">
-                                            <h4>C# Advenced</h4>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
+                                            <h4 ng-bind="course.name"></h4>
+                                            <p ng-bind="course.info"> </p>
                                             <p>Time : <span class="date">Thursday 10:00-11:30</span></p>
                                         <a href="#/liveRoom" class="btn live" role="button">Go live</a>
-                                        <button class="btn" data-toggle="modal" data-target="#editeCourse">Edit</button>
-                                        <button class="btn btn-danger">Delete</button>
+                                        <button class="btn" data-toggle="modal" data-target="#editeCourse" ng-click="sendId(course.id)">Edit</button>
+                                        <button class="btn btn-danger" ng-click="delLiveCourse(course.id)">Delete</button>
                                         <!-- Model EditInfo -->
                                         <div class="modal fade popUpInfo popup" id="editeCourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
@@ -131,7 +37,7 @@
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col-sm-12">
-                                                                            <input type="text" class="form-control" >
+                                                                            <input type="text" class="form-control" ng-model="editData.name" ng-bind="{{fillData.name}}" >
                                                                             
                                                                         </div>
                                                                     </div>
@@ -172,204 +78,30 @@
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col-sm-12">
-                                                                            <textarea class="form-control"  ></textarea>
+                                                                            <textarea class="form-control" ng-model="editData.info" value="{{fillData.info}}"  ></textarea>
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                            </div>
+                                                            <div class="row line ">
+                                                                <div class="col-md-4 col-6">
+                                                                    <label>Category</label>
+                                                                    <select  class="btn"  ng-model="filterCondition" >
+                                                                        <option ng-repeat="c in getcategory" value='{{c.id}}' >{{c.name}}</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-md-4 col-6">
+                                                                    <label>Sub Category</label>
+                                                                    <select  class="btn" name="SubCategoryId"  ng-model="subCategory.MainCategoryId"  ng-model="filterCondition" >
+                                                                        <option ng-repeat="c in getsubCategorys" value='{{c.id}}' >{{c.name}}</option>
+                                                                    </select>
+                                                            </div>
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <div class="row justify-content-center">
                                                                 <div class="col-sm-3">
-                                                                    <button type="button" class="btn save" ng-click=""class="close" data-dismiss="modal" aria-label="Close">Save changes</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 course">
-                                <div class="thumbnail">
-                                    <img src="images/course.jpg" alt="ALT NAME" class="img-responsive" />
-                                    <div class="caption">
-                                            <h4>C# Advenced</h4>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
-                                            <p>Time : <span class="date">Thursday 10:00-11:30</span></p>
-                                        <button class="btn live">Go live</button>
-                                        <button class="btn" data-toggle="modal" data-target="#editeCourse">Edit</button>
-                                        <button class="btn btn-danger">Delete</button>
-                                        <!-- Model EditInfo -->
-                                        <div class="modal fade popUpInfo popup" id="editeCourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Edit Course</h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="row justify-content-center">
-                                                                
-                                                            </div>
-                                                            <div class="row line">
-                                                                <div class="col-sm-6">
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                            <p class="title">Name Course</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                            <input type="text" class="form-control" >
-                                                                            
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-6">
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                            <p class="title">Title</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                            <input type="text" class="form-control" >
-                                                                        </div>
-                                                                    </div>      
-                                                                </div>
-                                                            </div>
-                                                            <div class="row line">
-                                                                    <div class="col-sm-6">
-                                                                            <div class="row">
-                                                                                <div class="col-sm-12">
-                                                                                    <p class="title">Time</p>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-sm-12">
-                                                                                    <input type="text" class="form-control" >
-                                                                                </div>
-                                                                            </div>      
-                                                                        </div>
-                                                                </div>
-                                                            <div class="row line">
-                                                                <div class="col-sm-12">
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                        <p class="title" >Description</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                            <textarea class="form-control"  ></textarea>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <div class="row justify-content-center">
-                                                                <div class="col-sm-3">
-                                                                    <button type="button" class="btn save" ng-click=""class="close" data-dismiss="modal" aria-label="Close">Save changes</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 course">
-                                <div class="thumbnail">
-                                    <img src="images/course.jpg" alt="ALT NAME" class="img-responsive" />
-                                    <div class="caption">
-                                            <h4>C# Advenced</h4>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
-                                            <p>Time : <span class="date">Thursday 10:00-11:30</span></p>
-                                        <button class="btn live">Go live</button>
-                                        <button class="btn" data-toggle="modal" data-target="#editeCourse">Edit</button>
-                                        <button class="btn btn-danger">Delete</button>
-                                        <!-- Model EditInfo -->
-                                        <div class="modal fade popUpInfo popup" id="editeCourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Edit Course</h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="row justify-content-center">
-                                                                
-                                                            </div>
-                                                            <div class="row line">
-                                                                <div class="col-sm-6">
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                            <p class="title">Name Course</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                            <input type="text" class="form-control" >
-                                                                            
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-6">
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                            <p class="title">Title</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                            <input type="text" class="form-control" >
-                                                                        </div>
-                                                                    </div>      
-                                                                </div>
-                                                            </div>
-                                                            <div class="row line">
-                                                                    <div class="col-sm-6">
-                                                                            <div class="row">
-                                                                                <div class="col-sm-12">
-                                                                                    <p class="title">Time</p>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-sm-12">
-                                                                                    <input type="text" class="form-control" >
-                                                                                </div>
-                                                                            </div>      
-                                                                        </div>
-                                                                </div>
-                                                            <div class="row line">
-                                                                <div class="col-sm-12">
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                        <p class="title" >Description</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                            <textarea class="form-control"  ></textarea>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <div class="row justify-content-center">
-                                                                <div class="col-sm-3">
-                                                                    <button type="button" class="btn save" ng-click=""class="close" data-dismiss="modal" aria-label="Close">Save changes</button>
+                                                                    <button type="button" class="btn save" ng-click="EditLiveCoures(course)"class="close" data-dismiss="modal" aria-label="Close">Save changes</button>
                                                                 </div>
                                                             </div>
                                                         </div>

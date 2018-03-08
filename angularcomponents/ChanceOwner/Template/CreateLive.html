@@ -7,9 +7,9 @@
             <div class="col-lg-2 col-sm-3">
                 <img  src="../../../images/defaultfemale.jpg" class="img-responsive">
                 <input type="file" name="file"  id="ImageBrowse" accept="image/png,image/jpg,image/jpeg" />
-                <label id="imgCourse" for="ImageBrowse">
+                <!-- <label id="imgCourse" for="ImageBrowse">
                     <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
-                </label>
+                </label> -->
                 <div class="row justify-content-center">
                     <div class="col-4 ">
                         <p class="error" id="size">Size image bigger than 5 Mega or Worng Format</p>
@@ -30,13 +30,13 @@
                 <div class="row line">
                     <div class="col-md-4 col-6">
                             <label>Category</label>
-                            <select  class="btn"  ng-model="filterCondition" >
-                                <option ng-repeat="c in getcategory" value='{{c.id}}' >{{c.name}}</option>
+                            <select  class="btn"  ng-model="data" ng-change="test(data)" ng-options=" c.name for c in getcategory"  >
+                                <option value=""></option>
                             </select>
                         </div>
                         <div class="col-md-4 col-6">
                             <label>Sub Category</label>
-                            <select  class="btn" name="SubCategoryId"  ng-model="subCategory.MainCategoryId"  ng-model="filterCondition" >
+                            <select  class="btn" name="SubCategoryId"   ng-model="filterCondition" >
                                 <option ng-repeat="c in getsubCategorys" value='{{c.id}}' >{{c.name}}</option>
                             </select>
                     </div>
@@ -55,5 +55,15 @@
                 <button class="btn" type="submit" >Create</button>
             </div>
         </div>      
+        <!-- <input  type="text" name="Name">
+        <textarea class="form-control"  name="Info"></textarea>
+        <input type="file" name="file"  id="ImageBrowse" accept="image/png,image/jpg,image/jpeg" />
+                <!-- <label id="imgCourse" for="ImageBrowse">
+                    <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
+                </label> -->
+        <!-- <select  class="btn" name="SubCategoryId"  ng-model="subCategory.MainCategoryId"  ng-model="filterCondition" >
+            <option ng-repeat="c in getsubCategorys" value='{{c.id}}' >{{c.name}}</option>
+        </select>
+        <button type="submit">ok</button> --> -->
     </form>
     </div>

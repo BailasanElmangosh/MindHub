@@ -11,26 +11,48 @@ angular.module('chanceOwner-app').factory("liveCourseSrvs", function ($http,$coo
             });
          
         },
-        GetsubCategorys: function () {
+        GetsubCategorys: function (id) {
             return $http({
                 method: "Get",
-                url: "http://mindhubgp-001-site1.itempurl.com/api/allsubcategories",
+                url: "http://mindhubgp-001-site1.itempurl.com//api/subcatsofcat/?id="+id,
                 headers: {
                     'Content-Type': 'application/json'
                 }
             })
-               }
-            //    createliveCourse: function (data) {
-            //     return $http({
-            //         method: "Post",
-            //         url: "http://mindhubgp-001-site1.itempurl.com/api/createlcourse",
-            //         data:data,
-            //         headers: {
-            //             'Content-Type': 'application/json',
-            //             'Authorization':' bearer '+ $cookies.get('token')
-            //         }
-            //     })
-            //        }
+               },
+               GetLiveCoures: function () {
+                return $http({
+                    method: "Get",
+                    url: "http://mindhubgp-001-site1.itempurl.com/api/getmylcourses",
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization':' bearer '+ $cookies.get('token')
+                    }
+                })
+                   },
+                   DeleteLiveCoures: function (id) {
+                    return $http({
+                        method: "Get",
+                        url: "http://mindhubgp-001-site1.itempurl.com/api/removelcource/?id="+id,
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization':' bearer '+ $cookies.get('token')
+                        }
+                    })
+                       },
+                       EditLiveCoures: function (data) {
+                        return $http({
+                            method: "Get",
+                            data:data,
+                            url: "http://mindhubgp-001-site1.itempurl.com/api/editlcourse",
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization':' bearer '+ $cookies.get('token')
+                            }
+                        })
+                           },
+
+                       
                
     }
 });
