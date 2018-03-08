@@ -1,5 +1,5 @@
 angular.module('chanceOwner-app').controller("liveCouresCtrl",function($scope,$cookies,liveCourseSrvs)
-{
+{ console.log($cookies.get('token'))
     liveCourseSrvs.getCatagory()
     .success(function(data, status){
       $scope.getcategory= data.mainCategories;
@@ -35,7 +35,6 @@ angular.module('chanceOwner-app').controller("liveCouresCtrl",function($scope,$c
         }
     }); 
     }
-<<<<<<< HEAD
     $(document).ready(function(){
         $("#createFrm").on('submit',function(e){
             alert("frm");
@@ -92,15 +91,16 @@ angular.module('chanceOwner-app').controller("liveCouresCtrl",function($scope,$c
              $scope.getLiveCoures=data.courses;
         }
     });  
-    $scope.sendId=function(id)
-    {  console.log(id);
+    $scope.sendId=function(idC)
+    {  console.log(idC);
        for(var i=0;i<=$scope.getLiveCoures.length;i++)
         {   console.log($scope.getLiveCoures[i].id)
-            if(id=$scope.getLiveCoures[i].id)
+            if(idC=$scope.getLiveCoures[i].id)
             {
                 $scope.fillData=$scope.getLiveCoures[i];
                 console.log($scope.fillData);
-                $scope.editData.id=$scope.fillData.id;
+                $scope.editData=$scope.fillData;
+              $scope.apply();
             }
 
         } 
@@ -115,49 +115,22 @@ angular.module('chanceOwner-app').controller("liveCouresCtrl",function($scope,$c
            
         }); 
     } 
-    $scope.editData;
+    
     $scope.EditLiveCoures=function()
-    { 
-        liveCourseSrvs.EditLiveCoures(editData)
+    {     
+          console.log($scope.editData)
+        //   $scope.apply();
+        //   $scope.editData.id=$scope.fillData.id;
+        liveCourseSrvs.EditLiveCoures($scope.editData)
      .success(function(data,status){
-=======
-
-    $scope.jquery = function(){
-        $(document).ready(function(){
-            $("#createFrm").on('submit',function(e){
-                alert("frm");
-                e.preventDefault();
-                var formData = new FormData(this);
-                console.log(formData);
-                var token = $.cookie("token");
-                $.ajax({
-                    type:'POST',
-                    datatype:"Json",
-                    url: 'http://mindhubgp-001-site1.itempurl.com/api/createlcourse',
-                    data:formData,
-                    headers: {"Authorization": "bearer "+token},
-                    cache:false,
-                    contentType: false,
-                    processData: false,
-                    success:function(){
-                        alert("DONE");
-                    },
-                    error:function(){
-                        alert("ERROR")
-                    }
-                })
-            })
-        });
-    }
-
-    $scope.jquery();
-    // $(document).ready(function(){ $("#createFrm").on('submit',function(e){ alert("frm"); e.preventDefault(); var formData = new FormData(this); console.log(formData); var token = $.cookie("token"); $.ajax({ type:'POST', datatype:"Json", url: 'http://mindhubgp-001-site1.itempurl.com/api/createlcourse', data:formData, headers: {"Authorization": "bearer "+token}, cache:false, contentType: false, processData: false, success:function(){ alert("DONE"); }, error:function(){ alert("ERROR") } }) }) });
-                //    //    upload image
-                //    $('#createFrm').on('submit',(function(e) {
-                //        e.preventDefault();
-                //        var token = $.cookie("token");
->>>>>>> 8bc1d912568afb8a977ba38df7cd187ac0a15e88
-
+            if(data.status="Success")
+            {
+                alert('done');
+            }
+            else
+            {
+                alert('error')
+            }
      }); 
     }
     

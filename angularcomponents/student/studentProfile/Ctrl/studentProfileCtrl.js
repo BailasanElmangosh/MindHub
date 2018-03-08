@@ -188,7 +188,7 @@
                    //    upload image
                    $('#imageUploadForm').on('submit',(function(e) {
                        e.preventDefault();
-                       var token = $.cookie("token");
+                       var token = $cookies.get('token');
                        var formData = new FormData(this);
                        var image;
                        $.ajax({

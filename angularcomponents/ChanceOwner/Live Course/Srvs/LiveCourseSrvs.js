@@ -42,7 +42,7 @@ angular.module('chanceOwner-app').factory("liveCourseSrvs", function ($http,$coo
                        },
                        EditLiveCoures: function (data) {
                         return $http({
-                            method: "Get",
+                            method: "Post",
                             data:data,
                             url: "http://mindhubgp-001-site1.itempurl.com/api/editlcourse",
                             headers: {
