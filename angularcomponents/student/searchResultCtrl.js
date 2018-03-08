@@ -1,4 +1,4 @@
-angular.module('student-app').controller("searchResultCtrl",function($scope,searchSrv){
+angular.module('student-app').controller("searchResultCtrl",function($scope,searchSrv,$routeParams,Person){
 
     $scope.keyresult=function(string)
     {   $scope.allResult=true;
@@ -17,6 +17,8 @@ angular.module('student-app').controller("searchResultCtrl",function($scope,sear
        
     }
     
+    
+
         
         $scope.completeResult = function(string,array){ 
             console.log($scope.resultList)
@@ -47,9 +49,9 @@ angular.module('student-app').controller("searchResultCtrl",function($scope,sear
                  window.location ="/friendProfile.html";
             })
         }  
-        searchSrv.resultSearch("a")
+        searchSrv.resultSearch($routeParams.key)
         .success(function(data, status){
             $scope.results= data.studentsResult;
-          
+            Person.setshow(false);
         });
 })

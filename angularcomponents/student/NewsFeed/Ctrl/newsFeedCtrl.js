@@ -1,6 +1,6 @@
 
     angular. module("student-app")
-    .controller("newFeedCtrl", function ($scope,$cookies,feedSrv,questionsSrv,$timeout,Person) {
+    .controller("newFeedCtrl", function ($scope,$http,$cookies,feedSrv,questionsSrv,$timeout,Person) {
       
         $scope.Feeds ={};
 
@@ -37,6 +37,25 @@
                 .error(function(){})
         };
 
+        $scope.FollowFriend = function(id)
+        {
+            $http({
+                method:"Get",
+                url:"http://mindhubgp-001-site1.itempurl.com/api/followfriend/?friendid="+id,
+                headers: 
+                {   'Content-Type': 'application/json',
+                    'Authorization':' bearer '+$cookies.get('token')
+                }
+            }).success(function(data){
+                if(data.Status =="Success"){
+                    alert("Friend Followed");
+                }
+                else{
+                    alert(data.Msg)
+                }
+            })
+        }
+
         $scope.newAnswer={};     
         $scope.addAnswer = function(key,id){
             $scope.newAnswer[key].questionId=id;  
@@ -54,14 +73,6 @@
                         })  
                         .error(function(){});   
             };
-
-            // $scope.newQuestionsSignalR = function(data){
-            //     questionsSrv.GetQuestionsByIds(data,'aa').
-            //         success(function(data){
-            //             alert();
-            //         })
-            // }
-
 
     });
 

@@ -12,7 +12,6 @@
                 $scope.editProfile=data.profile;
                 $scope.imgPath="http://mindhubgp-001-site1.itempurl.com/"+$scope.profileData.image;
                 Person.setshow(false);
-                console.log(Person.getshow()+"hello from profile");
                 Person.setImg($scope.img());
             });
          
@@ -75,12 +74,11 @@
                     birthdate:$scope.editProfile.birthDate,
                     image:$scope.editProfile.image
                  }
-                 console.log($scope.editProfile);
-                 console.log($scope.somedata);
+ 
 
                 profileEditSrv.editData($scope.somedata)
                 .success(function(data, status){
-                   console.log(data);
+             
                 });
             }
            $scope.getNewPath=function(data)
@@ -98,10 +96,9 @@
                   $scope.complete = function(string){  
                        $scope.hidethis = false;  
                        var output = [];  
-                       console.log($scope.skillList)
                       
                        angular.forEach($scope.skillList, function(skillDropDown){ 
-                           console.log(skillDropDown)
+                        
                             if(skillDropDown.name.toLowerCase().indexOf(string.toLowerCase()) >= 0)  
                             {  
                                  output.push(skillDropDown);  
@@ -139,7 +136,6 @@
                     SkillId:skillid, 
                     StudentId:studentid
                 }
-                    console.log($scope.skilladd)
 
                 profileEditSrv.addSkill($scope.skilladd)
                  .success(function(data, status){
@@ -220,7 +216,6 @@
                    
                    $("#ImageBrowse").on("change", function() {
                        var file=$(this)[0].files[0]
-                       console.log(file.size);
                        if(file.size<=5000000&&file.type=='image/jpeg'||file.type=='image/jpg'||file.type=='image/png')
                        { $("#imageUploadForm").submit();
                        $scope.sizeTrue();  
@@ -233,19 +228,19 @@
                } 
                 $scope.jquery();
               //  Add Question 
-                $scope.addQues=function()
-                {  $scope.isdisable=true;
-                    questionsSrv.Create($scope.question,$cookies.get('token'))
-                    .success(function(data, status){
-                        if(data.status="Success")
-                        { console.log(data);
-                            $scope.profileData.questions.unshift(data.question);
-                            angular.element('#textareaQues').val('');
-                             $scope.isdisable=false;
-                    
-                        }
-                    });
-                }
+              $scope.addQues=function()
+              {  $scope.isdisable=true;
+                  questionsSrv.Create($scope.question,$cookies.get('token'))
+                  .success(function(data, status){
+                      if(data.status="Success"){
+                          $scope.profileData.questions.unshift(data.question);
+                          angular.element('#textareaQues').val('');
+                           $scope.isdisable=false;
+                  
+                      }
+                  });
+              }
+
                 $scope.newAnswer={};
                 $scope.addAnswer=function(key,id)
                 {     
@@ -253,7 +248,7 @@
                     questionsSrv.CreateAnswer($scope.newAnswer[key],$cookies.get('token'))
                     .success(function(data, status){
                         if(data.status="Success")
-                        { console.log('Hii')
+                        { 
                             $scope.newAnswer[key].userImage = data.addedAnswer.userImage;
                             $scope.newAnswer[key].username = data.addedAnswer.username;
                             $scope.newAnswer[key].date = data.addedAnswer.date;
@@ -275,8 +270,7 @@
                 
                
                 var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(Day)));
-                console.log(date)
-                console.log(secondDate)
+
                 //Like & DisLike
                 $scope.checkLike=new Array();
                 $scope.dislike=0;
@@ -345,7 +339,6 @@
               profileEditSrv.skillsGet()
               .success(function(data, status){
                   $scope.List= data.skills;
-                 console.log($scope.resultList)
               });
           
 

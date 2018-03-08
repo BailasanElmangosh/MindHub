@@ -9,16 +9,19 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
            {
            templateUrl: "/angularcomponents/student/template/newsFeed.html",
            controller: 'newFeedCtrl'  
-          }).when('/Search',
+          }).when('/Search/:key',
           {
           templateUrl: "/angularcomponents/student/template/searchResult.html",
           controller: 'searchResultCtrl'  
-         }).when('/FriendProfile',
+         }).when('/FriendProfile/:studentId',
          {
          templateUrl: "/angularcomponents/student/template/friendProfie.html",
-         controller: 'searchResultCtrl'  
-        })
-          .when('/', {
+         controller: 'friendProfileCtrl'  
+        }).when('/liveCourses/',
+        {
+        templateUrl: "/angularcomponents/student/template/liveCourses.html",
+        controller:"liveCoursesCtrl"
+       }).when('/', {
             templateUrl: '/angularcomponents/student/template/newsFeed.html',
             controller: 'newFeedCtrl'
          })
@@ -98,7 +101,6 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
           {
              return Person.getshow();
           };
-          console.log($scope.show+"main")
           $scope.restartSplashScreen=function()
           { 
             if(Person.getshow()==false)
@@ -107,7 +109,6 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
               setTimeout(function(){
               Person.setshow(false);
               $scope.$apply();
-              alert(Person.getshow());
               },2000)
             }
           }

@@ -17,7 +17,7 @@ angular.module('student-app').factory("searchSrv", function ($http,$cookies) {
         { 
             return $http({
                 method: "Get",
-                url: "http://mindhubgp-001-site1.itempurl.com/api/otherstudentprofile/?id="+id,
+                url: "http://mindhubgp-001-site1.itempurl.com/api/allstudentsresult/?id="+id,
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization':' bearer '+ $cookies.get('token'),

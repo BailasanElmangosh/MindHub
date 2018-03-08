@@ -14,7 +14,7 @@
                             <div class="col-lg-3 col-md-6 col-sm-4 followInfo">
                                 <div class="row">
                                 <div class="col-12">
-                                    <a class="followName" href="" ng-bind="result.name"></a>
+                                    <a class="followName" href="#/FriendProfile/{{result.id}}" ng-bind="result.name"></a>
                                 </div>
                                 </div>
                                 <div class="row">
@@ -32,7 +32,7 @@
                                     </div>
                                     <div class=" col-md-8 col-5 ml-md-auto">
                                         <div class="delete">
-                                            <button class="btn" ng-click="unfollow(profileData.friends,person,person.id)">Unfollow</button>
+                                            <button class="btn" ng-click="follow(profileData.friends,person,person.id)">Follow</button>
                                         </div>
                                     </div>
                                 </div>
