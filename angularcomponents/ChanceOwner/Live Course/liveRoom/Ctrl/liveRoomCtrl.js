@@ -17,10 +17,27 @@ angular.module('chanceOwner-app').controller("liveRoomCtrl",function($scope,$coo
             var id=webrtc.connection.getSessionid();
             console.log(webrtc.connection.getSessionid())
             webrtc.mute();
+            $scope.saveSession($scope.roomId,id);
         });
     }
     $scope.jquery();
      $scope.roomId=$routeParams.roomId;
      alert($scope.roomId);
+     $scope.saveSession=function(sessionId,roomId)
+     {
+        liveRoomSrvs.saveSessionId(sessionId,roomId)
+        .success(function(data,status){
+           if(data.status=="Success")
+           {
+               console.log("done")
+           }
+           else
+           {
+               console.log("error")
+           }
+        });
+
+     }
+     
    
 });
