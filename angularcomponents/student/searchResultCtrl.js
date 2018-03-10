@@ -16,11 +16,7 @@ angular.module('student-app').controller("searchResultCtrl",function($scope,sear
           
        
     }
-    
-    
-
-        
-        $scope.completeResult = function(string,array){ 
+    $scope.completeResult = function(string,array){ 
             console.log($scope.resultList)
              $scope.hidetResult = false; 
              $scope.showResult = true;
@@ -37,6 +33,7 @@ angular.module('student-app').controller("searchResultCtrl",function($scope,sear
                  {   'margin-top':'40px',
                      'max-height':'200px'
                  });
+               
                  
              $scope.filterResult = output; 
              console.log($scope.filterResult );
