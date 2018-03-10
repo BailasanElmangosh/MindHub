@@ -11,7 +11,7 @@
                                             <h4 ng-bind="course.name"></h4>
                                             <p ng-bind="course.info"> </p>
                                             <p>Time : <span class="date">Thursday 10:00-11:30</span></p>
-                                        <a href="#/liveRoom" class="btn live" role="button">Go live</a>
+                                        <button class="btn live" role="button" ng-click="goLive(course.id)">Go live</button>
                                         <button class="btn" data-toggle="modal" data-target="#editeCourse" ng-click="sendId(course.id)">Edit</button>
                                         <button class="btn btn-danger" ng-click="delLiveCourse(course.id)">Delete</button>
                                         <!-- Model EditInfo -->

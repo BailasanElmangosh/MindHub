@@ -2121,10 +2121,6 @@ svg ,i {
             {
                 width:100%;
             }
-            input[type="file"]
-            {
-                display: none;
-            }
             #imgCourse
             {
                 display: block;
@@ -2213,3 +2209,69 @@ svg ,i {
     //End liveRoom
 }
 //end chanceOwner
+//start liveRoom
+.liveRoom
+{   border:2px solid #fff;
+    background-color: $grey1;
+    padding: 10px;
+    height:604px ;
+    margin-top: 60px;
+     .col-6
+    {
+        padding-left: 0px; 
+    }
+    .whiteBoard
+    {
+        background-color: #fff;
+        height:100%;
+    }
+    
+    .live
+    {
+        height:50%;
+        border:2px solid #fff;
+        margin-bottom: 5px;
+    }
+    .chat
+    { 
+        height:50%;
+        border:2px solid #fff;
+        background-color:#fff;
+        padding: 10px;
+        .block
+        { margin-bottom: 5px;
+            .image
+            { img
+                {
+                    width:50px;
+                    height:50px; 
+                }
+            }
+            p
+            { margin-bottom: 0px;
+                &.name
+                {
+                    color:#b30b0b;
+                }
+            } 
+        }
+        .send
+        { margin-top: 90px;
+            text-align: center;
+            .image
+            {
+                img
+                {
+                    width:50px;
+                    height: 50px;
+                }
+            }
+            button 
+            {
+                margin-top: 20px;
+            }
+        }
+       
+    }
+}
+//End liveRoom

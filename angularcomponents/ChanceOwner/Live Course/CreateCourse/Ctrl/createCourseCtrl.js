@@ -1,46 +1,39 @@
-angular.module('chanceOwner-app').controller("liveCouresCtrl",function($scope,$cookies,liveCourseSrvs)
-{ console.log($cookies.get('token'))
-    liveCourseSrvs.getCatagory()
+angular.module('chanceOwner-app').controller("createCouresCtrl",function($scope,$cookies,createCourseSrvs)
+{ 
+    createCourseSrvs.getCatagory()
     .success(function(data, status){
       $scope.getcategory= data.mainCategories;
     });
         
         $scope.test=function(id)
-        {$scope.data=id;
-            console.log($scope.data.id)
-            liveCourseSrvs.GetsubCategorys($scope.data.id)
+        {   $scope.data=id;
+            createCourseSrvs.GetsubCategorys($scope.data.id)
             .success(function(data, status){
                 if(data.status=="Success")
                 {
-                         alert('hii')
                    $scope.getsubCategorys= data.subCategories;
-                   console.log($scope.getsubCategorys)
                 }
                 else
                 {
-                    alert('error')
                 }
           
             });
         }
     $scope.createLiveCourse={}
     $scope.create=function()
-    {   console.log($scope.createLiveCourse)
-
-        liveCourseSrvs.createliveCourse($scope.createLiveCourse)
+    { 
+        createCourseSrvs.createliveCourse($scope.createLiveCourse)
     .success(function(data,status){
         if(data.status=="Success")
         {
-            alert('success')
+            
         }
     }); 
     }
     $(document).ready(function(){
         $("#createFrm").on('submit',function(e){
-            alert("frm");
             e.preventDefault();
             var formData = new FormData(this);
-            console.log(formData);
             var token = $.cookie("token");
             $.ajax({
                 type:'POST',
@@ -55,7 +48,8 @@ angular.module('chanceOwner-app').controller("liveCouresCtrl",function($scope,$c
                     window.location ="/chanceOwner.html#/liveCourse";
                 },
                 error:function(){
-                    alert("ERROR")
+                    
+                   
                 }
             })
         })
@@ -84,55 +78,7 @@ angular.module('chanceOwner-app').controller("liveCouresCtrl",function($scope,$c
     //     .css( 'display','none'); 
     // }
     
-    liveCourseSrvs.GetLiveCoures()
-    .success(function(data,status){
-        if(data.status=="Success")
-        {
-             $scope.getLiveCoures=data.courses;
-        }
-    });  
-    $scope.sendId=function(idC)
-    {  console.log(idC);
-       for(var i=0;i<=$scope.getLiveCoures.length;i++)
-        {   console.log($scope.getLiveCoures[i].id)
-            if(idC=$scope.getLiveCoures[i].id)
-            {
-                $scope.fillData=$scope.getLiveCoures[i];
-                console.log($scope.fillData);
-                $scope.editData=$scope.fillData;
-              $scope.apply();
-            }
 
-        } 
-    }
-    
-    $scope.getLiveCoures
-    $scope.delLiveCourse=function(id)
-    { 
-        $scope.id=id
-        liveCourseSrvs.DeleteLiveCoures($scope.id)
-        .success(function(data,status){
-           
-        }); 
-    } 
-    
-    $scope.EditLiveCoures=function()
-    {     
-          console.log($scope.editData)
-        //   $scope.apply();
-        //   $scope.editData.id=$scope.fillData.id;
-        liveCourseSrvs.EditLiveCoures($scope.editData)
-     .success(function(data,status){
-            if(data.status="Success")
-            {
-                alert('done');
-            }
-            else
-            {
-                alert('error')
-            }
-     }); 
-    }
     
    
 });

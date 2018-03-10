@@ -16,7 +16,11 @@
             *{
                 font-family: 'Kreon', serif;
                
-            }  
+            } 
+            #localVideo {
+                height:100%;
+                width: 100%
+            } 
             </style>
     </head>
     <body ng-controller="chanceOwnerCtrl" class="chanceOwner">
@@ -174,9 +178,14 @@
            <script src="/js/lib/angular/angular-messages.min.js"></script>
            <script src="/js/lib/angular/angular-route.min.js"></script>
            <script src="/js/lib/angular/angular-cookies.min.js"></script>
-           <script src="angularcomponents/ChanceOwner/chanceOwner-app.js"></script>    
-           <script src="angularcomponents/ChanceOwner/Live Course/Srvs/LiveCourseSrvs.js"></script>                             
-           <script src="angularcomponents/ChanceOwner/Live Course/Ctrl/liveCourseCtrl.js"></script>           
+           <script src="https://simplewebrtc.com/latest-v2.js"></script>
+           <script src="angularcomponents/ChanceOwner/chanceOwner-app.js"></script>   
+           <script src="angularcomponents/ChanceOwner/Live Course/CreateCourse/Srvs/createCourseSrvs.js"></script>                             
+           <script src="angularcomponents/ChanceOwner/Live Course/CreateCourse/Ctrl/createCourseCtrl.js"></script>
+           <script src="angularcomponents/ChanceOwner/Live Course/ShowCourses/Srvs/showCourseSrvs.js"></script>                                                  
+           <script src="angularcomponents/ChanceOwner/Live Course/ShowCourses/Ctrl/showCourseCtrl.js"></script>  
+           <script src="angularcomponents/ChanceOwner/Live Course/liveRoom/Srvs/liveRoomSrvs.js"></script>                                                  
+           <script src="angularcomponents/ChanceOwner/Live Course/liveRoom/Ctrl/liveRoomCtrl.js"></script>             
            <script src="angularcomponents/ChanceOwner/chanceOwnerCtrl.js"></script>
            <script src="/js/custom.js"></script> 
     </body>

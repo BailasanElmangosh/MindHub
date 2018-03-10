@@ -1,5 +1,15 @@
 <div class="container-fluid">
-        <script src="https://simplewebrtc.com/latest-v2.js"></script>
+      
+<style>
+   #remoteVideos video
+   {
+       display:none;
+   } 
+   #HF1Ab-Dv6--7S62EcfX5_video_incoming
+   {
+       display: block !important;
+   }
+</style>
 
 <div class="row liveRoom ">
 
@@ -12,8 +22,8 @@
         <div class="row">
             <div class="col-12"> 
                 <div class="live">
-                    <video id="localVideo"></video>
-                  
+                    <!-- <video id="localVideo"></video> -->
+                    <div id="remoteVideos"></div>
                 </div>
             </div>
         </div>
@@ -82,3 +92,22 @@
 
 </div>
 </div>
+
+<script>
+    
+    var webrtc = new SimpleWebRTC({
+        // the id/element dom element that will hold "our" video
+        localVideoEl: 'localVideo',
+        // the id/element dom element that will hold remote videos
+        remoteVideosEl: 'remoteVideos',
+        // immediately ask for camera access
+        autoRequestMedia: true
+    });
+    webrtc.on('readyToCall', function () {
+        // you can name it anything
+        webrtc.joinRoom('your awesome room name');
+       var id=webrtc.connection.getSessionid();
+       webrtc.mute();
+    });
+    
+    </script>

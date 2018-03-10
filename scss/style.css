@@ -1872,10 +1872,6 @@ svg, i {
   width: 100%;
 }
 
-.chanceOwner .CreateLive .line input[type="file"] {
-  display: none;
-}
-
 .chanceOwner .CreateLive .line #imgCourse {
   display: block;
   margin-left: 120px;
@@ -1949,6 +1945,67 @@ svg, i {
 }
 
 .chanceOwner .liveRoom .chat .send button {
+  margin-top: 20px;
+}
+
+.liveRoom {
+  border: 2px solid #fff;
+  background-color: #595959;
+  padding: 10px;
+  height: 604px;
+  margin-top: 60px;
+}
+
+.liveRoom .col-6 {
+  padding-left: 0px;
+}
+
+.liveRoom .whiteBoard {
+  background-color: #fff;
+  height: 100%;
+}
+
+.liveRoom .live {
+  height: 50%;
+  border: 2px solid #fff;
+  margin-bottom: 5px;
+}
+
+.liveRoom .chat {
+  height: 50%;
+  border: 2px solid #fff;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.liveRoom .chat .block {
+  margin-bottom: 5px;
+}
+
+.liveRoom .chat .block .image img {
+  width: 50px;
+  height: 50px;
+}
+
+.liveRoom .chat .block p {
+  margin-bottom: 0px;
+}
+
+.liveRoom .chat .block p.name {
+  color: #b30b0b;
+}
+
+.liveRoom .chat .send {
+  margin-top: 90px;
+  text-align: center;
+}
+
+.liveRoom .chat .send .image img {
+  width: 50px;
+  height: 50px;
+}
+
+.liveRoom .chat .send button {
   margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */
