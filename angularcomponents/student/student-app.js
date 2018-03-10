@@ -21,10 +21,10 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
         {
         templateUrl: "/angularcomponents/student/template/liveCourses.html",
         controller:"liveCoursesCtrl"
-       }).when('/liveRoom/',
+       }).when('/liveRoom/:roomId/:sessionId',
         {
         templateUrl: "/angularcomponents/student/template/liveRoom.html",
-        controller:"liveCoursesCtrl"
+        controller:"liveRoomCtrl"
        }).when('/', {
             templateUrl: '/angularcomponents/student/template/newsFeed.html',
             controller: 'newFeedCtrl'
