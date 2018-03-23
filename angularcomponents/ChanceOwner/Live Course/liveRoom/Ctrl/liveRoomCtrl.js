@@ -1,6 +1,7 @@
 
 angular.module('chanceOwner-app').controller("liveRoomCtrl",function($scope,$cookies,liveRoomSrvs,$routeParams)
-{ 
+{  $scope.textMsg
+    var room
     $scope.jquery=function()
     {
         var webrtc = new SimpleWebRTC({
@@ -22,7 +23,7 @@ angular.module('chanceOwner-app').controller("liveRoomCtrl",function($scope,$coo
     }
     $scope.jquery();
      $scope.roomId=$routeParams.roomId;
-    //  alert($scope.roomId);
+     room=$routeParams.roomId
      $scope.saveSession=function(sessionId,roomId)
      {
         liveRoomSrvs.saveSessionId(sessionId,roomId)
@@ -54,20 +55,26 @@ angular.module('chanceOwner-app').controller("liveRoomCtrl",function($scope,$coo
 
    
      var hub;
+     
      $scope.sendMessage = function(){
+         console.log($scope.textMsg)
         $(function(){
-            hub.server.sendMessageToRoom("grp", "sender", "msg msg");
-            alert("sent")
+            hub.server.sendMessageToRoom(room, "Instructor", $scope.textMsg);
+            
         });
      }
+     $scope.messages=[];
      $scope.signalRJquery=function()
      {
         $(function () {
             hub = $.connection.mainHub;
-            $.connection.hub.url = 'http://localhost:10724/signalr/hubs';
+            $.connection.hub.url = 'http://localhost:5415//signalr/hubs';
+
             hub.client.addNewMessage = function (sender,msg) {
-                console.log(sender +" : " + msg);
+                console.log( sender +" : " + msg);
+                $scope.messages.unshift(msg);
             }
+        
             $.connection.hub.start().done(function () {
                 hub.server.joinRoomGroupChat("grp");
             });
