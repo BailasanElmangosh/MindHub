@@ -1888,66 +1888,6 @@ svg, i {
   width: 150px;
 }
 
-.chanceOwner .liveRoom {
-  border: 2px solid #fff;
-  background-color: #595959;
-  padding: 10px;
-  height: 604px;
-}
-
-.chanceOwner .liveRoom .col-6 {
-  padding-left: 0px;
-}
-
-.chanceOwner .liveRoom .whiteBoard {
-  background-color: #fff;
-  height: 100%;
-}
-
-.chanceOwner .liveRoom .live {
-  height: 50%;
-  border: 2px solid #fff;
-  margin-bottom: 5px;
-}
-
-.chanceOwner .liveRoom .chat {
-  height: 50%;
-  border: 2px solid #fff;
-  background-color: #fff;
-  padding: 10px;
-}
-
-.chanceOwner .liveRoom .chat .block {
-  margin-bottom: 5px;
-}
-
-.chanceOwner .liveRoom .chat .block .image img {
-  width: 50px;
-  height: 50px;
-}
-
-.chanceOwner .liveRoom .chat .block p {
-  margin-bottom: 0px;
-}
-
-.chanceOwner .liveRoom .chat .block p.name {
-  color: #b30b0b;
-}
-
-.chanceOwner .liveRoom .chat .send {
-  margin-top: 90px;
-  text-align: center;
-}
-
-.chanceOwner .liveRoom .chat .send .image img {
-  width: 50px;
-  height: 50px;
-}
-
-.chanceOwner .liveRoom .chat .send button {
-  margin-top: 20px;
-}
-
 .liveRoom {
   border: 2px solid #fff;
   background-color: #595959;
@@ -1975,37 +1915,59 @@ svg, i {
   height: 50%;
   border: 2px solid #fff;
   background-color: #fff;
-  padding: 10px;
+  padding: 10px 10px 5px 10px;
 }
 
-.liveRoom .chat .block {
+.liveRoom .chat .showComment {
+  height: 70%;
+}
+
+.liveRoom .chat .showComment .block {
   margin-bottom: 5px;
 }
 
-.liveRoom .chat .block .image img {
-  width: 50px;
-  height: 50px;
+.liveRoom .chat .showComment .block .image img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
-.liveRoom .chat .block p {
+.liveRoom .chat .showComment .block p {
   margin-bottom: 0px;
 }
 
-.liveRoom .chat .block p.name {
+.liveRoom .chat .showComment .block p.name {
   color: #b30b0b;
 }
 
 .liveRoom .chat .send {
-  margin-top: 90px;
+  height: 30%;
   text-align: center;
+  margin-top: 5px;
+}
+
+.liveRoom .chat .send .col-lg-1 {
+  padding-right: 0px;
+}
+
+.liveRoom .chat .send .col-lg-8 {
+  padding-left: 0px;
+}
+
+.liveRoom .chat .send .title p {
+  margin-bottom: 0px;
+  font-size: 13px;
 }
 
 .liveRoom .chat .send .image img {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
-.liveRoom .chat .send button {
-  margin-top: 20px;
+.liveRoom .chat .send .textareaComment {
+  border: transparent;
+  font-size: 15px;
+  resize: none;
 }
 /*# sourceMappingURL=style.css.map */

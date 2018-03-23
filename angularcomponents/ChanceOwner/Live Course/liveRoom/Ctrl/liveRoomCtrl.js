@@ -22,7 +22,7 @@ angular.module('chanceOwner-app').controller("liveRoomCtrl",function($scope,$coo
     }
     $scope.jquery();
      $scope.roomId=$routeParams.roomId;
-     alert($scope.roomId);
+    //  alert($scope.roomId);
      $scope.saveSession=function(sessionId,roomId)
      {
         liveRoomSrvs.saveSessionId(sessionId,roomId)
@@ -39,5 +39,16 @@ angular.module('chanceOwner-app').controller("liveRoomCtrl",function($scope,$coo
 
      }
      
-   
+     angular.element('#scrollComment')
+     .css(
+         {
+             'margin': '0 auto',
+             'overflow-y':'scroll',
+             'overflow-x':'hidden',
+             'position': 'relative',
+             ' .scrollComment::-webkit-scrollbar-track': '{ " -webkit-box-shadow": "inset 0 0 6px rgba(0,0,0,0.3)","background-color": "#8ccb75"}',
+             ' .scrollComment::-webkit-scrollbar': '{ "width": "10px","background-color": "#F5F5F5"}',
+             ' .scrollComment::-webkit-scrollbar-thumb': '{ "border": " 2px solid #555555","background-color": "#555555"}'
+         }
+     );
 });

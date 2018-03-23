@@ -2142,71 +2142,71 @@ svg ,i {
         
     }
     //End CreateLive 
-    //start liveRoom
-    .liveRoom
-    {   border:2px solid #fff;
-        background-color: $grey1;
-        padding: 10px;
-        height:604px ;
-         .col-6
-        {
-            padding-left: 0px; 
-        }
-        .whiteBoard
-        {
-            background-color: #fff;
-            height:100%;
-        }
+    // //start liveRoom
+    // .liveRoom
+    // {   border:2px solid #fff;
+    //     background-color: $grey1;
+    //     padding: 10px;
+    //     height:604px ;
+    //      .col-6
+    //     {
+    //         padding-left: 0px; 
+    //     }
+    //     .whiteBoard
+    //     {
+    //         background-color: #fff;
+    //         height:100%;
+    //     }
         
-        .live
-        {
-            height:50%;
-            border:2px solid #fff;
-            margin-bottom: 5px;
-        }
-        .chat
-        { 
-            height:50%;
-            border:2px solid #fff;
-            background-color:#fff;
-            padding: 10px;
-            .block
-            { margin-bottom: 5px;
-                .image
-                { img
-                    {
-                        width:50px;
-                        height:50px; 
-                    }
-                }
-                p
-                { margin-bottom: 0px;
-                    &.name
-                    {
-                        color:#b30b0b;
-                    }
-                } 
-            }
-            .send
-            { margin-top: 90px;
-                text-align: center;
-                .image
-                {
-                    img
-                    {
-                        width:50px;
-                        height: 50px;
-                    }
-                }
-                button 
-                {
-                    margin-top: 20px;
-                }
-            }
+    //     .live
+    //     {
+    //         height:50%;
+    //         border:2px solid #fff;
+    //         margin-bottom: 5px;
+    //     }
+    //     .chat
+    //     { 
+    //         height:50%;
+    //         border:2px solid #fff;
+    //         background-color:#fff;
+    //         padding: 10px;
+    //         .block
+    //         { margin-bottom: 5px;
+    //             .image
+    //             { img
+    //                 {
+    //                     width:50px;
+    //                     height:50px; 
+    //                 }
+    //             }
+    //             p
+    //             { margin-bottom: 0px;
+    //                 &.name
+    //                 {
+    //                     color:#b30b0b;
+    //                 }
+    //             } 
+    //         }
+    //         .send
+    //         { margin-top: 90px;
+    //             text-align: center;
+    //             .image
+    //             {
+    //                 img
+    //                 {
+    //                     width:50px;
+    //                     height: 50px;
+    //                 }
+    //             }
+    //             button 
+    //             {
+    //                 margin-top: 20px;
+    //             }
+    //         }
            
-        }
-    }
-    //End liveRoom
+    //     }
+    // }
+    // //End liveRoom
 }
 //end chanceOwner
 //start liveRoom
@@ -2237,38 +2237,63 @@ svg ,i {
         height:50%;
         border:2px solid #fff;
         background-color:#fff;
-        padding: 10px;
-        .block
-        { margin-bottom: 5px;
-            .image
-            { img
+        padding: 10px 10px 5px 10px;
+        .showComment
+        { height: 70%;
+            .block
+              { margin-bottom: 5px;
+                .image
+                { img
+                    {
+                        width:30px;
+                        height:30px; 
+                        border-radius: 50%;
+                    }
+                }
+                p
+                { margin-bottom: 0px;
+                    &.name
+                    {
+                        color:#b30b0b;
+                    }
+                } 
+             }
+        }
+        
+        .send
+        {   height:30%;
+            text-align: center;
+            margin-top: 5px;
+            .col-lg-1
+            {
+              padding-right: 0px;
+            }
+            .col-lg-8
+            {
+                padding-left: 0px;
+            }
+            .title
+            {
+                p
                 {
-                    width:50px;
-                    height:50px; 
+                  margin-bottom: 0px; 
+                  font-size: 13px;                   
                 }
             }
-            p
-            { margin-bottom: 0px;
-                &.name
-                {
-                    color:#b30b0b;
-                }
-            } 
-        }
-        .send
-        { margin-top: 90px;
-            text-align: center;
             .image
             {
                 img
                 {
-                    width:50px;
-                    height: 50px;
+                    width:30px;
+                    height: 30px;
+                    border-radius: 50%;   
                 }
             }
-            button 
+            .textareaComment
             {
-                margin-top: 20px;
+                border:transparent;
+                font-size: 15px;
+                resize: none;
             }
         }
        
