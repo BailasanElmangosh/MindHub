@@ -66,6 +66,6 @@ angular.module('chanceOwner-app').controller("showCouresCtrl",function($scope,$c
             }
         });
     }
-    alert($routeParams.roomId)
+  
    
 });
