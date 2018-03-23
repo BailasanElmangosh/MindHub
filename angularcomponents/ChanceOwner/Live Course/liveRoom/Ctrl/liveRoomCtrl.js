@@ -51,26 +51,29 @@ angular.module('chanceOwner-app').controller("liveRoomCtrl",function($scope,$coo
              ' .scrollComment::-webkit-scrollbar-thumb': '{ "border": " 2px solid #555555","background-color": "#555555"}'
          }
      );
+
+   
+     var hub;
+     $scope.sendMessage = function(){
+        $(function(){
+            hub.server.sendMessageToRoom("grp", "sender", "msg msg");
+            alert("sent")
+        });
+     }
      $scope.signalRJquery=function()
      {
-        var hub;
         $(function () {
             hub = $.connection.mainHub;
-            $.connection.hub.url = 'http://localhost:9974/signalr/hubs';
+            $.connection.hub.url = 'http://localhost:10724/signalr/hubs';
             hub.client.addNewMessage = function (sender,msg) {
                 console.log(sender +" : " + msg);
             }
             $.connection.hub.start().done(function () {
                 hub.server.joinRoomGroupChat("grp");
-               
             });
         });
    
-        var onSendToGroup = function () {
-            
-            hub.server.sendMessageToRoom("grp", "sender", "msg msg");
-            alert("sent")
-        }
+
      }
     $scope.signalRJquery();
 });
