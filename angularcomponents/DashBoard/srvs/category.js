@@ -3,7 +3,7 @@ dashBoard.factory("categorysSrv", function ($http) {
         categorysPost: function (category) {
             return $http({
                 method: "Post",
-                url: "http://mindhubgp-001-site1.itempurl.com/api/createmaincategory",
+                url: "http://mindhubgp1-001-site1.gtempurl.com/api/createmaincategory",
                 data: category,
                 headers: {
                     'Content-Type': 'application/json'
@@ -15,7 +15,7 @@ dashBoard.factory("categorysSrv", function ($http) {
         categorysGet: function () {
             return $http({
                 method: "Get",
-                url: "http://mindhubgp-001-site1.itempurl.com/api/allmaincategories",
+                url: "http://mindhubgp1-001-site1.gtempurl.com/api/allmaincategories",
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -24,7 +24,7 @@ dashBoard.factory("categorysSrv", function ($http) {
         deleteCategory: function (id) {
             return $http({
                 method: "Get",
-                url: "http://mindhubgp-001-site1.itempurl.com/api/deletemaincategories/?id="+id,
+                url: "http://mindhubgp1-001-site1.gtempurl.com/api/deletemaincategories/?id="+id,
                 headers: {
                     'Content-Type': 'application/json'
                 }

@@ -3,13 +3,13 @@ angular.module("student-app")
 
     $scope.GetProfile = function(){
         $http({
-            url:"http://mindhubgp-001-site1.itempurl.com/api/otherstudentprofile/?id="+$routeParams.studentId,
+            url:"http://mindhubgp1-001-site1.gtempurl.com/api/otherstudentprofile/?id="+$routeParams.studentId,
             method:"Get"
         }).success(function(data){
             if(data.status == "Success")
             {
                 $scope.profileData =  data.studentProfile;
-                $scope.imgPath="http://mindhubgp-001-site1.itempurl.com/"+$scope.profileData.image
+                $scope.imgPath="http://mindhubgp1-001-site1.gtempurl.com/"+$scope.profileData.image
                 Person.setshow(false);
                 console.log($scope.profileData )
                 $scope.img();
@@ -24,7 +24,7 @@ angular.module("student-app")
         {
             if($scope.profileData.image==null)
             {
-                return"http://mindhubgp-001-site1.itempurl.com/defaults/female.jpg"
+                return"http://mindhubgp1-001-site1.gtempurl.com/defaults/female.jpg"
             }
             return $scope.imgPath
         }
@@ -32,7 +32,7 @@ angular.module("student-app")
         {
             if($scope.profileData.image==null)
             {
-                return"http://mindhubgp-001-site1.itempurl.com/defaults/male.png"
+                return"http://mindhubgp1-001-site1.gtempurl.com/defaults/male.png"
             }
             return $scope.imgPath
         }

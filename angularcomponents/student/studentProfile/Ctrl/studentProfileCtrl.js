@@ -10,7 +10,7 @@
             .success(function (data, status) {
                 $scope.profileData=data.profile;
                 $scope.editProfile=data.profile;
-                $scope.imgPath="http://mindhubgp-001-site1.itempurl.com/"+$scope.profileData.image;
+                $scope.imgPath="http://mindhubgp1-001-site1.gtempurl.com/"+$scope.profileData.image;
                 Person.setshow(false);
                 Person.setImg($scope.img());
             });
@@ -21,7 +21,7 @@
                 {
                     if($scope.profileData.image==null)
                     {
-                        return"http://mindhubgp-001-site1.itempurl.com/defaults/female.jpg"
+                        return"http://mindhubgp1-001-site1.gtempurl.com/defaults/female.jpg"
                     }
                     return $scope.imgPath
                 }
@@ -29,7 +29,7 @@
                 {
                     if($scope.profileData.image==null)
                     {
-                        return"http://mindhubgp-001-site1.itempurl.com/defaults/male.png"
+                        return"http://mindhubgp1-001-site1.gtempurl.com/defaults/male.png"
                     }
                     return $scope.imgPath
                 }
@@ -83,7 +83,7 @@
             }
            $scope.getNewPath=function(data)
            {
-            $scope.imgPath="http://mindhubgp-001-site1.itempurl.com/"+data;
+            $scope.imgPath="http://mindhubgp1-001-site1.gtempurl.com/"+data;
             $scope.$apply();
            }
             //Skills
@@ -193,7 +193,7 @@
                        var image;
                        $.ajax({
                            type:'POST',
-                           url: 'http://mindhubgp-001-site1.itempurl.com/api/uploadstudentimage',
+                           url: 'http://mindhubgp1-001-site1.gtempurl.com/api/uploadstudentimage',
                            data:formData,
                            headers: {"Authorization": "bearer "+token},
                            cache:false,
