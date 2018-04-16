@@ -72,11 +72,15 @@ angular.module('chanceOwner-app').controller("liveRoomCtrl",function($scope,$coo
 
             hub.client.addNewMessage = function (sender,msg) {
                 console.log( sender +" : " + msg);
-                $scope.messages.unshift(msg);
+                $scope.msg = {
+                    name:sender,
+                    msg :msg
+                };
+                $scope.messages.unshift($scope.msg);
             }
         
             $.connection.hub.start().done(function () {
-                hub.server.joinRoomGroupChat("grp");
+                hub.server.joinRoomGroupChat(room);
             });
         });
    

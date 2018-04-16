@@ -25,7 +25,12 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']
         {
         templateUrl: "/angularcomponents/student/template/liveRoom.html",
         controller:"liveRoomCtrl"
-       }).when('/', {
+       }).when('/ExamList',
+       {
+       templateUrl: "/angularcomponents/student/template/examList.html",
+       controller:"examListCtrl"
+      })
+      .when('/', {
             templateUrl: '/angularcomponents/student/template/newsFeed.html',
             controller: 'newFeedCtrl'
          })

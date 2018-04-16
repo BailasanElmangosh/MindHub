@@ -4,7 +4,7 @@ angular.module('chanceOwner-app').factory("liveRoomSrvs", function ($http,$cooki
         saveSessionId: function (roomId,sessionId) {
             return $http({
                 method: "Get",
-                url: "http://mindhubgp-001-site1.itempurl.com/api/saveroomsession/?roomId="+roomId+"&sessionId="+sessionId,
+                url: "http://mindhubgp1-001-site1.gtempurl.com/api/saveroomsession/?roomId="+roomId+"&sessionId="+sessionId,
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization':' bearer '+ $cookies.get('token')

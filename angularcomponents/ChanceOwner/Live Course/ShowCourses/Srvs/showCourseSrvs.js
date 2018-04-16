@@ -3,7 +3,7 @@ angular.module('chanceOwner-app').factory("showCourseSrvs", function ($http,$coo
                GetLiveCoures: function () {
                 return $http({
                     method: "Get",
-                    url: "http://mindhubgp-001-site1.itempurl.com/api/getmylcourses",
+                    url: "http://mindhubgp1-001-site1.gtempurl.com/api/getmylcourses",
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization':' bearer '+ $cookies.get('token')
@@ -13,7 +13,7 @@ angular.module('chanceOwner-app').factory("showCourseSrvs", function ($http,$coo
                    DeleteLiveCoures: function (id) {
                     return $http({
                         method: "Get",
-                        url: "http://mindhubgp-001-site1.itempurl.com/api/removelcource/?id="+id,
+                        url: "http://mindhubgp1-001-site1.gtempurl.com/api/removelcource/?id="+id,
                         headers: {
                             'Content-Type': 'application/json',
                             'Authorization':' bearer '+ $cookies.get('token')
@@ -24,7 +24,7 @@ angular.module('chanceOwner-app').factory("showCourseSrvs", function ($http,$coo
                         return $http({
                             method: "Post",
                             data:data,
-                            url: "http://mindhubgp-001-site1.itempurl.com/api/editlcourse",
+                            url: "http://mindhubgp1-001-site1.gtempurl.com/api/editlcourse",
                             headers: {
                                 'Content-Type': 'application/json',
                                 'Authorization':' bearer '+ $cookies.get('token')
@@ -34,7 +34,7 @@ angular.module('chanceOwner-app').factory("showCourseSrvs", function ($http,$coo
                            golive: function (id) {
                             return $http({
                                 method: "Get",
-                                url: "http://mindhubgp-001-site1.itempurl.com/api/goliveroom/?id="+id,
+                                url: "http://mindhubgp1-001-site1.gtempurl.com/api/goliveroom/?id="+id,
                                 headers: {
                                     'Content-Type': 'application/json',
                                     'Authorization':' bearer '+ $cookies.get('token')

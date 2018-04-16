@@ -38,7 +38,7 @@ angular.module('chanceOwner-app').controller("createCouresCtrl",function($scope,
             $.ajax({
                 type:'POST',
                 datatype:"Json",
-                url: 'http://mindhubgp-001-site1.itempurl.com/api/createlcourse',
+                url: 'http://mindhubgp1-001-site1.gtempurl.com/api/createlcourse',
                 data:formData,
                 headers: {"Authorization": "bearer "+token},
                 cache:false,

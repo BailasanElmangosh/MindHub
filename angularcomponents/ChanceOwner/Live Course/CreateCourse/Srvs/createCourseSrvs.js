@@ -4,7 +4,7 @@ angular.module('chanceOwner-app').factory("createCourseSrvs", function ($http,$c
         {
             return $http({
                 method: "Get",
-                url: "http://mindhubgp-001-site1.itempurl.com/api/allmaincategories",
+                url: "http://mindhubgp1-001-site1.gtempurl.com/api/allmaincategories",
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -14,7 +14,7 @@ angular.module('chanceOwner-app').factory("createCourseSrvs", function ($http,$c
         GetsubCategorys: function (id) {
             return $http({
                 method: "Get",
-                url: "http://mindhubgp-001-site1.itempurl.com//api/subcatsofcat/?id="+id,
+                url: "http://mindhubgp1-001-site1.gtempurl.com//api/subcatsofcat/?id="+id,
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -23,7 +23,7 @@ angular.module('chanceOwner-app').factory("createCourseSrvs", function ($http,$c
                GetLiveCoures: function () {
                 return $http({
                     method: "Get",
-                    url: "http://mindhubgp-001-site1.itempurl.com/api/getmylcourses",
+                    url: "http://mindhubgp1-001-site1.gtempurl.com/api/getmylcourses",
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization':' bearer '+ $cookies.get('token')

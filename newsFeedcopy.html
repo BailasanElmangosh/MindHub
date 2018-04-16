@@ -169,8 +169,8 @@
                                     <div class="card">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                    <img class="profimg"ng-if="studentData.gender=='Female'" ng-src="http://mindhubgp-001-site1.itempurl.com//{{studentData.image||'images/default.png' }}">   
-                                                    <img class="profimg" ng-if="studentData.gender=='Male'" ng-src="http://mindhubgp-001-site1.itempurl.com//{{studentData.image||'images/default.png' }}">
+                                                    <img class="profimg"ng-if="studentData.gender=='Female'" ng-src="http://mindhubgp1-001-site1.gtempurl.com//{{studentData.image||'images/default.png' }}">   
+                                                    <img class="profimg" ng-if="studentData.gender=='Male'" ng-src="http://mindhubgp1-001-site1.gtempurl.com//{{studentData.image||'images/default.png' }}">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -232,9 +232,9 @@
                                                                                 <div class="row">
                                                                                     <div class="col-md-1">
                                                                                             <div class="image">
-                                                                                                    <img ng-if="post.gender=='Female'" ng-src="http://mindhubgp-001-site1.itempurl.com//{{post.image||'images/default.png' }}">   
-                                                                                                    <img ng-if="post.gender=='Male'" ng-src="http://mindhubgp-001-site1.itempurl.com//{{post.image||'images/default.png' }}">
-                                                                                                    <!-- <img ng-if="post.image != null" ng-src='http://mindhubgp-001-site1.itempurl.com//{{post.image}}'/>                                                                              -->
+                                                                                                    <img ng-if="post.gender=='Female'" ng-src="http://mindhubgp1-001-site1.gtempurl.com//{{post.image||'images/default.png' }}">   
+                                                                                                    <img ng-if="post.gender=='Male'" ng-src="http://mindhubgp1-001-site1.gtempurl.com//{{post.image||'images/default.png' }}">
+                                                                                                    <!-- <img ng-if="post.image != null" ng-src='http://mindhubgp1-001-site1.gtempurl.com//{{post.image}}'/>                                                                              -->
                                                                                             </div>
                                                                                     </div>
                                                                                     <div class="col-md-11">
@@ -273,9 +273,9 @@
                                                                                                     <div class="row">
                                                                                                         <div class="col-md-1">
                                                                                                             <div class="image">
-                                                                                                                    <img ng-if="comment.gender=='Female'" ng-src="http://mindhubgp-001-site1.itempurl.com//{{comment.userImage||'images/default.png' }}">   
-                                                                                                                    <img ng-if="comment.gender=='Male'" ng-src="http://mindhubgp-001-site1.itempurl.com//{{comment.userImage||'images/default.png' }}">
-                                                                                                                    <!-- <img ng-if="comment.userImage != null" ng-src='http://mindhubgp-001-site1.itempurl.com//{{comment.userImage}}'/>  -->
+                                                                                                                    <img ng-if="comment.gender=='Female'" ng-src="http://mindhubgp1-001-site1.gtempurl.com//{{comment.userImage||'images/default.png' }}">   
+                                                                                                                    <img ng-if="comment.gender=='Male'" ng-src="http://mindhubgp1-001-site1.gtempurl.com//{{comment.userImage||'images/default.png' }}">
+                                                                                                                    <!-- <img ng-if="comment.userImage != null" ng-src='http://mindhubgp1-001-site1.gtempurl.com//{{comment.userImage}}'/>  -->
                                                                                                                 </div>
                                                                                                         </div>
                                                                                                         <div class="col-md-11">
@@ -386,7 +386,7 @@
                 var token = $.cookie("token");
          var data = new FormData(this);
          $.ajax({
-             url: "http://mindhubgp-001-site1.itempurl.com//api/uploadstudentimage",
+             url: "http://mindhubgp1-001-site1.gtempurl.com//api/uploadstudentimage",
              type: "Post",
              datatype: "Json",
              data: data,

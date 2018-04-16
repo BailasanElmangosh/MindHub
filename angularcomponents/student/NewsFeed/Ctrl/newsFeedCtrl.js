@@ -6,7 +6,7 @@
 
         // $scope.imgPath = function(path)
         // {
-        //     $scope.img = "http://mindhubgp-001-site1.itempurl.com/"+path;
+        //     $scope.img = "http://mindhubgp1-001-site1.gtempurl.com/"+path;
         //     $scope.$apply();
         // }
 
@@ -20,7 +20,7 @@
                 $scope.suggestedStudents = data.suggestedStudents;
                 Person.setshow(false);
 
-                Person.setImg("http://mindhubgp-001-site1.itempurl.com/"+$scope.studentData.image);
+                Person.setImg("http://mindhubgp1-001-site1.gtempurl.com/"+$scope.studentData.image);
             }
         })
         .error(function(){
@@ -41,7 +41,7 @@
         {
             $http({
                 method:"Get",
-                url:"http://mindhubgp-001-site1.itempurl.com/api/followfriend/?friendid="+id,
+                url:"http://mindhubgp1-001-site1.gtempurl.com/api/followfriend/?friendid="+id,
                 headers: 
                 {   'Content-Type': 'application/json',
                     'Authorization':' bearer '+$cookies.get('token')

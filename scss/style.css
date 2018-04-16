@@ -1970,4 +1970,137 @@ svg, i {
   font-size: 15px;
   resize: none;
 }
+
+.quiz {
+  /* Create Quiz Styles */
+}
+
+.quiz h1 {
+  color: #740808;
+  font-weight: normal;
+}
+
+.quiz h2 {
+  font-weight: normal;
+}
+
+.quiz hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  background: none;
+  margin-bottom: 2px;
+}
+
+.quiz .header-right {
+  padding-top: 12px;
+  text-align: right;
+}
+
+.quiz .center {
+  text-align: center;
+}
+
+.quiz .right {
+  text-align: right;
+}
+
+.quiz .question {
+  background-color: #eee;
+  color: #151569;
+  min-height: 300px;
+  text-align: center;
+}
+
+.quiz .option {
+  background-color: #cadaee;
+  font-size: 20px;
+  padding: 10px;
+  margin: 3px;
+}
+
+.quiz .option label {
+  font-weight: normal;
+}
+
+.quiz #quiz .options input[type=checkbox] {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  height: 22px;
+  width: 22px;
+}
+
+.quiz .quizNav {
+  margin: auto;
+  text-align: center;
+}
+
+.quiz .quizNav ul {
+  margin: 0;
+}
+
+.quiz .quizNav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.quiz .review {
+  text-align: center;
+}
+
+.quiz .review div {
+  cursor: pointer;
+}
+
+.quiz .answered {
+  background-color: #ccffcc;
+  border: 1px solid #aaeeaa;
+  margin: 2px 0;
+  padding: 12px;
+}
+
+.quiz .not-answered {
+  background-color: #ffcccc;
+  border: 1px solid #eeaaaa;
+  margin: 2px 0;
+  padding: 12px;
+}
+
+.quiz .result-question {
+  background-color: #eee;
+  margin: 4px;
+  padding: 6px;
+}
+
+.quiz .create-quiz .question {
+  text-align: left;
+}
+
+.quiz .create-quiz input[type=text] {
+  border: 1px solid #ddd;
+  width: 95%;
+}
+
+.quiz .create-quiz .tb-quiz-name {
+  background-color: #ccffcc;
+  text-align: center;
+}
+
+.quiz .create-quiz .tb-desc {
+  background-color: #fff;
+}
+
+.quiz .create-quiz .options div {
+  margin-left: 20px;
+}
+
+.quiz .create-quiz .options input[type=checkbox] {
+  border: 1px solid #262626;
+  display: inline-block;
+  height: 20px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 0;
+  width: 20px;
+  -webkit-appearance: checkbox;
+}
 /*# sourceMappingURL=style.css.map */
