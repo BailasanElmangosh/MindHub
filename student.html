@@ -1,17 +1,17 @@
-<html ng-app="student-app">
+﻿<html ng-app="student-app">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>profile</title>
         <link href="https://fonts.googleapis.com/css?family=Kreon" rel="stylesheet">
-        <link rel="icon" type="image/png" href=" /images/lamp90x90.png" />
+        <link rel="icon" type="image/png" href="/images/lamp90x90.png" />
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
-        <link href=" /scss/bootstrap.min.css" rel="stylesheet" />
-        <link href=" /scss/font-awesome.min.css" rel="stylesheet" />
-        <link href=" /scss/lightbox.css" rel="stylesheet" />        
-        <link href=" /scss/style.css" rel="stylesheet" />
-        <link href=" /scss/media.css" rel="stylesheet" />
+        <link href="/scss/bootstrap.min.css" rel="stylesheet" />
+        <link href="/scss/font-awesome.min.css" rel="stylesheet" />
+        <link href="/scss/lightbox.css" rel="stylesheet" />        
+        <link href="/scss/style.css" rel="stylesheet" />
+        <link href="/scss/media.css" rel="stylesheet" />
         <style>
             *{
                 font-family: 'Kreon', serif;
@@ -166,7 +166,7 @@
                         <ul class="list-group " id="listResult" ng-show="showResult" >  
                            <div class="dropdownSkill" id="dropdownResult">  
                                 <li class="list-group-item" ng-repeat="resultdata in filterResult" ng-click="showFriend(resultdata.id)" >
-                                    <img  class="imgSearch ng-cloak" ng-src="http://mindhubgp-001-site1.itempurl.com/{{resultdata.image}}">
+                                    <img  class="imgSearch ng-cloak" ng-src="http://mindhubgp1-001-site1.gtempurl.com/{{resultdata.image}}">
                                     <span ng-bind="resultdata.name"></span>
                                 </li>
                                 <li class="list-group-item" ng-show="allResult"><a href="#/Search/{{key}}">See all result </a></li>
@@ -237,7 +237,7 @@
                       Exam</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#liveRoom/"><img  style="    width: 15px;"src=" /images/exam.svg"> Exams</a>
+                    <a class="nav-link" href="#/ExamList"><img  style="    width: 15px;"src=" /images/exam.svg"> Exams</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link notifcation" href="#" ><i class="fa fa-bell-o" aria-hidden="true"></i></a>
@@ -307,6 +307,9 @@
        <script src="/js/lib/angular/angular-messages.min.js"></script>
        <script src="/js/lib/angular/angular-route.min.js"></script>
        <script src="/js/lib/angular/angular-cookies.min.js"></script>
+       <script src="/js/lib/angular/angular-sanitize.min.js"></script>
+       
+       
        <script src="https://simplewebrtc.com/latest-v2.js"></script>
        <script src="\angularcomponents\student\student-app.js"></script>
        <script src="/angularcomponents/student/searchResult.js"></script>
@@ -320,6 +323,8 @@
        <script src="/angularcomponents/student/FriendProfile/Controllers/friendProfileCtrl.js"></script>
        <script src="/angularcomponents\student\LiveCourses\Controllers\liveCoursesCtrl.js"></script>
        <script src="/angularcomponents\student\LiveCourses\Controllers\liveRoomCtrl.js"></script>
+       <script src="/angularcomponents\student\Exam\Srvs\examListSrvs.js"></script>
+       <script src="/angularcomponents\student\Exam\Ctrl\examListCtrl.js"></script>       
        <script src="/js/lib/lightbox.js"></script>
        <script src="/js/custom.js"></script> 
    </body>

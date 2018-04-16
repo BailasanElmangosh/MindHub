@@ -1,6 +1,6 @@
 
 angular.module('chanceOwner-app').controller("liveRoomCtrl",function($scope,$cookies,liveRoomSrvs,$routeParams)
-{  $scope.textMsg
+{  
     var room
     $scope.jquery=function()
     {
@@ -19,6 +19,8 @@ angular.module('chanceOwner-app').controller("liveRoomCtrl",function($scope,$coo
             console.log(webrtc.connection.getSessionid())
             webrtc.mute();
             $scope.saveSession($scope.roomId,id);
+
+            
         });
     }
     $scope.jquery();
@@ -31,6 +33,7 @@ angular.module('chanceOwner-app').controller("liveRoomCtrl",function($scope,$coo
            if(data.status=="Success")
            {
                console.log("done")
+               $scope.signalRJquery();
            }
            else
            {
@@ -55,12 +58,11 @@ angular.module('chanceOwner-app').controller("liveRoomCtrl",function($scope,$coo
 
    
      var hub;
-     
      $scope.sendMessage = function(){
-         console.log($scope.textMsg)
         $(function(){
-            hub.server.sendMessageToRoom(room, "Instructor", $scope.textMsg);
             
+            hub.server.sendMessageToRoom(room, "Instructor",$scope.textMsg);
+            $scope.textMsg=""
         });
      }
      $scope.messages=[];
@@ -68,23 +70,33 @@ angular.module('chanceOwner-app').controller("liveRoomCtrl",function($scope,$coo
      {
         $(function () {
             hub = $.connection.mainHub;
-            $.connection.hub.url = 'http://localhost:5415//signalr/hubs';
-
+            $.connection.hub.url = 'http://localhost:10724/signalr/hubs';
+           
             hub.client.addNewMessage = function (sender,msg) {
+<<<<<<< HEAD
                 console.log( sender +" : " + msg);
                 $scope.msg = {
                     name:sender,
                     msg :msg
                 };
                 $scope.messages.unshift($scope.msg);
+=======
+                $scope.newMsg={
+                    msg:msg,
+                    sender:sender
+                }
+                $scope.messages.push($scope.newMsg);
+               console.log($scope.messages);  
+               $scope.$apply();  
+>>>>>>> 4784e01406ca410e6b69ff850e6472f72382391b
             }
-        
+            
             $.connection.hub.start().done(function () {
                 hub.server.joinRoomGroupChat(room);
             });
-        });
-   
 
+
+        });
      }
-    $scope.signalRJquery();
+
 });

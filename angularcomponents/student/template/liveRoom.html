@@ -1,18 +1,23 @@
 <div class="container-fluid">
-      
+        <script src="https://simplewebrtc.com/latest-v2.js"></script>
+        <script src="../../../js/SignalR/jquery-1.6.4.min.js"></script>
+        <script src="../../../js/SignalR/jquery.signalR-2.2.2.min.js"></script>
+        <script src="http://localhost:10724/signalr/hubs"></script>       
 <style>
    #remoteVideos video
    {
        display:none;
+       width:100%;
+        height: 100%;
    } 
    #remoteVideos video:first-child
    {
        display:block;
    }
-   /* #en6ZM8C22ak44OSecrfs_video_incoming
+   #remoteVideos
    {
-       display: block !important;
-   } */
+      
+   }
 </style>
 
 <div class="row liveRoom ">
@@ -34,7 +39,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="chat justify-content-center">
-                        <div class="row block">
+                    <div class="showComment" id="scrollComment">
+                        <div class="row block" ng-repeat="msg in messages">
                             <div class="col-lg-1 col-md-3">
                                 <div class="image">
                                     <img class="profileImg" ng-src="../../../images/defaultfemale.jpg"> 
@@ -44,30 +50,15 @@
                                 <div>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <p class="name" >Bailasan</p>
-                                            <p class="msg" >hiiiiiiii</p>
+                                            <p class="name" ng-bind="msg.sender"></p>
+                                            <p class="msg" ng-bind="msg.msg"></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row block">
-                            <div class="col-lg-1 col-md-3">
-                                <div class="image">
-                                    <img class="profileImg" ng-src="../../../images/defaultfemale.jpg"> 
-                                </div>
-                            </div>
-                            <div class="col-lg-10 col-md-9">
-                                <div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <p class="name" >Bailasan</p>
-                                            <p class="msg" >hiiiiiiii</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </div> 
+                    </div>
+                    
                         <div class="send" >
                             <div class="row ">
                                 <div class="col-lg-1 col-md-3">
@@ -76,16 +67,24 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-8 col-md-9">
-                                    <div class="boxQus">
                                         <div class="row">
-                                            <div class="col-md-8">
-                                                <textarea class="textareaComment form-control" rows="3" cols="50" placeholder="Add Your Answer here ...."></textarea> 
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="col-md-5 title">
+                                                            <p>Type Your Message Here</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-8">
+                                                            <from >
+                                                                <input type="text" ng-model="textMsg"  class="textareaComment form-control" placeholder="Add Your Answer here ...."
+                                                                ng-keypress="($event.charCode==13)? sendMessage(): return"
+                                                                >
+                                                            </from>  
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-md-2">
-                                                <button class="btn" >Send</button>
-                                            </div>
-                                        </div>
-                                    </div>
                             </div>       
                             </div>  
                         </div>

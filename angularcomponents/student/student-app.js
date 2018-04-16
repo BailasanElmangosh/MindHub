@@ -1,4 +1,4 @@
-var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies']);
+var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies','ngSanitize']);
     student.config(function ($routeProvider, $locationProvider) {
 
         $routeProvider.when('/profile',

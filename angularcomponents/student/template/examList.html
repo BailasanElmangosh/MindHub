@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <div class="quiz">
 
+=======
+<div class="quiz container">
+>>>>>>> 4784e01406ca410e6b69ff850e6472f72382391b
     <div class="header">
         <div class="row">
             <div class="col-md-8">
@@ -9,18 +13,28 @@
                 <!-- In actual application, you may wish to load the quiz List using angular service. -->
                 Select Quiz: 
                 <select id="quizList" ng-model="quizName" ng-change="loadQuiz(quizName)">
+<<<<<<< HEAD
                     <option value="data/aspnet.js">Asp.Net</option>
                     <option value="data/csharp.js">C Sharp</option>
                     <option value="data/designPatterns.js">Design Patterns</option>
+=======
+                    <option value="/angularcomponents/student/Exam/data/aspnet.js">Asp.Net</option>
+                    <option value="/angularcomponents/student/Exam/data/csharp.js">C Sharp</option>
+                    <option value="/angularcomponents/student/Exam/data/designPatterns.js">Design Patterns</option>
+>>>>>>> 4784e01406ca410e6b69ff850e6472f72382391b
                 </select>
             </div>
         </div>
         <hr />
     </div>
+<<<<<<< HEAD
     <div id="quiz">
         <div class="row">
             <div class="col-md-12"><h1 class="center">{{quiz.name}}</h1><hr /></div>
         </div>
+=======
+    <div id="quiz"> 
+>>>>>>> 4784e01406ca410e6b69ff850e6472f72382391b
         
         <div ng-show="mode=='quiz'">
             <div ng-repeat="question in filteredQuestions">
