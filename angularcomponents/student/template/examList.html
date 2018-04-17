@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<div class="quiz">
-
-=======
 <div class="quiz container">
->>>>>>> 4784e01406ca410e6b69ff850e6472f72382391b
     <div class="header">
         <div class="row">
             <div class="col-md-8">
@@ -13,43 +8,31 @@
                 <!-- In actual application, you may wish to load the quiz List using angular service. -->
                 Select Quiz: 
                 <select id="quizList" ng-model="quizName" ng-change="loadQuiz(quizName)">
-<<<<<<< HEAD
-                    <option value="data/aspnet.js">Asp.Net</option>
-                    <option value="data/csharp.js">C Sharp</option>
-                    <option value="data/designPatterns.js">Design Patterns</option>
-=======
                     <option value="/angularcomponents/student/Exam/data/aspnet.js">Asp.Net</option>
                     <option value="/angularcomponents/student/Exam/data/csharp.js">C Sharp</option>
                     <option value="/angularcomponents/student/Exam/data/designPatterns.js">Design Patterns</option>
->>>>>>> 4784e01406ca410e6b69ff850e6472f72382391b
                 </select>
             </div>
         </div>
         <hr />
     </div>
-<<<<<<< HEAD
-    <div id="quiz">
-        <div class="row">
-            <div class="col-md-12"><h1 class="center">{{quiz.name}}</h1><hr /></div>
-        </div>
-=======
+    <button ng-click="loadQuiz()">hi</button>
     <div id="quiz"> 
->>>>>>> 4784e01406ca410e6b69ff850e6472f72382391b
         
         <div ng-show="mode=='quiz'">
             <div ng-repeat="question in filteredQuestions">
                 <div class="label label-warning">Question {{currentPage}} of {{totalItems}}.</div>
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>{{currentPage}}. <span ng-bind-html="question.Name"></span></h2>
+                        <h2>{{currentPage}}. <span ng-bind-html="question.name"></span></h2>
                     </div>
                 </div>
                 <div class="row text-left options">
-                    <div class="col-md-6" ng-repeat="option in question.Options">
+                    <div class="col-md-6" ng-repeat="option in question.options">
                         <div class="option">
                             <label class="" for="{{option.Id}}">
                                 <input id="{{option.Id}}" type="checkbox" ng-model="option.Selected" ng-change="onSelect(question, option);" />
-                                {{option.Name}}
+                                {{option.name}}
                             </label>
                         </div>
                     </div>
@@ -76,12 +59,12 @@
             <h2>Quiz Result</h2>
             <div ng-repeat="question in questions">
                 <div class="result-question">
-                    <h4>{{$index + 1}}. {{question.Name}}</h4>
+                    <h4>{{$index + 1}}. {{question.name}}</h4>
                     <div class="row">
-                        <div class="col-md-6" ng-repeat="Option in question.Options">
+                        <div class="col-md-6" ng-repeat="Option in question.options">
                             <div>
-                                <input id="{{Option.Id}}" type="checkbox" disabled="disabled" ng-model="Option.Selected" />
-                                {{Option.Name}}
+                                <input id="{{Option.id}}" type="checkbox" disabled="disabled" ng-model="Option.Selected" />
+                                {{Option.name}}
                             </div>
                         </div>
                     </div>

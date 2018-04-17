@@ -40,3 +40,17 @@ angular.module("student-app").service('helperService', function () {
         return out;
     };
 });
+angular.module('student-app').factory("examListSrv", function ($http,$cookies) {
+    return {
+           getData: function () {
+            return $http({
+                method: "Get",
+                url: "http://mindhubgp1-001-site1.gtempurl.com/api/getstudentexam/?id=1",
+                headers: 
+                {   'Content-Type': 'application/json',
+                    'Authorization':' bearer '+ $cookies.get('token')
+                }
+            })
+        }
+    }
+})

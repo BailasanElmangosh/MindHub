@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-angular.module("student-app")
-.controller("examListCtrl",function($scope){
 
-
-
-});
-=======
-
-var quizCtrl = function ($scope, $http, helper) {
+var quizCtrl = function ($scope, $http, helper,examListSrv,$timeout) {
     $scope.quizName = '/angularcomponents/student/Exam/data/csharp.js';
 
     //Note: Only those configs are functional which is documented at: http://www.codeproject.com/Articles/860024/Quiz-Application-in-AngularJs
@@ -36,7 +28,7 @@ var quizCtrl = function ($scope, $http, helper) {
 
     $scope.onSelect = function (question, option) {
         if (question.QuestionTypeId == 1) {
-            question.Options.forEach(function (element, index, array) {
+            question.options.forEach(function (element, index, array) {
                 if (element.Id != option.Id) {
                     element.Selected = false;
                     //question.Answered = element.Id;
@@ -51,13 +43,13 @@ var quizCtrl = function ($scope, $http, helper) {
     $scope.onSubmit = function () {
         var answers = [];
         $scope.questions.forEach(function (q, index) {
-            answers.push({ 'QuizId': $scope.quiz.Id, 'QuestionId': q.Id, 'Answered': q.Answered });
+            answers.push({ 'QuizId': $scope.quiz.Id, 'QuestionId': q.id, 'Answered': q.isAnswerv });
+            console.log(answers)
         });
         // Post your data to the server here. answers contains the questionId and the users' answer.
         //$http.post('api/Quiz/Submit', answers).success(function (data, status) {
         //    alert(data);
         //});
-        console.log($scope.questions);
         $scope.mode = 'result';
     }
 
@@ -65,40 +57,57 @@ var quizCtrl = function ($scope, $http, helper) {
         return Math.ceil($scope.questions.length / $scope.itemsPerPage);
     };
 
+    $scope.quiz= {
+        "Id": 2,
+        "name": "C# and .Net Framework",
+        "description": "C# and .Net Quiz (contains C#, .Net Framework, Linq, etc.)"
+    }
+    $scope.config1={
+        "shuffleQuestions": true,
+        "showPager": false,
+        "allowBack": true,
+        "autoMove": true
+    },
     //If you wish, you may create a separate factory or service to call loadQuiz. To keep things simple, i have kept it within controller.
-    $scope.loadQuiz = function (file) {
-        $http.get(file)
-         .then(function (res) {
-             $scope.quiz = res.data.quiz;
-             $scope.config = helper.extend({}, $scope.defaultConfig, res.data.config);
-             $scope.questions = $scope.config.shuffleQuestions ? helper.shuffle(res.data.questions) : res.data.questions;
-             $scope.totalItems = $scope.questions.length;
-             $scope.itemsPerPage = $scope.config.pageSize;
-             $scope.currentPage = 1;
-             $scope.mode = 'quiz';
-             if($scope.config.shuffleOptions)
-                $scope.shuffleOptions();
-
-             $scope.$watch('currentPage + itemsPerPage', function () {
-                 var begin = (($scope.currentPage - 1) * $scope.itemsPerPage),
-                   end = begin + $scope.itemsPerPage;
-
-                 $scope.filteredQuestions = $scope.questions.slice(begin, end);
-             });
-         });
+    $scope.loadQuiz = function () {
+        examListSrv.getData().success(function(data,status){
+            if(data.status=='Success')
+                {
+                    $scope.examList=data.exam;
+                    $scope.config = helper.extend({}, $scope.defaultConfig, $scope.config1);
+                    $scope.questions = $scope.config1.shuffleQuestions ? helper.shuffle($scope.examList) : $scope.examList;
+                    $scope.totalItems = $scope.questions.length;
+                    $scope.itemsPerPage = $scope.config.pageSize;
+                    $scope.currentPage = 1;
+                    $scope.mode = 'quiz';
+                    if($scope.config.shuffleOptions)
+                       $scope.shuffleOptions();
+       
+                    $scope.$watch('currentPage + itemsPerPage', function () {
+                        var begin = (($scope.currentPage - 1) * $scope.itemsPerPage),
+                          end = begin + $scope.itemsPerPage;
+                        $scope.filteredQuestions = $scope.questions.slice(begin, end);
+                    });
+               
+                }
+                else
+                {  
+                }
+        })
+            
     }
     
     $scope.shuffleOptions = function(){
         $scope.questions.forEach(function (question) {
-           question.Options = helper.shuffle(question.Options);
+           question.options = helper.shuffle(question.options);
         });
     }
     
-    $scope.loadQuiz($scope.quizName);
+    // $scope.loadQuiz($scope.quizName);
 
     $scope.isAnswered = function (index) {
         var answered = 'Not Answered';
-        $scope.questions[index].Options.forEach(function (element, index, array) {
+        $scope.questions[index].options.forEach(function (element, index, array) {
             if (element.Selected == true) {
                 answered = 'Answered';
                 return false;
@@ -109,8 +118,8 @@ var quizCtrl = function ($scope, $http, helper) {
 
     $scope.isCorrect = function (question) {
         var result = 'correct';
-        question.Options.forEach(function (option, index, array) {
-            if (helper.toBool(option.Selected) != option.IsAnswer) {
+        question.options.forEach(function (option, index, array) {
+            if (helper.toBool(option.Selected) != option.isAnswer) {
                 result = 'wrong';
                 return false;
             }
@@ -119,6 +128,5 @@ var quizCtrl = function ($scope, $http, helper) {
     };
 }
 
-quizCtrl.$inject = ['$scope', '$http', 'helperService'];
+quizCtrl.$inject = ['$scope', '$http', 'helperService','examListSrv','$timeout'];
 angular.module("student-app").controller('examListCtrl', quizCtrl);
->>>>>>> 4784e01406ca410e6b69ff850e6472f72382391b
