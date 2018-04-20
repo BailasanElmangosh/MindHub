@@ -1971,11 +1971,23 @@ svg, i {
   resize: none;
 }
 
-.quiz {
-<<<<<<< HEAD
-=======
+.allExam {
   margin-top: 60px;
->>>>>>> 4784e01406ca410e6b69ff850e6472f72382391b
+}
+
+.allExam .exam {
+  background-color: #666666;
+  opacity: 0.5;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.allExam .exam a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.quiz {
   /* Create Quiz Styles */
 }
 

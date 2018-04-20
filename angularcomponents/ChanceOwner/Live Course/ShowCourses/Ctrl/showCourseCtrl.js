@@ -12,13 +12,12 @@ angular.module('chanceOwner-app').controller("showCouresCtrl",function($scope,$c
     //get id from course and send to edit dropdwon
 
     $scope.sendId=function(idC)
-    {  console.log(idC);
+    {  
        for(var i=0;i<=$scope.getLiveCoures.length;i++)
-        {   console.log($scope.getLiveCoures[i].id)
+        {  
             if(idC=$scope.getLiveCoures[i].id)
             {
                 $scope.fillData=$scope.getLiveCoures[i];
-                console.log($scope.fillData);
                 $scope.editData=$scope.fillData;
               $scope.apply();
             }
