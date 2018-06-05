@@ -6,7 +6,7 @@ angular.module('student-app').factory("searchSrv", function ($http,$cookies) {
         { 
             return $http({
                 method: "Get",
-                url: "http://mindhubgp1-001-site1.gtempurl.com/api/studentsresult/?key="+key,
+                url: "http://gpmhhost-001-site1.ftempurl.com/api/studentsresult/?key="+key,
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization':' bearer '+ $cookies.get('token'),
@@ -17,7 +17,7 @@ angular.module('student-app').factory("searchSrv", function ($http,$cookies) {
         { 
             return $http({
                 method: "Get",
-                url: "http://mindhubgp1-001-site1.gtempurl.com/api/allstudentsresult/?id="+id,
+                url: "http://gpmhhost-001-site1.ftempurl.com/api/allstudentsresult/?id="+id,
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization':' bearer '+ $cookies.get('token'),

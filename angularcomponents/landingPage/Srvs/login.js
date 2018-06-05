@@ -3,7 +3,7 @@
         login: function (user) {
             return $http({
                 method: "Post",
-                url: "http://mindhubgp1-001-site1.gtempurl.com/api/Login",
+                url: "http://gpmhhost-001-site1.ftempurl.com/api/Login",
                 data: user,
                 headers: 
                 {

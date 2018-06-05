@@ -10,7 +10,7 @@
             .success(function (data, status) {
                 $scope.profileData=data.profile;
                 $scope.editProfile=data.profile;
-                $scope.imgPath="http://mindhubgp1-001-site1.gtempurl.com/"+$scope.profileData.image;
+                $scope.imgPath="http://gpmhhost-001-site1.ftempurl.com/"+$scope.profileData.image;
                 Person.setshow(false);
                 Person.setImg($scope.img());
             });
@@ -21,7 +21,7 @@
                 {
                     if($scope.profileData.image==null)
                     {
-                        return"http://mindhubgp1-001-site1.gtempurl.com/defaults/female.jpg"
+                        return"http://gpmhhost-001-site1.ftempurl.com/defaults/female.jpg"
                     }
                     return $scope.imgPath
                 }
@@ -29,7 +29,7 @@
                 {
                     if($scope.profileData.image==null)
                     {
-                        return"http://mindhubgp1-001-site1.gtempurl.com/defaults/male.png"
+                        return"http://gpmhhost-001-site1.ftempurl.com/defaults/male.png"
                     }
                     return $scope.imgPath
                 }
@@ -83,7 +83,7 @@
             }
            $scope.getNewPath=function(data)
            {
-            $scope.imgPath="http://mindhubgp1-001-site1.gtempurl.com/"+data;
+            $scope.imgPath="http://gpmhhost-001-site1.ftempurl.com/"+data;
             $scope.$apply();
            }
             //Skills
@@ -188,12 +188,13 @@
                    //    upload image
                    $('#imageUploadForm').on('submit',(function(e) {
                        e.preventDefault();
+                       $('#pfSpinner').show();
                        var token = $cookies.get('token');
                        var formData = new FormData(this);
                        var image;
                        $.ajax({
                            type:'POST',
-                           url: 'http://mindhubgp1-001-site1.gtempurl.com/api/uploadstudentimage',
+                           url: 'http://gpmhhost-001-site1.ftempurl.com/api/uploadstudentimage',
                            data:formData,
                            headers: {"Authorization": "bearer "+token},
                            cache:false,
@@ -203,6 +204,7 @@
                                if(data.status=='Success')
                                {
                                    $scope.getNewPath(data.imagePath);
+                                   $('#pfSpinner').hide();
                                }
                                else
                                {  
@@ -217,11 +219,16 @@
                    $("#ImageBrowse").on("change", function() {
                        var file=$(this)[0].files[0]
                        if(file.size<=5000000&&file.type=='image/jpeg'||file.type=='image/jpg'||file.type=='image/png')
-                       { $("#imageUploadForm").submit();
-                       $scope.sizeTrue();  
+                       { 
+                            $("#imageUploadForm").submit();
+                            $scope.sizeTrue();  
+                       
+                            
                        }
                        else
-                       {$scope.sizeFalse();
+                       {
+                           alert("error")
+                           $scope.sizeFalse();
                        }
                    });
                

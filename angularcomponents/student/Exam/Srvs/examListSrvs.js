@@ -45,7 +45,7 @@ angular.module('student-app').factory("examListSrv", function ($http,$cookies) {
            getData: function () {
             return $http({
                 method: "Get",
-                url: "http://mindhubgp1-001-site1.gtempurl.com/api/getstudentexam/?id=1",
+                url: "http://gpmhhost-001-site1.ftempurl.com/api/getstudentexam/?id=1",
                 headers: 
                 {   'Content-Type': 'application/json',
                     'Authorization':' bearer '+ $cookies.get('token')

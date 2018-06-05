@@ -3,7 +3,7 @@ dashBoard.factory("skillsSrv", function ($http) {
         skillsPost: function (skill) {
             return $http({
                 method: "Post",
-                url: "http://mindhubgp1-001-site1.gtempurl.com/api/createskill",
+                url: "http://gpmhhost-001-site1.ftempurl.com/api/createskill",
                 data: skill,
                 headers: {
                     'Content-Type': 'application/json'
@@ -15,7 +15,7 @@ dashBoard.factory("skillsSrv", function ($http) {
         skillsGet: function () {
             return $http({
                 method: "Get",
-                url: "http://mindhubgp1-001-site1.gtempurl.com/api/allskills",
+                url: "http://gpmhhost-001-site1.ftempurl.com/api/allskills",
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -24,7 +24,7 @@ dashBoard.factory("skillsSrv", function ($http) {
         deleteSkill: function (id) {
             return $http({
                 method: "Get",
-                url: "http://mindhubgp1-001-site1.gtempurl.com/api/deleteskill/?id="+id,
+                url: "http://gpmhhost-001-site1.ftempurl.com/api/deleteskill/?id="+id,
                 headers: {
                     'Content-Type': 'application/json'
                 }

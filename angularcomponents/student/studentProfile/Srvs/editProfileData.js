@@ -3,7 +3,7 @@ angular.module('student-app').factory("profileEditSrv", function ($http,$cookies
             editData: function (data) {
             return $http({
                 method: "Post",
-                url: "http://mindhubgp1-001-site1.gtempurl.com/api/editstudentprofile",
+                url: "http://gpmhhost-001-site1.ftempurl.com/api/editstudentprofile",
                 data:data,
                 headers: 
                 {   'Content-Type': 'application/json',
@@ -14,7 +14,7 @@ angular.module('student-app').factory("profileEditSrv", function ($http,$cookies
             skillsGet: function () {
                 return $http({
                     method: "Get",
-                    url: "http://mindhubgp1-001-site1.gtempurl.com/api/allskills",
+                    url: "http://gpmhhost-001-site1.ftempurl.com/api/allskills",
                     headers: {
                         'Content-Type': 'application/json'
                     }
@@ -24,7 +24,7 @@ angular.module('student-app').factory("profileEditSrv", function ($http,$cookies
             { 
                 return $http({
                     method:'Post',
-                    url:"http://mindhubgp1-001-site1.gtempurl.com/api/addstudentskill",
+                    url:"http://gpmhhost-001-site1.ftempurl.com/api/addstudentskill",
                     data:skill,
                     headers: {
                         'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ angular.module('student-app').factory("profileEditSrv", function ($http,$cookies
             deleteSkill: function (data) {
                 return $http({
                     method: "Post",
-                    url: "http://mindhubgp1-001-site1.gtempurl.com/api/deletestudentskill",
+                    url: "http://gpmhhost-001-site1.ftempurl.com/api/deletestudentskill",
                     data:data,
                     headers: {
                         'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ angular.module('student-app').factory("profileEditSrv", function ($http,$cookies
             uploadImage: function (data) {
                 return $http({
                     method: "Post",
-                    url: "http://mindhubgp1-001-site1.gtempurl.com/api/uploadstudentimage",
+                    url: "http://gpmhhost-001-site1.ftempurl.com/api/uploadstudentimage",
                     data:data,
                     headers: {
                         'Content-Type': 'multipart/form-data',
@@ -59,7 +59,7 @@ angular.module('student-app').factory("profileEditSrv", function ($http,$cookies
             addQues: function (data) {
                 return $http({
                     method: "Post",
-                    url: "http://mindhubgp1-001-site1.gtempurl.com/api/addstudentquestion",
+                    url: "http://gpmhhost-001-site1.ftempurl.com/api/addstudentquestion",
                     data:data,
                     headers: {
                         'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ angular.module('student-app').factory("profileEditSrv", function ($http,$cookies
             likedislike: function (data) {
                 return $http({
                     method: "Post",
-                    url: "http://mindhubgp1-001-site1.gtempurl.com/api/likedislikequestion",
+                    url: "http://gpmhhost-001-site1.ftempurl.com/api/likedislikequestion",
                     data:data,
                     headers: {
                         'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ angular.module('student-app').factory("profileEditSrv", function ($http,$cookies
             { 
                 return $http({
                     method: "Get",
-                    url: "http://mindhubgp1-001-site1.gtempurl.com/api/unfollowfriend/?id="+id,
+                    url: "http://gpmhhost-001-site1.ftempurl.com/api/unfollowfriend/?id="+id,
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization':' bearer '+ $cookies.get('token'),

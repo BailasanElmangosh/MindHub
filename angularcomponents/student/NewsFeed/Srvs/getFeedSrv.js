@@ -3,7 +3,7 @@ angular. module("student-app").factory("feedSrv",function($http){
         getFeed : function(token){
              return $http({
                  method: "Get",
-                 url: "http://mindhubgp1-001-site1.gtempurl.com/api/newsfeed",
+                 url: "http://gpmhhost-001-site1.ftempurl.com/api/newsfeed",
                  headers: 
                  {   'Content-Type': 'application/json',
                      'Authorization':' bearer '+token

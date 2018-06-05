@@ -4,7 +4,7 @@ dashBoard.factory("subCategorySrv", function ($http) {
         GetsubCategorys: function () {
             return $http({
                 method: "Get",
-                url: "http://mindhubgp1-001-site1.gtempurl.com/api/allsubcategories",
+                url: "http://gpmhhost-001-site1.ftempurl.com/api/allsubcategories",
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -13,7 +13,7 @@ dashBoard.factory("subCategorySrv", function ($http) {
     CreateSubCategory: function (subCategory) {
         return $http({
             method: "Post",
-            url: "http://mindhubgp1-001-site1.gtempurl.com/api/createsubcat",
+            url: "http://gpmhhost-001-site1.ftempurl.com/api/createsubcat",
             data:subCategory ,
             headers: {
                 'Content-Type': 'application/json'
@@ -24,7 +24,7 @@ dashBoard.factory("subCategorySrv", function ($http) {
      DeleteSubCategory: function (id) {
         return $http({
             method: "Get",
-            url: "http://mindhubgp1-001-site1.gtempurl.com/api/deletesubcategory/?id="+id,
+            url: "http://gpmhhost-001-site1.ftempurl.com/api/deletesubcategory/?id="+id,
             headers: {
                 'Content-Type': 'application/json'
             }

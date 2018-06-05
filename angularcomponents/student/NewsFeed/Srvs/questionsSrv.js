@@ -3,7 +3,7 @@ angular.module("student-app").factory('questionsSrv',function($http,$cookies){
         Create : function(question,token){
             return $http({
                 method:"Post",
-                url:"http://mindhubgp1-001-site1.gtempurl.com/api/addstudentquestion",
+                url:"http://gpmhhost-001-site1.ftempurl.com/api/addstudentquestion",
                 headers:{
                     'Content-Type': 'application/json',
                     'Authorization':' bearer '+token
@@ -14,7 +14,7 @@ angular.module("student-app").factory('questionsSrv',function($http,$cookies){
         CreateAnswer : function(answer,token){
             return $http({
                 method:"Post",
-                url:"http://mindhubgp1-001-site1.gtempurl.com/api/addanswer",
+                url:"http://gpmhhost-001-site1.ftempurl.com/api/addanswer",
                 headers:{
                     'Content-Type': 'application/json',
                     'Authorization':' bearer '+token
@@ -25,7 +25,7 @@ angular.module("student-app").factory('questionsSrv',function($http,$cookies){
         GetQuestionsByIds : function(ids,token){
             return $http({
                 method:"Post",
-                url:"http://mindhubgp1-001-site1.gtempurl.com/api/getquestionsbyid",
+                url:"http://gpmhhost-001-site1.ftempurl.com/api/getquestionsbyid",
                 headers:{
                     'Content-Type': 'application/json',
                     'Authorization':' bearer '+token
