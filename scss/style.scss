@@ -2302,20 +2302,30 @@ svg ,i {
     }
 }
 //End liveRoom
-
+//start exam list
+.allExam
+{
+    margin-top: 60px;
+    .exam
+    {
+        background-color: #666666;
+        opacity: 0.5;
+        padding: 5px;
+        margin-bottom: 20px;
+        a
+        {
+            text-decoration: none;
+            color:#fff;
+        }
+    }
+}
+//end exam list
 
 //start quiz
 .quiz
-<<<<<<< HEAD
 {
     h1{
         color:#740808;
-=======
-{  margin-top: 60px;
-    h1{
-        color:#740808;
-        
->>>>>>> 4784e01406ca410e6b69ff850e6472f72382391b
         font-weight:normal;
     }
     h2{

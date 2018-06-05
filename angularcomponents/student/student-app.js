@@ -2,21 +2,21 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies',
     student.config(function ($routeProvider, $locationProvider) {
 
         $routeProvider.when('/profile',
-            {
-            templateUrl: "/angularcomponents/student/template/profile.html",
-            controller: 'studentProfileCtrl'  
-           }).when('/newsfeed',
-           {
-           templateUrl: "/angularcomponents/student/template/newsFeed.html",
-           controller: 'newFeedCtrl'  
-          }).when('/Search/:key',
-          {
-          templateUrl: "/angularcomponents/student/template/searchResult.html",
-          controller: 'searchResultCtrl'  
-         }).when('/FriendProfile/:studentId',
-         {
-         templateUrl: "/angularcomponents/student/template/friendProfie.html",
-         controller: 'friendProfileCtrl'  
+        {
+        templateUrl: "/angularcomponents/student/template/profile.html",
+        controller: 'studentProfileCtrl'  
+        }).when('/newsfeed',
+        {
+        templateUrl: "/angularcomponents/student/template/newsFeed.html",
+        controller: 'newFeedCtrl'  
+        }).when('/Search/:key',
+        {
+        templateUrl: "/angularcomponents/student/template/searchResult.html",
+        controller: 'searchResultCtrl'  
+        }).when('/FriendProfile/:studentId',
+        {
+        templateUrl: "/angularcomponents/student/template/friendProfie.html",
+        controller: 'friendProfileCtrl'  
         }).when('/liveCourses/',
         {
         templateUrl: "/angularcomponents/student/template/liveCourses.html",
@@ -29,7 +29,11 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies',
        {
        templateUrl: "/angularcomponents/student/template/examList.html",
        controller:"examListCtrl"
-      })
+      }).when('/Exam/:id',
+      {
+      templateUrl: "/angularcomponents/student/template/exam.html",
+      controller:"examCtrl"
+     })
       .when('/', {
             templateUrl: '/angularcomponents/student/template/newsFeed.html',
             controller: 'newFeedCtrl'
