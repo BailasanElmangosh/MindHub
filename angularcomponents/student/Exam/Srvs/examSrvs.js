@@ -45,7 +45,7 @@ angular.module('student-app').factory("examSrv", function ($http,$cookies) {
         getData: function (id) {
             return $http({
                 method: "Get",
-                url: "http://mindhubgp1-001-site1.gtempurl.com/api/getstudentexam/?id="+id,
+                url: "http://gpmhhost-001-site1.ftempurl.com/api/getstudentexam/?id="+id,
                 headers: 
                 {   'Content-Type': 'application/json',
                     'Authorization':' bearer '+ $cookies.get('token')
@@ -56,7 +56,7 @@ angular.module('student-app').factory("examSrv", function ($http,$cookies) {
         sendDegree: function (id,degree) {
             return $http({
                 method: "Get",
-                url: "http://mindhubgp1-001-site1.gtempurl.com/api/submitexam/?examId="+id+"&degree="+degree,
+                url: "http://gpmhhost-001-site1.ftempurl.com/api/submitexam/?examId="+id+"&degree="+degree,
                 headers: 
                 {   'Content-Type': 'application/json',
                     'Authorization':' bearer '+ $cookies.get('token')

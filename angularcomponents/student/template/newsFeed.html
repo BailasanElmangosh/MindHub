@@ -1,306 +1,304 @@
 <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
 <script src=" ../../../js/custom.js"></script>
-        <section class="newsFeed" >
-        
-          <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-sm-12 col-12">
-                    <!-- start NewsFeed container -->
-                    <div class="newsFeedBody">
-                        <div class="row">
-                            <!-- start card --> 
-                            <div class="col-sm-3 col-12">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-9 hidden-xs ">
-                                        <div class="card">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <img class="profimg" src="http://gpmhhost-001-site1.ftempurl.com/{{studentData.image}}">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12" >
-                                                    <div class="line">
-                                                    <p class="name" ng-bind="studentData.username"></p>
-                                                    <p class="title" ng-bind="studentData.title"></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <p class="followNum" ng-bind="studentData.followers"></p>
-                                                    <p> Followers</p>
-                                                    <p class="followNum" ng-bind="studentData.following"></p>
-                                                    <p> Following</p>
-                                                </div>
-                                            </div>
-                                            
+<section class="newsFeed" >
+    <div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-12">
+            <!-- start NewsFeed container -->
+            <div class="newsFeedBody">
+                <div class="row">
+                    <!-- start card --> 
+                    <div class="col-sm-3 col-12">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-9 hidden-xs ">
+                                <div class="card" id="cardInfo">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <img class="profimg" src="http://gpmhhost-001-site1.ftempurl.com/{{studentData.image}}">
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-sm-12" >
+                                            <div class="line">
+                                            <p class="name" ng-bind="studentData.username"></p>
+                                            <p class="title" ng-bind="studentData.title"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <p class="followNum" ng-bind="studentData.followers"></p>
+                                            <p> Followers</p>
+                                            <p class="followNum" ng-bind="studentData.following"></p>
+                                            <p> Following</p>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
-                            </div>   
-                            <!-- End card -->
-                            <div class="col-md-6 col-sm-8 col-12">
-                                <!-- start Question -->
-                                <div  class=" row " id="question">
-                                    <div class="question col-sm-12" >
-                                        <div class="body"> 
-                                            <div class="body-container">
-                                                    <div >
-                                                        <!-- start write Question box -->
-                                                        <div class="addQue">
+                            </div>
+                        </div>
+                    </div>   
+                    <!-- End card -->
+                    <div class="col-md-6 col-sm-8 col-12">
+                        <!-- start Question -->
+                        <div  class=" row " id="question">
+                            <div class="question col-sm-12" >
+                                <div class="body"> 
+                                    <div class="body-container">
+                                            <div >
+                                                <!-- start write Question box -->
+                                                <div class="addQue">
+                                                    <div class="row">
+                                                        <div class="col-md-10 ">
+                                                            <div class="boxQus">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <textarea ng-model="question.QuestionHead" rows="4" cols="50" placeholder="Add Your Question here ...."></textarea> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                             <div class="row">
-                                                                <div class="col-md-10 ">
-                                                                    <div class="boxQus">
-                                                                        <div class="row">
-                                                                            <div class="col-md-12">
-                                                                                <textarea ng-model="question.QuestionHead" rows="4" cols="50" placeholder="Add Your Question here ...."></textarea> 
+                                                                <div class="col-md-3 ml-md-auto  ">
+                                                                        <button ng-click="addQuestion()">Ask</button> 
+                                                                    <!--<button>Ask</button>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                            
+                                                    </div>
+                                                </div> 
+                                                <!-- End write Question box --> 
+                                                <!-- start Questions -->
+                                                <div class=" row" >
+                                                        <div class="post"  ng-repeat="(key,post) in Feeds">
+                                                            <div class="col-sm-12">
+                                                                <div class="row">
+                                                                        <div class="col-sm-12 queBody">
+                                                                            <div class="row">
+                                                                                <div class="col-md-1 col-2">
+                                                                                        <div class="image">
+                                                                                            <img src="http://gpmhhost-001-site1.ftempurl.com/{{post.image}}">
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-md-11 col-10">
+                                                                                    <div class="row">
+                                                                                        <div class="col-11 ">
+                                                                                            <h3 class="name" ng-bind="post.username"></h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-11">
+                                                                                            <p class="title" ng-bind="post.title"></p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-11">
+                                                                                            <p class="date" ng-bind="post.date| formatDate"></p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-sm-12 ">
+                                                                                    <div class="row ">
+                                                                                        <div class=" col-lg-11 col-sm-12 ml-sm-auto">
+                                                                                            <p class="queText" ng-bind="post.questionHead"></p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                        
+                                                                                    <div class="row">
+                                                                                        <div class="col-lg-4 col-md-5 col-sm-8  ml-sm-auto queOption">
+                                                                                            <!-- <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                                                                            |
+                                                                                            <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+                                                                                            -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-md-3 ml-md-auto  ">
-                                                                             <button ng-click="addQuestion()">Ask</button> 
-                                                                            <!--<button>Ask</button>-->
-                                                                        </div>
-                                                                    </div>
                                                                 </div>
-                                                                    
-                                                            </div>
-                                                        </div> 
-                                                        <!-- End write Question box --> 
-                                                        <!-- start Questions -->
-                                                        <div class=" row" >
-                                                                <div class="post"  ng-repeat="(key,post) in Feeds">
-                                                                    <div class="col-sm-12">
-                                                                        <div class="row">
-                                                                                <div class="col-sm-12 queBody">
-                                                                                    <div class="row">
-                                                                                        <div class="col-md-1 col-2">
-                                                                                                <div class="image">
-                                                                                                    <img src="http://gpmhhost-001-site1.ftempurl.com/{{post.image}}">
-                                                                                                </div>
-                                                                                        </div>
-                                                                                        <div class="col-md-11 col-10">
-                                                                                            <div class="row">
-                                                                                                <div class="col-11 ">
-                                                                                                    <h3 class="name" ng-bind="post.username"></h3>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="row">
-                                                                                                <div class="col-11">
-                                                                                                    <p class="title" ng-bind="post.title"></p>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="row">
-                                                                                                <div class="col-11">
-                                                                                                    <p class="date" ng-bind="post.date| formatDate"></p>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="row">
-                                                                                        <div class="col-sm-12 ">
-                                                                                            <div class="row ">
-                                                                                                <div class=" col-lg-11 col-sm-12 ml-sm-auto">
-                                                                                                    <p class="queText" ng-bind="post.questionHead"></p>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                                
-                                                                                            <div class="row">
-                                                                                                <div class="col-lg-4 col-md-5 col-sm-8  ml-sm-auto queOption">
-                                                                                                    <!-- <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-                                                                                                    |
-                                                                                                    <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
-                                                                                                 -->
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                        </div>
-                                                                        <div class="row justify-content-center">
-                                                                                <div class="col-md-11 ">
-                                                                                    <div class="row">
-                                                                                        <div class="col-md-12">
-                                                                                            <div class="comment line" id="comment" ng-repeat="comment in post.answers">
-                                                                                                <div class="row  ">
-                                                                                                    <div class="col-md-12 queBody ">
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-lg-1 col-md-2 col-2">
-                                                                                                                <div class="image">
-                                                                                                                    <img src="http://gpmhhost-001-site1.ftempurl.com/{{comment.userImage}}">
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="col-lg-11 col-md-10 col-10">
-                                                                                                                <div class="row">
-                                                                                                                    <div class="col-11 ">
-                                                                                                                        <h3 class="name" ng-bind="comment.username"></h3>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                                <div class="row">
-                                                                                                                    <div class="col-11">
-                                                                                                                        <p class="title" ng-bind="comment.title"></p>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                                <div class="row">
-                                                                                                                    <div class="col-11">
-                                                                                                                        <p class="date" ng-bind="comment.date| formatDate"></p>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-md-12 ">
-                                                                                                                <div class="row ">
-                                                                                                                    <div class="col-md-11 ml-md-auto">
-                                                                                                                        <p class="queText"ng-bind="comment.questionAnswer"></p>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div> 
-                                                                                            <div class="prevComment">
-                                                                                            <!-- <a href="#">Show Previous Comments(2)</a> -->
-                                                                                            </div>
-                                                                                            <div class="postComment" id="commentBox">
+                                                                <div class="row justify-content-center">
+                                                                        <div class="col-md-11 ">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="comment line" id="comment" ng-repeat="comment in post.answers">
+                                                                                        <div class="row  ">
+                                                                                            <div class="col-md-12 queBody ">
                                                                                                 <div class="row">
-                                                                                                    <div class="col-lg-2 col-md-3">
-                                                                                                            <div class="image">
-                                                                                                                <img src="http://gpmhhost-001-site1.ftempurl.com/{{studentData.image}}">
-                                                                                                            </div>
+                                                                                                    <div class="col-lg-1 col-md-2 col-2">
+                                                                                                        <div class="image">
+                                                                                                            <img src="http://gpmhhost-001-site1.ftempurl.com/{{comment.userImage}}">
+                                                                                                        </div>
                                                                                                     </div>
-                                                                                                    <div class="col-lg-6 col-md-9">
-                                                                                                        <div class="boxQus">
-                                                                                                            <div class="row">
-                                                                                                                <div class="col-md-12">
-                                                                                                                    <textarea ng-model="newAnswer[key].questionAnswer" rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
-                                                                                                                </div>
+                                                                                                    <div class="col-lg-11 col-md-10 col-10">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-11 ">
+                                                                                                                <h3 class="name" ng-bind="comment.username"></h3>
                                                                                                             </div>
                                                                                                         </div>
-                                                                                                    </div>   
-                                                                                                    <div class="col-lg-4  col-md-5  align-self-center" >
-                                                                                                         <button ng-click="addAnswer(key,post.id)" >Answer</button> 
-                                                                                                        <!--<button  >Answer</button>-->
-                                                                                                    </div>    
-                                                                                                </div>  
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-11">
+                                                                                                                <p class="title" ng-bind="comment.title"></p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-11">
+                                                                                                                <p class="date" ng-bind="comment.date| formatDate"></p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-12 ">
+                                                                                                        <div class="row ">
+                                                                                                            <div class="col-md-11 ml-md-auto">
+                                                                                                                <p class="queText"ng-bind="comment.questionAnswer"></p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
                                                                                             </div>
                                                                                         </div>
+                                                                                    </div> 
+                                                                                    <div class="prevComment">
+                                                                                    <!-- <a href="#">Show Previous Comments(2)</a> -->
+                                                                                    </div>
+                                                                                    <div class="postComment" id="commentBox">
+                                                                                        <div class="row">
+                                                                                            <div class="col-lg-2 col-md-3">
+                                                                                                    <div class="image">
+                                                                                                        <img src="http://gpmhhost-001-site1.ftempurl.com/{{studentData.image}}">
+                                                                                                    </div>
+                                                                                            </div>
+                                                                                            <div class="col-lg-6 col-md-9">
+                                                                                                <div class="boxQus">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-12">
+                                                                                                            <textarea ng-model="newAnswer[key].questionAnswer" rows="4" cols="50" placeholder="Add Your Answer here ...."></textarea> 
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>   
+                                                                                            <div class="col-lg-4  col-md-5  align-self-center" >
+                                                                                                    <button ng-click="addAnswer(key,post.id)" >Answer</button> 
+                                                                                                <!--<button  >Answer</button>-->
+                                                                                            </div>    
+                                                                                        </div>  
                                                                                     </div>
                                                                                 </div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
                                                                 </div>
-                                                            </div> 
-                                                        <!-- End Questions -->
-                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                <!-- End Questions -->
                                             </div>
-                                        </div>
                                     </div>
                                 </div>
-                                <!-- End Question --> 
                             </div>
-                            <div class="col-md-3  hidden-xs hidden-sm">
-                                    <!-- start suggest Pepole -->                            
-                                <div class="row">
-                                    <div class="col-12 ">
-                                        <div class="suggest ">
-                                            <div class="row">
-                                                    <div class="col-sm-12" >
-                                                        <div class="header">
-                                                            <h5>Suggest Students</h5>
+                        </div>
+                        <!-- End Question --> 
+                    </div>
+                    <div class="col-md-3  hidden-xs hidden-sm">
+                            <!-- start suggest Pepole -->                            
+                        <div class="row">
+                            <div class="col-12 ">
+                                <div class="suggest" id="suggestCard">
+                                    <div class="row">
+                                            <div class="col-sm-12" >
+                                                <div class="header">
+                                                    <h5>Suggest Students</h5>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="row ">
+                                        <div class="col-md-12" >
+                                            <div class="row" ng-repeat="student in suggestedStudents" >
+                                                    <div class="col-md-3 col-2">
+                                                        <div class="image">
+                                                            <img src="http://gpmhhost-001-site1.ftempurl.com/{{student.image}}">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 col-9">
+                                                        <div class="row">
+                                                            <div class="col-11 ">
+                                                                <a href="#/FriendProfile/{{student.id}}"> <h3 class="name" ng-bind="student.name"></h3></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-11">
+                                                                <p class="title" ng-bind="student.title"></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-1">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <button  ng-click="FollowFriend(student.id)"class="btn"><p class="show-lg-md">Follow</p><i class="fa fa-user-plus hidden-md-lg" aria-hidden="true"></i></button>                                                                 
+                                                            </div>
                                                         </div>
                                                     </div>
                                             </div>
-                                            <div class="row ">
-                                                <div class="col-md-12" >
-                                                    <div class="row" ng-repeat="student in suggestedStudents" >
-                                                            <div class="col-md-3 col-2">
-                                                                <div class="image">
-                                                                    <img src="http://gpmhhost-001-site1.ftempurl.com/{{student.image}}">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-5 col-9">
-                                                                <div class="row">
-                                                                    <div class="col-11 ">
-                                                                       <a href="#/FriendProfile/{{student.id}}"> <h3 class="name" ng-bind="student.name"></h3></a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-11">
-                                                                        <p class="title" ng-bind="student.title"></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-4 col-1">
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <button ng-click="FollowFriend(student.id)"class="btn"><p class="show-lg-md">Follow</p><i class="fa fa-user-plus hidden-md-lg" aria-hidden="true"></i></button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
                                         </div>
                                     </div>
                                 </div>
-                                    <!-- End suggest Pepole -->  
-                                    <!-- start slider live now -->                                                          
-                                <div class="row">
-                                    <div class="col-12 hidden-xs">
-                                        <div class="liveNow">
-                                            <h3>Live Course</h3>
+                            </div>
+                        </div>
+                            <!-- End suggest Pepole -->  
+                            <!-- start slider live now -->                                                          
+                        <div class="row">
+                            <div class="col-12 hidden-xs" id="liveCard">
+                                <div class="liveNow">
+                                    <h3>Live Course</h3>
+                                </div>
+                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                        <img class="d-block w-100" src="http://via.placeholder.com/350x150..." alt="First slide">
+                                        <div class="carousel-caption d-none d-md-block">
+                                                <h5>Front-End course</h5>
                                         </div>
-                                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                            <div class="carousel-inner">
-                                              <div class="carousel-item active">
-                                                <img class="d-block w-100" src="http://via.placeholder.com/350x150..." alt="First slide">
-                                                <div class="carousel-caption d-none d-md-block">
-                                                        <h5>Front-End course</h5>
-                                                </div>
-                                              </div>
-                                              <div class="carousel-item">
-                                                <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="Second slide">
-                                                <div class="carousel-caption d-none d-md-block">
-                                                        <h5>Back-End course</h5>
-                                                </div>
-                                            </div>
-                                              <div class="carousel-item">
-                                                <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="Third slide">
-                                                <div class="carousel-caption d-none d-md-block">
-                                                        <h5>Bootstrap course</h5>
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <a class="carousel-control-prev" ng-href="#carouselExampleIndicators" target="_self" role="button" data-slide="prev">
-                                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                              <span class="sr-only">Previous</span>
-                                            </a>
-                                            <a class="carousel-control-next" ng-href="#carouselExampleIndicators" target="_self" role="button" data-slide="next">
-                                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                              <span class="sr-only">Next</span>
-                                            </a>
-                                          </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="Second slide">
+                                        <div class="carousel-caption d-none d-md-block">
+                                                <h5>Back-End course</h5>
+                                        </div>
                                     </div>
-                                </div>
-                                    <!-- End slider live now -->  
-                                    <!-- start Footer-->
-                                <div class="row">
-                                  <div class="footer">
-                                    <img src="/images/logoNav.png">
-                                    <p> MindHub Corporation © 2018</p>
-                                  </div>
-                                </div>
-                                    <!-- End Footer -->
-                            </div>   
-                        </div>      
-                    </div>
-               </div>
-               <!-- End profile container --> 
-          </div>
-          </div>
-        </section>
+                                        <div class="carousel-item">
+                                        <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="Third slide">
+                                        <div class="carousel-caption d-none d-md-block">
+                                                <h5>Bootstrap course</h5>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" ng-href="#carouselExampleIndicators" target="_self" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" ng-href="#carouselExampleIndicators" target="_self" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                    </div>
+                            </div>
+                        </div>
+                            <!-- End slider live now -->  
+                            <!-- start Footer-->
+                        <div class="row">
+                            <div class="footer" id="footerNews">
+                            <img src="/images/logoNav.png">
+                            <p> MindHub Corporation © 2018</p>
+                            </div>
+                        </div>
+                            <!-- End Footer -->
+                    </div>   
+                </div>      
+            </div>
+        </div>
+        <!-- End profile container --> 
+    </div>
+    </div>
+</section>

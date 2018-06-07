@@ -105,6 +105,7 @@ var quizCtrl = function ($scope, $http, helper,examSrv,$timeout,$routeParams) {
                         var begin = (($scope.currentPage - 1) * $scope.itemsPerPage),
                           end = begin + $scope.itemsPerPage;
                         $scope.filteredQuestions = $scope.questions.slice(begin, end);
+                        console.log($scope.filteredQuestions)
                     });
                
                 }

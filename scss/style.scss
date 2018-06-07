@@ -690,6 +690,17 @@ body
     }
   
 }
+.loading
+{
+    img
+    {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: -75px;
+        top: -100px;
+    }
+}
 
 // end Navbar
 .bgCover
@@ -2305,7 +2316,7 @@ svg ,i {
 //start exam list
 .allExam
 {
-    margin-top: 60px;
+    margin-top: 80px;
     .exam
     {
         background-color: #666666;
@@ -2323,7 +2334,8 @@ svg ,i {
 
 //start quiz
 .quiz
-{
+{ 
+    margin-top: 80px;
     h1{
         color:#740808;
         font-weight:normal;

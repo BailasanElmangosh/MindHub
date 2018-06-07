@@ -20,6 +20,7 @@
       subCategorySrv.CreateSubCategory($scope.subCategory)
         .success(function(data, status){
              $scope.getsubCategorys.push(data.subCategory)
+             $scope.subCategory.name=""
         });
       };
     //  Get ALL Sub Category 

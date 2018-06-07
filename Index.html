@@ -84,7 +84,7 @@
                             <!-- start Login pop up -->
                             <div id="loginDiv" class="tab-pane hide">
                                 <form name="loginfrm" novalidate ng-submit="login('token')">
-                                        <span class="msg">{{errorsLogin.msg}}</span>
+                                        <span class="msg">{{errorsLogin}}</span>
                                     <div class="form-group">
                                         <input type="email" name="loginMail" id="loginMail" placeholder="Mail" ng-model="userLogin.Email" required>
                                    
@@ -151,7 +151,7 @@
                                         <label>Gender</label>
                                         <div class="gender">
                                             <select class="form-control" id="exampleSelect1" required name="Gender" ng-model="userSignUp.Gender">
-                                                <option ng-selected="true" ng-if="false"></option>
+                                                <option></option>
                                                 <option>Male</option>
                                                 <option>Female</option>
                                             </select>
@@ -162,7 +162,7 @@
                                         <label>Type</label>
                                         <div class="type">
                                             <select class="form-control" id="exampleSelect1" required name="type" ng-model="userSignUp.UserRole">
-                                                <option ng-selected="true" ng-if="false"></option>
+                                                <option ></option>
                                                 <option>Student</option>
                                                 <option>Chance owner</option>
                                             </select>

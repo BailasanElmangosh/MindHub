@@ -251,7 +251,205 @@
             'width':'100%'
           });
          
-         
+          var $cache = $('#cardInfo');
+          if ($(window).scrollTop() > 200)
+          {
+              $cache.css({
+                  'position': 'fixed',
+                  'top': '80px',
+                  'width':'16%'
+                });
+                if ($(window).width() > 990)
+                {
+                  $cache.css({
+                      'position': 'fixed',
+                      'top': '80px',
+                      'width':'16%'
+                    });
+                }
+                
+                if ($(window).width() < 790)
+                {
+                  $cache.css({
+                      'position': 'fixed',
+                      'top': '80px',
+                      'width':'16%'
+                    });
+                }
+                if ($(window).width() < 767)
+                {
+                  $cache.css({
+                      'position': 'fixed',
+                      'top': '80px',
+                      'width':'16%'
+                    });
+                }
+                if ($(window).width() < 575)
+                {
+                  $cache.css({
+                      'position': 'relative',
+                      'top': 'auto',
+                      'width':'100%'
+                    });
+                }
+              
+          } 
+          else
+            $cache.css({
+               'position': 'relative',
+              'top': 'auto',
+              'width':'100%'
+            });
+            var $cache = $('#suggestCard');
+            if ($(window).scrollTop() > 400)
+            {
+                $cache.css({
+                    'position': 'fixed',
+                    'top': '80px',
+                    'width':'23%'
+                  });
+                  if ($(window).width() > 990)
+                  {
+                    $cache.css({
+                        'position': 'fixed',
+                        'top': '80px',
+                        'width':'23%'
+                      });
+                  }
+                  
+                  if ($(window).width() < 790)
+                  {
+                    $cache.css({
+                        'position': 'fixed',
+                        'top': '80px',
+                        'width':'23%'
+                      });
+                  }
+                  if ($(window).width() < 767)
+                  {
+                    $cache.css({
+                        'position': 'fixed',
+                        'top': '80px',
+                        'width':'23%'
+                      });
+                  }
+                  if ($(window).width() < 575)
+                  {
+                    $cache.css({
+                        'position': 'relative',
+                        'top': 'auto',
+                        'width':'100%'
+                      });
+                  }
+                
+            } 
+            else
+              $cache.css({
+                 'position': 'relative',
+                'top': 'auto',
+                'width':'100%'
+              });
+
+              var $cache = $('#liveCard');
+              if ($(window).scrollTop() > 400)
+              {
+                  $cache.css({
+                      'position': 'fixed',
+                      'top': '290px',
+                      'width':'25%'
+                    });
+                    if ($(window).width() > 990)
+                    {
+                      $cache.css({
+                          'position': 'fixed',
+                          'top': '290px',
+                          'width':'25%'
+                        });
+                    }
+                    
+                    if ($(window).width() < 790)
+                    {
+                      $cache.css({
+                          'position': 'fixed',
+                          'top': '290px',
+                          'width':'25%'
+                        });
+                    }
+                    if ($(window).width() < 767)
+                    {
+                      $cache.css({
+                          'position': 'fixed',
+                          'top': '290px',
+                          'width':'25%'
+                        });
+                    }
+                    if ($(window).width() < 575)
+                    {
+                      $cache.css({
+                          'position': 'relative',
+                          'top': 'auto',
+                          'width':'100%'
+                        });
+                    }
+                  
+              } 
+              else
+                $cache.css({
+                   'position': 'relative',
+                  'top': 'auto',
+                  'width':'100%'
+                });
+                
+                
+              var $cache = $('#footerNews');
+              if ($(window).scrollTop() > 400)
+              {
+                  $cache.css({
+                      'position': 'fixed',
+                      'top': '455px',
+                      'width':'25%'
+                    });
+                    if ($(window).width() > 990)
+                    {
+                      $cache.css({
+                          'position': 'fixed',
+                          'top': '455px',
+                          'width':'25%'
+                        });
+                    }
+                    
+                    if ($(window).width() < 790)
+                    {
+                      $cache.css({
+                          'position': 'fixed',
+                          'top': '455px',
+                          'width':'25%'
+                        });
+                    }
+                    if ($(window).width() < 767)
+                    {
+                      $cache.css({
+                          'position': 'fixed',
+                          'top': '455px',
+                          'width':'25%'
+                        });
+                    }
+                    if ($(window).width() < 575)
+                    {
+                      $cache.css({
+                          'position': 'relative',
+                          'top': 'auto',
+                          'width':'100%'
+                        });
+                    }
+                  
+              } 
+              else
+                $cache.css({
+                   'position': 'relative',
+                  'top': 'auto',
+                  'width':'100%'
+                });
       }
       $(window).scroll(fixDiv);
       fixDiv();

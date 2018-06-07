@@ -3,7 +3,7 @@ angular.module('student-app').controller("examListCtrl", function ($scope,examLi
       if(data.status=="Success")
       {
           $scope.allExam=data.exams
-        console.log(data.exams)
+          console.log(data.exams)
       }
     })
 });

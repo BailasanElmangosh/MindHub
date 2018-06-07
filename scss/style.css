@@ -641,6 +641,14 @@ body {
   border-top-color: #8ccb75;
 }
 
+.loading img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: -75px;
+  top: -100px;
+}
+
 .bgCover {
   background: url("../images/1.png") no-repeat;
   background-size: cover;
@@ -1972,7 +1980,7 @@ svg, i {
 }
 
 .allExam {
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .allExam .exam {
@@ -1988,6 +1996,7 @@ svg, i {
 }
 
 .quiz {
+  margin-top: 80px;
   /* Create Quiz Styles */
 }
 

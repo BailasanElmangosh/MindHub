@@ -3,8 +3,6 @@
     .controller("landingPageCtrl", function ($scope, signupSrv,loginSrv,cookies) {
         $scope.userSignUp = {};
         $scope.userLogin = {};
-        $scope.errorsLogin = {};
-        $scope.errorsSignUp = {};
         $scope.showSpinnerLogin = false;
         $scope.showSpinnerSign = false;
         $scope.showSuccesspop = false;
@@ -19,6 +17,7 @@
                         var signupSuccessPopUp = angular.element(document.querySelector('#popupSeccess'));
                         signupSuccessPopUp.modal('show');
                         angular.element(document.querySelector("#signFrm").reset());
+                        $scope.errorsSignUp={}
                     }
                     if (data.status == "Failed") {
                         $scope.errorsSignUp = data.errors;
@@ -34,6 +33,7 @@
                         cookies.set(key,data.token);
                         console.log(data.token)
                         cookies.set('socketid',data.userId);
+                       
                         if(data.userType=="Chance owner")
                         {
                             window.location ="/chanceOwner.html#/liveCourse";
@@ -44,7 +44,9 @@
                         }
                        
                     }
-                    else{
+                    if (data.status == "Failed") {
+                        $scope.errorsLogin = data.msg;
+                        console.log(data.msg)
                     }
                 });
         };

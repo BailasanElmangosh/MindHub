@@ -146,7 +146,8 @@
                         }
                         if(data.status=="Success")
                         { 
-                            $scope.profileData.skills.push($scope.data);   
+                            $scope.profileData.skills.push($scope.data); 
+                            $scope.skillDropDown="";  
                         }
                         if(data.status=="Failed")
                         { 

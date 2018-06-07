@@ -1,22 +1,6 @@
 
 <div class="quiz container">
-    <div class="header">
-        <div class="row">
-            <div class="col-md-8">
-                <h3>Quiz Application</h3>
-            </div>
-            <div class="col-md-4 header-right">
-                <!-- In actual application, you may wish to load the quiz List using angular service. -->
-                Select Quiz: 
-                <select id="quizList" ng-model="quizName" ng-change="loadQuiz(quizName)">
-                    <option value="/angularcomponents/student/Exam/data/aspnet.js">Asp.Net</option>
-                    <option value="/angularcomponents/student/Exam/data/csharp.js">C Sharp</option>
-                    <option value="/angularcomponents/student/Exam/data/designPatterns.js">Design Patterns</option>
-                </select>
-            </div>
-        </div>
-        <hr />
-    </div>
+ 
     <div id="quiz"> 
         
         <div ng-show="mode=='quiz'">
@@ -68,12 +52,10 @@
                             </div>
                         </div>
                     </div>
-                    <h4 class="alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{isCorrect(question)}}.</h4>
+                    <!-- <h4 class="alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{isCorrect(question)}}.</h4> -->
                 </div>
             </div>
-            <h4 class="alert alert-info text-center">You may close this window now.</h4>
         </div>
-        <hr />
         <div class="" ng-show="mode!='result'">
             <button class="btn btn-default" ng-click="mode = 'quiz'">Quiz</button> 
             <button class="btn btn-default" ng-click="mode = 'review'">Review</button> 
