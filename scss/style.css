@@ -650,7 +650,7 @@ body {
 }
 
 .bgCover {
-  background: url("../images/1.png") no-repeat;
+  background: url("../images/cover/profile-bg.png") no-repeat;
   background-size: cover;
   height: 270px;
 }

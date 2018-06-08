@@ -203,7 +203,7 @@
                            processData: false,
                            success:function(data){
                                if(data.status=='Success')
-                               {
+                               {   console.log(data);
                                    $scope.getNewPath(data.imagePath);
                                    $('#pfSpinner').hide();
                                }
