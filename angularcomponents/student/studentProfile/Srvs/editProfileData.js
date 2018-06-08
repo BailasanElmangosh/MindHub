@@ -75,7 +75,7 @@ angular.module('student-app').factory("profileEditSrv", function ($http,$cookies
                     data:data,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization':' bearer '+ $cookies.get('token'),
+                        'Authorization':' bearer '+ $cookies.get('token'),  
                     }
                 });
             } ,
