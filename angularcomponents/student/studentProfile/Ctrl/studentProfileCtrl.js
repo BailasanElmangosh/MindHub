@@ -1,18 +1,20 @@
 
-    angular.module('student-app').controller("studentProfileCtrl", function ($scope,profileDataSrv,profileEditSrv,$cookies,questionsSrv,Person) {
+    angular.module('student-app').controller("studentProfileCtrl", function ($cookies,$scope,profileDataSrv,profileEditSrv,questionsSrv,Person) {
             $scope.profileData={};
             $scope.editProfile={};
-            $scope.maleImg = "images/default.png";
-            $scope.FemaleImg = "/images/defaultfemale.jpg";
             $scope.imgPath='';
             $scope.isdisable=false;            
             profileDataSrv.getData()
             .success(function (data, status) {
                 $scope.profileData=data.profile;
+                console.log($cookies.get('token'))
                 $scope.editProfile=data.profile;
                 $scope.imgPath="http://gpmhhost-001-site1.ftempurl.com/"+$scope.profileData.image;
                 Person.setshow(false);
                 Person.setImg($scope.img());
+                // // imgCookies.set("imgcookie",$scope.imgPath)
+                // $cookies.set("imgCookie",$scope.imgPath);
+                // alert($cookies.get("imgCookie"))
             });
          
             $scope.img=function()
@@ -22,6 +24,7 @@
                     if($scope.profileData.image==null)
                     {
                         return"http://gpmhhost-001-site1.ftempurl.com/defaults/female.jpg"
+                        console.log('error')
                     }
                     return $scope.imgPath
                 }
@@ -30,6 +33,8 @@
                     if($scope.profileData.image==null)
                     {
                         return"http://gpmhhost-001-site1.ftempurl.com/defaults/male.png"
+                        console.log('error')
+                        
                     }
                     return $scope.imgPath
                 }
@@ -98,10 +103,13 @@
                        var output = [];  
                       
                        angular.forEach($scope.skillList, function(skillDropDown){ 
-                        
-                            if(skillDropDown.name.toLowerCase().indexOf(string.toLowerCase()) >= 0)  
+
+                            console.log(skillDropDown.name.toLowerCase().indexOf(string.toLowerCase()))
+                            console.log($scope.skillList)
+                            if(  angular.isDefined(skillDropDown.name) && skillDropDown.name.toLowerCase().indexOf(string.toLowerCase()) !==-1)  
                             {  
                                  output.push(skillDropDown);  
+                                 console.log(output)
                             }  
                        });  
                        $scope.height=angular.element('#list-group').width()
@@ -120,7 +128,8 @@
                            .css( 'width', $scope.height);
                            angular.element('#error')
                            .css( 'display','none');
-                       $scope.filterSkill = output;  
+                       $scope.filterSkill = output; 
+                       console.log($scope.filterSkill) 
                   }  
                   $scope.fillTextbox = function(string,idS){  
                        $scope.skillDropDown = string;  
@@ -228,7 +237,7 @@
                        }
                        else
                        {
-                           alert("error")
+                           
                            $scope.sizeFalse();
                        }
                    });

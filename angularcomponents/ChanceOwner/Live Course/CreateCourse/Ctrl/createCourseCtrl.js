@@ -55,30 +55,4 @@ angular.module('chanceOwner-app').controller("createCouresCtrl",function($scope,
         })
     });
 
-    // upload image
-    
-    //    var file=$(this)[0].files[0]
-    //     if(file.size<=5000000&&file.type=='image/jpeg'||file.type=='image/jpg'||file.type=='image/png')
-    //     { 
-    //         $scope.sizeTrue();  
-    //         var image;
-            
-    //     }
-    //     else
-    //     {$scope.sizeFalse();
-    //     }
-    // $scope.sizeFalse=function()
-    // {  
-    //     angular.element('#size')
-    //     .css( 'display','block'); 
-    // }
-    // $scope.sizeTrue=function()
-    // {  
-    //     angular.element('#size')
-    //     .css( 'display','none'); 
-    // }
-    
-
-    
-   
 });

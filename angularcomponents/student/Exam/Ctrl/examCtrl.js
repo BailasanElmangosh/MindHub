@@ -91,6 +91,7 @@ var quizCtrl = function ($scope, $http, helper,examSrv,$timeout,$routeParams) {
             if(data.status=='Success')
                 { 
                     $scope.examList=data.exam;
+                    $scope.examName=data.examName;
                     $scope.rightAnswer=data.rightAnswers
                     $scope.config = helper.extend({}, $scope.defaultConfig, $scope.config1);
                     $scope.questions = $scope.config1.shuffleQuestions ? helper.shuffle($scope.examList) : $scope.examList;

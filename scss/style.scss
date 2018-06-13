@@ -2320,9 +2320,10 @@ svg ,i {
     .exam
     {
         background-color: #666666;
-        opacity: 0.5;
+        // opacity: 0.5;
         padding: 5px;
         margin-bottom: 20px;
+        border-left:10px solid $greencolor;
         a
         {
             text-decoration: none;
@@ -2335,7 +2336,7 @@ svg ,i {
 //start quiz
 .quiz
 { 
-    margin-top: 80px;
+    margin-top: 150px;
     h1{
         color:#740808;
         font-weight:normal;
@@ -2369,7 +2370,7 @@ svg ,i {
         text-align:center;
     }
     .option{
-        background-color:#cadaee;
+        background-color:$greencolor;
         font-size:20px;
         padding:10px;
         margin:3px;

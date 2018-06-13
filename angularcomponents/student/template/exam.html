@@ -5,6 +5,7 @@
         
         <div ng-show="mode=='quiz'">
             <div ng-repeat="question in filteredQuestions">
+                <div>{{examName}}</div>
                 <div class="label label-warning">Question {{currentPage}} of {{totalItems}}.</div>
                 <div class="row">
                     <div class="col-md-12">
@@ -27,7 +28,7 @@
                 <div>
                     <button class="btn btn-default" ng-show="config.allowBack" ng-click="goTo(1);">First</button>
                     <button class="btn btn-default" ng-show="config.allowBack" ng-click="goTo(currentPage - 1);">Prev</button>
-                    <button class="btn btn-primary"                            ng-click="goTo(currentPage + 1);">Next</button>
+                    <button class="btn btn-success" ng-click="goTo(currentPage + 1);">Next</button>
                     <button class="btn btn-default" ng-show="config.allowBack" ng-click="goTo(totalItems);">Last</button>
                 </div>
                 <br />
@@ -57,7 +58,6 @@
             </div>
         </div>
         <div class="" ng-show="mode!='result'">
-            <button class="btn btn-default" ng-click="mode = 'quiz'">Quiz</button> 
             <button class="btn btn-default" ng-click="mode = 'review'">Review</button> 
             <button class="btn btn-default" ng-click="onSubmit();">Submit Quiz</button>
         </div>

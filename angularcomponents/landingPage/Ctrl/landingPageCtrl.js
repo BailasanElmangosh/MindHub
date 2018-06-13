@@ -31,7 +31,6 @@
                     if (data.status =="Success")
                     {  
                         cookies.set(key,data.token);
-                        console.log(data.token)
                         cookies.set('socketid',data.userId);
                        
                         if(data.userType=="Chance owner")
@@ -54,7 +53,6 @@
         $scope.token = function (key) 
             {
                 cookies.get(key);
-                console.log(key);
             };
             
     });

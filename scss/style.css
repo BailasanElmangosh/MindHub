@@ -1985,9 +1985,9 @@ svg, i {
 
 .allExam .exam {
   background-color: #666666;
-  opacity: 0.5;
   padding: 5px;
   margin-bottom: 20px;
+  border-left: 10px solid #8ccb75;
 }
 
 .allExam .exam a {
@@ -1996,7 +1996,7 @@ svg, i {
 }
 
 .quiz {
-  margin-top: 80px;
+  margin-top: 150px;
   /* Create Quiz Styles */
 }
 
@@ -2037,7 +2037,7 @@ svg, i {
 }
 
 .quiz .option {
-  background-color: #cadaee;
+  background-color: #8ccb75;
   font-size: 20px;
   padding: 10px;
   margin: 3px;

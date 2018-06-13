@@ -33,10 +33,59 @@
                                             <div class="col-12 ">
                                             <div class="row justify-content-center">
                                                 <div class="col-sm-2 col-2 ">
+                                                        <div class="row count">
+                                                                <div class="col-sm-12 iconbg ">
+                                                                    <div class="icon">
+                                                                        <svg class="">
+                                                                            <use xlink:href="#user"></use>
+                                                                        </svg>
+                                                                        <span>
+                                                                            follows
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-12 data ">
+                                                                    <span class="num">{{profileData.friends.length}}</span>
+                                                                </div>
+                                                                </div>
+                                                </div>
+                                                <div class="col-sm-2 col-2 ">
+                                                    
+                                                    <div class="row count">
+                                                            <div class="col-sm-12 iconbg ">
+                                                                    <div class="icon">
+                                                                        <i class="far fa-question-circle" aria-hidden="true"></i>
+                                                                        <span>
+                                                                            Questions
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            <div class="col-sm-12 data ">
+                                                                <span class="num">{{profileData.questions.length}}</span>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2 col-2 ">
                                                     <div class="row count">
                                                         <div class="col-sm-12 iconbg ">
+                                                        <div class="icon">
+                                                            <img src=" /images/exam3.svg">
+                                                            <span>
+                                                                Exams
+                                                            </span>
+                                                        </div>
+                                                        </div>
+                                                        <div class="col-sm-12 data ">
+                                                            <span class="num">23</span>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                <div class="col-sm-2 col-2">
+                                                    <div class="row count">
+                                                    
+                                                    <div class="col-sm-12 iconbg ">
                                                             <div class="icon" id="courses">
-                                                                <img src="images/online-course.svg">
+                                                                <img src="images/course.svg">
                                                                 <span>
                                                                     Courses
                                                                 </span>
@@ -46,55 +95,6 @@
                                                             <span class="num">23</span>
                                                             <!-- <span class="name">Courses</span> -->
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-2 col-2 ">
-                                                    <div class="row count">
-                                                    <div class="col-sm-12 iconbg ">
-                                                        <div class="icon">
-                                                            <svg class="">
-                                                                <use xlink:href="#user"></use>
-                                                            </svg>
-                                                            <span>
-                                                                follows
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12 data ">
-                                                        <span class="num">23</span>
-                                                        <!-- <span class="name">Follwers</span> -->
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-2 col-2 ">
-                                                    <div class="row count">
-                                                        <div class="col-sm-12 iconbg ">
-                                                        <div class="icon">
-                                                            <i class="fa fa-heart" aria-hidden="true"></i>
-                                                            <span>
-                                                                Favorites
-                                                            </span>
-                                                        </div>
-                                                        </div>
-                                                        <div class="col-sm-12 data ">
-                                                            <span class="num">23</span>
-                                                            <!-- <span class="name">Favorites</span> -->
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                <div class="col-sm-2 col-2">
-                                                    <div class="row count">
-                                                    <div class="col-sm-12 iconbg ">
-                                                            <div class="icon">
-                                                                <i class="far fa-question-circle" aria-hidden="true"></i>
-                                                                <span>
-                                                                    Questions
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    <div class="col-sm-12 data ">
-                                                        <span class="num">23</span>
-                                                    </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -589,7 +589,7 @@
                                                                             <li class="list-group-item" ng-repeat="skilldata in filterSkill" ng-click="fillTextbox(skilldata.name ,skilldata.id)" ng-bind="skilldata.name"></li>  
                                                                         </div> 
                                                                         </ul>  
-                                                                        <p class="error" id="error">This Skill choosen before</p>
+                                                                        <p class="error" id="error">This Skill chosen before</p>
                                                                     </div>
                                                                     <div class="col-sm-3">
                                                                         <button class="btn" ng-click="addSkill(idSkill,profileData.userId)">Add </button>

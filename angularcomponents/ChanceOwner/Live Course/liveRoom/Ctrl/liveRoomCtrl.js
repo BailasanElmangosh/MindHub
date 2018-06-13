@@ -73,22 +73,12 @@ angular.module('chanceOwner-app').controller("liveRoomCtrl",function($scope,$coo
             $.connection.hub.url = 'http://localhost:10724/signalr/hubs';
            
             hub.client.addNewMessage = function (sender,msg) {
-<<<<<<< HEAD
                 console.log( sender +" : " + msg);
                 $scope.msg = {
                     name:sender,
                     msg :msg
                 };
                 $scope.messages.unshift($scope.msg);
-=======
-                $scope.newMsg={
-                    msg:msg,
-                    sender:sender
-                }
-                $scope.messages.push($scope.newMsg);
-               console.log($scope.messages);  
-               $scope.$apply();  
->>>>>>> 4784e01406ca410e6b69ff850e6472f72382391b
             }
             
             $.connection.hub.start().done(function () {

@@ -42,7 +42,7 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies',
     });
     
       student.filter('formatDate', function($filter) {
-        // alert('hii');
+        
         return function (myDate) {
           if(typeof myDate === 'undefined') {
             return myDate;
@@ -127,9 +127,10 @@ var student = angular.module('student-app', ['ngRoute','ngMessages','ngCookies',
           }
           $scope.img=function()
           {
-            // console.log(Person.getImg());
             return Person.getImg();
           }
+          // $scope.imgcookie=$cookies.get("imgCookie");
+          // alert($scope.imgcookie)
       });
     
      
