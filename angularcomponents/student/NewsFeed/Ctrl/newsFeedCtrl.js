@@ -12,6 +12,8 @@
                 $scope.Feeds =data.feed;
                 $scope.studentData = data.studentData;
                 $scope.suggestedStudents = data.suggestedStudents;
+                $scope.course=data.course;
+                console.log(data);
                 Person.setshow(false);
                 Person.setImg("http://gpmhhost-001-site1.ftempurl.com/"+$scope.studentData.image);
             }
