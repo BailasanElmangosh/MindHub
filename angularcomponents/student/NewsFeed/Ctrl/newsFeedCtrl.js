@@ -46,12 +46,9 @@
             }).success(function(data){
                 $scope.hideFollow=true;
                 $scope.hideUnFollow=false;                               
-                if(data.Status =="Success"){
-                    alert("Friend Followed");
-                }
-                else{
-                    alert(data)
-                }
+                
+                swal("You followed new friend", "", "success");
+
             })
         }
         $scope.UnFollowFriend = function(id)
