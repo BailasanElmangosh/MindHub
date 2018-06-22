@@ -34,7 +34,7 @@ angular.module('chanceOwner-app').controller("createCouresCtrl",function($scope,
         $("#createFrm").on('submit',function(e){
             e.preventDefault();
             var formData = new FormData(this);
-            var token = $cookie("token");
+            var token = $cookies.get("token");
             $.ajax({
                 type:'POST',
                 datatype:"Json",
@@ -49,7 +49,7 @@ angular.module('chanceOwner-app').controller("createCouresCtrl",function($scope,
                     
                 },
                 error:function(){
-                    console.log(data);
+                  
                    
                 }
             })
